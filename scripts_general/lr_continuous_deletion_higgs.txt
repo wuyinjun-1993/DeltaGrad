@@ -1,0 +1,2663 @@
+dataset name::higgs
+deletion rate::0.00167
+python3 generate_rand_ids 0.00167  higgs 1
+start loading data...
+normalization start!!
+torch.Size([10500000, 29])
+torch.Size([500000, 29])
+tensor([2129934, 7143439, 6225935,  ..., 2523126, 3735545, 2260986])
+python3 generate_dataset_train_test.py Logistic_regression higgs 16384 32 10
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+start loading data...
+normalization start!!
+torch.Size([10500000, 29])
+torch.Size([500000, 29])
+repetition 0
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 0 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.738604
+Train - Epoch 0, Batch: 10, Loss: 0.699365
+Train - Epoch 0, Batch: 20, Loss: 0.696446
+Train - Epoch 0, Batch: 30, Loss: 0.694084
+Train - Epoch 0, Batch: 40, Loss: 0.694435
+Train - Epoch 0, Batch: 50, Loss: 0.693671
+Train - Epoch 0, Batch: 60, Loss: 0.692445
+Train - Epoch 0, Batch: 70, Loss: 0.691862
+Train - Epoch 0, Batch: 80, Loss: 0.692102
+Train - Epoch 0, Batch: 90, Loss: 0.691863
+Train - Epoch 0, Batch: 100, Loss: 0.691139
+Train - Epoch 0, Batch: 110, Loss: 0.691105
+Train - Epoch 0, Batch: 120, Loss: 0.691723
+Train - Epoch 0, Batch: 130, Loss: 0.690367
+Train - Epoch 0, Batch: 140, Loss: 0.690709
+Train - Epoch 0, Batch: 150, Loss: 0.690293
+Train - Epoch 0, Batch: 160, Loss: 0.690623
+Train - Epoch 0, Batch: 170, Loss: 0.689524
+Train - Epoch 0, Batch: 180, Loss: 0.689203
+Train - Epoch 0, Batch: 190, Loss: 0.689935
+Train - Epoch 0, Batch: 200, Loss: 0.689319
+Train - Epoch 0, Batch: 210, Loss: 0.690473
+Train - Epoch 0, Batch: 220, Loss: 0.689537
+Train - Epoch 0, Batch: 230, Loss: 0.689131
+Train - Epoch 0, Batch: 240, Loss: 0.690714
+Train - Epoch 0, Batch: 250, Loss: 0.689783
+Train - Epoch 0, Batch: 260, Loss: 0.689797
+Train - Epoch 0, Batch: 270, Loss: 0.688437
+Train - Epoch 0, Batch: 280, Loss: 0.688266
+Train - Epoch 0, Batch: 290, Loss: 0.687863
+Train - Epoch 0, Batch: 300, Loss: 0.689602
+Train - Epoch 0, Batch: 310, Loss: 0.689451
+Train - Epoch 0, Batch: 320, Loss: 0.687251
+Train - Epoch 0, Batch: 330, Loss: 0.688293
+Train - Epoch 0, Batch: 340, Loss: 0.688490
+Train - Epoch 0, Batch: 350, Loss: 0.688897
+Train - Epoch 0, Batch: 360, Loss: 0.687620
+Train - Epoch 0, Batch: 370, Loss: 0.687478
+Train - Epoch 0, Batch: 380, Loss: 0.688489
+Train - Epoch 0, Batch: 390, Loss: 0.688407
+Train - Epoch 0, Batch: 400, Loss: 0.687885
+Train - Epoch 0, Batch: 410, Loss: 0.687688
+Train - Epoch 0, Batch: 420, Loss: 0.688973
+Train - Epoch 0, Batch: 430, Loss: 0.688151
+Train - Epoch 0, Batch: 440, Loss: 0.687224
+Train - Epoch 0, Batch: 450, Loss: 0.687778
+Train - Epoch 0, Batch: 460, Loss: 0.687573
+Train - Epoch 0, Batch: 470, Loss: 0.689281
+Train - Epoch 0, Batch: 480, Loss: 0.687425
+Train - Epoch 0, Batch: 490, Loss: 0.687705
+Train - Epoch 0, Batch: 500, Loss: 0.686788
+Train - Epoch 0, Batch: 510, Loss: 0.687844
+Train - Epoch 0, Batch: 520, Loss: 0.687841
+Train - Epoch 0, Batch: 530, Loss: 0.688619
+Train - Epoch 0, Batch: 540, Loss: 0.687648
+Train - Epoch 0, Batch: 550, Loss: 0.686510
+Train - Epoch 0, Batch: 560, Loss: 0.687608
+Train - Epoch 0, Batch: 570, Loss: 0.688321
+Train - Epoch 0, Batch: 580, Loss: 0.687836
+Train - Epoch 0, Batch: 590, Loss: 0.688223
+Train - Epoch 0, Batch: 600, Loss: 0.688860
+Train - Epoch 0, Batch: 610, Loss: 0.686678
+Train - Epoch 0, Batch: 620, Loss: 0.687333
+Train - Epoch 0, Batch: 630, Loss: 0.687820
+Train - Epoch 0, Batch: 640, Loss: 0.687346
+Train - Epoch 1, Batch: 0, Loss: 0.688724
+Train - Epoch 1, Batch: 10, Loss: 0.685919
+Train - Epoch 1, Batch: 20, Loss: 0.686483
+Train - Epoch 1, Batch: 30, Loss: 0.685897
+Train - Epoch 1, Batch: 40, Loss: 0.687143
+Train - Epoch 1, Batch: 50, Loss: 0.688061
+Train - Epoch 1, Batch: 60, Loss: 0.687254
+Train - Epoch 1, Batch: 70, Loss: 0.687348
+Train - Epoch 1, Batch: 80, Loss: 0.686810
+Train - Epoch 1, Batch: 90, Loss: 0.686762
+Train - Epoch 1, Batch: 100, Loss: 0.686760
+Train - Epoch 1, Batch: 110, Loss: 0.687789
+Train - Epoch 1, Batch: 120, Loss: 0.687837
+Train - Epoch 1, Batch: 130, Loss: 0.686612
+Train - Epoch 1, Batch: 140, Loss: 0.688032
+Train - Epoch 1, Batch: 150, Loss: 0.687701
+Train - Epoch 1, Batch: 160, Loss: 0.686960
+Train - Epoch 1, Batch: 170, Loss: 0.687566
+Train - Epoch 1, Batch: 180, Loss: 0.685603
+Train - Epoch 1, Batch: 190, Loss: 0.685975
+Train - Epoch 1, Batch: 200, Loss: 0.687425
+Train - Epoch 1, Batch: 210, Loss: 0.686848
+Train - Epoch 1, Batch: 220, Loss: 0.688116
+Train - Epoch 1, Batch: 230, Loss: 0.686500
+Train - Epoch 1, Batch: 240, Loss: 0.687353
+Train - Epoch 1, Batch: 250, Loss: 0.686483
+Train - Epoch 1, Batch: 260, Loss: 0.686670
+Train - Epoch 1, Batch: 270, Loss: 0.686262
+Train - Epoch 1, Batch: 280, Loss: 0.686901
+Train - Epoch 1, Batch: 290, Loss: 0.687165
+Train - Epoch 1, Batch: 300, Loss: 0.688320
+Train - Epoch 1, Batch: 310, Loss: 0.686289
+Train - Epoch 1, Batch: 320, Loss: 0.686596
+Train - Epoch 1, Batch: 330, Loss: 0.686777
+Train - Epoch 1, Batch: 340, Loss: 0.686615
+Train - Epoch 1, Batch: 350, Loss: 0.686306
+Train - Epoch 1, Batch: 360, Loss: 0.686826
+Train - Epoch 1, Batch: 370, Loss: 0.686979
+Train - Epoch 1, Batch: 380, Loss: 0.685964
+Train - Epoch 1, Batch: 390, Loss: 0.686855
+Train - Epoch 1, Batch: 400, Loss: 0.685249
+Train - Epoch 1, Batch: 410, Loss: 0.686766
+Train - Epoch 1, Batch: 420, Loss: 0.685305
+Train - Epoch 1, Batch: 430, Loss: 0.685987
+Train - Epoch 1, Batch: 440, Loss: 0.685998
+Train - Epoch 1, Batch: 450, Loss: 0.685596
+Train - Epoch 1, Batch: 460, Loss: 0.685922
+Train - Epoch 1, Batch: 470, Loss: 0.685864
+Train - Epoch 1, Batch: 480, Loss: 0.685000
+Train - Epoch 1, Batch: 490, Loss: 0.686463
+Train - Epoch 1, Batch: 500, Loss: 0.685788
+Train - Epoch 1, Batch: 510, Loss: 0.685086
+Train - Epoch 1, Batch: 520, Loss: 0.685665
+Train - Epoch 1, Batch: 530, Loss: 0.686233
+Train - Epoch 1, Batch: 540, Loss: 0.686193
+Train - Epoch 1, Batch: 550, Loss: 0.686328
+Train - Epoch 1, Batch: 560, Loss: 0.686952
+Train - Epoch 1, Batch: 570, Loss: 0.685660
+Train - Epoch 1, Batch: 580, Loss: 0.685167
+Train - Epoch 1, Batch: 590, Loss: 0.685899
+Train - Epoch 1, Batch: 600, Loss: 0.685711
+Train - Epoch 1, Batch: 610, Loss: 0.686219
+Train - Epoch 1, Batch: 620, Loss: 0.686616
+Train - Epoch 1, Batch: 630, Loss: 0.685461
+Train - Epoch 1, Batch: 640, Loss: 0.686072
+Train - Epoch 2, Batch: 0, Loss: 0.684918
+Train - Epoch 2, Batch: 10, Loss: 0.684617
+Train - Epoch 2, Batch: 20, Loss: 0.686618
+Train - Epoch 2, Batch: 30, Loss: 0.685297
+Train - Epoch 2, Batch: 40, Loss: 0.685312
+Train - Epoch 2, Batch: 50, Loss: 0.684827
+Train - Epoch 2, Batch: 60, Loss: 0.685057
+Train - Epoch 2, Batch: 70, Loss: 0.685750
+Train - Epoch 2, Batch: 80, Loss: 0.685503
+Train - Epoch 2, Batch: 90, Loss: 0.686499
+Train - Epoch 2, Batch: 100, Loss: 0.685336
+Train - Epoch 2, Batch: 110, Loss: 0.684948
+Train - Epoch 2, Batch: 120, Loss: 0.685988
+Train - Epoch 2, Batch: 130, Loss: 0.685589
+Train - Epoch 2, Batch: 140, Loss: 0.685820
+Train - Epoch 2, Batch: 150, Loss: 0.685763
+Train - Epoch 2, Batch: 160, Loss: 0.686079
+Train - Epoch 2, Batch: 170, Loss: 0.685678
+Train - Epoch 2, Batch: 180, Loss: 0.685513
+Train - Epoch 2, Batch: 190, Loss: 0.686424
+Train - Epoch 2, Batch: 200, Loss: 0.685557
+Train - Epoch 2, Batch: 210, Loss: 0.685715
+Train - Epoch 2, Batch: 220, Loss: 0.684267
+Train - Epoch 2, Batch: 230, Loss: 0.685364
+Train - Epoch 2, Batch: 240, Loss: 0.685154
+Train - Epoch 2, Batch: 250, Loss: 0.685212
+Train - Epoch 2, Batch: 260, Loss: 0.685243
+Train - Epoch 2, Batch: 270, Loss: 0.685753
+Train - Epoch 2, Batch: 280, Loss: 0.684672
+Train - Epoch 2, Batch: 290, Loss: 0.685399
+Train - Epoch 2, Batch: 300, Loss: 0.683840
+Train - Epoch 2, Batch: 310, Loss: 0.685816
+Train - Epoch 2, Batch: 320, Loss: 0.684755
+Train - Epoch 2, Batch: 330, Loss: 0.684662
+Train - Epoch 2, Batch: 340, Loss: 0.684485
+Train - Epoch 2, Batch: 350, Loss: 0.686168
+Train - Epoch 2, Batch: 360, Loss: 0.684695
+Train - Epoch 2, Batch: 370, Loss: 0.684001
+Train - Epoch 2, Batch: 380, Loss: 0.684753
+Train - Epoch 2, Batch: 390, Loss: 0.684468
+Train - Epoch 2, Batch: 400, Loss: 0.686865
+Train - Epoch 2, Batch: 410, Loss: 0.684167
+Train - Epoch 2, Batch: 420, Loss: 0.685663
+Train - Epoch 2, Batch: 430, Loss: 0.685995
+Train - Epoch 2, Batch: 440, Loss: 0.684631
+Train - Epoch 2, Batch: 450, Loss: 0.685881
+Train - Epoch 2, Batch: 460, Loss: 0.685909
+Train - Epoch 2, Batch: 470, Loss: 0.685092
+Train - Epoch 2, Batch: 480, Loss: 0.684281
+Train - Epoch 2, Batch: 490, Loss: 0.683903
+Train - Epoch 2, Batch: 500, Loss: 0.684737
+Train - Epoch 2, Batch: 510, Loss: 0.684596
+Train - Epoch 2, Batch: 520, Loss: 0.685184
+Train - Epoch 2, Batch: 530, Loss: 0.683990
+Train - Epoch 2, Batch: 540, Loss: 0.684000
+Train - Epoch 2, Batch: 550, Loss: 0.684939
+Train - Epoch 2, Batch: 560, Loss: 0.685883
+Train - Epoch 2, Batch: 570, Loss: 0.684791
+Train - Epoch 2, Batch: 580, Loss: 0.685622
+Train - Epoch 2, Batch: 590, Loss: 0.684375
+Train - Epoch 2, Batch: 600, Loss: 0.684023
+Train - Epoch 2, Batch: 610, Loss: 0.685610
+Train - Epoch 2, Batch: 620, Loss: 0.684253
+Train - Epoch 2, Batch: 630, Loss: 0.685245
+Train - Epoch 2, Batch: 640, Loss: 0.683802
+Train - Epoch 3, Batch: 0, Loss: 0.683470
+Train - Epoch 3, Batch: 10, Loss: 0.684491
+Train - Epoch 3, Batch: 20, Loss: 0.684135
+Train - Epoch 3, Batch: 30, Loss: 0.684576
+Train - Epoch 3, Batch: 40, Loss: 0.684767
+Train - Epoch 3, Batch: 50, Loss: 0.685587
+Train - Epoch 3, Batch: 60, Loss: 0.685011
+Train - Epoch 3, Batch: 70, Loss: 0.686084
+Train - Epoch 3, Batch: 80, Loss: 0.685065
+Train - Epoch 3, Batch: 90, Loss: 0.683854
+Train - Epoch 3, Batch: 100, Loss: 0.685685
+Train - Epoch 3, Batch: 110, Loss: 0.684702
+Train - Epoch 3, Batch: 120, Loss: 0.684796
+Train - Epoch 3, Batch: 130, Loss: 0.685505
+Train - Epoch 3, Batch: 140, Loss: 0.684859
+Train - Epoch 3, Batch: 150, Loss: 0.684056
+Train - Epoch 3, Batch: 160, Loss: 0.685018
+Train - Epoch 3, Batch: 170, Loss: 0.684236
+Train - Epoch 3, Batch: 180, Loss: 0.684153
+Train - Epoch 3, Batch: 190, Loss: 0.683717
+Train - Epoch 3, Batch: 200, Loss: 0.683417
+Train - Epoch 3, Batch: 210, Loss: 0.683333
+Train - Epoch 3, Batch: 220, Loss: 0.684622
+Train - Epoch 3, Batch: 230, Loss: 0.684248
+Train - Epoch 3, Batch: 240, Loss: 0.685030
+Train - Epoch 3, Batch: 250, Loss: 0.684301
+Train - Epoch 3, Batch: 260, Loss: 0.685201
+Train - Epoch 3, Batch: 270, Loss: 0.682642
+Train - Epoch 3, Batch: 280, Loss: 0.684136
+Train - Epoch 3, Batch: 290, Loss: 0.684631
+Train - Epoch 3, Batch: 300, Loss: 0.685427
+Train - Epoch 3, Batch: 310, Loss: 0.684536
+Train - Epoch 3, Batch: 320, Loss: 0.684078
+Train - Epoch 3, Batch: 330, Loss: 0.684527
+Train - Epoch 3, Batch: 340, Loss: 0.684088
+Train - Epoch 3, Batch: 350, Loss: 0.684330
+Train - Epoch 3, Batch: 360, Loss: 0.685199
+Train - Epoch 3, Batch: 370, Loss: 0.684065
+Train - Epoch 3, Batch: 380, Loss: 0.684803
+Train - Epoch 3, Batch: 390, Loss: 0.684585
+Train - Epoch 3, Batch: 400, Loss: 0.684001
+Train - Epoch 3, Batch: 410, Loss: 0.683903
+Train - Epoch 3, Batch: 420, Loss: 0.684099
+Train - Epoch 3, Batch: 430, Loss: 0.683969
+Train - Epoch 3, Batch: 440, Loss: 0.684273
+Train - Epoch 3, Batch: 450, Loss: 0.683756
+Train - Epoch 3, Batch: 460, Loss: 0.683052
+Train - Epoch 3, Batch: 470, Loss: 0.684775
+Train - Epoch 3, Batch: 480, Loss: 0.684584
+Train - Epoch 3, Batch: 490, Loss: 0.684020
+Train - Epoch 3, Batch: 500, Loss: 0.685151
+Train - Epoch 3, Batch: 510, Loss: 0.684712
+Train - Epoch 3, Batch: 520, Loss: 0.684033
+Train - Epoch 3, Batch: 530, Loss: 0.683749
+Train - Epoch 3, Batch: 540, Loss: 0.683881
+Train - Epoch 3, Batch: 550, Loss: 0.685561
+Train - Epoch 3, Batch: 560, Loss: 0.684356
+Train - Epoch 3, Batch: 570, Loss: 0.683045
+Train - Epoch 3, Batch: 580, Loss: 0.684550
+Train - Epoch 3, Batch: 590, Loss: 0.685143
+Train - Epoch 3, Batch: 600, Loss: 0.684056
+Train - Epoch 3, Batch: 610, Loss: 0.684916
+Train - Epoch 3, Batch: 620, Loss: 0.685139
+Train - Epoch 3, Batch: 630, Loss: 0.684385
+Train - Epoch 3, Batch: 640, Loss: 0.684399
+Train - Epoch 4, Batch: 0, Loss: 0.683991
+Train - Epoch 4, Batch: 10, Loss: 0.684226
+Train - Epoch 4, Batch: 20, Loss: 0.682807
+Train - Epoch 4, Batch: 30, Loss: 0.684159
+Train - Epoch 4, Batch: 40, Loss: 0.683157
+Train - Epoch 4, Batch: 50, Loss: 0.683042
+Train - Epoch 4, Batch: 60, Loss: 0.683105
+Train - Epoch 4, Batch: 70, Loss: 0.683575
+Train - Epoch 4, Batch: 80, Loss: 0.683942
+Train - Epoch 4, Batch: 90, Loss: 0.683218
+Train - Epoch 4, Batch: 100, Loss: 0.683763
+Train - Epoch 4, Batch: 110, Loss: 0.684566
+Train - Epoch 4, Batch: 120, Loss: 0.683983
+Train - Epoch 4, Batch: 130, Loss: 0.684699
+Train - Epoch 4, Batch: 140, Loss: 0.682982
+Train - Epoch 4, Batch: 150, Loss: 0.682870
+Train - Epoch 4, Batch: 160, Loss: 0.684294
+Train - Epoch 4, Batch: 170, Loss: 0.684815
+Train - Epoch 4, Batch: 180, Loss: 0.683209
+Train - Epoch 4, Batch: 190, Loss: 0.683679
+Train - Epoch 4, Batch: 200, Loss: 0.683948
+Train - Epoch 4, Batch: 210, Loss: 0.684123
+Train - Epoch 4, Batch: 220, Loss: 0.682733
+Train - Epoch 4, Batch: 230, Loss: 0.685324
+Train - Epoch 4, Batch: 240, Loss: 0.682596
+Train - Epoch 4, Batch: 250, Loss: 0.684000
+Train - Epoch 4, Batch: 260, Loss: 0.684592
+Train - Epoch 4, Batch: 270, Loss: 0.684380
+Train - Epoch 4, Batch: 280, Loss: 0.683120
+Train - Epoch 4, Batch: 290, Loss: 0.683148
+Train - Epoch 4, Batch: 300, Loss: 0.683420
+Train - Epoch 4, Batch: 310, Loss: 0.683499
+Train - Epoch 4, Batch: 320, Loss: 0.684037
+Train - Epoch 4, Batch: 330, Loss: 0.683996
+Train - Epoch 4, Batch: 340, Loss: 0.683779
+Train - Epoch 4, Batch: 350, Loss: 0.683289
+Train - Epoch 4, Batch: 360, Loss: 0.684039
+Train - Epoch 4, Batch: 370, Loss: 0.684098
+Train - Epoch 4, Batch: 380, Loss: 0.683760
+Train - Epoch 4, Batch: 390, Loss: 0.683957
+Train - Epoch 4, Batch: 400, Loss: 0.686060
+Train - Epoch 4, Batch: 410, Loss: 0.682441
+Train - Epoch 4, Batch: 420, Loss: 0.683307
+Train - Epoch 4, Batch: 430, Loss: 0.684388
+Train - Epoch 4, Batch: 440, Loss: 0.683187
+Train - Epoch 4, Batch: 450, Loss: 0.682568
+Train - Epoch 4, Batch: 460, Loss: 0.683911
+Train - Epoch 4, Batch: 470, Loss: 0.685067
+Train - Epoch 4, Batch: 480, Loss: 0.683624
+Train - Epoch 4, Batch: 490, Loss: 0.682243
+Train - Epoch 4, Batch: 500, Loss: 0.683820
+Train - Epoch 4, Batch: 510, Loss: 0.682673
+Train - Epoch 4, Batch: 520, Loss: 0.683523
+Train - Epoch 4, Batch: 530, Loss: 0.684469
+Train - Epoch 4, Batch: 540, Loss: 0.682835
+Train - Epoch 4, Batch: 550, Loss: 0.683773
+Train - Epoch 4, Batch: 560, Loss: 0.683551
+Train - Epoch 4, Batch: 570, Loss: 0.682996
+Train - Epoch 4, Batch: 580, Loss: 0.684287
+Train - Epoch 4, Batch: 590, Loss: 0.683585
+Train - Epoch 4, Batch: 600, Loss: 0.682864
+Train - Epoch 4, Batch: 610, Loss: 0.683530
+Train - Epoch 4, Batch: 620, Loss: 0.685677
+Train - Epoch 4, Batch: 630, Loss: 0.682920
+Train - Epoch 4, Batch: 640, Loss: 0.683686
+Train - Epoch 5, Batch: 0, Loss: 0.684253
+Train - Epoch 5, Batch: 10, Loss: 0.681691
+Train - Epoch 5, Batch: 20, Loss: 0.682432
+Train - Epoch 5, Batch: 30, Loss: 0.684294
+Train - Epoch 5, Batch: 40, Loss: 0.683055
+Train - Epoch 5, Batch: 50, Loss: 0.683519
+Train - Epoch 5, Batch: 60, Loss: 0.683151
+Train - Epoch 5, Batch: 70, Loss: 0.683589
+Train - Epoch 5, Batch: 80, Loss: 0.683247
+Train - Epoch 5, Batch: 90, Loss: 0.682591
+Train - Epoch 5, Batch: 100, Loss: 0.683967
+Train - Epoch 5, Batch: 110, Loss: 0.683721
+Train - Epoch 5, Batch: 120, Loss: 0.683231
+Train - Epoch 5, Batch: 130, Loss: 0.682868
+Train - Epoch 5, Batch: 140, Loss: 0.684233
+Train - Epoch 5, Batch: 150, Loss: 0.683619
+Train - Epoch 5, Batch: 160, Loss: 0.683966
+Train - Epoch 5, Batch: 170, Loss: 0.684163
+Train - Epoch 5, Batch: 180, Loss: 0.683975
+Train - Epoch 5, Batch: 190, Loss: 0.683720
+Train - Epoch 5, Batch: 200, Loss: 0.682511
+Train - Epoch 5, Batch: 210, Loss: 0.684723
+Train - Epoch 5, Batch: 220, Loss: 0.683818
+Train - Epoch 5, Batch: 230, Loss: 0.683754
+Train - Epoch 5, Batch: 240, Loss: 0.682684
+Train - Epoch 5, Batch: 250, Loss: 0.683376
+Train - Epoch 5, Batch: 260, Loss: 0.684703
+Train - Epoch 5, Batch: 270, Loss: 0.683556
+Train - Epoch 5, Batch: 280, Loss: 0.683346
+Train - Epoch 5, Batch: 290, Loss: 0.683308
+Train - Epoch 5, Batch: 300, Loss: 0.684073
+Train - Epoch 5, Batch: 310, Loss: 0.683120
+Train - Epoch 5, Batch: 320, Loss: 0.684493
+Train - Epoch 5, Batch: 330, Loss: 0.684715
+Train - Epoch 5, Batch: 340, Loss: 0.683760
+Train - Epoch 5, Batch: 350, Loss: 0.683822
+Train - Epoch 5, Batch: 360, Loss: 0.682708
+Train - Epoch 5, Batch: 370, Loss: 0.683225
+Train - Epoch 5, Batch: 380, Loss: 0.682824
+Train - Epoch 5, Batch: 390, Loss: 0.684351
+Train - Epoch 5, Batch: 400, Loss: 0.683211
+Train - Epoch 5, Batch: 410, Loss: 0.682042
+Train - Epoch 5, Batch: 420, Loss: 0.683040
+Train - Epoch 5, Batch: 430, Loss: 0.683020
+Train - Epoch 5, Batch: 440, Loss: 0.682965
+Train - Epoch 5, Batch: 450, Loss: 0.682687
+Train - Epoch 5, Batch: 460, Loss: 0.683042
+Train - Epoch 5, Batch: 470, Loss: 0.683890
+Train - Epoch 5, Batch: 480, Loss: 0.683785
+Train - Epoch 5, Batch: 490, Loss: 0.684118
+Train - Epoch 5, Batch: 500, Loss: 0.682411
+Train - Epoch 5, Batch: 510, Loss: 0.682437
+Train - Epoch 5, Batch: 520, Loss: 0.684446
+Train - Epoch 5, Batch: 530, Loss: 0.682104
+Train - Epoch 5, Batch: 540, Loss: 0.683558
+Train - Epoch 5, Batch: 550, Loss: 0.682197
+Train - Epoch 5, Batch: 560, Loss: 0.682679
+Train - Epoch 5, Batch: 570, Loss: 0.684127
+Train - Epoch 5, Batch: 580, Loss: 0.683530
+Train - Epoch 5, Batch: 590, Loss: 0.684320
+Train - Epoch 5, Batch: 600, Loss: 0.683926
+Train - Epoch 5, Batch: 610, Loss: 0.683221
+Train - Epoch 5, Batch: 620, Loss: 0.682655
+Train - Epoch 5, Batch: 630, Loss: 0.682836
+Train - Epoch 5, Batch: 640, Loss: 0.683149
+Train - Epoch 6, Batch: 0, Loss: 0.683238
+Train - Epoch 6, Batch: 10, Loss: 0.683992
+Train - Epoch 6, Batch: 20, Loss: 0.682119
+Train - Epoch 6, Batch: 30, Loss: 0.683307
+Train - Epoch 6, Batch: 40, Loss: 0.682532
+Train - Epoch 6, Batch: 50, Loss: 0.683296
+Train - Epoch 6, Batch: 60, Loss: 0.682406
+Train - Epoch 6, Batch: 70, Loss: 0.682683
+Train - Epoch 6, Batch: 80, Loss: 0.683357
+Train - Epoch 6, Batch: 90, Loss: 0.683228
+Train - Epoch 6, Batch: 100, Loss: 0.682305
+Train - Epoch 6, Batch: 110, Loss: 0.684492
+Train - Epoch 6, Batch: 120, Loss: 0.683607
+Train - Epoch 6, Batch: 130, Loss: 0.683280
+Train - Epoch 6, Batch: 140, Loss: 0.683182
+Train - Epoch 6, Batch: 150, Loss: 0.682911
+Train - Epoch 6, Batch: 160, Loss: 0.683875
+Train - Epoch 6, Batch: 170, Loss: 0.683600
+Train - Epoch 6, Batch: 180, Loss: 0.682679
+Train - Epoch 6, Batch: 190, Loss: 0.683556
+Train - Epoch 6, Batch: 200, Loss: 0.682960
+Train - Epoch 6, Batch: 210, Loss: 0.684408
+Train - Epoch 6, Batch: 220, Loss: 0.682716
+Train - Epoch 6, Batch: 230, Loss: 0.683392
+Train - Epoch 6, Batch: 240, Loss: 0.684448
+Train - Epoch 6, Batch: 250, Loss: 0.684669
+Train - Epoch 6, Batch: 260, Loss: 0.683624
+Train - Epoch 6, Batch: 270, Loss: 0.682626
+Train - Epoch 6, Batch: 280, Loss: 0.682334
+Train - Epoch 6, Batch: 290, Loss: 0.681735
+Train - Epoch 6, Batch: 300, Loss: 0.683042
+Train - Epoch 6, Batch: 310, Loss: 0.682910
+Train - Epoch 6, Batch: 320, Loss: 0.682711
+Train - Epoch 6, Batch: 330, Loss: 0.682897
+Train - Epoch 6, Batch: 340, Loss: 0.683613
+Train - Epoch 6, Batch: 350, Loss: 0.682691
+Train - Epoch 6, Batch: 360, Loss: 0.684546
+Train - Epoch 6, Batch: 370, Loss: 0.683083
+Train - Epoch 6, Batch: 380, Loss: 0.682947
+Train - Epoch 6, Batch: 390, Loss: 0.683342
+Train - Epoch 6, Batch: 400, Loss: 0.683172
+Train - Epoch 6, Batch: 410, Loss: 0.681979
+Train - Epoch 6, Batch: 420, Loss: 0.683094
+Train - Epoch 6, Batch: 430, Loss: 0.682924
+Train - Epoch 6, Batch: 440, Loss: 0.681283
+Train - Epoch 6, Batch: 450, Loss: 0.682565
+Train - Epoch 6, Batch: 460, Loss: 0.683156
+Train - Epoch 6, Batch: 470, Loss: 0.682585
+Train - Epoch 6, Batch: 480, Loss: 0.682733
+Train - Epoch 6, Batch: 490, Loss: 0.683454
+Train - Epoch 6, Batch: 500, Loss: 0.682602
+Train - Epoch 6, Batch: 510, Loss: 0.683293
+Train - Epoch 6, Batch: 520, Loss: 0.683188
+Train - Epoch 6, Batch: 530, Loss: 0.683301
+Train - Epoch 6, Batch: 540, Loss: 0.682411
+Train - Epoch 6, Batch: 550, Loss: 0.682683
+Train - Epoch 6, Batch: 560, Loss: 0.683010
+Train - Epoch 6, Batch: 570, Loss: 0.682534
+Train - Epoch 6, Batch: 580, Loss: 0.683702
+Train - Epoch 6, Batch: 590, Loss: 0.683151
+Train - Epoch 6, Batch: 600, Loss: 0.684072
+Train - Epoch 6, Batch: 610, Loss: 0.684193
+Train - Epoch 6, Batch: 620, Loss: 0.683718
+Train - Epoch 6, Batch: 630, Loss: 0.683698
+Train - Epoch 6, Batch: 640, Loss: 0.683131
+Train - Epoch 7, Batch: 0, Loss: 0.682936
+Train - Epoch 7, Batch: 10, Loss: 0.681735
+Train - Epoch 7, Batch: 20, Loss: 0.683518
+Train - Epoch 7, Batch: 30, Loss: 0.682811
+Train - Epoch 7, Batch: 40, Loss: 0.681560
+Train - Epoch 7, Batch: 50, Loss: 0.682875
+Train - Epoch 7, Batch: 60, Loss: 0.683398
+Train - Epoch 7, Batch: 70, Loss: 0.683084
+Train - Epoch 7, Batch: 80, Loss: 0.683605
+Train - Epoch 7, Batch: 90, Loss: 0.683324
+Train - Epoch 7, Batch: 100, Loss: 0.683910
+Train - Epoch 7, Batch: 110, Loss: 0.682380
+Train - Epoch 7, Batch: 120, Loss: 0.682334
+Train - Epoch 7, Batch: 130, Loss: 0.681835
+Train - Epoch 7, Batch: 140, Loss: 0.681990
+Train - Epoch 7, Batch: 150, Loss: 0.682886
+Train - Epoch 7, Batch: 160, Loss: 0.683789
+Train - Epoch 7, Batch: 170, Loss: 0.682401
+Train - Epoch 7, Batch: 180, Loss: 0.683273
+Train - Epoch 7, Batch: 190, Loss: 0.683626
+Train - Epoch 7, Batch: 200, Loss: 0.682911
+Train - Epoch 7, Batch: 210, Loss: 0.682442
+Train - Epoch 7, Batch: 220, Loss: 0.682817
+Train - Epoch 7, Batch: 230, Loss: 0.682547
+Train - Epoch 7, Batch: 240, Loss: 0.682887
+Train - Epoch 7, Batch: 250, Loss: 0.683349
+Train - Epoch 7, Batch: 260, Loss: 0.683096
+Train - Epoch 7, Batch: 270, Loss: 0.683181
+Train - Epoch 7, Batch: 280, Loss: 0.681892
+Train - Epoch 7, Batch: 290, Loss: 0.682753
+Train - Epoch 7, Batch: 300, Loss: 0.683297
+Train - Epoch 7, Batch: 310, Loss: 0.682013
+Train - Epoch 7, Batch: 320, Loss: 0.682443
+Train - Epoch 7, Batch: 330, Loss: 0.682562
+Train - Epoch 7, Batch: 340, Loss: 0.683161
+Train - Epoch 7, Batch: 350, Loss: 0.682195
+Train - Epoch 7, Batch: 360, Loss: 0.682642
+Train - Epoch 7, Batch: 370, Loss: 0.682895
+Train - Epoch 7, Batch: 380, Loss: 0.682965
+Train - Epoch 7, Batch: 390, Loss: 0.683303
+Train - Epoch 7, Batch: 400, Loss: 0.683298
+Train - Epoch 7, Batch: 410, Loss: 0.681080
+Train - Epoch 7, Batch: 420, Loss: 0.683494
+Train - Epoch 7, Batch: 430, Loss: 0.682114
+Train - Epoch 7, Batch: 440, Loss: 0.684731
+Train - Epoch 7, Batch: 450, Loss: 0.684131
+Train - Epoch 7, Batch: 460, Loss: 0.683385
+Train - Epoch 7, Batch: 470, Loss: 0.683276
+Train - Epoch 7, Batch: 480, Loss: 0.681863
+Train - Epoch 7, Batch: 490, Loss: 0.683565
+Train - Epoch 7, Batch: 500, Loss: 0.683400
+Train - Epoch 7, Batch: 510, Loss: 0.683087
+Train - Epoch 7, Batch: 520, Loss: 0.682651
+Train - Epoch 7, Batch: 530, Loss: 0.683811
+Train - Epoch 7, Batch: 540, Loss: 0.682723
+Train - Epoch 7, Batch: 550, Loss: 0.681182
+Train - Epoch 7, Batch: 560, Loss: 0.682083
+Train - Epoch 7, Batch: 570, Loss: 0.682664
+Train - Epoch 7, Batch: 580, Loss: 0.683072
+Train - Epoch 7, Batch: 590, Loss: 0.682740
+Train - Epoch 7, Batch: 600, Loss: 0.682649
+Train - Epoch 7, Batch: 610, Loss: 0.683902
+Train - Epoch 7, Batch: 620, Loss: 0.682467
+Train - Epoch 7, Batch: 630, Loss: 0.682566
+Train - Epoch 7, Batch: 640, Loss: 0.682683
+Train - Epoch 8, Batch: 0, Loss: 0.682926
+Train - Epoch 8, Batch: 10, Loss: 0.683597
+Train - Epoch 8, Batch: 20, Loss: 0.682313
+Train - Epoch 8, Batch: 30, Loss: 0.682110
+Train - Epoch 8, Batch: 40, Loss: 0.682333
+Train - Epoch 8, Batch: 50, Loss: 0.682848
+Train - Epoch 8, Batch: 60, Loss: 0.683724
+Train - Epoch 8, Batch: 70, Loss: 0.682063
+Train - Epoch 8, Batch: 80, Loss: 0.682549
+Train - Epoch 8, Batch: 90, Loss: 0.681278
+Train - Epoch 8, Batch: 100, Loss: 0.682709
+Train - Epoch 8, Batch: 110, Loss: 0.682216
+Train - Epoch 8, Batch: 120, Loss: 0.683276
+Train - Epoch 8, Batch: 130, Loss: 0.683383
+Train - Epoch 8, Batch: 140, Loss: 0.682787
+Train - Epoch 8, Batch: 150, Loss: 0.682386
+Train - Epoch 8, Batch: 160, Loss: 0.681403
+Train - Epoch 8, Batch: 170, Loss: 0.681919
+Train - Epoch 8, Batch: 180, Loss: 0.683765
+Train - Epoch 8, Batch: 190, Loss: 0.682537
+Train - Epoch 8, Batch: 200, Loss: 0.682703
+Train - Epoch 8, Batch: 210, Loss: 0.683003
+Train - Epoch 8, Batch: 220, Loss: 0.683152
+Train - Epoch 8, Batch: 230, Loss: 0.683239
+Train - Epoch 8, Batch: 240, Loss: 0.682675
+Train - Epoch 8, Batch: 250, Loss: 0.683700
+Train - Epoch 8, Batch: 260, Loss: 0.682282
+Train - Epoch 8, Batch: 270, Loss: 0.682117
+Train - Epoch 8, Batch: 280, Loss: 0.683389
+Train - Epoch 8, Batch: 290, Loss: 0.683653
+Train - Epoch 8, Batch: 300, Loss: 0.683549
+Train - Epoch 8, Batch: 310, Loss: 0.683309
+Train - Epoch 8, Batch: 320, Loss: 0.684449
+Train - Epoch 8, Batch: 330, Loss: 0.684288
+Train - Epoch 8, Batch: 340, Loss: 0.682779
+Train - Epoch 8, Batch: 350, Loss: 0.683171
+Train - Epoch 8, Batch: 360, Loss: 0.683117
+Train - Epoch 8, Batch: 370, Loss: 0.683490
+Train - Epoch 8, Batch: 380, Loss: 0.682648
+Train - Epoch 8, Batch: 390, Loss: 0.681927
+Train - Epoch 8, Batch: 400, Loss: 0.683002
+Train - Epoch 8, Batch: 410, Loss: 0.683337
+Train - Epoch 8, Batch: 420, Loss: 0.683202
+Train - Epoch 8, Batch: 430, Loss: 0.684209
+Train - Epoch 8, Batch: 440, Loss: 0.683680
+Train - Epoch 8, Batch: 450, Loss: 0.681933
+Train - Epoch 8, Batch: 460, Loss: 0.682900
+Train - Epoch 8, Batch: 470, Loss: 0.683088
+Train - Epoch 8, Batch: 480, Loss: 0.683666
+Train - Epoch 8, Batch: 490, Loss: 0.682357
+Train - Epoch 8, Batch: 500, Loss: 0.682677
+Train - Epoch 8, Batch: 510, Loss: 0.681491
+Train - Epoch 8, Batch: 520, Loss: 0.681930
+Train - Epoch 8, Batch: 530, Loss: 0.683809
+Train - Epoch 8, Batch: 540, Loss: 0.682630
+Train - Epoch 8, Batch: 550, Loss: 0.683053
+Train - Epoch 8, Batch: 560, Loss: 0.682891
+Train - Epoch 8, Batch: 570, Loss: 0.683396
+Train - Epoch 8, Batch: 580, Loss: 0.682719
+Train - Epoch 8, Batch: 590, Loss: 0.682360
+Train - Epoch 8, Batch: 600, Loss: 0.683904
+Train - Epoch 8, Batch: 610, Loss: 0.682961
+Train - Epoch 8, Batch: 620, Loss: 0.681988
+Train - Epoch 8, Batch: 630, Loss: 0.683236
+Train - Epoch 8, Batch: 640, Loss: 0.684162
+Train - Epoch 9, Batch: 0, Loss: 0.681540
+Train - Epoch 9, Batch: 10, Loss: 0.684024
+Train - Epoch 9, Batch: 20, Loss: 0.682009
+Train - Epoch 9, Batch: 30, Loss: 0.682159
+Train - Epoch 9, Batch: 40, Loss: 0.682686
+Train - Epoch 9, Batch: 50, Loss: 0.683227
+Train - Epoch 9, Batch: 60, Loss: 0.682847
+Train - Epoch 9, Batch: 70, Loss: 0.683260
+Train - Epoch 9, Batch: 80, Loss: 0.682305
+Train - Epoch 9, Batch: 90, Loss: 0.681758
+Train - Epoch 9, Batch: 100, Loss: 0.683789
+Train - Epoch 9, Batch: 110, Loss: 0.682557
+Train - Epoch 9, Batch: 120, Loss: 0.681795
+Train - Epoch 9, Batch: 130, Loss: 0.682025
+Train - Epoch 9, Batch: 140, Loss: 0.682126
+Train - Epoch 9, Batch: 150, Loss: 0.682777
+Train - Epoch 9, Batch: 160, Loss: 0.683545
+Train - Epoch 9, Batch: 170, Loss: 0.682345
+Train - Epoch 9, Batch: 180, Loss: 0.682834
+Train - Epoch 9, Batch: 190, Loss: 0.682097
+Train - Epoch 9, Batch: 200, Loss: 0.684456
+Train - Epoch 9, Batch: 210, Loss: 0.683065
+Train - Epoch 9, Batch: 220, Loss: 0.684054
+Train - Epoch 9, Batch: 230, Loss: 0.682503
+Train - Epoch 9, Batch: 240, Loss: 0.681524
+Train - Epoch 9, Batch: 250, Loss: 0.683246
+Train - Epoch 9, Batch: 260, Loss: 0.681661
+Train - Epoch 9, Batch: 270, Loss: 0.681631
+Train - Epoch 9, Batch: 280, Loss: 0.683594
+Train - Epoch 9, Batch: 290, Loss: 0.681800
+Train - Epoch 9, Batch: 300, Loss: 0.682791
+Train - Epoch 9, Batch: 310, Loss: 0.683069
+Train - Epoch 9, Batch: 320, Loss: 0.682315
+Train - Epoch 9, Batch: 330, Loss: 0.682285
+Train - Epoch 9, Batch: 340, Loss: 0.683380
+Train - Epoch 9, Batch: 350, Loss: 0.682348
+Train - Epoch 9, Batch: 360, Loss: 0.682868
+Train - Epoch 9, Batch: 370, Loss: 0.681985
+Train - Epoch 9, Batch: 380, Loss: 0.682754
+Train - Epoch 9, Batch: 390, Loss: 0.682859
+Train - Epoch 9, Batch: 400, Loss: 0.682596
+Train - Epoch 9, Batch: 410, Loss: 0.682811
+Train - Epoch 9, Batch: 420, Loss: 0.681954
+Train - Epoch 9, Batch: 430, Loss: 0.682400
+Train - Epoch 9, Batch: 440, Loss: 0.683394
+Train - Epoch 9, Batch: 450, Loss: 0.682709
+Train - Epoch 9, Batch: 460, Loss: 0.683533
+Train - Epoch 9, Batch: 470, Loss: 0.682423
+Train - Epoch 9, Batch: 480, Loss: 0.682349
+Train - Epoch 9, Batch: 490, Loss: 0.683841
+Train - Epoch 9, Batch: 500, Loss: 0.682274
+Train - Epoch 9, Batch: 510, Loss: 0.682787
+Train - Epoch 9, Batch: 520, Loss: 0.681795
+Train - Epoch 9, Batch: 530, Loss: 0.681785
+Train - Epoch 9, Batch: 540, Loss: 0.682561
+Train - Epoch 9, Batch: 550, Loss: 0.682664
+Train - Epoch 9, Batch: 560, Loss: 0.683393
+Train - Epoch 9, Batch: 570, Loss: 0.682823
+Train - Epoch 9, Batch: 580, Loss: 0.681611
+Train - Epoch 9, Batch: 590, Loss: 0.682093
+Train - Epoch 9, Batch: 600, Loss: 0.683252
+Train - Epoch 9, Batch: 610, Loss: 0.682214
+Train - Epoch 9, Batch: 620, Loss: 0.683910
+Train - Epoch 9, Batch: 630, Loss: 0.683067
+Train - Epoch 9, Batch: 640, Loss: 0.683175
+Train - Epoch 10, Batch: 0, Loss: 0.682612
+Train - Epoch 10, Batch: 10, Loss: 0.683938
+Train - Epoch 10, Batch: 20, Loss: 0.682825
+Train - Epoch 10, Batch: 30, Loss: 0.681401
+Train - Epoch 10, Batch: 40, Loss: 0.682812
+Train - Epoch 10, Batch: 50, Loss: 0.682706
+Train - Epoch 10, Batch: 60, Loss: 0.682694
+Train - Epoch 10, Batch: 70, Loss: 0.682008
+Train - Epoch 10, Batch: 80, Loss: 0.682902
+Train - Epoch 10, Batch: 90, Loss: 0.683246
+Train - Epoch 10, Batch: 100, Loss: 0.681568
+Train - Epoch 10, Batch: 110, Loss: 0.682957
+Train - Epoch 10, Batch: 120, Loss: 0.682794
+Train - Epoch 10, Batch: 130, Loss: 0.682315
+Train - Epoch 10, Batch: 140, Loss: 0.683073
+Train - Epoch 10, Batch: 150, Loss: 0.681499
+Train - Epoch 10, Batch: 160, Loss: 0.683914
+Train - Epoch 10, Batch: 170, Loss: 0.684068
+Train - Epoch 10, Batch: 180, Loss: 0.683619
+Train - Epoch 10, Batch: 190, Loss: 0.683303
+Train - Epoch 10, Batch: 200, Loss: 0.682131
+Train - Epoch 10, Batch: 210, Loss: 0.682805
+Train - Epoch 10, Batch: 220, Loss: 0.683147
+Train - Epoch 10, Batch: 230, Loss: 0.683245
+Train - Epoch 10, Batch: 240, Loss: 0.683152
+Train - Epoch 10, Batch: 250, Loss: 0.683536
+Train - Epoch 10, Batch: 260, Loss: 0.682456
+Train - Epoch 10, Batch: 270, Loss: 0.681835
+Train - Epoch 10, Batch: 280, Loss: 0.683048
+Train - Epoch 10, Batch: 290, Loss: 0.682793
+Train - Epoch 10, Batch: 300, Loss: 0.681848
+Train - Epoch 10, Batch: 310, Loss: 0.681807
+Train - Epoch 10, Batch: 320, Loss: 0.682660
+Train - Epoch 10, Batch: 330, Loss: 0.682546
+Train - Epoch 10, Batch: 340, Loss: 0.682041
+Train - Epoch 10, Batch: 350, Loss: 0.683140
+Train - Epoch 10, Batch: 360, Loss: 0.682409
+Train - Epoch 10, Batch: 370, Loss: 0.683184
+Train - Epoch 10, Batch: 380, Loss: 0.683963
+Train - Epoch 10, Batch: 390, Loss: 0.682892
+Train - Epoch 10, Batch: 400, Loss: 0.683953
+Train - Epoch 10, Batch: 410, Loss: 0.683132
+Train - Epoch 10, Batch: 420, Loss: 0.682582
+Train - Epoch 10, Batch: 430, Loss: 0.683475
+Train - Epoch 10, Batch: 440, Loss: 0.682580
+Train - Epoch 10, Batch: 450, Loss: 0.682120
+Train - Epoch 10, Batch: 460, Loss: 0.681338
+Train - Epoch 10, Batch: 470, Loss: 0.682508
+Train - Epoch 10, Batch: 480, Loss: 0.682772
+Train - Epoch 10, Batch: 490, Loss: 0.682757
+Train - Epoch 10, Batch: 500, Loss: 0.683968
+Train - Epoch 10, Batch: 510, Loss: 0.681433
+Train - Epoch 10, Batch: 520, Loss: 0.682455
+Train - Epoch 10, Batch: 530, Loss: 0.681876
+Train - Epoch 10, Batch: 540, Loss: 0.683361
+Train - Epoch 10, Batch: 550, Loss: 0.682502
+Train - Epoch 10, Batch: 560, Loss: 0.682219
+Train - Epoch 10, Batch: 570, Loss: 0.682866
+Train - Epoch 10, Batch: 580, Loss: 0.684554
+Train - Epoch 10, Batch: 590, Loss: 0.682593
+Train - Epoch 10, Batch: 600, Loss: 0.683357
+Train - Epoch 10, Batch: 610, Loss: 0.682155
+Train - Epoch 10, Batch: 620, Loss: 0.682925
+Train - Epoch 10, Batch: 630, Loss: 0.683264
+Train - Epoch 10, Batch: 640, Loss: 0.682015
+Train - Epoch 11, Batch: 0, Loss: 0.681832
+Train - Epoch 11, Batch: 10, Loss: 0.682742
+Train - Epoch 11, Batch: 20, Loss: 0.683383
+Train - Epoch 11, Batch: 30, Loss: 0.683554
+Train - Epoch 11, Batch: 40, Loss: 0.680961
+Train - Epoch 11, Batch: 50, Loss: 0.681648
+Train - Epoch 11, Batch: 60, Loss: 0.682528
+Train - Epoch 11, Batch: 70, Loss: 0.682630
+Train - Epoch 11, Batch: 80, Loss: 0.682354
+Train - Epoch 11, Batch: 90, Loss: 0.682394
+Train - Epoch 11, Batch: 100, Loss: 0.682810
+Train - Epoch 11, Batch: 110, Loss: 0.682583
+Train - Epoch 11, Batch: 120, Loss: 0.682796
+Train - Epoch 11, Batch: 130, Loss: 0.681648
+Train - Epoch 11, Batch: 140, Loss: 0.683771
+Train - Epoch 11, Batch: 150, Loss: 0.683304
+Train - Epoch 11, Batch: 160, Loss: 0.682430
+Train - Epoch 11, Batch: 170, Loss: 0.682670
+Train - Epoch 11, Batch: 180, Loss: 0.681858
+Train - Epoch 11, Batch: 190, Loss: 0.682562
+Train - Epoch 11, Batch: 200, Loss: 0.682894
+Train - Epoch 11, Batch: 210, Loss: 0.682244
+Train - Epoch 11, Batch: 220, Loss: 0.683411
+Train - Epoch 11, Batch: 230, Loss: 0.682699
+Train - Epoch 11, Batch: 240, Loss: 0.681877
+Train - Epoch 11, Batch: 250, Loss: 0.683203
+Train - Epoch 11, Batch: 260, Loss: 0.683488
+Train - Epoch 11, Batch: 270, Loss: 0.682553
+Train - Epoch 11, Batch: 280, Loss: 0.681596
+Train - Epoch 11, Batch: 290, Loss: 0.682888
+Train - Epoch 11, Batch: 300, Loss: 0.682237
+Train - Epoch 11, Batch: 310, Loss: 0.681851
+Train - Epoch 11, Batch: 320, Loss: 0.683007
+Train - Epoch 11, Batch: 330, Loss: 0.683828
+Train - Epoch 11, Batch: 340, Loss: 0.682968
+Train - Epoch 11, Batch: 350, Loss: 0.683267
+Train - Epoch 11, Batch: 360, Loss: 0.681806
+Train - Epoch 11, Batch: 370, Loss: 0.682641
+Train - Epoch 11, Batch: 380, Loss: 0.682126
+Train - Epoch 11, Batch: 390, Loss: 0.682509
+Train - Epoch 11, Batch: 400, Loss: 0.682918
+Train - Epoch 11, Batch: 410, Loss: 0.683412
+Train - Epoch 11, Batch: 420, Loss: 0.681948
+Train - Epoch 11, Batch: 430, Loss: 0.681645
+Train - Epoch 11, Batch: 440, Loss: 0.681924
+Train - Epoch 11, Batch: 450, Loss: 0.681327
+Train - Epoch 11, Batch: 460, Loss: 0.682800
+Train - Epoch 11, Batch: 470, Loss: 0.682552
+Train - Epoch 11, Batch: 480, Loss: 0.682881
+Train - Epoch 11, Batch: 490, Loss: 0.681672
+Train - Epoch 11, Batch: 500, Loss: 0.681994
+Train - Epoch 11, Batch: 510, Loss: 0.682307
+Train - Epoch 11, Batch: 520, Loss: 0.682364
+Train - Epoch 11, Batch: 530, Loss: 0.682742
+Train - Epoch 11, Batch: 540, Loss: 0.683559
+Train - Epoch 11, Batch: 550, Loss: 0.681740
+Train - Epoch 11, Batch: 560, Loss: 0.683576
+Train - Epoch 11, Batch: 570, Loss: 0.682869
+Train - Epoch 11, Batch: 580, Loss: 0.683682
+Train - Epoch 11, Batch: 590, Loss: 0.682424
+Train - Epoch 11, Batch: 600, Loss: 0.683249
+Train - Epoch 11, Batch: 610, Loss: 0.683323
+Train - Epoch 11, Batch: 620, Loss: 0.682969
+Train - Epoch 11, Batch: 630, Loss: 0.682248
+Train - Epoch 11, Batch: 640, Loss: 0.682206
+Train - Epoch 12, Batch: 0, Loss: 0.682880
+Train - Epoch 12, Batch: 10, Loss: 0.683078
+Train - Epoch 12, Batch: 20, Loss: 0.681820
+Train - Epoch 12, Batch: 30, Loss: 0.682300
+Train - Epoch 12, Batch: 40, Loss: 0.682620
+Train - Epoch 12, Batch: 50, Loss: 0.682287
+Train - Epoch 12, Batch: 60, Loss: 0.683424
+Train - Epoch 12, Batch: 70, Loss: 0.681902
+Train - Epoch 12, Batch: 80, Loss: 0.683047
+Train - Epoch 12, Batch: 90, Loss: 0.681344
+Train - Epoch 12, Batch: 100, Loss: 0.682780
+Train - Epoch 12, Batch: 110, Loss: 0.683572
+Train - Epoch 12, Batch: 120, Loss: 0.683616
+Train - Epoch 12, Batch: 130, Loss: 0.683122
+Train - Epoch 12, Batch: 140, Loss: 0.682332
+Train - Epoch 12, Batch: 150, Loss: 0.683583
+Train - Epoch 12, Batch: 160, Loss: 0.682269
+Train - Epoch 12, Batch: 170, Loss: 0.682477
+Train - Epoch 12, Batch: 180, Loss: 0.682117
+Train - Epoch 12, Batch: 190, Loss: 0.681224
+Train - Epoch 12, Batch: 200, Loss: 0.683131
+Train - Epoch 12, Batch: 210, Loss: 0.682858
+Train - Epoch 12, Batch: 220, Loss: 0.681762
+Train - Epoch 12, Batch: 230, Loss: 0.683169
+Train - Epoch 12, Batch: 240, Loss: 0.682668
+Train - Epoch 12, Batch: 250, Loss: 0.683757
+Train - Epoch 12, Batch: 260, Loss: 0.682322
+Train - Epoch 12, Batch: 270, Loss: 0.682506
+Train - Epoch 12, Batch: 280, Loss: 0.683912
+Train - Epoch 12, Batch: 290, Loss: 0.682164
+Train - Epoch 12, Batch: 300, Loss: 0.682083
+Train - Epoch 12, Batch: 310, Loss: 0.682448
+Train - Epoch 12, Batch: 320, Loss: 0.683760
+Train - Epoch 12, Batch: 330, Loss: 0.682403
+Train - Epoch 12, Batch: 340, Loss: 0.682174
+Train - Epoch 12, Batch: 350, Loss: 0.682892
+Train - Epoch 12, Batch: 360, Loss: 0.682112
+Train - Epoch 12, Batch: 370, Loss: 0.682591
+Train - Epoch 12, Batch: 380, Loss: 0.682814
+Train - Epoch 12, Batch: 390, Loss: 0.683977
+Train - Epoch 12, Batch: 400, Loss: 0.683759
+Train - Epoch 12, Batch: 410, Loss: 0.682588
+Train - Epoch 12, Batch: 420, Loss: 0.682416
+Train - Epoch 12, Batch: 430, Loss: 0.683000
+Train - Epoch 12, Batch: 440, Loss: 0.682426
+Train - Epoch 12, Batch: 450, Loss: 0.682450
+Train - Epoch 12, Batch: 460, Loss: 0.683704
+Train - Epoch 12, Batch: 470, Loss: 0.684016
+Train - Epoch 12, Batch: 480, Loss: 0.682537
+Train - Epoch 12, Batch: 490, Loss: 0.683284
+Train - Epoch 12, Batch: 500, Loss: 0.681796
+Train - Epoch 12, Batch: 510, Loss: 0.681811
+Train - Epoch 12, Batch: 520, Loss: 0.681297
+Train - Epoch 12, Batch: 530, Loss: 0.682991
+Train - Epoch 12, Batch: 540, Loss: 0.683448
+Train - Epoch 12, Batch: 550, Loss: 0.682263
+Train - Epoch 12, Batch: 560, Loss: 0.682569
+Train - Epoch 12, Batch: 570, Loss: 0.681935
+Train - Epoch 12, Batch: 580, Loss: 0.682215
+Train - Epoch 12, Batch: 590, Loss: 0.683113
+Train - Epoch 12, Batch: 600, Loss: 0.682663
+Train - Epoch 12, Batch: 610, Loss: 0.682804
+Train - Epoch 12, Batch: 620, Loss: 0.682565
+Train - Epoch 12, Batch: 630, Loss: 0.681839
+Train - Epoch 12, Batch: 640, Loss: 0.683170
+Train - Epoch 13, Batch: 0, Loss: 0.684078
+Train - Epoch 13, Batch: 10, Loss: 0.681579
+Train - Epoch 13, Batch: 20, Loss: 0.683409
+Train - Epoch 13, Batch: 30, Loss: 0.681674
+Train - Epoch 13, Batch: 40, Loss: 0.682281
+Train - Epoch 13, Batch: 50, Loss: 0.682381
+Train - Epoch 13, Batch: 60, Loss: 0.682814
+Train - Epoch 13, Batch: 70, Loss: 0.681471
+Train - Epoch 13, Batch: 80, Loss: 0.682902
+Train - Epoch 13, Batch: 90, Loss: 0.683198
+Train - Epoch 13, Batch: 100, Loss: 0.682756
+Train - Epoch 13, Batch: 110, Loss: 0.683304
+Train - Epoch 13, Batch: 120, Loss: 0.682581
+Train - Epoch 13, Batch: 130, Loss: 0.681660
+Train - Epoch 13, Batch: 140, Loss: 0.683082
+Train - Epoch 13, Batch: 150, Loss: 0.682439
+Train - Epoch 13, Batch: 160, Loss: 0.682726
+Train - Epoch 13, Batch: 170, Loss: 0.681890
+Train - Epoch 13, Batch: 180, Loss: 0.682363
+Train - Epoch 13, Batch: 190, Loss: 0.680936
+Train - Epoch 13, Batch: 200, Loss: 0.681761
+Train - Epoch 13, Batch: 210, Loss: 0.681679
+Train - Epoch 13, Batch: 220, Loss: 0.682654
+Train - Epoch 13, Batch: 230, Loss: 0.683137
+Train - Epoch 13, Batch: 240, Loss: 0.681902
+Train - Epoch 13, Batch: 250, Loss: 0.682589
+Train - Epoch 13, Batch: 260, Loss: 0.682323
+Train - Epoch 13, Batch: 270, Loss: 0.682123
+Train - Epoch 13, Batch: 280, Loss: 0.683252
+Train - Epoch 13, Batch: 290, Loss: 0.681461
+Train - Epoch 13, Batch: 300, Loss: 0.682248
+Train - Epoch 13, Batch: 310, Loss: 0.684007
+Train - Epoch 13, Batch: 320, Loss: 0.681659
+Train - Epoch 13, Batch: 330, Loss: 0.683397
+Train - Epoch 13, Batch: 340, Loss: 0.681832
+Train - Epoch 13, Batch: 350, Loss: 0.682957
+Train - Epoch 13, Batch: 360, Loss: 0.683306
+Train - Epoch 13, Batch: 370, Loss: 0.683722
+Train - Epoch 13, Batch: 380, Loss: 0.683565
+Train - Epoch 13, Batch: 390, Loss: 0.684321
+Train - Epoch 13, Batch: 400, Loss: 0.681992
+Train - Epoch 13, Batch: 410, Loss: 0.682761
+Train - Epoch 13, Batch: 420, Loss: 0.683157
+Train - Epoch 13, Batch: 430, Loss: 0.682534
+Train - Epoch 13, Batch: 440, Loss: 0.682807
+Train - Epoch 13, Batch: 450, Loss: 0.684058
+Train - Epoch 13, Batch: 460, Loss: 0.683056
+Train - Epoch 13, Batch: 470, Loss: 0.681183
+Train - Epoch 13, Batch: 480, Loss: 0.682462
+Train - Epoch 13, Batch: 490, Loss: 0.682407
+Train - Epoch 13, Batch: 500, Loss: 0.683213
+Train - Epoch 13, Batch: 510, Loss: 0.682638
+Train - Epoch 13, Batch: 520, Loss: 0.682833
+Train - Epoch 13, Batch: 530, Loss: 0.681875
+Train - Epoch 13, Batch: 540, Loss: 0.682308
+Train - Epoch 13, Batch: 550, Loss: 0.683729
+Train - Epoch 13, Batch: 560, Loss: 0.681515
+Train - Epoch 13, Batch: 570, Loss: 0.682722
+Train - Epoch 13, Batch: 580, Loss: 0.683339
+Train - Epoch 13, Batch: 590, Loss: 0.682343
+Train - Epoch 13, Batch: 600, Loss: 0.683027
+Train - Epoch 13, Batch: 610, Loss: 0.682648
+Train - Epoch 13, Batch: 620, Loss: 0.681670
+Train - Epoch 13, Batch: 630, Loss: 0.682305
+Train - Epoch 13, Batch: 640, Loss: 0.683844
+Train - Epoch 14, Batch: 0, Loss: 0.682925
+Train - Epoch 14, Batch: 10, Loss: 0.682313
+Train - Epoch 14, Batch: 20, Loss: 0.684543
+Train - Epoch 14, Batch: 30, Loss: 0.682794
+Train - Epoch 14, Batch: 40, Loss: 0.682940
+Train - Epoch 14, Batch: 50, Loss: 0.683078
+Train - Epoch 14, Batch: 60, Loss: 0.682231
+Train - Epoch 14, Batch: 70, Loss: 0.682624
+Train - Epoch 14, Batch: 80, Loss: 0.683683
+Train - Epoch 14, Batch: 90, Loss: 0.682198
+Train - Epoch 14, Batch: 100, Loss: 0.682907
+Train - Epoch 14, Batch: 110, Loss: 0.682409
+Train - Epoch 14, Batch: 120, Loss: 0.683109
+Train - Epoch 14, Batch: 130, Loss: 0.683746
+Train - Epoch 14, Batch: 140, Loss: 0.682700
+Train - Epoch 14, Batch: 150, Loss: 0.683236
+Train - Epoch 14, Batch: 160, Loss: 0.683021
+Train - Epoch 14, Batch: 170, Loss: 0.682162
+Train - Epoch 14, Batch: 180, Loss: 0.682654
+Train - Epoch 14, Batch: 190, Loss: 0.682485
+Train - Epoch 14, Batch: 200, Loss: 0.682226
+Train - Epoch 14, Batch: 210, Loss: 0.683196
+Train - Epoch 14, Batch: 220, Loss: 0.683122
+Train - Epoch 14, Batch: 230, Loss: 0.682040
+Train - Epoch 14, Batch: 240, Loss: 0.682419
+Train - Epoch 14, Batch: 250, Loss: 0.682668
+Train - Epoch 14, Batch: 260, Loss: 0.683066
+Train - Epoch 14, Batch: 270, Loss: 0.682795
+Train - Epoch 14, Batch: 280, Loss: 0.683955
+Train - Epoch 14, Batch: 290, Loss: 0.683372
+Train - Epoch 14, Batch: 300, Loss: 0.682323
+Train - Epoch 14, Batch: 310, Loss: 0.683374
+Train - Epoch 14, Batch: 320, Loss: 0.681759
+Train - Epoch 14, Batch: 330, Loss: 0.682335
+Train - Epoch 14, Batch: 340, Loss: 0.683269
+Train - Epoch 14, Batch: 350, Loss: 0.681967
+Train - Epoch 14, Batch: 360, Loss: 0.681920
+Train - Epoch 14, Batch: 370, Loss: 0.681314
+Train - Epoch 14, Batch: 380, Loss: 0.682850
+Train - Epoch 14, Batch: 390, Loss: 0.681577
+Train - Epoch 14, Batch: 400, Loss: 0.681425
+Train - Epoch 14, Batch: 410, Loss: 0.683308
+Train - Epoch 14, Batch: 420, Loss: 0.683788
+Train - Epoch 14, Batch: 430, Loss: 0.683339
+Train - Epoch 14, Batch: 440, Loss: 0.683310
+Train - Epoch 14, Batch: 450, Loss: 0.683272
+Train - Epoch 14, Batch: 460, Loss: 0.683084
+Train - Epoch 14, Batch: 470, Loss: 0.681659
+Train - Epoch 14, Batch: 480, Loss: 0.681519
+Train - Epoch 14, Batch: 490, Loss: 0.682833
+Train - Epoch 14, Batch: 500, Loss: 0.681440
+Train - Epoch 14, Batch: 510, Loss: 0.680601
+Train - Epoch 14, Batch: 520, Loss: 0.682035
+Train - Epoch 14, Batch: 530, Loss: 0.681946
+Train - Epoch 14, Batch: 540, Loss: 0.682455
+Train - Epoch 14, Batch: 550, Loss: 0.683616
+Train - Epoch 14, Batch: 560, Loss: 0.682550
+Train - Epoch 14, Batch: 570, Loss: 0.684859
+Train - Epoch 14, Batch: 580, Loss: 0.681602
+Train - Epoch 14, Batch: 590, Loss: 0.682918
+Train - Epoch 14, Batch: 600, Loss: 0.683368
+Train - Epoch 14, Batch: 610, Loss: 0.682273
+Train - Epoch 14, Batch: 620, Loss: 0.681974
+Train - Epoch 14, Batch: 630, Loss: 0.682843
+Train - Epoch 14, Batch: 640, Loss: 0.682912
+Train - Epoch 15, Batch: 0, Loss: 0.682137
+Train - Epoch 15, Batch: 10, Loss: 0.682916
+Train - Epoch 15, Batch: 20, Loss: 0.683042
+Train - Epoch 15, Batch: 30, Loss: 0.683439
+Train - Epoch 15, Batch: 40, Loss: 0.682839
+Train - Epoch 15, Batch: 50, Loss: 0.682576
+Train - Epoch 15, Batch: 60, Loss: 0.682884
+Train - Epoch 15, Batch: 70, Loss: 0.681367
+Train - Epoch 15, Batch: 80, Loss: 0.682771
+Train - Epoch 15, Batch: 90, Loss: 0.681951
+Train - Epoch 15, Batch: 100, Loss: 0.681618
+Train - Epoch 15, Batch: 110, Loss: 0.683403
+Train - Epoch 15, Batch: 120, Loss: 0.684243
+Train - Epoch 15, Batch: 130, Loss: 0.682491
+Train - Epoch 15, Batch: 140, Loss: 0.682705
+Train - Epoch 15, Batch: 150, Loss: 0.683968
+Train - Epoch 15, Batch: 160, Loss: 0.681783
+Train - Epoch 15, Batch: 170, Loss: 0.681724
+Train - Epoch 15, Batch: 180, Loss: 0.681968
+Train - Epoch 15, Batch: 190, Loss: 0.682630
+Train - Epoch 15, Batch: 200, Loss: 0.682515
+Train - Epoch 15, Batch: 210, Loss: 0.682032
+Train - Epoch 15, Batch: 220, Loss: 0.682650
+Train - Epoch 15, Batch: 230, Loss: 0.683135
+Train - Epoch 15, Batch: 240, Loss: 0.683393
+Train - Epoch 15, Batch: 250, Loss: 0.682686
+Train - Epoch 15, Batch: 260, Loss: 0.682475
+Train - Epoch 15, Batch: 270, Loss: 0.681801
+Train - Epoch 15, Batch: 280, Loss: 0.684124
+Train - Epoch 15, Batch: 290, Loss: 0.683101
+Train - Epoch 15, Batch: 300, Loss: 0.682523
+Train - Epoch 15, Batch: 310, Loss: 0.682236
+Train - Epoch 15, Batch: 320, Loss: 0.684358
+Train - Epoch 15, Batch: 330, Loss: 0.682773
+Train - Epoch 15, Batch: 340, Loss: 0.681784
+Train - Epoch 15, Batch: 350, Loss: 0.682314
+Train - Epoch 15, Batch: 360, Loss: 0.681240
+Train - Epoch 15, Batch: 370, Loss: 0.682951
+Train - Epoch 15, Batch: 380, Loss: 0.682474
+Train - Epoch 15, Batch: 390, Loss: 0.682446
+Train - Epoch 15, Batch: 400, Loss: 0.682259
+Train - Epoch 15, Batch: 410, Loss: 0.682972
+Train - Epoch 15, Batch: 420, Loss: 0.682327
+Train - Epoch 15, Batch: 430, Loss: 0.682239
+Train - Epoch 15, Batch: 440, Loss: 0.684594
+Train - Epoch 15, Batch: 450, Loss: 0.682451
+Train - Epoch 15, Batch: 460, Loss: 0.682883
+Train - Epoch 15, Batch: 470, Loss: 0.683593
+Train - Epoch 15, Batch: 480, Loss: 0.683546
+Train - Epoch 15, Batch: 490, Loss: 0.681956
+Train - Epoch 15, Batch: 500, Loss: 0.682906
+Train - Epoch 15, Batch: 510, Loss: 0.681786
+Train - Epoch 15, Batch: 520, Loss: 0.682123
+Train - Epoch 15, Batch: 530, Loss: 0.683431
+Train - Epoch 15, Batch: 540, Loss: 0.683339
+Train - Epoch 15, Batch: 550, Loss: 0.683900
+Train - Epoch 15, Batch: 560, Loss: 0.683025
+Train - Epoch 15, Batch: 570, Loss: 0.683310
+Train - Epoch 15, Batch: 580, Loss: 0.682765
+Train - Epoch 15, Batch: 590, Loss: 0.682518
+Train - Epoch 15, Batch: 600, Loss: 0.682464
+Train - Epoch 15, Batch: 610, Loss: 0.683556
+Train - Epoch 15, Batch: 620, Loss: 0.683360
+Train - Epoch 15, Batch: 630, Loss: 0.681928
+Train - Epoch 15, Batch: 640, Loss: 0.682011
+Train - Epoch 16, Batch: 0, Loss: 0.683046
+Train - Epoch 16, Batch: 10, Loss: 0.683075
+Train - Epoch 16, Batch: 20, Loss: 0.681820
+Train - Epoch 16, Batch: 30, Loss: 0.682381
+Train - Epoch 16, Batch: 40, Loss: 0.682740
+Train - Epoch 16, Batch: 50, Loss: 0.682718
+Train - Epoch 16, Batch: 60, Loss: 0.683185
+Train - Epoch 16, Batch: 70, Loss: 0.682672
+Train - Epoch 16, Batch: 80, Loss: 0.681992
+Train - Epoch 16, Batch: 90, Loss: 0.681703
+Train - Epoch 16, Batch: 100, Loss: 0.681883
+Train - Epoch 16, Batch: 110, Loss: 0.681709
+Train - Epoch 16, Batch: 120, Loss: 0.681877
+Train - Epoch 16, Batch: 130, Loss: 0.682614
+Train - Epoch 16, Batch: 140, Loss: 0.681171
+Train - Epoch 16, Batch: 150, Loss: 0.682583
+Train - Epoch 16, Batch: 160, Loss: 0.682597
+Train - Epoch 16, Batch: 170, Loss: 0.683029
+Train - Epoch 16, Batch: 180, Loss: 0.683167
+Train - Epoch 16, Batch: 190, Loss: 0.681924
+Train - Epoch 16, Batch: 200, Loss: 0.681454
+Train - Epoch 16, Batch: 210, Loss: 0.683342
+Train - Epoch 16, Batch: 220, Loss: 0.682039
+Train - Epoch 16, Batch: 230, Loss: 0.683241
+Train - Epoch 16, Batch: 240, Loss: 0.682573
+Train - Epoch 16, Batch: 250, Loss: 0.682742
+Train - Epoch 16, Batch: 260, Loss: 0.683109
+Train - Epoch 16, Batch: 270, Loss: 0.682613
+Train - Epoch 16, Batch: 280, Loss: 0.682699
+Train - Epoch 16, Batch: 290, Loss: 0.682235
+Train - Epoch 16, Batch: 300, Loss: 0.683467
+Train - Epoch 16, Batch: 310, Loss: 0.681393
+Train - Epoch 16, Batch: 320, Loss: 0.682917
+Train - Epoch 16, Batch: 330, Loss: 0.682092
+Train - Epoch 16, Batch: 340, Loss: 0.681906
+Train - Epoch 16, Batch: 350, Loss: 0.681630
+Train - Epoch 16, Batch: 360, Loss: 0.682739
+Train - Epoch 16, Batch: 370, Loss: 0.683420
+Train - Epoch 16, Batch: 380, Loss: 0.682938
+Train - Epoch 16, Batch: 390, Loss: 0.681689
+Train - Epoch 16, Batch: 400, Loss: 0.681891
+Train - Epoch 16, Batch: 410, Loss: 0.680566
+Train - Epoch 16, Batch: 420, Loss: 0.682744
+Train - Epoch 16, Batch: 430, Loss: 0.682950
+Train - Epoch 16, Batch: 440, Loss: 0.682638
+Train - Epoch 16, Batch: 450, Loss: 0.682362
+Train - Epoch 16, Batch: 460, Loss: 0.681282
+Train - Epoch 16, Batch: 470, Loss: 0.682968
+Train - Epoch 16, Batch: 480, Loss: 0.682509
+Train - Epoch 16, Batch: 490, Loss: 0.683040
+Train - Epoch 16, Batch: 500, Loss: 0.681901
+Train - Epoch 16, Batch: 510, Loss: 0.683185
+Train - Epoch 16, Batch: 520, Loss: 0.682729
+Train - Epoch 16, Batch: 530, Loss: 0.682453
+Train - Epoch 16, Batch: 540, Loss: 0.681997
+Train - Epoch 16, Batch: 550, Loss: 0.682482
+Train - Epoch 16, Batch: 560, Loss: 0.683207
+Train - Epoch 16, Batch: 570, Loss: 0.682588
+Train - Epoch 16, Batch: 580, Loss: 0.682295
+Train - Epoch 16, Batch: 590, Loss: 0.682700
+Train - Epoch 16, Batch: 600, Loss: 0.683364
+Train - Epoch 16, Batch: 610, Loss: 0.682158
+Train - Epoch 16, Batch: 620, Loss: 0.683327
+Train - Epoch 16, Batch: 630, Loss: 0.683131
+Train - Epoch 16, Batch: 640, Loss: 0.681362
+Train - Epoch 17, Batch: 0, Loss: 0.683404
+Train - Epoch 17, Batch: 10, Loss: 0.681918
+Train - Epoch 17, Batch: 20, Loss: 0.681902
+Train - Epoch 17, Batch: 30, Loss: 0.682369
+Train - Epoch 17, Batch: 40, Loss: 0.682247
+Train - Epoch 17, Batch: 50, Loss: 0.682611
+Train - Epoch 17, Batch: 60, Loss: 0.681615
+Train - Epoch 17, Batch: 70, Loss: 0.682208
+Train - Epoch 17, Batch: 80, Loss: 0.682569
+Train - Epoch 17, Batch: 90, Loss: 0.681278
+Train - Epoch 17, Batch: 100, Loss: 0.682438
+Train - Epoch 17, Batch: 110, Loss: 0.682541
+Train - Epoch 17, Batch: 120, Loss: 0.682861
+Train - Epoch 17, Batch: 130, Loss: 0.682030
+Train - Epoch 17, Batch: 140, Loss: 0.682150
+Train - Epoch 17, Batch: 150, Loss: 0.682031
+Train - Epoch 17, Batch: 160, Loss: 0.682616
+Train - Epoch 17, Batch: 170, Loss: 0.683165
+Train - Epoch 17, Batch: 180, Loss: 0.682441
+Train - Epoch 17, Batch: 190, Loss: 0.682760
+Train - Epoch 17, Batch: 200, Loss: 0.683234
+Train - Epoch 17, Batch: 210, Loss: 0.683109
+Train - Epoch 17, Batch: 220, Loss: 0.683428
+Train - Epoch 17, Batch: 230, Loss: 0.682863
+Train - Epoch 17, Batch: 240, Loss: 0.682796
+Train - Epoch 17, Batch: 250, Loss: 0.684190
+Train - Epoch 17, Batch: 260, Loss: 0.683099
+Train - Epoch 17, Batch: 270, Loss: 0.683677
+Train - Epoch 17, Batch: 280, Loss: 0.682816
+Train - Epoch 17, Batch: 290, Loss: 0.683849
+Train - Epoch 17, Batch: 300, Loss: 0.681892
+Train - Epoch 17, Batch: 310, Loss: 0.682633
+Train - Epoch 17, Batch: 320, Loss: 0.683355
+Train - Epoch 17, Batch: 330, Loss: 0.681623
+Train - Epoch 17, Batch: 340, Loss: 0.681728
+Train - Epoch 17, Batch: 350, Loss: 0.682559
+Train - Epoch 17, Batch: 360, Loss: 0.682919
+Train - Epoch 17, Batch: 370, Loss: 0.682771
+Train - Epoch 17, Batch: 380, Loss: 0.682197
+Train - Epoch 17, Batch: 390, Loss: 0.681329
+Train - Epoch 17, Batch: 400, Loss: 0.682694
+Train - Epoch 17, Batch: 410, Loss: 0.683266
+Train - Epoch 17, Batch: 420, Loss: 0.683100
+Train - Epoch 17, Batch: 430, Loss: 0.682233
+Train - Epoch 17, Batch: 440, Loss: 0.682139
+Train - Epoch 17, Batch: 450, Loss: 0.682919
+Train - Epoch 17, Batch: 460, Loss: 0.682557
+Train - Epoch 17, Batch: 470, Loss: 0.684084
+Train - Epoch 17, Batch: 480, Loss: 0.684323
+Train - Epoch 17, Batch: 490, Loss: 0.683084
+Train - Epoch 17, Batch: 500, Loss: 0.681733
+Train - Epoch 17, Batch: 510, Loss: 0.681736
+Train - Epoch 17, Batch: 520, Loss: 0.682479
+Train - Epoch 17, Batch: 530, Loss: 0.683492
+Train - Epoch 17, Batch: 540, Loss: 0.682269
+Train - Epoch 17, Batch: 550, Loss: 0.682883
+Train - Epoch 17, Batch: 560, Loss: 0.681542
+Train - Epoch 17, Batch: 570, Loss: 0.682835
+Train - Epoch 17, Batch: 580, Loss: 0.681849
+Train - Epoch 17, Batch: 590, Loss: 0.683052
+Train - Epoch 17, Batch: 600, Loss: 0.682382
+Train - Epoch 17, Batch: 610, Loss: 0.681811
+Train - Epoch 17, Batch: 620, Loss: 0.683527
+Train - Epoch 17, Batch: 630, Loss: 0.683173
+Train - Epoch 17, Batch: 640, Loss: 0.682930
+Train - Epoch 18, Batch: 0, Loss: 0.683611
+Train - Epoch 18, Batch: 10, Loss: 0.683038
+Train - Epoch 18, Batch: 20, Loss: 0.683305
+Train - Epoch 18, Batch: 30, Loss: 0.682225
+Train - Epoch 18, Batch: 40, Loss: 0.681474
+Train - Epoch 18, Batch: 50, Loss: 0.682230
+Train - Epoch 18, Batch: 60, Loss: 0.682986
+Train - Epoch 18, Batch: 70, Loss: 0.681897
+Train - Epoch 18, Batch: 80, Loss: 0.683531
+Train - Epoch 18, Batch: 90, Loss: 0.684168
+Train - Epoch 18, Batch: 100, Loss: 0.681996
+Train - Epoch 18, Batch: 110, Loss: 0.682203
+Train - Epoch 18, Batch: 120, Loss: 0.682422
+Train - Epoch 18, Batch: 130, Loss: 0.683805
+Train - Epoch 18, Batch: 140, Loss: 0.682841
+Train - Epoch 18, Batch: 150, Loss: 0.681046
+Train - Epoch 18, Batch: 160, Loss: 0.681786
+Train - Epoch 18, Batch: 170, Loss: 0.683381
+Train - Epoch 18, Batch: 180, Loss: 0.684070
+Train - Epoch 18, Batch: 190, Loss: 0.681956
+Train - Epoch 18, Batch: 200, Loss: 0.680675
+Train - Epoch 18, Batch: 210, Loss: 0.683029
+Train - Epoch 18, Batch: 220, Loss: 0.682737
+Train - Epoch 18, Batch: 230, Loss: 0.681717
+Train - Epoch 18, Batch: 240, Loss: 0.682828
+Train - Epoch 18, Batch: 250, Loss: 0.683203
+Train - Epoch 18, Batch: 260, Loss: 0.682939
+Train - Epoch 18, Batch: 270, Loss: 0.681870
+Train - Epoch 18, Batch: 280, Loss: 0.683355
+Train - Epoch 18, Batch: 290, Loss: 0.682544
+Train - Epoch 18, Batch: 300, Loss: 0.683589
+Train - Epoch 18, Batch: 310, Loss: 0.682891
+Train - Epoch 18, Batch: 320, Loss: 0.682606
+Train - Epoch 18, Batch: 330, Loss: 0.680697
+Train - Epoch 18, Batch: 340, Loss: 0.682607
+Train - Epoch 18, Batch: 350, Loss: 0.680600
+Train - Epoch 18, Batch: 360, Loss: 0.683524
+Train - Epoch 18, Batch: 370, Loss: 0.681993
+Train - Epoch 18, Batch: 380, Loss: 0.682747
+Train - Epoch 18, Batch: 390, Loss: 0.681839
+Train - Epoch 18, Batch: 400, Loss: 0.682499
+Train - Epoch 18, Batch: 410, Loss: 0.682545
+Train - Epoch 18, Batch: 420, Loss: 0.681422
+Train - Epoch 18, Batch: 430, Loss: 0.682070
+Train - Epoch 18, Batch: 440, Loss: 0.681719
+Train - Epoch 18, Batch: 450, Loss: 0.683564
+Train - Epoch 18, Batch: 460, Loss: 0.683288
+Train - Epoch 18, Batch: 470, Loss: 0.681818
+Train - Epoch 18, Batch: 480, Loss: 0.681886
+Train - Epoch 18, Batch: 490, Loss: 0.682108
+Train - Epoch 18, Batch: 500, Loss: 0.682272
+Train - Epoch 18, Batch: 510, Loss: 0.681940
+Train - Epoch 18, Batch: 520, Loss: 0.683681
+Train - Epoch 18, Batch: 530, Loss: 0.683331
+Train - Epoch 18, Batch: 540, Loss: 0.684323
+Train - Epoch 18, Batch: 550, Loss: 0.681901
+Train - Epoch 18, Batch: 560, Loss: 0.682684
+Train - Epoch 18, Batch: 570, Loss: 0.683056
+Train - Epoch 18, Batch: 580, Loss: 0.681679
+Train - Epoch 18, Batch: 590, Loss: 0.683559
+Train - Epoch 18, Batch: 600, Loss: 0.682359
+Train - Epoch 18, Batch: 610, Loss: 0.682754
+Train - Epoch 18, Batch: 620, Loss: 0.680956
+Train - Epoch 18, Batch: 630, Loss: 0.683178
+Train - Epoch 18, Batch: 640, Loss: 0.683536
+Train - Epoch 19, Batch: 0, Loss: 0.681978
+Train - Epoch 19, Batch: 10, Loss: 0.681820
+Train - Epoch 19, Batch: 20, Loss: 0.682944
+Train - Epoch 19, Batch: 30, Loss: 0.683517
+Train - Epoch 19, Batch: 40, Loss: 0.682375
+Train - Epoch 19, Batch: 50, Loss: 0.682422
+Train - Epoch 19, Batch: 60, Loss: 0.683086
+Train - Epoch 19, Batch: 70, Loss: 0.681770
+Train - Epoch 19, Batch: 80, Loss: 0.682824
+Train - Epoch 19, Batch: 90, Loss: 0.683444
+Train - Epoch 19, Batch: 100, Loss: 0.682575
+Train - Epoch 19, Batch: 110, Loss: 0.682768
+Train - Epoch 19, Batch: 120, Loss: 0.682603
+Train - Epoch 19, Batch: 130, Loss: 0.683151
+Train - Epoch 19, Batch: 140, Loss: 0.682604
+Train - Epoch 19, Batch: 150, Loss: 0.681251
+Train - Epoch 19, Batch: 160, Loss: 0.683600
+Train - Epoch 19, Batch: 170, Loss: 0.683595
+Train - Epoch 19, Batch: 180, Loss: 0.681758
+Train - Epoch 19, Batch: 190, Loss: 0.683005
+Train - Epoch 19, Batch: 200, Loss: 0.682329
+Train - Epoch 19, Batch: 210, Loss: 0.681219
+Train - Epoch 19, Batch: 220, Loss: 0.681996
+Train - Epoch 19, Batch: 230, Loss: 0.682318
+Train - Epoch 19, Batch: 240, Loss: 0.682711
+Train - Epoch 19, Batch: 250, Loss: 0.683032
+Train - Epoch 19, Batch: 260, Loss: 0.682373
+Train - Epoch 19, Batch: 270, Loss: 0.682526
+Train - Epoch 19, Batch: 280, Loss: 0.682732
+Train - Epoch 19, Batch: 290, Loss: 0.682696
+Train - Epoch 19, Batch: 300, Loss: 0.682598
+Train - Epoch 19, Batch: 310, Loss: 0.681544
+Train - Epoch 19, Batch: 320, Loss: 0.681252
+Train - Epoch 19, Batch: 330, Loss: 0.682022
+Train - Epoch 19, Batch: 340, Loss: 0.682135
+Train - Epoch 19, Batch: 350, Loss: 0.682636
+Train - Epoch 19, Batch: 360, Loss: 0.682754
+Train - Epoch 19, Batch: 370, Loss: 0.681771
+Train - Epoch 19, Batch: 380, Loss: 0.683684
+Train - Epoch 19, Batch: 390, Loss: 0.683599
+Train - Epoch 19, Batch: 400, Loss: 0.681533
+Train - Epoch 19, Batch: 410, Loss: 0.682233
+Train - Epoch 19, Batch: 420, Loss: 0.682481
+Train - Epoch 19, Batch: 430, Loss: 0.682055
+Train - Epoch 19, Batch: 440, Loss: 0.682267
+Train - Epoch 19, Batch: 450, Loss: 0.682932
+Train - Epoch 19, Batch: 460, Loss: 0.681535
+Train - Epoch 19, Batch: 470, Loss: 0.681750
+Train - Epoch 19, Batch: 480, Loss: 0.683074
+Train - Epoch 19, Batch: 490, Loss: 0.683028
+Train - Epoch 19, Batch: 500, Loss: 0.682329
+Train - Epoch 19, Batch: 510, Loss: 0.682770
+Train - Epoch 19, Batch: 520, Loss: 0.683891
+Train - Epoch 19, Batch: 530, Loss: 0.682191
+Train - Epoch 19, Batch: 540, Loss: 0.682876
+Train - Epoch 19, Batch: 550, Loss: 0.682443
+Train - Epoch 19, Batch: 560, Loss: 0.682956
+Train - Epoch 19, Batch: 570, Loss: 0.682947
+Train - Epoch 19, Batch: 580, Loss: 0.682442
+Train - Epoch 19, Batch: 590, Loss: 0.682153
+Train - Epoch 19, Batch: 600, Loss: 0.682535
+Train - Epoch 19, Batch: 610, Loss: 0.682279
+Train - Epoch 19, Batch: 620, Loss: 0.682489
+Train - Epoch 19, Batch: 630, Loss: 0.683044
+Train - Epoch 19, Batch: 640, Loss: 0.681844
+Train - Epoch 20, Batch: 0, Loss: 0.681979
+Train - Epoch 20, Batch: 10, Loss: 0.683442
+Train - Epoch 20, Batch: 20, Loss: 0.683005
+Train - Epoch 20, Batch: 30, Loss: 0.681264
+Train - Epoch 20, Batch: 40, Loss: 0.682330
+Train - Epoch 20, Batch: 50, Loss: 0.682709
+Train - Epoch 20, Batch: 60, Loss: 0.681698
+Train - Epoch 20, Batch: 70, Loss: 0.682467
+Train - Epoch 20, Batch: 80, Loss: 0.681335
+Train - Epoch 20, Batch: 90, Loss: 0.682100
+Train - Epoch 20, Batch: 100, Loss: 0.682858
+Train - Epoch 20, Batch: 110, Loss: 0.681174
+Train - Epoch 20, Batch: 120, Loss: 0.681106
+Train - Epoch 20, Batch: 130, Loss: 0.683691
+Train - Epoch 20, Batch: 140, Loss: 0.681832
+Train - Epoch 20, Batch: 150, Loss: 0.683268
+Train - Epoch 20, Batch: 160, Loss: 0.683624
+Train - Epoch 20, Batch: 170, Loss: 0.683114
+Train - Epoch 20, Batch: 180, Loss: 0.683936
+Train - Epoch 20, Batch: 190, Loss: 0.681751
+Train - Epoch 20, Batch: 200, Loss: 0.682870
+Train - Epoch 20, Batch: 210, Loss: 0.682504
+Train - Epoch 20, Batch: 220, Loss: 0.682218
+Train - Epoch 20, Batch: 230, Loss: 0.682231
+Train - Epoch 20, Batch: 240, Loss: 0.683089
+Train - Epoch 20, Batch: 250, Loss: 0.682189
+Train - Epoch 20, Batch: 260, Loss: 0.683016
+Train - Epoch 20, Batch: 270, Loss: 0.683481
+Train - Epoch 20, Batch: 280, Loss: 0.683128
+Train - Epoch 20, Batch: 290, Loss: 0.681885
+Train - Epoch 20, Batch: 300, Loss: 0.682520
+Train - Epoch 20, Batch: 310, Loss: 0.682728
+Train - Epoch 20, Batch: 320, Loss: 0.681172
+Train - Epoch 20, Batch: 330, Loss: 0.681492
+Train - Epoch 20, Batch: 340, Loss: 0.682095
+Train - Epoch 20, Batch: 350, Loss: 0.682991
+Train - Epoch 20, Batch: 360, Loss: 0.682971
+Train - Epoch 20, Batch: 370, Loss: 0.682838
+Train - Epoch 20, Batch: 380, Loss: 0.681932
+Train - Epoch 20, Batch: 390, Loss: 0.682007
+Train - Epoch 20, Batch: 400, Loss: 0.684333
+Train - Epoch 20, Batch: 410, Loss: 0.682066
+Train - Epoch 20, Batch: 420, Loss: 0.681954
+Train - Epoch 20, Batch: 430, Loss: 0.683264
+Train - Epoch 20, Batch: 440, Loss: 0.682092
+Train - Epoch 20, Batch: 450, Loss: 0.682154
+Train - Epoch 20, Batch: 460, Loss: 0.682647
+Train - Epoch 20, Batch: 470, Loss: 0.682320
+Train - Epoch 20, Batch: 480, Loss: 0.681435
+Train - Epoch 20, Batch: 490, Loss: 0.681834
+Train - Epoch 20, Batch: 500, Loss: 0.683611
+Train - Epoch 20, Batch: 510, Loss: 0.682634
+Train - Epoch 20, Batch: 520, Loss: 0.682277
+Train - Epoch 20, Batch: 530, Loss: 0.682885
+Train - Epoch 20, Batch: 540, Loss: 0.681437
+Train - Epoch 20, Batch: 550, Loss: 0.682150
+Train - Epoch 20, Batch: 560, Loss: 0.682672
+Train - Epoch 20, Batch: 570, Loss: 0.682636
+Train - Epoch 20, Batch: 580, Loss: 0.682281
+Train - Epoch 20, Batch: 590, Loss: 0.684172
+Train - Epoch 20, Batch: 600, Loss: 0.682849
+Train - Epoch 20, Batch: 610, Loss: 0.682969
+Train - Epoch 20, Batch: 620, Loss: 0.682425
+Train - Epoch 20, Batch: 630, Loss: 0.681572
+Train - Epoch 20, Batch: 640, Loss: 0.682229
+Train - Epoch 21, Batch: 0, Loss: 0.681644
+Train - Epoch 21, Batch: 10, Loss: 0.681853
+Train - Epoch 21, Batch: 20, Loss: 0.682226
+Train - Epoch 21, Batch: 30, Loss: 0.682743
+Train - Epoch 21, Batch: 40, Loss: 0.682555
+Train - Epoch 21, Batch: 50, Loss: 0.681490
+Train - Epoch 21, Batch: 60, Loss: 0.682921
+Train - Epoch 21, Batch: 70, Loss: 0.681982
+Train - Epoch 21, Batch: 80, Loss: 0.682438
+Train - Epoch 21, Batch: 90, Loss: 0.684064
+Train - Epoch 21, Batch: 100, Loss: 0.681134
+Train - Epoch 21, Batch: 110, Loss: 0.681915
+Train - Epoch 21, Batch: 120, Loss: 0.684043
+Train - Epoch 21, Batch: 130, Loss: 0.682964
+Train - Epoch 21, Batch: 140, Loss: 0.682475
+Train - Epoch 21, Batch: 150, Loss: 0.681652
+Train - Epoch 21, Batch: 160, Loss: 0.683255
+Train - Epoch 21, Batch: 170, Loss: 0.683685
+Train - Epoch 21, Batch: 180, Loss: 0.682291
+Train - Epoch 21, Batch: 190, Loss: 0.682183
+Train - Epoch 21, Batch: 200, Loss: 0.683533
+Train - Epoch 21, Batch: 210, Loss: 0.683340
+Train - Epoch 21, Batch: 220, Loss: 0.682752
+Train - Epoch 21, Batch: 230, Loss: 0.682160
+Train - Epoch 21, Batch: 240, Loss: 0.681407
+Train - Epoch 21, Batch: 250, Loss: 0.681909
+Train - Epoch 21, Batch: 260, Loss: 0.682996
+Train - Epoch 21, Batch: 270, Loss: 0.682749
+Train - Epoch 21, Batch: 280, Loss: 0.682517
+Train - Epoch 21, Batch: 290, Loss: 0.683629
+Train - Epoch 21, Batch: 300, Loss: 0.682312
+Train - Epoch 21, Batch: 310, Loss: 0.682505
+Train - Epoch 21, Batch: 320, Loss: 0.681938
+Train - Epoch 21, Batch: 330, Loss: 0.682209
+Train - Epoch 21, Batch: 340, Loss: 0.682549
+Train - Epoch 21, Batch: 350, Loss: 0.681490
+Train - Epoch 21, Batch: 360, Loss: 0.682871
+Train - Epoch 21, Batch: 370, Loss: 0.681068
+Train - Epoch 21, Batch: 380, Loss: 0.682702
+Train - Epoch 21, Batch: 390, Loss: 0.682362
+Train - Epoch 21, Batch: 400, Loss: 0.682232
+Train - Epoch 21, Batch: 410, Loss: 0.684403
+Train - Epoch 21, Batch: 420, Loss: 0.682862
+Train - Epoch 21, Batch: 430, Loss: 0.682719
+Train - Epoch 21, Batch: 440, Loss: 0.683779
+Train - Epoch 21, Batch: 450, Loss: 0.682473
+Train - Epoch 21, Batch: 460, Loss: 0.681467
+Train - Epoch 21, Batch: 470, Loss: 0.681777
+Train - Epoch 21, Batch: 480, Loss: 0.681674
+Train - Epoch 21, Batch: 490, Loss: 0.683928
+Train - Epoch 21, Batch: 500, Loss: 0.685481
+Train - Epoch 21, Batch: 510, Loss: 0.681919
+Train - Epoch 21, Batch: 520, Loss: 0.681797
+Train - Epoch 21, Batch: 530, Loss: 0.681913
+Train - Epoch 21, Batch: 540, Loss: 0.683994
+Train - Epoch 21, Batch: 550, Loss: 0.682998
+Train - Epoch 21, Batch: 560, Loss: 0.682700
+Train - Epoch 21, Batch: 570, Loss: 0.682260
+Train - Epoch 21, Batch: 580, Loss: 0.682397
+Train - Epoch 21, Batch: 590, Loss: 0.681713
+Train - Epoch 21, Batch: 600, Loss: 0.682130
+Train - Epoch 21, Batch: 610, Loss: 0.681490
+Train - Epoch 21, Batch: 620, Loss: 0.683588
+Train - Epoch 21, Batch: 630, Loss: 0.682249
+Train - Epoch 21, Batch: 640, Loss: 0.683112
+Train - Epoch 22, Batch: 0, Loss: 0.682231
+Train - Epoch 22, Batch: 10, Loss: 0.682157
+Train - Epoch 22, Batch: 20, Loss: 0.682998
+Train - Epoch 22, Batch: 30, Loss: 0.683591
+Train - Epoch 22, Batch: 40, Loss: 0.682218
+Train - Epoch 22, Batch: 50, Loss: 0.682227
+Train - Epoch 22, Batch: 60, Loss: 0.683007
+Train - Epoch 22, Batch: 70, Loss: 0.682295
+Train - Epoch 22, Batch: 80, Loss: 0.682348
+Train - Epoch 22, Batch: 90, Loss: 0.682531
+Train - Epoch 22, Batch: 100, Loss: 0.681718
+Train - Epoch 22, Batch: 110, Loss: 0.680996
+Train - Epoch 22, Batch: 120, Loss: 0.681479
+Train - Epoch 22, Batch: 130, Loss: 0.681962
+Train - Epoch 22, Batch: 140, Loss: 0.683460
+Train - Epoch 22, Batch: 150, Loss: 0.682159
+Train - Epoch 22, Batch: 160, Loss: 0.681846
+Train - Epoch 22, Batch: 170, Loss: 0.682378
+Train - Epoch 22, Batch: 180, Loss: 0.682467
+Train - Epoch 22, Batch: 190, Loss: 0.680205
+Train - Epoch 22, Batch: 200, Loss: 0.683165
+Train - Epoch 22, Batch: 210, Loss: 0.682477
+Train - Epoch 22, Batch: 220, Loss: 0.681922
+Train - Epoch 22, Batch: 230, Loss: 0.682034
+Train - Epoch 22, Batch: 240, Loss: 0.683691
+Train - Epoch 22, Batch: 250, Loss: 0.681693
+Train - Epoch 22, Batch: 260, Loss: 0.682287
+Train - Epoch 22, Batch: 270, Loss: 0.682949
+Train - Epoch 22, Batch: 280, Loss: 0.682100
+Train - Epoch 22, Batch: 290, Loss: 0.682318
+Train - Epoch 22, Batch: 300, Loss: 0.683229
+Train - Epoch 22, Batch: 310, Loss: 0.682167
+Train - Epoch 22, Batch: 320, Loss: 0.682502
+Train - Epoch 22, Batch: 330, Loss: 0.682942
+Train - Epoch 22, Batch: 340, Loss: 0.683416
+Train - Epoch 22, Batch: 350, Loss: 0.682700
+Train - Epoch 22, Batch: 360, Loss: 0.681991
+Train - Epoch 22, Batch: 370, Loss: 0.682802
+Train - Epoch 22, Batch: 380, Loss: 0.681794
+Train - Epoch 22, Batch: 390, Loss: 0.682572
+Train - Epoch 22, Batch: 400, Loss: 0.683574
+Train - Epoch 22, Batch: 410, Loss: 0.683694
+Train - Epoch 22, Batch: 420, Loss: 0.684427
+Train - Epoch 22, Batch: 430, Loss: 0.684026
+Train - Epoch 22, Batch: 440, Loss: 0.682882
+Train - Epoch 22, Batch: 450, Loss: 0.680724
+Train - Epoch 22, Batch: 460, Loss: 0.682729
+Train - Epoch 22, Batch: 470, Loss: 0.683139
+Train - Epoch 22, Batch: 480, Loss: 0.681484
+Train - Epoch 22, Batch: 490, Loss: 0.682453
+Train - Epoch 22, Batch: 500, Loss: 0.683113
+Train - Epoch 22, Batch: 510, Loss: 0.682784
+Train - Epoch 22, Batch: 520, Loss: 0.682813
+Train - Epoch 22, Batch: 530, Loss: 0.681773
+Train - Epoch 22, Batch: 540, Loss: 0.682553
+Train - Epoch 22, Batch: 550, Loss: 0.683991
+Train - Epoch 22, Batch: 560, Loss: 0.683144
+Train - Epoch 22, Batch: 570, Loss: 0.682394
+Train - Epoch 22, Batch: 580, Loss: 0.681942
+Train - Epoch 22, Batch: 590, Loss: 0.682345
+Train - Epoch 22, Batch: 600, Loss: 0.683442
+Train - Epoch 22, Batch: 610, Loss: 0.682288
+Train - Epoch 22, Batch: 620, Loss: 0.682283
+Train - Epoch 22, Batch: 630, Loss: 0.682538
+Train - Epoch 22, Batch: 640, Loss: 0.683010
+Train - Epoch 23, Batch: 0, Loss: 0.681121
+Train - Epoch 23, Batch: 10, Loss: 0.682010
+Train - Epoch 23, Batch: 20, Loss: 0.683449
+Train - Epoch 23, Batch: 30, Loss: 0.682207
+Train - Epoch 23, Batch: 40, Loss: 0.683072
+Train - Epoch 23, Batch: 50, Loss: 0.682227
+Train - Epoch 23, Batch: 60, Loss: 0.683949
+Train - Epoch 23, Batch: 70, Loss: 0.682037
+Train - Epoch 23, Batch: 80, Loss: 0.683799
+Train - Epoch 23, Batch: 90, Loss: 0.681079
+Train - Epoch 23, Batch: 100, Loss: 0.681379
+Train - Epoch 23, Batch: 110, Loss: 0.683143
+Train - Epoch 23, Batch: 120, Loss: 0.682653
+Train - Epoch 23, Batch: 130, Loss: 0.681454
+Train - Epoch 23, Batch: 140, Loss: 0.682866
+Train - Epoch 23, Batch: 150, Loss: 0.683591
+Train - Epoch 23, Batch: 160, Loss: 0.682383
+Train - Epoch 23, Batch: 170, Loss: 0.682551
+Train - Epoch 23, Batch: 180, Loss: 0.682822
+Train - Epoch 23, Batch: 190, Loss: 0.682832
+Train - Epoch 23, Batch: 200, Loss: 0.682661
+Train - Epoch 23, Batch: 210, Loss: 0.682535
+Train - Epoch 23, Batch: 220, Loss: 0.683226
+Train - Epoch 23, Batch: 230, Loss: 0.682180
+Train - Epoch 23, Batch: 240, Loss: 0.683325
+Train - Epoch 23, Batch: 250, Loss: 0.682285
+Train - Epoch 23, Batch: 260, Loss: 0.682181
+Train - Epoch 23, Batch: 270, Loss: 0.682782
+Train - Epoch 23, Batch: 280, Loss: 0.683291
+Train - Epoch 23, Batch: 290, Loss: 0.681938
+Train - Epoch 23, Batch: 300, Loss: 0.683845
+Train - Epoch 23, Batch: 310, Loss: 0.681583
+Train - Epoch 23, Batch: 320, Loss: 0.681694
+Train - Epoch 23, Batch: 330, Loss: 0.682776
+Train - Epoch 23, Batch: 340, Loss: 0.682021
+Train - Epoch 23, Batch: 350, Loss: 0.682012
+Train - Epoch 23, Batch: 360, Loss: 0.683046
+Train - Epoch 23, Batch: 370, Loss: 0.682877
+Train - Epoch 23, Batch: 380, Loss: 0.682018
+Train - Epoch 23, Batch: 390, Loss: 0.683557
+Train - Epoch 23, Batch: 400, Loss: 0.682108
+Train - Epoch 23, Batch: 410, Loss: 0.681127
+Train - Epoch 23, Batch: 420, Loss: 0.683389
+Train - Epoch 23, Batch: 430, Loss: 0.682527
+Train - Epoch 23, Batch: 440, Loss: 0.682290
+Train - Epoch 23, Batch: 450, Loss: 0.682174
+Train - Epoch 23, Batch: 460, Loss: 0.681568
+Train - Epoch 23, Batch: 470, Loss: 0.681927
+Train - Epoch 23, Batch: 480, Loss: 0.682402
+Train - Epoch 23, Batch: 490, Loss: 0.683182
+Train - Epoch 23, Batch: 500, Loss: 0.682897
+Train - Epoch 23, Batch: 510, Loss: 0.682972
+Train - Epoch 23, Batch: 520, Loss: 0.682992
+Train - Epoch 23, Batch: 530, Loss: 0.683065
+Train - Epoch 23, Batch: 540, Loss: 0.683898
+Train - Epoch 23, Batch: 550, Loss: 0.682632
+Train - Epoch 23, Batch: 560, Loss: 0.681517
+Train - Epoch 23, Batch: 570, Loss: 0.682749
+Train - Epoch 23, Batch: 580, Loss: 0.681849
+Train - Epoch 23, Batch: 590, Loss: 0.682052
+Train - Epoch 23, Batch: 600, Loss: 0.683653
+Train - Epoch 23, Batch: 610, Loss: 0.683642
+Train - Epoch 23, Batch: 620, Loss: 0.682487
+Train - Epoch 23, Batch: 630, Loss: 0.682447
+Train - Epoch 23, Batch: 640, Loss: 0.683286
+Train - Epoch 24, Batch: 0, Loss: 0.681484
+Train - Epoch 24, Batch: 10, Loss: 0.680910
+Train - Epoch 24, Batch: 20, Loss: 0.683257
+Train - Epoch 24, Batch: 30, Loss: 0.683171
+Train - Epoch 24, Batch: 40, Loss: 0.683304
+Train - Epoch 24, Batch: 50, Loss: 0.682210
+Train - Epoch 24, Batch: 60, Loss: 0.682508
+Train - Epoch 24, Batch: 70, Loss: 0.683585
+Train - Epoch 24, Batch: 80, Loss: 0.681166
+Train - Epoch 24, Batch: 90, Loss: 0.682673
+Train - Epoch 24, Batch: 100, Loss: 0.681989
+Train - Epoch 24, Batch: 110, Loss: 0.682414
+Train - Epoch 24, Batch: 120, Loss: 0.682094
+Train - Epoch 24, Batch: 130, Loss: 0.683509
+Train - Epoch 24, Batch: 140, Loss: 0.682184
+Train - Epoch 24, Batch: 150, Loss: 0.683434
+Train - Epoch 24, Batch: 160, Loss: 0.682701
+Train - Epoch 24, Batch: 170, Loss: 0.682661
+Train - Epoch 24, Batch: 180, Loss: 0.681839
+Train - Epoch 24, Batch: 190, Loss: 0.682790
+Train - Epoch 24, Batch: 200, Loss: 0.683001
+Train - Epoch 24, Batch: 210, Loss: 0.682339
+Train - Epoch 24, Batch: 220, Loss: 0.683821
+Train - Epoch 24, Batch: 230, Loss: 0.683279
+Train - Epoch 24, Batch: 240, Loss: 0.682881
+Train - Epoch 24, Batch: 250, Loss: 0.681187
+Train - Epoch 24, Batch: 260, Loss: 0.682074
+Train - Epoch 24, Batch: 270, Loss: 0.682444
+Train - Epoch 24, Batch: 280, Loss: 0.681895
+Train - Epoch 24, Batch: 290, Loss: 0.682831
+Train - Epoch 24, Batch: 300, Loss: 0.681738
+Train - Epoch 24, Batch: 310, Loss: 0.682105
+Train - Epoch 24, Batch: 320, Loss: 0.682290
+Train - Epoch 24, Batch: 330, Loss: 0.683227
+Train - Epoch 24, Batch: 340, Loss: 0.683194
+Train - Epoch 24, Batch: 350, Loss: 0.684336
+Train - Epoch 24, Batch: 360, Loss: 0.682573
+Train - Epoch 24, Batch: 370, Loss: 0.682045
+Train - Epoch 24, Batch: 380, Loss: 0.682442
+Train - Epoch 24, Batch: 390, Loss: 0.682416
+Train - Epoch 24, Batch: 400, Loss: 0.682516
+Train - Epoch 24, Batch: 410, Loss: 0.681819
+Train - Epoch 24, Batch: 420, Loss: 0.683095
+Train - Epoch 24, Batch: 430, Loss: 0.683809
+Train - Epoch 24, Batch: 440, Loss: 0.683120
+Train - Epoch 24, Batch: 450, Loss: 0.683136
+Train - Epoch 24, Batch: 460, Loss: 0.681906
+Train - Epoch 24, Batch: 470, Loss: 0.681541
+Train - Epoch 24, Batch: 480, Loss: 0.681906
+Train - Epoch 24, Batch: 490, Loss: 0.683449
+Train - Epoch 24, Batch: 500, Loss: 0.683714
+Train - Epoch 24, Batch: 510, Loss: 0.683773
+Train - Epoch 24, Batch: 520, Loss: 0.683054
+Train - Epoch 24, Batch: 530, Loss: 0.681758
+Train - Epoch 24, Batch: 540, Loss: 0.683421
+Train - Epoch 24, Batch: 550, Loss: 0.682610
+Train - Epoch 24, Batch: 560, Loss: 0.682640
+Train - Epoch 24, Batch: 570, Loss: 0.682137
+Train - Epoch 24, Batch: 580, Loss: 0.684956
+Train - Epoch 24, Batch: 590, Loss: 0.683316
+Train - Epoch 24, Batch: 600, Loss: 0.683099
+Train - Epoch 24, Batch: 610, Loss: 0.681942
+Train - Epoch 24, Batch: 620, Loss: 0.682171
+Train - Epoch 24, Batch: 630, Loss: 0.682238
+Train - Epoch 24, Batch: 640, Loss: 0.682574
+Train - Epoch 25, Batch: 0, Loss: 0.681577
+Train - Epoch 25, Batch: 10, Loss: 0.682930
+Train - Epoch 25, Batch: 20, Loss: 0.681056
+Train - Epoch 25, Batch: 30, Loss: 0.682150
+Train - Epoch 25, Batch: 40, Loss: 0.682384
+Train - Epoch 25, Batch: 50, Loss: 0.682273
+Train - Epoch 25, Batch: 60, Loss: 0.683304
+Train - Epoch 25, Batch: 70, Loss: 0.683208
+Train - Epoch 25, Batch: 80, Loss: 0.682474
+Train - Epoch 25, Batch: 90, Loss: 0.683917
+Train - Epoch 25, Batch: 100, Loss: 0.683915
+Train - Epoch 25, Batch: 110, Loss: 0.682878
+Train - Epoch 25, Batch: 120, Loss: 0.682117
+Train - Epoch 25, Batch: 130, Loss: 0.683083
+Train - Epoch 25, Batch: 140, Loss: 0.682783
+Train - Epoch 25, Batch: 150, Loss: 0.683006
+Train - Epoch 25, Batch: 160, Loss: 0.681686
+Train - Epoch 25, Batch: 170, Loss: 0.681728
+Train - Epoch 25, Batch: 180, Loss: 0.683463
+Train - Epoch 25, Batch: 190, Loss: 0.682420
+Train - Epoch 25, Batch: 200, Loss: 0.681789
+Train - Epoch 25, Batch: 210, Loss: 0.681798
+Train - Epoch 25, Batch: 220, Loss: 0.682682
+Train - Epoch 25, Batch: 230, Loss: 0.683269
+Train - Epoch 25, Batch: 240, Loss: 0.681424
+Train - Epoch 25, Batch: 250, Loss: 0.681972
+Train - Epoch 25, Batch: 260, Loss: 0.682180
+Train - Epoch 25, Batch: 270, Loss: 0.682823
+Train - Epoch 25, Batch: 280, Loss: 0.681830
+Train - Epoch 25, Batch: 290, Loss: 0.683125
+Train - Epoch 25, Batch: 300, Loss: 0.681828
+Train - Epoch 25, Batch: 310, Loss: 0.682596
+Train - Epoch 25, Batch: 320, Loss: 0.683341
+Train - Epoch 25, Batch: 330, Loss: 0.683679
+Train - Epoch 25, Batch: 340, Loss: 0.682297
+Train - Epoch 25, Batch: 350, Loss: 0.682303
+Train - Epoch 25, Batch: 360, Loss: 0.682773
+Train - Epoch 25, Batch: 370, Loss: 0.682766
+Train - Epoch 25, Batch: 380, Loss: 0.680804
+Train - Epoch 25, Batch: 390, Loss: 0.682223
+Train - Epoch 25, Batch: 400, Loss: 0.682446
+Train - Epoch 25, Batch: 410, Loss: 0.682522
+Train - Epoch 25, Batch: 420, Loss: 0.681625
+Train - Epoch 25, Batch: 430, Loss: 0.683698
+Train - Epoch 25, Batch: 440, Loss: 0.682966
+Train - Epoch 25, Batch: 450, Loss: 0.682870
+Train - Epoch 25, Batch: 460, Loss: 0.681768
+Train - Epoch 25, Batch: 470, Loss: 0.681670
+Train - Epoch 25, Batch: 480, Loss: 0.682976
+Train - Epoch 25, Batch: 490, Loss: 0.682247
+Train - Epoch 25, Batch: 500, Loss: 0.680826
+Train - Epoch 25, Batch: 510, Loss: 0.683004
+Train - Epoch 25, Batch: 520, Loss: 0.682941
+Train - Epoch 25, Batch: 530, Loss: 0.682990
+Train - Epoch 25, Batch: 540, Loss: 0.682169
+Train - Epoch 25, Batch: 550, Loss: 0.682976
+Train - Epoch 25, Batch: 560, Loss: 0.683405
+Train - Epoch 25, Batch: 570, Loss: 0.681276
+Train - Epoch 25, Batch: 580, Loss: 0.683061
+Train - Epoch 25, Batch: 590, Loss: 0.681203
+Train - Epoch 25, Batch: 600, Loss: 0.681721
+Train - Epoch 25, Batch: 610, Loss: 0.682795
+Train - Epoch 25, Batch: 620, Loss: 0.683124
+Train - Epoch 25, Batch: 630, Loss: 0.681730
+Train - Epoch 25, Batch: 640, Loss: 0.682502
+Train - Epoch 26, Batch: 0, Loss: 0.681656
+Train - Epoch 26, Batch: 10, Loss: 0.683588
+Train - Epoch 26, Batch: 20, Loss: 0.681633
+Train - Epoch 26, Batch: 30, Loss: 0.682357
+Train - Epoch 26, Batch: 40, Loss: 0.682495
+Train - Epoch 26, Batch: 50, Loss: 0.681831
+Train - Epoch 26, Batch: 60, Loss: 0.682182
+Train - Epoch 26, Batch: 70, Loss: 0.683498
+Train - Epoch 26, Batch: 80, Loss: 0.682581
+Train - Epoch 26, Batch: 90, Loss: 0.682386
+Train - Epoch 26, Batch: 100, Loss: 0.683732
+Train - Epoch 26, Batch: 110, Loss: 0.681736
+Train - Epoch 26, Batch: 120, Loss: 0.682814
+Train - Epoch 26, Batch: 130, Loss: 0.683011
+Train - Epoch 26, Batch: 140, Loss: 0.682999
+Train - Epoch 26, Batch: 150, Loss: 0.682051
+Train - Epoch 26, Batch: 160, Loss: 0.683450
+Train - Epoch 26, Batch: 170, Loss: 0.682456
+Train - Epoch 26, Batch: 180, Loss: 0.682339
+Train - Epoch 26, Batch: 190, Loss: 0.682065
+Train - Epoch 26, Batch: 200, Loss: 0.683534
+Train - Epoch 26, Batch: 210, Loss: 0.682743
+Train - Epoch 26, Batch: 220, Loss: 0.683414
+Train - Epoch 26, Batch: 230, Loss: 0.683434
+Train - Epoch 26, Batch: 240, Loss: 0.682713
+Train - Epoch 26, Batch: 250, Loss: 0.682135
+Train - Epoch 26, Batch: 260, Loss: 0.682805
+Train - Epoch 26, Batch: 270, Loss: 0.682988
+Train - Epoch 26, Batch: 280, Loss: 0.682540
+Train - Epoch 26, Batch: 290, Loss: 0.684093
+Train - Epoch 26, Batch: 300, Loss: 0.683718
+Train - Epoch 26, Batch: 310, Loss: 0.682741
+Train - Epoch 26, Batch: 320, Loss: 0.682804
+Train - Epoch 26, Batch: 330, Loss: 0.683866
+Train - Epoch 26, Batch: 340, Loss: 0.682170
+Train - Epoch 26, Batch: 350, Loss: 0.681986
+Train - Epoch 26, Batch: 360, Loss: 0.681412
+Train - Epoch 26, Batch: 370, Loss: 0.681142
+Train - Epoch 26, Batch: 380, Loss: 0.682508
+Train - Epoch 26, Batch: 390, Loss: 0.682594
+Train - Epoch 26, Batch: 400, Loss: 0.682571
+Train - Epoch 26, Batch: 410, Loss: 0.682400
+Train - Epoch 26, Batch: 420, Loss: 0.682198
+Train - Epoch 26, Batch: 430, Loss: 0.682516
+Train - Epoch 26, Batch: 440, Loss: 0.683373
+Train - Epoch 26, Batch: 450, Loss: 0.681642
+Train - Epoch 26, Batch: 460, Loss: 0.683261
+Train - Epoch 26, Batch: 470, Loss: 0.683128
+Train - Epoch 26, Batch: 480, Loss: 0.683340
+Train - Epoch 26, Batch: 490, Loss: 0.681945
+Train - Epoch 26, Batch: 500, Loss: 0.683261
+Train - Epoch 26, Batch: 510, Loss: 0.681998
+Train - Epoch 26, Batch: 520, Loss: 0.682964
+Train - Epoch 26, Batch: 530, Loss: 0.682847
+Train - Epoch 26, Batch: 540, Loss: 0.682434
+Train - Epoch 26, Batch: 550, Loss: 0.682127
+Train - Epoch 26, Batch: 560, Loss: 0.682445
+Train - Epoch 26, Batch: 570, Loss: 0.681881
+Train - Epoch 26, Batch: 580, Loss: 0.682368
+Train - Epoch 26, Batch: 590, Loss: 0.682284
+Train - Epoch 26, Batch: 600, Loss: 0.682901
+Train - Epoch 26, Batch: 610, Loss: 0.682109
+Train - Epoch 26, Batch: 620, Loss: 0.683719
+Train - Epoch 26, Batch: 630, Loss: 0.683384
+Train - Epoch 26, Batch: 640, Loss: 0.682666
+Train - Epoch 27, Batch: 0, Loss: 0.682447
+Train - Epoch 27, Batch: 10, Loss: 0.681751
+Train - Epoch 27, Batch: 20, Loss: 0.682666
+Train - Epoch 27, Batch: 30, Loss: 0.683147
+Train - Epoch 27, Batch: 40, Loss: 0.683209
+Train - Epoch 27, Batch: 50, Loss: 0.682135
+Train - Epoch 27, Batch: 60, Loss: 0.683346
+Train - Epoch 27, Batch: 70, Loss: 0.682018
+Train - Epoch 27, Batch: 80, Loss: 0.683726
+Train - Epoch 27, Batch: 90, Loss: 0.682406
+Train - Epoch 27, Batch: 100, Loss: 0.682452
+Train - Epoch 27, Batch: 110, Loss: 0.682699
+Train - Epoch 27, Batch: 120, Loss: 0.682944
+Train - Epoch 27, Batch: 130, Loss: 0.681790
+Train - Epoch 27, Batch: 140, Loss: 0.682808
+Train - Epoch 27, Batch: 150, Loss: 0.682596
+Train - Epoch 27, Batch: 160, Loss: 0.683582
+Train - Epoch 27, Batch: 170, Loss: 0.681888
+Train - Epoch 27, Batch: 180, Loss: 0.682404
+Train - Epoch 27, Batch: 190, Loss: 0.682641
+Train - Epoch 27, Batch: 200, Loss: 0.682012
+Train - Epoch 27, Batch: 210, Loss: 0.682259
+Train - Epoch 27, Batch: 220, Loss: 0.682321
+Train - Epoch 27, Batch: 230, Loss: 0.682795
+Train - Epoch 27, Batch: 240, Loss: 0.681399
+Train - Epoch 27, Batch: 250, Loss: 0.682977
+Train - Epoch 27, Batch: 260, Loss: 0.682857
+Train - Epoch 27, Batch: 270, Loss: 0.682418
+Train - Epoch 27, Batch: 280, Loss: 0.681775
+Train - Epoch 27, Batch: 290, Loss: 0.683956
+Train - Epoch 27, Batch: 300, Loss: 0.682391
+Train - Epoch 27, Batch: 310, Loss: 0.682154
+Train - Epoch 27, Batch: 320, Loss: 0.683289
+Train - Epoch 27, Batch: 330, Loss: 0.682793
+Train - Epoch 27, Batch: 340, Loss: 0.682838
+Train - Epoch 27, Batch: 350, Loss: 0.683629
+Train - Epoch 27, Batch: 360, Loss: 0.683942
+Train - Epoch 27, Batch: 370, Loss: 0.681506
+Train - Epoch 27, Batch: 380, Loss: 0.681780
+Train - Epoch 27, Batch: 390, Loss: 0.681854
+Train - Epoch 27, Batch: 400, Loss: 0.682891
+Train - Epoch 27, Batch: 410, Loss: 0.682031
+Train - Epoch 27, Batch: 420, Loss: 0.682767
+Train - Epoch 27, Batch: 430, Loss: 0.682885
+Train - Epoch 27, Batch: 440, Loss: 0.682112
+Train - Epoch 27, Batch: 450, Loss: 0.682215
+Train - Epoch 27, Batch: 460, Loss: 0.682343
+Train - Epoch 27, Batch: 470, Loss: 0.682491
+Train - Epoch 27, Batch: 480, Loss: 0.682982
+Train - Epoch 27, Batch: 490, Loss: 0.681327
+Train - Epoch 27, Batch: 500, Loss: 0.683242
+Train - Epoch 27, Batch: 510, Loss: 0.682533
+Train - Epoch 27, Batch: 520, Loss: 0.682637
+Train - Epoch 27, Batch: 530, Loss: 0.682628
+Train - Epoch 27, Batch: 540, Loss: 0.682898
+Train - Epoch 27, Batch: 550, Loss: 0.680918
+Train - Epoch 27, Batch: 560, Loss: 0.682978
+Train - Epoch 27, Batch: 570, Loss: 0.682899
+Train - Epoch 27, Batch: 580, Loss: 0.683290
+Train - Epoch 27, Batch: 590, Loss: 0.682145
+Train - Epoch 27, Batch: 600, Loss: 0.682911
+Train - Epoch 27, Batch: 610, Loss: 0.682679
+Train - Epoch 27, Batch: 620, Loss: 0.682473
+Train - Epoch 27, Batch: 630, Loss: 0.681622
+Train - Epoch 27, Batch: 640, Loss: 0.683053
+Train - Epoch 28, Batch: 0, Loss: 0.682631
+Train - Epoch 28, Batch: 10, Loss: 0.682640
+Train - Epoch 28, Batch: 20, Loss: 0.682690
+Train - Epoch 28, Batch: 30, Loss: 0.681705
+Train - Epoch 28, Batch: 40, Loss: 0.682104
+Train - Epoch 28, Batch: 50, Loss: 0.681990
+Train - Epoch 28, Batch: 60, Loss: 0.683817
+Train - Epoch 28, Batch: 70, Loss: 0.681904
+Train - Epoch 28, Batch: 80, Loss: 0.681954
+Train - Epoch 28, Batch: 90, Loss: 0.681965
+Train - Epoch 28, Batch: 100, Loss: 0.681571
+Train - Epoch 28, Batch: 110, Loss: 0.681272
+Train - Epoch 28, Batch: 120, Loss: 0.681137
+Train - Epoch 28, Batch: 130, Loss: 0.682444
+Train - Epoch 28, Batch: 140, Loss: 0.682785
+Train - Epoch 28, Batch: 150, Loss: 0.681387
+Train - Epoch 28, Batch: 160, Loss: 0.682411
+Train - Epoch 28, Batch: 170, Loss: 0.682177
+Train - Epoch 28, Batch: 180, Loss: 0.682185
+Train - Epoch 28, Batch: 190, Loss: 0.683389
+Train - Epoch 28, Batch: 200, Loss: 0.681930
+Train - Epoch 28, Batch: 210, Loss: 0.682432
+Train - Epoch 28, Batch: 220, Loss: 0.680905
+Train - Epoch 28, Batch: 230, Loss: 0.681529
+Train - Epoch 28, Batch: 240, Loss: 0.683265
+Train - Epoch 28, Batch: 250, Loss: 0.681894
+Train - Epoch 28, Batch: 260, Loss: 0.680847
+Train - Epoch 28, Batch: 270, Loss: 0.682652
+Train - Epoch 28, Batch: 280, Loss: 0.682694
+Train - Epoch 28, Batch: 290, Loss: 0.683256
+Train - Epoch 28, Batch: 300, Loss: 0.683786
+Train - Epoch 28, Batch: 310, Loss: 0.682071
+Train - Epoch 28, Batch: 320, Loss: 0.682082
+Train - Epoch 28, Batch: 330, Loss: 0.681898
+Train - Epoch 28, Batch: 340, Loss: 0.682965
+Train - Epoch 28, Batch: 350, Loss: 0.683450
+Train - Epoch 28, Batch: 360, Loss: 0.682787
+Train - Epoch 28, Batch: 370, Loss: 0.682430
+Train - Epoch 28, Batch: 380, Loss: 0.682578
+Train - Epoch 28, Batch: 390, Loss: 0.682567
+Train - Epoch 28, Batch: 400, Loss: 0.682626
+Train - Epoch 28, Batch: 410, Loss: 0.683732
+Train - Epoch 28, Batch: 420, Loss: 0.682429
+Train - Epoch 28, Batch: 430, Loss: 0.681786
+Train - Epoch 28, Batch: 440, Loss: 0.682987
+Train - Epoch 28, Batch: 450, Loss: 0.681819
+Train - Epoch 28, Batch: 460, Loss: 0.681664
+Train - Epoch 28, Batch: 470, Loss: 0.682504
+Train - Epoch 28, Batch: 480, Loss: 0.683314
+Train - Epoch 28, Batch: 490, Loss: 0.683390
+Train - Epoch 28, Batch: 500, Loss: 0.682369
+Train - Epoch 28, Batch: 510, Loss: 0.681595
+Train - Epoch 28, Batch: 520, Loss: 0.681765
+Train - Epoch 28, Batch: 530, Loss: 0.683061
+Train - Epoch 28, Batch: 540, Loss: 0.682627
+Train - Epoch 28, Batch: 550, Loss: 0.681642
+Train - Epoch 28, Batch: 560, Loss: 0.682679
+Train - Epoch 28, Batch: 570, Loss: 0.682986
+Train - Epoch 28, Batch: 580, Loss: 0.683818
+Train - Epoch 28, Batch: 590, Loss: 0.682684
+Train - Epoch 28, Batch: 600, Loss: 0.683757
+Train - Epoch 28, Batch: 610, Loss: 0.683071
+Train - Epoch 28, Batch: 620, Loss: 0.682665
+Train - Epoch 28, Batch: 630, Loss: 0.683807
+Train - Epoch 28, Batch: 640, Loss: 0.681998
+Train - Epoch 29, Batch: 0, Loss: 0.682298
+Train - Epoch 29, Batch: 10, Loss: 0.682709
+Train - Epoch 29, Batch: 20, Loss: 0.682702
+Train - Epoch 29, Batch: 30, Loss: 0.683175
+Train - Epoch 29, Batch: 40, Loss: 0.682074
+Train - Epoch 29, Batch: 50, Loss: 0.682581
+Train - Epoch 29, Batch: 60, Loss: 0.682555
+Train - Epoch 29, Batch: 70, Loss: 0.683015
+Train - Epoch 29, Batch: 80, Loss: 0.682078
+Train - Epoch 29, Batch: 90, Loss: 0.682781
+Train - Epoch 29, Batch: 100, Loss: 0.682275
+Train - Epoch 29, Batch: 110, Loss: 0.681860
+Train - Epoch 29, Batch: 120, Loss: 0.682146
+Train - Epoch 29, Batch: 130, Loss: 0.682642
+Train - Epoch 29, Batch: 140, Loss: 0.682654
+Train - Epoch 29, Batch: 150, Loss: 0.682850
+Train - Epoch 29, Batch: 160, Loss: 0.683556
+Train - Epoch 29, Batch: 170, Loss: 0.682144
+Train - Epoch 29, Batch: 180, Loss: 0.681734
+Train - Epoch 29, Batch: 190, Loss: 0.682233
+Train - Epoch 29, Batch: 200, Loss: 0.683163
+Train - Epoch 29, Batch: 210, Loss: 0.682128
+Train - Epoch 29, Batch: 220, Loss: 0.682242
+Train - Epoch 29, Batch: 230, Loss: 0.682951
+Train - Epoch 29, Batch: 240, Loss: 0.684264
+Train - Epoch 29, Batch: 250, Loss: 0.682522
+Train - Epoch 29, Batch: 260, Loss: 0.683476
+Train - Epoch 29, Batch: 270, Loss: 0.683149
+Train - Epoch 29, Batch: 280, Loss: 0.682408
+Train - Epoch 29, Batch: 290, Loss: 0.682624
+Train - Epoch 29, Batch: 300, Loss: 0.683569
+Train - Epoch 29, Batch: 310, Loss: 0.681690
+Train - Epoch 29, Batch: 320, Loss: 0.681145
+Train - Epoch 29, Batch: 330, Loss: 0.682661
+Train - Epoch 29, Batch: 340, Loss: 0.682613
+Train - Epoch 29, Batch: 350, Loss: 0.682035
+Train - Epoch 29, Batch: 360, Loss: 0.683094
+Train - Epoch 29, Batch: 370, Loss: 0.683243
+Train - Epoch 29, Batch: 380, Loss: 0.682278
+Train - Epoch 29, Batch: 390, Loss: 0.682311
+Train - Epoch 29, Batch: 400, Loss: 0.682069
+Train - Epoch 29, Batch: 410, Loss: 0.683385
+Train - Epoch 29, Batch: 420, Loss: 0.681997
+Train - Epoch 29, Batch: 430, Loss: 0.682319
+Train - Epoch 29, Batch: 440, Loss: 0.682341
+Train - Epoch 29, Batch: 450, Loss: 0.681927
+Train - Epoch 29, Batch: 460, Loss: 0.682942
+Train - Epoch 29, Batch: 470, Loss: 0.682382
+Train - Epoch 29, Batch: 480, Loss: 0.680806
+Train - Epoch 29, Batch: 490, Loss: 0.682431
+Train - Epoch 29, Batch: 500, Loss: 0.683064
+Train - Epoch 29, Batch: 510, Loss: 0.682940
+Train - Epoch 29, Batch: 520, Loss: 0.682200
+Train - Epoch 29, Batch: 530, Loss: 0.682975
+Train - Epoch 29, Batch: 540, Loss: 0.682280
+Train - Epoch 29, Batch: 550, Loss: 0.682779
+Train - Epoch 29, Batch: 560, Loss: 0.681668
+Train - Epoch 29, Batch: 570, Loss: 0.683359
+Train - Epoch 29, Batch: 580, Loss: 0.682764
+Train - Epoch 29, Batch: 590, Loss: 0.682392
+Train - Epoch 29, Batch: 600, Loss: 0.683758
+Train - Epoch 29, Batch: 610, Loss: 0.683245
+Train - Epoch 29, Batch: 620, Loss: 0.682426
+Train - Epoch 29, Batch: 630, Loss: 0.682562
+Train - Epoch 29, Batch: 640, Loss: 0.681863
+Train - Epoch 30, Batch: 0, Loss: 0.681865
+Train - Epoch 30, Batch: 10, Loss: 0.682044
+Train - Epoch 30, Batch: 20, Loss: 0.682539
+Train - Epoch 30, Batch: 30, Loss: 0.682187
+Train - Epoch 30, Batch: 40, Loss: 0.682989
+Train - Epoch 30, Batch: 50, Loss: 0.682312
+Train - Epoch 30, Batch: 60, Loss: 0.683163
+Train - Epoch 30, Batch: 70, Loss: 0.682331
+Train - Epoch 30, Batch: 80, Loss: 0.683169
+Train - Epoch 30, Batch: 90, Loss: 0.683303
+Train - Epoch 30, Batch: 100, Loss: 0.682798
+Train - Epoch 30, Batch: 110, Loss: 0.681816
+Train - Epoch 30, Batch: 120, Loss: 0.683006
+Train - Epoch 30, Batch: 130, Loss: 0.681803
+Train - Epoch 30, Batch: 140, Loss: 0.682232
+Train - Epoch 30, Batch: 150, Loss: 0.683483
+Train - Epoch 30, Batch: 160, Loss: 0.682418
+Train - Epoch 30, Batch: 170, Loss: 0.682923
+Train - Epoch 30, Batch: 180, Loss: 0.683106
+Train - Epoch 30, Batch: 190, Loss: 0.681815
+Train - Epoch 30, Batch: 200, Loss: 0.682580
+Train - Epoch 30, Batch: 210, Loss: 0.682404
+Train - Epoch 30, Batch: 220, Loss: 0.682420
+Train - Epoch 30, Batch: 230, Loss: 0.683600
+Train - Epoch 30, Batch: 240, Loss: 0.683531
+Train - Epoch 30, Batch: 250, Loss: 0.682824
+Train - Epoch 30, Batch: 260, Loss: 0.682872
+Train - Epoch 30, Batch: 270, Loss: 0.681902
+Train - Epoch 30, Batch: 280, Loss: 0.681987
+Train - Epoch 30, Batch: 290, Loss: 0.682505
+Train - Epoch 30, Batch: 300, Loss: 0.682437
+Train - Epoch 30, Batch: 310, Loss: 0.682682
+Train - Epoch 30, Batch: 320, Loss: 0.682516
+Train - Epoch 30, Batch: 330, Loss: 0.682848
+Train - Epoch 30, Batch: 340, Loss: 0.682726
+Train - Epoch 30, Batch: 350, Loss: 0.682613
+Train - Epoch 30, Batch: 360, Loss: 0.681604
+Train - Epoch 30, Batch: 370, Loss: 0.682274
+Train - Epoch 30, Batch: 380, Loss: 0.683438
+Train - Epoch 30, Batch: 390, Loss: 0.682406
+Train - Epoch 30, Batch: 400, Loss: 0.683899
+Train - Epoch 30, Batch: 410, Loss: 0.681102
+Train - Epoch 30, Batch: 420, Loss: 0.681564
+Train - Epoch 30, Batch: 430, Loss: 0.682518
+Train - Epoch 30, Batch: 440, Loss: 0.681729
+Train - Epoch 30, Batch: 450, Loss: 0.682046
+Train - Epoch 30, Batch: 460, Loss: 0.683291
+Train - Epoch 30, Batch: 470, Loss: 0.682736
+Train - Epoch 30, Batch: 480, Loss: 0.682132
+Train - Epoch 30, Batch: 490, Loss: 0.681995
+Train - Epoch 30, Batch: 500, Loss: 0.682631
+Train - Epoch 30, Batch: 510, Loss: 0.681949
+Train - Epoch 30, Batch: 520, Loss: 0.681481
+Train - Epoch 30, Batch: 530, Loss: 0.682811
+Train - Epoch 30, Batch: 540, Loss: 0.682571
+Train - Epoch 30, Batch: 550, Loss: 0.682661
+Train - Epoch 30, Batch: 560, Loss: 0.682993
+Train - Epoch 30, Batch: 570, Loss: 0.681848
+Train - Epoch 30, Batch: 580, Loss: 0.681939
+Train - Epoch 30, Batch: 590, Loss: 0.682786
+Train - Epoch 30, Batch: 600, Loss: 0.682880
+Train - Epoch 30, Batch: 610, Loss: 0.682536
+Train - Epoch 30, Batch: 620, Loss: 0.682506
+Train - Epoch 30, Batch: 630, Loss: 0.682047
+Train - Epoch 30, Batch: 640, Loss: 0.682959
+Train - Epoch 31, Batch: 0, Loss: 0.683450
+Train - Epoch 31, Batch: 10, Loss: 0.682893
+Train - Epoch 31, Batch: 20, Loss: 0.682144
+Train - Epoch 31, Batch: 30, Loss: 0.682988
+Train - Epoch 31, Batch: 40, Loss: 0.682028
+Train - Epoch 31, Batch: 50, Loss: 0.682916
+Train - Epoch 31, Batch: 60, Loss: 0.682116
+Train - Epoch 31, Batch: 70, Loss: 0.683119
+Train - Epoch 31, Batch: 80, Loss: 0.683133
+Train - Epoch 31, Batch: 90, Loss: 0.682348
+Train - Epoch 31, Batch: 100, Loss: 0.681953benchmark_lr_continuous.sh: line 46: 13525 Killed                  ${python_cmd} ${benchmark_more_py} 0.001 ${bz} ${e_num} [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] ${model_class} ${dataset_name} $j 0.005 1 1
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 0 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 1
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 1 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 1 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 2
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 2 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 2 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 3
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 3 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 3 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 4
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 4 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 4 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 5
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 5 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 5 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 6
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 6 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 6 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 7
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 7 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 7 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 8
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 8 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 8 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+repetition 9
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 9 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/tarfile.py", line 2297, in next
+    tarinfo = self.tarinfo.fromtarfile(self)
+  File "/usr/lib/python3.6/tarfile.py", line 1093, in fromtarfile
+    obj = cls.frombuf(buf, tarfile.encoding, tarfile.errors)
+  File "/usr/lib/python3.6/tarfile.py", line 1029, in frombuf
+    raise EmptyHeaderError("empty header")
+tarfile.EmptyHeaderError: empty header
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 595, in _load
+    return legacy_load(f)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 506, in legacy_load
+    with closing(tarfile.open(fileobj=f, mode='r:', format=tarfile.PAX_FORMAT)) as tar, \
+  File "/usr/lib/python3.6/tarfile.py", line 1589, in open
+    return func(name, filemode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1619, in taropen
+    return cls(name, mode, fileobj, **kwargs)
+  File "/usr/lib/python3.6/tarfile.py", line 1482, in __init__
+    self.firstmember = self.next()
+  File "/usr/lib/python3.6/tarfile.py", line 2312, in next
+    raise ReadError("empty file")
+tarfile.ReadError: empty file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "benchmark_exp_lr.py", line 141, in <module>
+    data_train_loader = torch.load(git_ignore_folder + "data_train_loader")
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 426, in load
+    return _load(f, map_location, pickle_module, **pickle_load_args)
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 597, in _load
+    if _is_zipfile(f):
+  File "/usr/lib/python3/dist-packages/torch/serialization.py", line 75, in _is_zipfile
+    if ord(magic_byte) != ord(read_byte):
+TypeError: ord() expected a character, but string of length 0 found
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_base_line_lr_multi.py", line 190, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 9 0.00167 6000
+max_epoch:: 32
+delta_size:: 17535
+Traceback (most recent call last):
+  File "incremental_updates_provenance5_lr_multi.py", line 453, in <module>
+    init_model(model,init_para_list)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4787, in init_model
+    m.data.copy_(para_list[i])
+RuntimeError: The size of tensor a (53) must match the size of tensor b (2) at non-singleton dimension 0

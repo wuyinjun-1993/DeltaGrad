@@ -1,0 +1,1153 @@
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.297426
+Train - Epoch 0, Batch: 10, Loss: 2.186491
+Train - Epoch 0, Batch: 20, Loss: 2.110012
+Train - Epoch 0, Batch: 30, Loss: 2.044827
+Train - Epoch 0, Batch: 40, Loss: 2.024895
+Train - Epoch 0, Batch: 50, Loss: 1.987638
+Train - Epoch 0, Batch: 60, Loss: 1.968241
+Train - Epoch 0, Batch: 70, Loss: 1.967979
+Train - Epoch 0, Batch: 80, Loss: 1.943703
+Train - Epoch 0, Batch: 90, Loss: 1.937099
+Train - Epoch 0, Batch: 100, Loss: 1.930712
+Train - Epoch 0, Batch: 110, Loss: 1.947349
+Train - Epoch 0, Batch: 120, Loss: 1.911979
+Train - Epoch 0, Batch: 130, Loss: 1.913615
+Train - Epoch 0, Batch: 140, Loss: 1.921027
+Train - Epoch 0, Batch: 150, Loss: 1.933165
+Train - Epoch 0, Batch: 160, Loss: 1.912713
+Train - Epoch 0, Batch: 170, Loss: 1.900324
+Train - Epoch 0, Batch: 180, Loss: 1.877747
+Train - Epoch 0, Batch: 190, Loss: 1.905217
+Train - Epoch 0, Batch: 200, Loss: 1.906941
+Train - Epoch 0, Batch: 210, Loss: 1.903976
+Train - Epoch 0, Batch: 220, Loss: 1.899654
+Train - Epoch 0, Batch: 230, Loss: 1.894673
+Test Avg. Loss: 0.007544, Accuracy: 0.834700
+Train - Epoch 1, Batch: 0, Loss: 1.884855
+Train - Epoch 1, Batch: 10, Loss: 1.887290
+Train - Epoch 1, Batch: 20, Loss: 1.891983
+Train - Epoch 1, Batch: 30, Loss: 1.896094
+Train - Epoch 1, Batch: 40, Loss: 1.893043
+Train - Epoch 1, Batch: 50, Loss: 1.895039
+Train - Epoch 1, Batch: 60, Loss: 1.885195
+Train - Epoch 1, Batch: 70, Loss: 1.875120
+Train - Epoch 1, Batch: 80, Loss: 1.895174
+Train - Epoch 1, Batch: 90, Loss: 1.863939
+Train - Epoch 1, Batch: 100, Loss: 1.892208
+Train - Epoch 1, Batch: 110, Loss: 1.885130
+Train - Epoch 1, Batch: 120, Loss: 1.875737
+Train - Epoch 1, Batch: 130, Loss: 1.889966
+Train - Epoch 1, Batch: 140, Loss: 1.896884
+Train - Epoch 1, Batch: 150, Loss: 1.878863
+Train - Epoch 1, Batch: 160, Loss: 1.885322
+Train - Epoch 1, Batch: 170, Loss: 1.891550
+Train - Epoch 1, Batch: 180, Loss: 1.906310
+Train - Epoch 1, Batch: 190, Loss: 1.894782
+Train - Epoch 1, Batch: 200, Loss: 1.880487
+Train - Epoch 1, Batch: 210, Loss: 1.866689
+Train - Epoch 1, Batch: 220, Loss: 1.872853
+Train - Epoch 1, Batch: 230, Loss: 1.892746
+Test Avg. Loss: 0.007511, Accuracy: 0.834500
+training_time:: 11.976612091064453
+varied number of samples::
+deletion rate:: 0.00002
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 1
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.168959856033325
+time_baseline:: 10.173660039901733
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.5152e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834500
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 1
+max_epoch:: 2
+Traceback (most recent call last):
+  File "incremental_updates_provenance3.py", line 482, in <module>
+    model_para_list = model_update_provenance_test1(period, 1, init_epochs, None, None, exp_gradient_list_all_epochs, exp_para_list_all_epochs, dataset_train, model, gradient_list_all_epochs, para_list_all_epochs, max_epoch, delta_data_ids, 2, learning_rate_all_epochs, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim, criterion, optimizer, lr_scheduler, regularization_coeff, is_GPU, device)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 3436, in model_update_provenance_test1
+    all_indexes = np.sort(sort_idx[delta_ids])
+  File "<__array_function__ internals>", line 6, in sort
+  File "/usr/local/lib/python3.6/dist-packages/numpy/core/fromnumeric.py", line 970, in sort
+    a.sort(axis=axis, kind=kind, order=order)
+numpy.AxisError: axis -1 is out of bounds for array of dimension 0
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 1
+max_epoch:: 2
+Traceback (most recent call last):
+  File "incremental_updates_provenance4.py", line 423, in <module>
+    model_para_list = model_update_provenance_test1_varied_period(period, 1, init_epochs, None, None, exp_gradient_list_all_epochs, exp_para_list_all_epochs, dataset_train, model, gradient_list_all_epochs, para_list_all_epochs, max_epoch, delta_data_ids, 2, learning_rate_all_epochs, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim, criterion, optimizer, lr_scheduler, regularization_coeff, is_GPU, device)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4525, in model_update_provenance_test1_varied_period
+    random_ids_list_all_epochs, removed_batch_empty_list, explicit_eval_iterations = get_random_id_list_with_evaluation_iteration_varied_period(random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, delta_ids, dim, init_epochs, max_period, length, batch_size)
+  File "/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Benchmark_experiments/benchmark_exp.py", line 4410, in get_random_id_list_with_evaluation_iteration_varied_period
+    all_indexes = np.sort(sort_idx[delta_ids])
+  File "<__array_function__ internals>", line 6, in sort
+  File "/usr/local/lib/python3.6/dist-packages/numpy/core/fromnumeric.py", line 970, in sort
+    a.sort(axis=axis, kind=kind, order=order)
+numpy.AxisError: axis -1 is out of bounds for array of dimension 0
+deletion rate:: 0.00005
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.156469106674194
+time_baseline:: 10.161289930343628
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(9.8752e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834600
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.123868703842163
+curr_diff: 0 tensor(3.2053e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.7118e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(3.2098e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.1011e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007512, Accuracy: 0.835900
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.6451570987701416
+curr_diff: 0 tensor(2.1247e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.1319e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.1277e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.0811e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+deletion rate:: 0.0001
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 6
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 9.96865701675415
+time_baseline:: 9.973422527313232
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.7362e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834300
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 6
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1834356784820557
+curr_diff: 0 tensor(3.6748e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.4260e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(3.6776e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.6571e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 6
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.7511913776397705
+curr_diff: 0 tensor(2.6720e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.4271e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.6830e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.8439e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+deletion rate:: 0.0002
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 12
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.146830081939697
+time_baseline:: 10.151302337646484
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.4714e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834400
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 12
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1752407550811768
+curr_diff: 0 tensor(5.5032e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.8328e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(5.5063e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.5334e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007512, Accuracy: 0.835800
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 12
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.663656234741211
+curr_diff: 0 tensor(3.4802e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.4756e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(3.4890e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.5788e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835300
+deletion rate:: 0.0005
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 30
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.023801803588867
+time_baseline:: 10.028452396392822
+curr_diff: 0 tensor(0.0013, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.6897e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0013, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834700
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 30
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.2137019634246826
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.0490e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0013, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.7283e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0013, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835400
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 30
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.750452995300293
+curr_diff: 0 tensor(6.2939e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(3.8209e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(6.3055e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0013, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.8823e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0013, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835400
+deletion rate:: 0.001
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 60
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 9.99552059173584
+time_baseline:: 10.00021743774414
+curr_diff: 0 tensor(0.0020, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(6.6543e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0020, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834600
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 60
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1977570056915283
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(6.3464e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0019, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(6.3079e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0019, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835300
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 60
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.732267379760742
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(5.1026e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0020, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(6.7180e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0020, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835300
+deletion rate:: 0.002
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 120
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.226058006286621
+time_baseline:: 10.230797052383423
+curr_diff: 0 tensor(0.0026, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(8.7133e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0026, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834600
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 120
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.274226427078247
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(5.6996e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0026, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(8.9812e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0026, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 120
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.8301610946655273
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(4.4190e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0026, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(8.8901e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0026, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+deletion rate:: 0.005
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 300
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.231782674789429
+time_baseline:: 10.236159563064575
+curr_diff: 0 tensor(0.0042, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(7.7038e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0042, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834700
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 300
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.4779255390167236
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.4008e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0044, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(8.2300e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0044, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834900
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 300
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.8923206329345703
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.1424e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0043, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(8.3205e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0043, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834800
+deletion rate:: 0.01
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 600
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 9.927295446395874
+time_baseline:: 9.93196702003479
+curr_diff: 0 tensor(0.0058, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0058, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834800
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 600
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.5194449424743652
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(3.0451e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0059, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0059, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834800
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 600
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 3.1179516315460205
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.0444e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0060, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0060, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834800
+varied l2 norm::
+l2 norm:: 0.001
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.297295
+Train - Epoch 0, Batch: 10, Loss: 2.185348
+Train - Epoch 0, Batch: 20, Loss: 2.095350
+Train - Epoch 0, Batch: 30, Loss: 2.054131
+Train - Epoch 0, Batch: 40, Loss: 2.004350
+Train - Epoch 0, Batch: 50, Loss: 1.993524
+Train - Epoch 0, Batch: 60, Loss: 1.958346
+Train - Epoch 0, Batch: 70, Loss: 1.965262
+Train - Epoch 0, Batch: 80, Loss: 1.957674
+Train - Epoch 0, Batch: 90, Loss: 1.924761
+Train - Epoch 0, Batch: 100, Loss: 1.925886
+Train - Epoch 0, Batch: 110, Loss: 1.945831
+Train - Epoch 0, Batch: 120, Loss: 1.912142
+Train - Epoch 0, Batch: 130, Loss: 1.941159
+Train - Epoch 0, Batch: 140, Loss: 1.885723
+Train - Epoch 0, Batch: 150, Loss: 1.903521
+Train - Epoch 0, Batch: 160, Loss: 1.927343
+Train - Epoch 0, Batch: 170, Loss: 1.914112
+Train - Epoch 0, Batch: 180, Loss: 1.890557
+Train - Epoch 0, Batch: 190, Loss: 1.891111
+Train - Epoch 0, Batch: 200, Loss: 1.885197
+Train - Epoch 0, Batch: 210, Loss: 1.889876
+Train - Epoch 0, Batch: 220, Loss: 1.907359
+Train - Epoch 0, Batch: 230, Loss: 1.884131
+Test Avg. Loss: 0.007543, Accuracy: 0.828200
+Train - Epoch 1, Batch: 0, Loss: 1.897535
+Train - Epoch 1, Batch: 10, Loss: 1.898716
+Train - Epoch 1, Batch: 20, Loss: 1.890740
+Train - Epoch 1, Batch: 30, Loss: 1.890790
+Train - Epoch 1, Batch: 40, Loss: 1.886358
+Train - Epoch 1, Batch: 50, Loss: 1.891698
+Train - Epoch 1, Batch: 60, Loss: 1.896481
+Train - Epoch 1, Batch: 70, Loss: 1.884970
+Train - Epoch 1, Batch: 80, Loss: 1.887628
+Train - Epoch 1, Batch: 90, Loss: 1.898582
+Train - Epoch 1, Batch: 100, Loss: 1.873714
+Train - Epoch 1, Batch: 110, Loss: 1.886962
+Train - Epoch 1, Batch: 120, Loss: 1.883487
+Train - Epoch 1, Batch: 130, Loss: 1.885738
+Train - Epoch 1, Batch: 140, Loss: 1.901891
+Train - Epoch 1, Batch: 150, Loss: 1.905051
+Train - Epoch 1, Batch: 160, Loss: 1.888630
+Train - Epoch 1, Batch: 170, Loss: 1.869994
+Train - Epoch 1, Batch: 180, Loss: 1.889262
+Train - Epoch 1, Batch: 190, Loss: 1.883064
+Train - Epoch 1, Batch: 200, Loss: 1.878773
+Train - Epoch 1, Batch: 210, Loss: 1.895693
+Train - Epoch 1, Batch: 220, Loss: 1.883132
+Train - Epoch 1, Batch: 230, Loss: 1.901200
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+training_time:: 11.858150005340576
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.110773086547852
+time_baseline:: 10.11570954322815
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.0535e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835200
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1084396839141846
+curr_diff: 0 tensor(1.9851e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(5.1849e-07, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.9857e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.0354e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835800
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.715116262435913
+curr_diff: 0 tensor(1.8126e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(8.0708e-07, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.8144e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.1205e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835100
+l2 norm:: 0.01
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.305332
+Train - Epoch 0, Batch: 10, Loss: 2.181427
+Train - Epoch 0, Batch: 20, Loss: 2.100424
+Train - Epoch 0, Batch: 30, Loss: 2.052047
+Train - Epoch 0, Batch: 40, Loss: 2.018070
+Train - Epoch 0, Batch: 50, Loss: 1.992412
+Train - Epoch 0, Batch: 60, Loss: 1.985488
+Train - Epoch 0, Batch: 70, Loss: 1.949153
+Train - Epoch 0, Batch: 80, Loss: 1.946942
+Train - Epoch 0, Batch: 90, Loss: 1.926742
+Train - Epoch 0, Batch: 100, Loss: 1.934052
+Train - Epoch 0, Batch: 110, Loss: 1.926018
+Train - Epoch 0, Batch: 120, Loss: 1.933003
+Train - Epoch 0, Batch: 130, Loss: 1.914493
+Train - Epoch 0, Batch: 140, Loss: 1.912117
+Train - Epoch 0, Batch: 150, Loss: 1.905495
+Train - Epoch 0, Batch: 160, Loss: 1.905696
+Train - Epoch 0, Batch: 170, Loss: 1.892343
+Train - Epoch 0, Batch: 180, Loss: 1.908553
+Train - Epoch 0, Batch: 190, Loss: 1.891988
+Train - Epoch 0, Batch: 200, Loss: 1.880598
+Train - Epoch 0, Batch: 210, Loss: 1.896036
+Train - Epoch 0, Batch: 220, Loss: 1.904629
+Train - Epoch 0, Batch: 230, Loss: 1.908802
+Test Avg. Loss: 0.007543, Accuracy: 0.829200
+Train - Epoch 1, Batch: 0, Loss: 1.887610
+Train - Epoch 1, Batch: 10, Loss: 1.880897
+Train - Epoch 1, Batch: 20, Loss: 1.893561
+Train - Epoch 1, Batch: 30, Loss: 1.882281
+Train - Epoch 1, Batch: 40, Loss: 1.887247
+Train - Epoch 1, Batch: 50, Loss: 1.894259
+Train - Epoch 1, Batch: 60, Loss: 1.898858
+Train - Epoch 1, Batch: 70, Loss: 1.875789
+Train - Epoch 1, Batch: 80, Loss: 1.878392
+Train - Epoch 1, Batch: 90, Loss: 1.878701
+Train - Epoch 1, Batch: 100, Loss: 1.885284
+Train - Epoch 1, Batch: 110, Loss: 1.880556
+Train - Epoch 1, Batch: 120, Loss: 1.883106
+Train - Epoch 1, Batch: 130, Loss: 1.881364
+Train - Epoch 1, Batch: 140, Loss: 1.883226
+Train - Epoch 1, Batch: 150, Loss: 1.870408
+Train - Epoch 1, Batch: 160, Loss: 1.897243
+Train - Epoch 1, Batch: 170, Loss: 1.900621
+Train - Epoch 1, Batch: 180, Loss: 1.892446
+Train - Epoch 1, Batch: 190, Loss: 1.880547
+Train - Epoch 1, Batch: 200, Loss: 1.877181
+Train - Epoch 1, Batch: 210, Loss: 1.896634
+Train - Epoch 1, Batch: 220, Loss: 1.884535
+Train - Epoch 1, Batch: 230, Loss: 1.895498
+Test Avg. Loss: 0.007511, Accuracy: 0.834300
+training_time:: 12.294568061828613
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.032597541809082
+time_baseline:: 10.037255764007568
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.5104e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834400
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1154227256774902
+curr_diff: 0 tensor(1.6693e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(5.1736e-07, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.6701e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.4996e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834100
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.7084691524505615
+curr_diff: 0 tensor(1.7779e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.9699e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.7888e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.6939e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834700
+l2 norm:: 0.02
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.310368
+Train - Epoch 0, Batch: 10, Loss: 2.183908
+Train - Epoch 0, Batch: 20, Loss: 2.101376
+Train - Epoch 0, Batch: 30, Loss: 2.056045
+Train - Epoch 0, Batch: 40, Loss: 2.010754
+Train - Epoch 0, Batch: 50, Loss: 1.998552
+Train - Epoch 0, Batch: 60, Loss: 1.967703
+Train - Epoch 0, Batch: 70, Loss: 1.946375
+Train - Epoch 0, Batch: 80, Loss: 1.947446
+Train - Epoch 0, Batch: 90, Loss: 1.937506
+Train - Epoch 0, Batch: 100, Loss: 1.925842
+Train - Epoch 0, Batch: 110, Loss: 1.934426
+Train - Epoch 0, Batch: 120, Loss: 1.934402
+Train - Epoch 0, Batch: 130, Loss: 1.908708
+Train - Epoch 0, Batch: 140, Loss: 1.933591
+Train - Epoch 0, Batch: 150, Loss: 1.911686
+Train - Epoch 0, Batch: 160, Loss: 1.902819
+Train - Epoch 0, Batch: 170, Loss: 1.899387
+Train - Epoch 0, Batch: 180, Loss: 1.901751
+Train - Epoch 0, Batch: 190, Loss: 1.910889
+Train - Epoch 0, Batch: 200, Loss: 1.896818
+Train - Epoch 0, Batch: 210, Loss: 1.884707
+Train - Epoch 0, Batch: 220, Loss: 1.896623
+Train - Epoch 0, Batch: 230, Loss: 1.889476
+Test Avg. Loss: 0.007543, Accuracy: 0.832900
+Train - Epoch 1, Batch: 0, Loss: 1.909919
+Train - Epoch 1, Batch: 10, Loss: 1.891283
+Train - Epoch 1, Batch: 20, Loss: 1.895152
+Train - Epoch 1, Batch: 30, Loss: 1.877455
+Train - Epoch 1, Batch: 40, Loss: 1.887518
+Train - Epoch 1, Batch: 50, Loss: 1.892095
+Train - Epoch 1, Batch: 60, Loss: 1.885594
+Train - Epoch 1, Batch: 70, Loss: 1.887202
+Train - Epoch 1, Batch: 80, Loss: 1.881374
+Train - Epoch 1, Batch: 90, Loss: 1.884800
+Train - Epoch 1, Batch: 100, Loss: 1.891779
+Train - Epoch 1, Batch: 110, Loss: 1.883695
+Train - Epoch 1, Batch: 120, Loss: 1.875530
+Train - Epoch 1, Batch: 130, Loss: 1.897855
+Train - Epoch 1, Batch: 140, Loss: 1.885621
+Train - Epoch 1, Batch: 150, Loss: 1.883710
+Train - Epoch 1, Batch: 160, Loss: 1.883261
+Train - Epoch 1, Batch: 170, Loss: 1.884687
+Train - Epoch 1, Batch: 180, Loss: 1.899231
+Train - Epoch 1, Batch: 190, Loss: 1.876620
+Train - Epoch 1, Batch: 200, Loss: 1.889571
+Train - Epoch 1, Batch: 210, Loss: 1.893184
+Train - Epoch 1, Batch: 220, Loss: 1.893696
+Train - Epoch 1, Batch: 230, Loss: 1.889641
+Test Avg. Loss: 0.007511, Accuracy: 0.835300
+training_time:: 11.822558403015137
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.181548595428467
+time_baseline:: 10.186221599578857
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.2402e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.835300
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1322591304779053
+curr_diff: 0 tensor(3.0711e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(6.9544e-07, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(3.0719e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.2714e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834700
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.6663475036621094
+curr_diff: 0 tensor(2.0137e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.7759e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.0215e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.2370e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834700
+l2 norm:: 0.05
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.309494
+Train - Epoch 0, Batch: 10, Loss: 2.177620
+Train - Epoch 0, Batch: 20, Loss: 2.103461
+Train - Epoch 0, Batch: 30, Loss: 2.052460
+Train - Epoch 0, Batch: 40, Loss: 2.019692
+Train - Epoch 0, Batch: 50, Loss: 1.979774
+Train - Epoch 0, Batch: 60, Loss: 1.979512
+Train - Epoch 0, Batch: 70, Loss: 1.949016
+Train - Epoch 0, Batch: 80, Loss: 1.934575
+Train - Epoch 0, Batch: 90, Loss: 1.945363
+Train - Epoch 0, Batch: 100, Loss: 1.923922
+Train - Epoch 0, Batch: 110, Loss: 1.927085
+Train - Epoch 0, Batch: 120, Loss: 1.899519
+Train - Epoch 0, Batch: 130, Loss: 1.917454
+Train - Epoch 0, Batch: 140, Loss: 1.917060
+Train - Epoch 0, Batch: 150, Loss: 1.908705
+Train - Epoch 0, Batch: 160, Loss: 1.901454
+Train - Epoch 0, Batch: 170, Loss: 1.906546
+Train - Epoch 0, Batch: 180, Loss: 1.896812
+Train - Epoch 0, Batch: 190, Loss: 1.902025
+Train - Epoch 0, Batch: 200, Loss: 1.887501
+Train - Epoch 0, Batch: 210, Loss: 1.893659
+Train - Epoch 0, Batch: 220, Loss: 1.889158
+Train - Epoch 0, Batch: 230, Loss: 1.883422
+Test Avg. Loss: 0.007543, Accuracy: 0.834700
+Train - Epoch 1, Batch: 0, Loss: 1.909233
+Train - Epoch 1, Batch: 10, Loss: 1.900223
+Train - Epoch 1, Batch: 20, Loss: 1.886882
+Train - Epoch 1, Batch: 30, Loss: 1.894784
+Train - Epoch 1, Batch: 40, Loss: 1.899480
+Train - Epoch 1, Batch: 50, Loss: 1.886466
+Train - Epoch 1, Batch: 60, Loss: 1.879265
+Train - Epoch 1, Batch: 70, Loss: 1.900939
+Train - Epoch 1, Batch: 80, Loss: 1.885902
+Train - Epoch 1, Batch: 90, Loss: 1.883399
+Train - Epoch 1, Batch: 100, Loss: 1.894147
+Train - Epoch 1, Batch: 110, Loss: 1.896016
+Train - Epoch 1, Batch: 120, Loss: 1.885192
+Train - Epoch 1, Batch: 130, Loss: 1.893264
+Train - Epoch 1, Batch: 140, Loss: 1.899784
+Train - Epoch 1, Batch: 150, Loss: 1.894725
+Train - Epoch 1, Batch: 160, Loss: 1.878539
+Train - Epoch 1, Batch: 170, Loss: 1.889732
+Train - Epoch 1, Batch: 180, Loss: 1.880059
+Train - Epoch 1, Batch: 190, Loss: 1.891686
+Train - Epoch 1, Batch: 200, Loss: 1.877267
+Train - Epoch 1, Batch: 210, Loss: 1.869459
+Train - Epoch 1, Batch: 220, Loss: 1.885195
+Train - Epoch 1, Batch: 230, Loss: 1.883648
+Test Avg. Loss: 0.007511, Accuracy: 0.834600
+training_time:: 12.163517475128174
+baseline::
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.090338945388794
+time_baseline:: 10.095062971115112
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.2964e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834500
+incremental fixed_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1410529613494873
+curr_diff: 0 tensor(4.1557e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.9634e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(4.1603e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.3256e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834400
+incremental varied_period::
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.6594767570495605
+curr_diff: 0 tensor(2.4017e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.4111e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.4058e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.3124e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007511, Accuracy: 0.834600

@@ -1,0 +1,824 @@
+varied number of samples::
+python3 benchmark_exp_compare_lr.py 0.001 16384 32 [0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05] Logistic_regression MNIST5 0.2 0.005 1 2
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.325279
+Train - Epoch 1, Batch: 0, Loss: 2.111039
+Train - Epoch 2, Batch: 0, Loss: 1.937201
+Train - Epoch 3, Batch: 0, Loss: 1.789085
+Train - Epoch 4, Batch: 0, Loss: 1.666783
+Train - Epoch 5, Batch: 0, Loss: 1.559325
+Train - Epoch 6, Batch: 0, Loss: 1.458370
+Train - Epoch 7, Batch: 0, Loss: 1.384581
+Train - Epoch 8, Batch: 0, Loss: 1.313918
+Train - Epoch 9, Batch: 0, Loss: 1.252938
+Train - Epoch 10, Batch: 0, Loss: 1.197678
+Train - Epoch 11, Batch: 0, Loss: 1.144442
+Train - Epoch 12, Batch: 0, Loss: 1.105076
+Train - Epoch 13, Batch: 0, Loss: 1.072507
+Train - Epoch 14, Batch: 0, Loss: 1.032518
+Train - Epoch 15, Batch: 0, Loss: 1.004729
+Train - Epoch 16, Batch: 0, Loss: 0.973258
+Train - Epoch 17, Batch: 0, Loss: 0.946647
+Train - Epoch 18, Batch: 0, Loss: 0.919311
+Train - Epoch 19, Batch: 0, Loss: 0.904255
+Train - Epoch 20, Batch: 0, Loss: 0.880211
+Train - Epoch 21, Batch: 0, Loss: 0.857980
+Train - Epoch 22, Batch: 0, Loss: 0.850320
+Train - Epoch 23, Batch: 0, Loss: 0.837387
+Train - Epoch 24, Batch: 0, Loss: 0.816764
+Train - Epoch 25, Batch: 0, Loss: 0.801713
+Train - Epoch 26, Batch: 0, Loss: 0.790450
+Train - Epoch 27, Batch: 0, Loss: 0.778081
+Train - Epoch 28, Batch: 0, Loss: 0.774904
+Train - Epoch 29, Batch: 0, Loss: 0.750308
+Train - Epoch 30, Batch: 0, Loss: 0.751314
+Train - Epoch 31, Batch: 0, Loss: 0.737423
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+training_time:: 3.515993595123291
+super_iteration:: 32
+cut_off_epoch:: 128
+tensor([[[ 0.0850, -0.0107, -0.0085,  ..., -0.0099, -0.0087, -0.0096],
+         [-0.0107,  0.1013, -0.0103,  ..., -0.0121, -0.0107, -0.0117],
+         [-0.0085, -0.0103,  0.0822,  ..., -0.0096, -0.0084, -0.0092],
+         ...,
+         [-0.0099, -0.0121, -0.0096,  ...,  0.0948, -0.0099, -0.0109],
+         [-0.0087, -0.0107, -0.0084,  ..., -0.0099,  0.0845, -0.0095],
+         [-0.0096, -0.0117, -0.0092,  ..., -0.0109, -0.0095,  0.0919]],
+
+        [[ 0.0908, -0.0117, -0.0089,  ..., -0.0091, -0.0098, -0.0095],
+         [-0.0117,  0.1026, -0.0102,  ..., -0.0104, -0.0113, -0.0110],
+         [-0.0089, -0.0102,  0.0803,  ..., -0.0079, -0.0086, -0.0083],
+         ...,
+         [-0.0091, -0.0104, -0.0079,  ...,  0.0817, -0.0087, -0.0085],
+         [-0.0098, -0.0113, -0.0086,  ..., -0.0087,  0.0878, -0.0092],
+         [-0.0095, -0.0110, -0.0083,  ..., -0.0085, -0.0092,  0.0855]],
+
+        [[ 0.0947, -0.0121, -0.0067,  ..., -0.0096, -0.0086, -0.0102],
+         [-0.0121,  0.1011, -0.0072,  ..., -0.0104, -0.0093, -0.0110],
+         [-0.0067, -0.0072,  0.0593,  ..., -0.0058, -0.0052, -0.0061],
+         ...,
+         [-0.0096, -0.0104, -0.0058,  ...,  0.0826, -0.0074, -0.0087],
+         [-0.0086, -0.0093, -0.0052,  ..., -0.0074,  0.0749, -0.0078],
+         [-0.0102, -0.0110, -0.0061,  ..., -0.0087, -0.0078,  0.0869]],
+
+        ...,
+
+        [[ 0.0961, -0.0143, -0.0080,  ..., -0.0121, -0.0111, -0.0086],
+         [-0.0143,  0.1152, -0.0098,  ..., -0.0150, -0.0137, -0.0106],
+         [-0.0080, -0.0098,  0.0684,  ..., -0.0083, -0.0076, -0.0059],
+         ...,
+         [-0.0121, -0.0150, -0.0083,  ...,  0.1000, -0.0117, -0.0090],
+         [-0.0111, -0.0137, -0.0076,  ..., -0.0117,  0.0927, -0.0082],
+         [-0.0086, -0.0106, -0.0059,  ..., -0.0090, -0.0082,  0.0733]],
+
+        [[ 0.0992, -0.0133, -0.0085,  ..., -0.0096, -0.0127, -0.0105],
+         [-0.0133,  0.1047, -0.0090,  ..., -0.0103, -0.0135, -0.0112],
+         [-0.0085, -0.0090,  0.0701,  ..., -0.0065, -0.0086, -0.0072],
+         ...,
+         [-0.0096, -0.0103, -0.0065,  ...,  0.0789, -0.0098, -0.0082],
+         [-0.0127, -0.0135, -0.0086,  ..., -0.0098,  0.1010, -0.0108],
+         [-0.0105, -0.0112, -0.0072,  ..., -0.0082, -0.0108,  0.0855]],
+
+        [[ 0.0903, -0.0118, -0.0086,  ..., -0.0096, -0.0108, -0.0106],
+         [-0.0118,  0.1038, -0.0101,  ..., -0.0113, -0.0126, -0.0124],
+         [-0.0086, -0.0101,  0.0785,  ..., -0.0082, -0.0092, -0.0091],
+         ...,
+         [-0.0096, -0.0113, -0.0082,  ...,  0.0868, -0.0103, -0.0102],
+         [-0.0108, -0.0126, -0.0092,  ..., -0.0103,  0.0956, -0.0113],
+         [-0.0106, -0.0124, -0.0091,  ..., -0.0102, -0.0113,  0.0946]]],
+       dtype=torch.float64)
+compute_weights_offsets_done!!
+torch.Size([1920000, 100])
+	calling Sampler:__iter__
+0 3277 144.94174722936165 0.000726547961046753
+1 3277 147.03910635224477 0.0007409350270658793
+2 3277 146.08043159488255 0.000746639823084944
+3 3277 94.98458612036768 0.0007320731091240472
+	calling Sampler:__iter__
+4 3277 148.81499868112252 0.0007567502062401681
+5 3277 144.8164758219318 0.0007373444881396723
+6 3277 145.68827177240064 0.0007371565848109584
+7 3277 94.4019953718381 0.0007299584194394376
+	calling Sampler:__iter__
+8 3277 145.1131973405565 0.0007331088976754159
+9 3277 143.5787721725159 0.0007350076358470692
+10 3277 143.90835021486058 0.0007385776657668191
+11 3277 92.64310091529632 0.0007130283520772263
+	calling Sampler:__iter__
+12 3277 142.97042150548822 0.0007275444336417523
+13 3277 142.18032776812132 0.0007329624232079542
+14 3277 140.27393743357325 0.0007195068510191133
+15 3277 88.80526386566795 0.0006932701283513893
+	calling Sampler:__iter__
+16 3277 139.69742070692408 0.0007172759672968977
+17 3277 138.26393765202653 0.0007173740277218826
+18 3277 136.41032930334418 0.0007089677123161311
+19 3277 87.47385492311145 0.0006902714890774759
+	calling Sampler:__iter__
+20 3277 135.15191837061178 0.000703771906355605
+21 3277 134.15391561822645 0.000701937488465157
+22 3277 133.0828600485776 0.0007031551063178251
+23 3277 85.7118092219882 0.0006828135597816671
+	calling Sampler:__iter__
+24 3277 131.57173195363052 0.0006938671038667627
+25 3277 130.7678436471908 0.0006976702705753839
+26 3277 128.92641327592344 0.0006886899061371403
+27 3277 82.79998493130029 0.0006674639934842781
+	calling Sampler:__iter__
+28 3277 127.17233864239422 0.0006826300353386178
+29 3277 126.24716287544835 0.0006757672367897884
+30 3277 126.17426785602252 0.0006867317929747256
+31 3277 80.18791940808576 0.0006630840175451221
+	calling Sampler:__iter__
+32 3277 122.69901681755374 0.0006708633926529752
+33 3277 122.42862161452997 0.0006690505546726916
+34 3277 122.9571776626762 0.0006762965502474861
+35 3277 77.69900129391553 0.0006517592586273072
+	calling Sampler:__iter__
+36 3277 119.97697798167694 0.000666692901832908
+37 3277 119.01427714065927 0.0006642582681123018
+38 3277 118.11154697310411 0.0006604201505688594
+39 3277 74.83262654507568 0.0006355501473005497
+	calling Sampler:__iter__
+40 3277 115.6497231092237 0.0006520267300882225
+41 3277 115.72309634657596 0.0006579374509503554
+42 3277 114.31730654620631 0.0006507239033990557
+43 3277 72.73979705845151 0.0006281189536222343
+	calling Sampler:__iter__
+44 3277 112.41808302212426 0.0006470885383393583
+45 3277 111.7540353376801 0.0006453527353536107
+46 3277 111.0273405114174 0.0006427157347343547
+47 3277 70.60487447080935 0.0006183306848934325
+	calling Sampler:__iter__
+48 3277 108.58461174129594 0.0006357847846713791
+49 3277 107.2503558301714 0.0006258038212499678
+50 3277 108.44351135686443 0.0006394743350703457
+51 3277 69.59425738435736 0.0006230349091879212
+	calling Sampler:__iter__
+52 3277 105.57189697664104 0.0006270342384807277
+53 3277 105.61297488350465 0.0006310662305741578
+54 3277 104.44514748644583 0.0006248562627575216
+55 3277 66.76927416726834 0.0006065295557493085
+	calling Sampler:__iter__
+56 3277 102.36925889224806 0.0006169697510594063
+57 3277 102.58171912460368 0.0006228983114466089
+58 3277 101.62563771201012 0.0006201895154841959
+59 3277 65.22161625957204 0.0006009070794551831
+	calling Sampler:__iter__
+60 3277 100.10489453132502 0.0006181061879350334
+61 3277 98.89975705413336 0.000607545677685199
+62 3277 98.85304688637726 0.0006088311574582766
+63 3277 63.73376335391788 0.0006006965284467035
+	calling Sampler:__iter__
+64 3277 98.35868220698448 0.0006134033585322461
+65 3277 96.20318541804154 0.0006034403979745487
+66 3277 95.9774523801428 0.000602208367634915
+67 3277 61.63020027724887 0.0005873117238450026
+	calling Sampler:__iter__
+68 3277 93.86884129158717 0.0005965976499510059
+69 3277 95.14660533802723 0.000605518774524183
+70 3277 94.96021752525085 0.0006032575037217775/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+
+71 3277 59.33859732031653 0.0005755778220023548
+	calling Sampler:__iter__
+72 3277 93.01000012635107 0.0006009782227228511
+73 3277 92.21331624083521 0.0005921116390026158
+74 3277 91.8212363023166 0.0005943128345542349
+75 3277 57.81532756731157 0.0005689879791378547
+	calling Sampler:__iter__
+76 3277 89.7121172111899 0.0005852325777228401
+77 3277 90.17465292584117 0.0005946020366462513
+78 3277 89.70346956691236 0.0005854835234262431
+79 3277 57.25592319446513 0.0005700530024684854
+	calling Sampler:__iter__
+80 3277 87.55247168743148 0.0005780491385249366
+81 3277 88.08261573385543 0.0005862650847465505
+82 3277 88.10675855322829 0.0005871146473502787
+83 3277 55.553500912398626 0.0005622276233934519
+	calling Sampler:__iter__
+84 3277 86.75492561744328 0.0005878605941318605
+85 3277 86.12469245682556 0.0005744631351117774
+86 3277 85.32469483305914 0.0005759988312774675
+87 3277 54.308206541616 0.0005570527635563047
+	calling Sampler:__iter__
+88 3277 84.71336084622196 0.0005750019931701956
+89 3277 84.06298667119543 0.0005732782001360005
+90 3277 84.2118111955928 0.0005759496798633477
+91 3277 53.06744972812701 0.0005529384796309628
+	calling Sampler:__iter__
+92 3277 83.30358713393201 0.0005742353055437968
+93 3277 82.13997042320719 0.0005676464877170555
+94 3277 82.30036300935637 0.0005715517153062298
+95 3277 51.883540688052285 0.0005434483408003261
+	calling Sampler:__iter__
+96 3277 80.64894064548243 0.0005627948112659175
+97 3277 80.95136600884715 0.0005706250355668883
+98 3277 80.98449599594457 0.0005656228293775633
+99 3277 51.11249933040673 0.0005435200239689374
+	calling Sampler:__iter__
+100 3277 80.32278623683278 0.0005687674725897832
+101 3277 79.98600790916588 0.0005647422170631884
+102 3277 77.90920511135856 0.0005552030927341552
+103 3277 49.94495031945679 0.0005375840937329121
+	calling Sampler:__iter__
+104 3277 77.9207690617172 0.000556636674143719
+105 3277 78.05747232752749 0.0005617163062235257
+106 3277 77.09490202403259 0.0005533750611487129
+107 3277 49.66899549287203 0.0005409135970213499
+	calling Sampler:__iter__
+108 3277 76.71782380814409 0.0005518053019030753
+109 3277 76.16260015437179 0.0005512764854984284
+110 3277 75.50156179664035 0.0005512617868055577
+111 3277 49.24297630765838 0.00054704035161742
+	calling Sampler:__iter__
+112 3277 75.25480496940227 0.000551035057939969
+113 3277 75.53882169753275 0.0005574421103223675
+114 3277 74.93992675511521 0.0005495275941453403
+115 3277 47.23663031505514 0.0005237011726605133
+	calling Sampler:__iter__
+116 3277 73.86402889207953 0.0005436099910862849
+117 3277 74.28308305852872 0.0005535282589139951
+118 3277 73.13534204131881 0.0005439670533867218
+119 3277 47.10968220989982 0.0005315845661418028
+	calling Sampler:__iter__
+120 3277 73.64672738293419 0.0005514745937975662
+121 3277 72.14843072183933 0.0005372798391435515
+122 3277 71.64524963504803 0.0005390416783797177
+123 3277 46.39151499003626 0.0005319656874754561
+	calling Sampler:__iter__
+124 3277 71.83891584969206 0.000545275186398178
+125 3277 72.42191995579496 0.0005482154709344079
+126 3277 70.72636057473186 0.0005388566052376498
+127 3277 44.84550140633971 0.000510582214006149
+save weights and term 1 done!!!
+save offsets and term 2 done!!!
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+	calling Sampler:__iter__
+training time full:: 3.516038179397583
+provenance prepare time:: 3129.4340500831604
+deletion rate:: 0.00002
+python3 generate_rand_ids 0.00002  MNIST5 1
+tensor([52417])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 1
+max_epoch:: 32
+batch_size:: 16384
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+epoch:: 8
+epoch:: 9
+epoch:: 10
+epoch:: 11
+epoch:: 12
+epoch:: 13
+epoch:: 14
+epoch:: 15
+epoch:: 16
+epoch:: 17
+epoch:: 18
+epoch:: 19
+epoch:: 20
+epoch:: 21
+epoch:: 22
+epoch:: 23
+epoch:: 24
+epoch:: 25
+epoch:: 26
+epoch:: 27
+epoch:: 28
+epoch:: 29
+epoch:: 30
+epoch:: 31
+training time is 2.704117774963379
+overhead:: 0
+overhead2:: 0.21253132820129395
+overhead3:: 0
+time_baseline:: 2.7042489051818848
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 1
+cut_off_epoch:: 88
+max_epoch:: 32
+batch_size:: 16384
+memory usage:: 109528723456
+time_provenance0:: 6.238875389099121
+absolute_error:: tensor(0.0007, device='cuda:2', dtype=torch.float64, grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 10 5 1 0.00002 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 1
+max_epoch:: 32
+overhead:: 0
+overhead2:: 0.0028727054595947266
+overhead3:: 0.03696036338806152
+overhead4:: 0.6869330406188965
+overhead5:: 0
+memory usage:: 3705987072
+time_provenance:: 0.96197509765625
+curr_diff: 0 tensor(3.2711e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(3.2711e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+deletion rate:: 0.00005
+python3 generate_rand_ids 0.00005  MNIST5 0
+tensor([52417, 44791, 18823])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 3
+max_epoch:: 32
+batch_size:: 16384
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+epoch:: 8
+epoch:: 9
+epoch:: 10
+epoch:: 11
+epoch:: 12
+epoch:: 13
+epoch:: 14
+epoch:: 15
+epoch:: 16
+epoch:: 17
+epoch:: 18
+epoch:: 19
+epoch:: 20
+epoch:: 21
+epoch:: 22
+epoch:: 23
+epoch:: 24
+epoch:: 25
+epoch:: 26
+epoch:: 27
+epoch:: 28
+epoch:: 29
+epoch:: 30
+epoch:: 31
+training time is 2.6784934997558594
+overhead:: 0
+overhead2:: 0.20034050941467285
+overhead3:: 0
+time_baseline:: 2.678664207458496
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 3
+cut_off_epoch:: 88
+max_epoch:: 32
+batch_size:: 16384
+memory usage:: 109942018048
+time_provenance0:: 5.271458387374878
+absolute_error:: tensor(0.0007, device='cuda:2', dtype=torch.float64, grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 10 5 1 0.00005 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 3
+max_epoch:: 32
+overhead:: 0
+overhead2:: 0.006008625030517578
+overhead3:: 0.036107778549194336
+overhead4:: 0.732184648513794
+overhead5:: 0
+memory usage:: 3705884672
+time_provenance:: 1.1041820049285889
+curr_diff: 0 tensor(9.0929e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(9.0929e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+deletion rate:: 0.0001
+python3 generate_rand_ids 0.0001  MNIST5 0
+tensor([52417, 21185, 39684, 18823, 44791, 20603])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 6
+max_epoch:: 32
+batch_size:: 16384
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+epoch:: 8
+epoch:: 9
+epoch:: 10
+epoch:: 11
+epoch:: 12
+epoch:: 13
+epoch:: 14
+epoch:: 15
+epoch:: 16
+epoch:: 17
+epoch:: 18
+epoch:: 19
+epoch:: 20
+epoch:: 21
+epoch:: 22
+epoch:: 23
+epoch:: 24
+epoch:: 25
+epoch:: 26
+epoch:: 27
+epoch:: 28
+epoch:: 29
+epoch:: 30
+epoch:: 31
+training time is 2.690883159637451
+overhead:: 0
+overhead2:: 0.19299960136413574
+overhead3:: 0
+time_baseline:: 2.6910507678985596
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 6
+cut_off_epoch:: 88
+max_epoch:: 32
+batch_size:: 16384
+memory usage:: 109940359168
+time_provenance0:: 4.833202600479126
+absolute_error:: tensor(0.0007, device='cuda:2', dtype=torch.float64, grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 10 5 1 0.0001 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 6
+max_epoch:: 32
+overhead:: 0
+overhead2:: 0.009770870208740234
+overhead3:: 0.03371024131774902
+overhead4:: 0.7353682518005371
+overhead5:: 0
+memory usage:: 3706589184
+time_provenance:: 1.1210296154022217
+curr_diff: 0 tensor(1.0083e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.0083e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+deletion rate:: 0.0002
+python3 generate_rand_ids 0.0002  MNIST5 0
+tensor([ 3360, 52417, 21185, 39684, 18823, 13224, 53131, 16498, 51155,  8275,
+        44791, 20603])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 12
+max_epoch:: 32
+batch_size:: 16384
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+epoch:: 8
+epoch:: 9
+epoch:: 10
+epoch:: 11
+epoch:: 12
+epoch:: 13
+epoch:: 14
+epoch:: 15
+epoch:: 16
+epoch:: 17
+epoch:: 18
+epoch:: 19
+epoch:: 20
+epoch:: 21
+epoch:: 22
+epoch:: 23
+epoch:: 24
+epoch:: 25
+epoch:: 26
+epoch:: 27
+epoch:: 28
+epoch:: 29
+epoch:: 30
+epoch:: 31
+training time is 2.702035903930664
+overhead:: 0
+overhead2:: 0.19933629035949707
+overhead3:: 0
+time_baseline:: 2.7022104263305664
+curr_diff: 0 tensor(0.0011, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0011, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 12
+cut_off_epoch:: 88
+max_epoch:: 32
+batch_size:: 16384
+memory usage:: 112991080448
+time_provenance0:: 7.6979899406433105
+absolute_error:: tensor(0.0007, device='cuda:2', dtype=torch.float64, grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 10 5 1 0.0002 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 12
+max_epoch:: 32
+overhead:: 0
+overhead2:: 0.01134347915649414
+overhead3:: 0.03375649452209473
+overhead4:: 0.694028377532959
+overhead5:: 0
+memory usage:: 3704889344
+time_provenance:: 1.0921282768249512
+curr_diff: 0 tensor(1.9103e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.9103e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0011, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0011, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+deletion rate:: 0.0005
+python3 generate_rand_ids 0.0005  MNIST5 0
+tensor([52417, 21185, 39684, 18823,  9799, 42759, 53131, 33997, 16463, 51155,
+         8275, 34389, 36347, 50140, 52700,  3360,  2593, 18850, 55971, 13224,
+        14700,  7534, 32878,  4465, 16498, 38515, 44791,  9529, 20603, 17983])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 30
+max_epoch:: 32
+batch_size:: 16384
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+epoch:: 8
+epoch:: 9
+epoch:: 10
+epoch:: 11
+epoch:: 12
+epoch:: 13
+epoch:: 14
+epoch:: 15
+epoch:: 16
+epoch:: 17
+epoch:: 18
+epoch:: 19
+epoch:: 20
+epoch:: 21
+epoch:: 22
+epoch:: 23
+epoch:: 24
+epoch:: 25
+epoch:: 26
+epoch:: 27
+epoch:: 28
+epoch:: 29
+epoch:: 30
+epoch:: 31
+training time is 2.6540186405181885
+overhead:: 0
+overhead2:: 0.19467568397521973
+overhead3:: 0
+time_baseline:: 2.654183864593506
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 30
+cut_off_epoch:: 88
+max_epoch:: 32
+batch_size:: 16384
+memory usage:: 112990642176
+time_provenance0:: 7.77470064163208
+absolute_error:: tensor(0.0007, device='cuda:2', dtype=torch.float64, grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 10 5 1 0.0005 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 30
+max_epoch:: 32
+overhead:: 0
+overhead2:: 0.01141214370727539
+overhead3:: 0.0353085994720459
+overhead4:: 0.7229049205780029
+overhead5:: 0
+memory usage:: 3706064896
+time_provenance:: 1.1342103481292725
+curr_diff: 0 tensor(2.3996e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.3996e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856100
+deletion rate:: 0.001
+python3 generate_rand_ids 0.001  MNIST5 0
+tensor([59523, 39684, 18823, 42759,  9211, 53131, 24591, 19862, 25239, 34586,
+          286,  3360,  2593, 18850, 55971,   674, 26147, 34980, 46844, 13224,
+         5932, 53677,  9644, 23343, 23474, 33844,  9529, 17983, 52417, 21185,
+        41028, 38470,  9799, 48713, 59467, 33997, 16463, 39377, 51155,  8275,
+        34389, 48600, 15706, 52700, 50140, 18150, 20603, 14700, 16236,  7534,
+        32878,  7021,  4465, 16498, 38515, 41844, 44791, 23417, 36347, 30716])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 60
+max_epoch:: 32
+batch_size:: 16384
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+epoch:: 8
+epoch:: 9
+epoch:: 10
+epoch:: 11
+epoch:: 12
+epoch:: 13
+epoch:: 14
+epoch:: 15
+epoch:: 16
+epoch:: 17
+epoch:: 18
+epoch:: 19
+epoch:: 20
+epoch:: 21
+epoch:: 22
+epoch:: 23
+epoch:: 24
+epoch:: 25
+epoch:: 26
+epoch:: 27
+epoch:: 28
+epoch:: 29
+epoch:: 30
+epoch:: 31
+training time is 2.6216983795166016
+overhead:: 0
+overhead2:: 0.19524598121643066
+overhead3:: 0
+time_baseline:: 2.6218748092651367
+curr_diff: 0 tensor(0.0024, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0024, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856200
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 60
+cut_off_epoch:: 88
+max_epoch:: 32
+batch_size:: 16384
+memory usage:: 112976367616
+time_provenance0:: 7.977615833282471
+absolute_error:: tensor(0.0007, device='cuda:2', dtype=torch.float64, grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856200
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 10 5 1 0.001 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 60
+max_epoch:: 32
+overhead:: 0
+overhead2:: 0.01097559928894043
+overhead3:: 0.035202980041503906
+overhead4:: 0.7221064567565918
+overhead5:: 0
+memory usage:: 3660996608
+time_provenance:: 1.149930715560913
+curr_diff: 0 tensor(2.9021e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.9021e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0024, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0024, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.856200

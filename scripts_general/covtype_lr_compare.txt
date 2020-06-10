@@ -1,0 +1,592 @@
+varied deletion rate::
+varied number of samples::
+deletion rate:: 0.00002
+python3 generate_rand_ids 0.00002  covtype 1
+start loading data...
+normalization start!!
+tensor([460196, 201480,  77995,  10444, 469547, 422225,   6771, 114677,  42587,
+        425375])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 10
+max_epoch:: 8
+batch_size:: 4096
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+training time is 3.528521776199341
+time_baseline:: 3.6852035522460938
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 8
+delta_size:: 10
+cut_off_epoch:: 640
+max_epoch:: 8
+batch_size:: 4096
+memory usage:: 9296764928
+time_provenance0:: 1.556431531906128
+absolute_error:: tensor(2.3102e-09, device='cuda:2', dtype=torch.float64,
+       grad_fn=<NormBackward0>)
+angle:: tensor(1., device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 20 5 1 0.00002
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 10
+max_epoch:: 8
+epoch  0
+epoch  1
+epoch  2
+epoch  3
+epoch  4
+epoch  5
+epoch  6
+epoch  7
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+memory usage:: 2558734336
+time_provenance:: 0.9242405891418457
+curr_diff: 0 tensor(2.2110e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.2110e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+deletion rate:: 0.00005
+python3 generate_rand_ids 0.00005  covtype 0
+start loading data...
+normalization start!!
+tensor([  3520, 201480, 483656, 303819,  10444, 281104, 422225,  13394, 459477,
+         32151,  42587,  76380,  35230, 425375, 460196, 213220, 154150, 469547,
+         77995,  98411,  68461,   6771,   9011, 114677, 454647, 215673])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 26
+max_epoch:: 8
+batch_size:: 4096
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+training time is 3.5028553009033203
+time_baseline:: 3.6640396118164062
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 8
+delta_size:: 26
+cut_off_epoch:: 640
+max_epoch:: 8
+batch_size:: 4096
+memory usage:: 9298079744
+time_provenance0:: 1.5872652530670166
+absolute_error:: tensor(2.6265e-09, device='cuda:2', dtype=torch.float64,
+       grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 20 5 1 0.00005
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 26
+max_epoch:: 8
+epoch  0
+epoch  1
+epoch  2
+epoch  3
+epoch  4
+epoch  5
+epoch  6
+epoch  7
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+memory usage:: 2557816832
+time_provenance:: 0.9823229312896729
+curr_diff: 0 tensor(2.7070e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.7070e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0003, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0003, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+deletion rate:: 0.0001
+python3 generate_rand_ids 0.0001  covtype 0
+start loading data...
+normalization start!!
+tensor([365060, 201480, 281104, 494480,  81684,  32151, 255257, 437402,  35230,
+        425375, 460196, 402596, 154150, 517796, 469547,  77995, 337841,   9011,
+        183220, 398134, 273527, 408767,   3520, 162628, 205510, 424007, 483656,
+         26056, 384457, 303819,  10444, 438728, 422225,  13394, 112084, 459477,
+         42587,  76380, 229595, 516447, 179809, 213220, 428005, 353126, 232168,
+        179306,  98411,  68461,   6771, 114677, 454647, 215673])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 52
+max_epoch:: 8
+batch_size:: 4096
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+training time is 3.2857649326324463
+time_baseline:: 3.440157651901245
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 8
+delta_size:: 52
+cut_off_epoch:: 640
+max_epoch:: 8
+batch_size:: 4096
+memory usage:: 9300856832
+time_provenance0:: 1.7163236141204834
+absolute_error:: tensor(4.7356e-09, device='cuda:2', dtype=torch.float64,
+       grad_fn=<NormBackward0>)
+angle:: tensor(1., device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 20 5 1 0.0001
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 52
+max_epoch:: 8
+epoch  0
+epoch  1
+epoch  2
+epoch  3
+epoch  4
+epoch  5
+epoch  6
+epoch  7
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+memory usage:: 2554449920
+time_provenance:: 1.031627893447876
+curr_diff: 0 tensor(4.3781e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(4.3781e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+deletion rate:: 0.0002
+python3 generate_rand_ids 0.0002  covtype 0
+start loading data...
+normalization start!!
+tensor([365060, 268807, 201480,  55562, 475660, 375310, 281104, 334353,  65298,
+         81684,  50966, 255257, 300827, 211483, 453917, 239139, 157731, 154150,
+        469547,  84012, 239919, 518191, 396079,   9011, 398134, 162628, 424007,
+        483656, 240201,  56907,  61261, 170575, 422225,  13394,  79956,  42587,
+         76380, 200797, 385374, 516447, 179809, 448353, 271713, 350053, 353126,
+        138343, 179306,  98411, 416876,  68461, 298349, 183409, 211057,   6771,
+        273527, 215673, 364154, 265084, 391292, 351617, 224899, 494480, 381333,
+         32151, 437402,  35230, 425375, 460196, 402596, 517796,  77995, 337841,
+         11698, 322738, 183220, 481717,  80312,  62139, 309692, 117182, 408767,
+          3520,  48631, 289221, 205510, 265415,  26056, 384457, 438728, 303819,
+         10444, 480210, 112084, 459477, 229595, 393439, 213220, 428005, 233446,
+        232168, 307442, 298483, 114677, 454647])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 104
+max_epoch:: 8
+batch_size:: 4096
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+training time is 3.321180582046509
+time_baseline:: 3.478290319442749
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620957
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 8
+delta_size:: 104
+cut_off_epoch:: 640
+max_epoch:: 8
+batch_size:: 4096
+memory usage:: 9312305152
+time_provenance0:: 1.705981969833374
+absolute_error:: tensor(1.4700e-08, device='cuda:2', dtype=torch.float64,
+       grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620957
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 20 5 1 0.0002
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 104
+max_epoch:: 8
+epoch  0
+epoch  1
+epoch  2
+epoch  3
+epoch  4
+epoch  5
+epoch  6
+epoch  7
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+memory usage:: 2556207104
+time_provenance:: 1.1780385971069336
+curr_diff: 0 tensor(7.3855e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(7.3855e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0006, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0006, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620957
+deletion rate:: 0.0005
+python3 generate_rand_ids 0.0005  covtype 0
+start loading data...
+normalization start!!
+tensor([125971, 137246, 157731,  84012, 152622, 518191, 292911, 510012, 403522,
+        387139, 424007, 360523, 489553,  13394,  79956, 327764, 365655, 507995,
+        200797, 138343, 179306,  98411, 416876, 182381, 183409, 211057, 243828,
+        273527, 331899, 391292, 279676, 437374, 473215, 422020, 166024, 159880,
+        437402, 322714, 402596, 481449,  77995, 517293, 303279, 196785, 322738,
+        124086, 408767, 453826, 403650, 265415,  10444, 166097, 198869, 229595,
+        393439, 336095, 213220, 428267, 215276, 307442, 483571,  55562, 255257,
+        453917, 396576, 318763, 392493, 239919,  98607, 405810, 106804, 313657,
+        439612, 426302, 291137,  78150, 483656, 419144, 406857, 217424, 422225,
+        385374, 516447, 422240, 271713, 494946, 298349, 263535, 413042, 519539,
+         40312, 180601, 522616, 411003, 170364, 124288, 351617, 381333, 209301,
+         32151, 356764, 453021,  35230, 425375, 460196, 175529,  11698, 481717,
+         80312, 207290, 435643, 309692, 447932, 117182, 441789,   3520, 248257,
+        289221, 174534,  26056, 384457, 438728, 336335, 112084, 102880, 512487,
+        118251, 231915, 298483, 422388, 183796,  48631, 509436, 220670, 365060,
+        268807, 109067, 475660, 474637, 375310, 281104, 334353, 181784, 211483,
+        239139, 154150, 103977, 469547, 419379,   4659, 511541, 290375, 240201,
+         56907,  96844, 170575, 253523,  42587,  76380, 344671, 179809,  51821,
+        517744,   6771,  96888, 215673, 364154, 142973, 224899, 191111, 378506,
+        429720, 259736, 461466, 236190, 517796, 316072, 291500, 146093, 334511,
+        101041, 415741,  62139, 392899, 205510, 382664, 303819, 459477, 277207,
+        239319, 504535, 348890, 224988, 232168, 312056, 519930, 201480, 330504,
+        509706, 331533,  65298, 517907,  81684, 488211,  50966, 300827, 376607,
+        162598, 485372, 396079,   9011, 480051,  40756, 398134, 162628,  61261,
+        291664,  29522, 102232, 140121,   8026, 290653, 448353, 350053, 353126,
+         68461, 412525, 378747, 265084, 198527, 405379, 137092, 121732,  96138,
+        283532, 180110,  55182, 494480, 432045, 202670, 337841,   9139, 183220,
+        195575,  25526, 374712, 220099, 474052, 244681, 480210, 476120, 464860,
+        390113, 428005, 233446, 114677, 454647,  20476, 356349,  70654, 378879])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 261
+max_epoch:: 8
+batch_size:: 4096
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+training time is 3.407564163208008
+time_baseline:: 3.563889741897583
+curr_diff: 0 tensor(0.0009, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0009, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 8
+delta_size:: 261
+cut_off_epoch:: 640
+max_epoch:: 8
+batch_size:: 4096
+memory usage:: 10665693184
+time_provenance0:: 3.1175968647003174
+absolute_error:: tensor(1.3243e-08, device='cuda:2', dtype=torch.float64,
+       grad_fn=<NormBackward0>)
+angle:: tensor(1., device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 20 5 1 0.0005
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 261
+max_epoch:: 8
+epoch  0
+epoch  1
+epoch  2
+epoch  3
+epoch  4
+epoch  5
+epoch  6
+epoch  7
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+memory usage:: 2560143360
+time_provenance:: 1.4045560359954834
+curr_diff: 0 tensor(1.2930e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.2930e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0009, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0009, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+deletion rate:: 0.001
+python3 generate_rand_ids 0.001  covtype 0
+start loading data...
+normalization start!!
+tensor([ 68612, 416774, 293897, 431119,  79888,  20498, 125971, 214035, 100375,
+        285721, 252954, 184346, 137246, 258079, 157731,  81955, 315431, 174123,
+         84012, 420907, 152622, 518191, 292911, 348211, 282677, 363574, 462904,
+        375865, 510012, 309308,  66625, 403522, 387139, 424007, 194633, 230474,
+        360523,   5194, 489553,  13394,  79956, 327764, 365655, 147544, 507995,
+        200797, 190559, 512095, 138343, 438375, 179306,  98411, 416876, 182381,
+        183409, 211057, 243828, 273527, 345207, 510072, 331899, 279676, 391292,
+        437374, 473215,  29819, 178301, 435327, 422020, 166024, 159880, 184468,
+        369814,  20631, 126105, 437402, 322714, 188574, 402596, 455844, 481449,
+        220329,  77995, 498860, 517293, 303279, 196785, 322738, 124086, 144568,
+        111800, 408767, 125121, 453826, 403650, 302278, 265415, 512199, 353479,
+        307401, 502984,  10444,  46283, 374986, 241865, 166097,  68817, 198869,
+        373973, 466136, 384216, 249048, 229595, 393439, 336095,  83169, 307424,
+        213220, 485606, 428267, 215276, 445675, 477425, 307442, 483571, 339191,
+         69880, 322820, 400646,  55562, 292114, 255257,  80153, 453917, 396576,
+         60704, 318763, 137515, 392493, 239919,  98607, 405810, 258354, 106804,
+        313657, 439612, 426302, 291137,  78150, 454983, 483656, 419144, 406857,
+        517448, 109901, 519502, 512335, 217424, 422225,  69968, 116055, 154968,
+        197979,  67932, 470365, 385374, 516447, 422240, 271713, 494946, 133470,
+        274783, 428382,  49510,   3426, 298349, 263535,  37233, 413042, 519539,
+        131445, 447862,  40312, 180601, 522616, 411003, 170364, 514424, 225659,
+        124288, 351617, 478594, 427395, 193925, 322950, 451986, 271763, 381333,
+        209301,  32151,  46078, 356764, 453021,  35230, 425375, 475552, 337313,
+        460196, 485797, 176551, 175529, 189868, 134576,  11698, 464306, 176564,
+        481717, 125365,  80312, 383417, 207290, 435643, 309692, 447932, 117182,
+        441789,   3520, 248257, 218563, 289221, 174534, 451013,  26056, 384457,
+        438728, 259526,  51655, 294345, 336335, 513490, 112084, 506326, 425433,
+         85465, 102880, 216545, 520674, 512487, 118251, 231915, 290285, 317937,
+        298483, 422388, 183796, 356852,  48631, 364024,  57850, 471547, 509436,
+        220670,  40447, 104960, 365060, 479750, 268807,  84488, 487942, 109067,
+        475660, 474637, 375310, 253452, 281104, 334353,  45585,  94742, 181784,
+        211483, 423452, 406046, 251423, 148002, 239139, 154150, 103977, 469547,
+        355888, 419379,   4659, 511541, 231987, 223798, 332345,  91707, 363068,
+        172605, 207427, 418371, 290375, 240201, 259657,  56907,  96844, 221771,
+        170575, 176720, 253523, 171607, 189017, 458329,  42587,  76380, 471646,
+        344671, 179809, 183909, 307816,  51821,  29295, 517744, 261743, 224880,
+          6771,  96888, 215673, 364154,   6778, 440955, 142973, 345728, 224899,
+        191111, 446088, 378506, 151188, 317076, 455319, 429720, 259736, 461466,
+        468631,  92827, 376477, 236190, 517796, 239269, 505511, 316072, 285352,
+        291500, 146093, 386734, 334511, 116399, 101041, 415741, 366258,  44727,
+         62139,  49851, 392899, 205510, 382664, 303819, 252924, 459477, 277207,
+        239319, 504535, 348890, 291543, 224988, 406232,  78557, 277213, 169696,
+        214754, 232168, 303852, 500461, 411382, 312056, 519930, 429823, 457473,
+        512772, 384773, 201480, 330504, 509706, 514828, 331533, 398093,  67342,
+         65298, 517907,  81684, 488211,  50966, 515862, 504600, 300827, 496412,
+        414494, 376607, 161568, 176930, 162598, 320295, 375592, 485372, 396079,
+          9011, 480051,  40756, 398134, 173876, 162628, 210759, 127819, 246604,
+         61261, 412495, 291664,  24399,  29522, 241495, 102232, 140121,   8026,
+        435032, 439128, 290653, 242522, 488282, 399198, 448353,  77665, 378722,
+        277346, 350053, 353126, 144230, 268136, 260972,  68461, 412525, 376685,
+        218991, 294772, 383865, 378747, 265084, 198527, 283519, 160640, 405379,
+        137092, 121732, 182151,  84871,  96138, 189323, 283532, 381836, 180110,
+         55182, 494480, 274324,  12183, 381854, 341919,  97190, 443302, 205739,
+        114604, 432045, 202670, 337841, 455602,   9139, 183220, 195575,  25526,
+         56243, 374712, 519095, 290744, 223161, 305084, 202688, 224193, 367554,
+        220099, 474052, 244681, 384971, 228301, 406478, 468945, 480210,  54226,
+        376788,  21462, 476120, 464860,  26590, 390113, 428005, 233446, 140271,
+        159728, 114677,  48117, 454647, 485209,  20476, 356349,  70654, 378879])
+baseline::
+python3 incremental_updates_base_line_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 522
+max_epoch:: 8
+batch_size:: 4096
+epoch:: 0
+epoch:: 1
+epoch:: 2
+epoch:: 3
+epoch:: 4
+epoch:: 5
+epoch:: 6
+epoch:: 7
+training time is 3.3511996269226074
+time_baseline:: 3.529405117034912
+curr_diff: 0 tensor(0.0012, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0012, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates 0::
+python3 incremental_updates_provenance_lr.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 8
+delta_size:: 522
+cut_off_epoch:: 640
+max_epoch:: 8
+batch_size:: 4096
+memory usage:: 10669678592
+time_provenance0:: 3.1705727577209473
+absolute_error:: tensor(4.0214e-08, device='cuda:2', dtype=torch.float64,
+       grad_fn=<NormBackward0>)
+angle:: tensor(1.0000, device='cuda:2', dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975
+incremental updates::
+python3 incremental_updates_provenance3_lr.py 20 5 1 0.001
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Logistic_regression. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type LogSoftmax. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 8
+delta_size:: 522
+max_epoch:: 8
+epoch  0
+epoch  1
+epoch  2
+epoch  3
+epoch  4
+epoch  5
+epoch  6
+epoch  7
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+memory usage:: 2555412480
+time_provenance:: 1.4438939094543457
+curr_diff: 0 tensor(2.1499e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.1499e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0012, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0012, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000272, Accuracy: 0.620975

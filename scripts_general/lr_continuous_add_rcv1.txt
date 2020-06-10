@@ -1,0 +1,459 @@
+dataset name::rcv1
+deletion rate::0.00495
+python3 generate_rand_ids 0.00495  rcv1 1
+tensor([16384, 10759, 16904, 13321, 17931,  1547,  3098,  5672,  8232, 11316,
+        11320,  4667,  8256, 11846, 10825,  3667, 11354,  5722,  3676, 19039,
+        15968,  9314,  5746,  3196,  1148,  8316, 19586,  4240,  3220,   660,
+        18593,  4261, 18601, 14506,  4268,  2735, 18610, 16063, 10438, 16589,
+        18132, 20186, 14044,  6364, 15588,  4328,  9967,  6899, 16636, 19708,
+        13058, 17155, 16648, 19723, 19222,  7447, 18710, 14105, 14106, 17692,
+        10013,  9504,  8480,  3364,  2348, 10032, 16179, 15157,  7488,  7494,
+        19273, 17739,  4428,  9556,  1901, 15215, 17780, 19321, 17790,  1408,
+        17799, 19849,  9621,  1946,  6046,  9129,  4522,  8117,  8630, 13240,
+         7612,  5067,  3022,   994,  9191,  4079,  3059,  3063,  4093, 19454])
+python3 generate_dataset_train_test.py Logistic_regression rcv1 4096 10 5
+repetition 0
+python3 benchmark_exp_lr.py 0.001 4096 10 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression rcv1 0 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.693122
+Train - Epoch 1, Batch: 0, Loss: 0.692174
+Train - Epoch 2, Batch: 0, Loss: 0.691216
+Train - Epoch 3, Batch: 0, Loss: 0.690384
+Train - Epoch 4, Batch: 0, Loss: 0.689416
+Train - Epoch 5, Batch: 0, Loss: 0.688579
+Train - Epoch 6, Batch: 0, Loss: 0.687577
+Train - Epoch 7, Batch: 0, Loss: 0.686657
+Train - Epoch 8, Batch: 0, Loss: 0.685870
+Train - Epoch 9, Batch: 0, Loss: 0.684824
+training_time:: 17.899311780929565
+training time full:: 17.89935827255249
+provenance prepare time:: 7.152557373046875e-07
+Test Avg. Loss: 0.000169, Accuracy: 0.915967
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+Num of deletion:: 0, running time baseline::14.962116
+Num of deletion:: 10, running time baseline::165.797353
+Num of deletion:: 20, running time baseline::316.793876
+Num of deletion:: 30, running time baseline::468.214146
+Num of deletion:: 40, running time baseline::619.703350
+Num of deletion:: 50, running time baseline::771.407499
+Num of deletion:: 60, running time baseline::922.801948
+Num of deletion:: 70, running time baseline::1074.415269
+Num of deletion:: 80, running time baseline::1226.135499
+Num of deletion:: 90, running time baseline::1377.798850
+training time is 1514.857216835022
+overhead:: 0
+overhead2:: 1514.8569285869598
+time_baseline:: 1514.8572463989258
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.916016
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: model_base_line
+tensor(616128)
+RCV1 Test Avg. Accuracy:: 0.9095496155146376
+period:: 5
+init_iters:: 5
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 5 5 0 0.00495 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+delta_size:: 100
+max_epoch:: 10
+Num of deletion:: 0, running time provenance::5.160145
+Num of deletion:: 10, running time provenance::56.660713
+Num of deletion:: 20, running time provenance::108.096247
+Num of deletion:: 30, running time provenance::160.041987
+Num of deletion:: 40, running time provenance::211.580255
+Num of deletion:: 50, running time provenance::263.337325
+Num of deletion:: 60, running time provenance::315.208720
+Num of deletion:: 70, running time provenance::366.636559
+Num of deletion:: 80, running time provenance::419.812207
+Num of deletion:: 90, running time provenance::471.479622
+overhead:: 0
+overhead2:: 0.13912749290466309
+overhead3:: 518.2487378120422
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 518.2495348453522
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0017, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0017, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.916016
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: incremental_provenance_5_5_0_0.00495_4096
+tensor(616134)
+RCV1 Test Avg. Accuracy:: 0.9095584729236388
+repetition 1
+python3 benchmark_exp_lr.py 0.001 4096 10 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression rcv1 1 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.693166
+Train - Epoch 1, Batch: 0, Loss: 0.692278
+Train - Epoch 2, Batch: 0, Loss: 0.691366
+Train - Epoch 3, Batch: 0, Loss: 0.690390
+Train - Epoch 4, Batch: 0, Loss: 0.689459
+Train - Epoch 5, Batch: 0, Loss: 0.688667
+Train - Epoch 6, Batch: 0, Loss: 0.687695
+Train - Epoch 7, Batch: 0, Loss: 0.686716
+Train - Epoch 8, Batch: 0, Loss: 0.685965
+Train - Epoch 9, Batch: 0, Loss: 0.684923
+training_time:: 17.998899459838867
+training time full:: 17.998943567276
+provenance prepare time:: 9.5367431640625e-07
+Test Avg. Loss: 0.000169, Accuracy: 0.914584
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+Num of deletion:: 0, running time baseline::14.981862
+Num of deletion:: 10, running time baseline::166.115382
+Num of deletion:: 20, running time baseline::317.646777
+Num of deletion:: 30, running time baseline::469.457338
+Num of deletion:: 40, running time baseline::621.191935
+Num of deletion:: 50, running time baseline::772.933003
+Num of deletion:: 60, running time baseline::924.929766
+Num of deletion:: 70, running time baseline::1077.013808
+Num of deletion:: 80, running time baseline::1229.380566
+Num of deletion:: 90, running time baseline::1381.657075
+training time is 1518.6444439888
+overhead:: 0
+overhead2:: 1518.6441643238068
+time_baseline:: 1518.6444725990295
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.914929
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: model_base_line
+tensor(615964)
+RCV1 Test Avg. Accuracy:: 0.9093075130019384
+period:: 5
+init_iters:: 5
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 5 5 1 0.00495 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+delta_size:: 100
+max_epoch:: 10
+Num of deletion:: 0, running time provenance::5.235081
+Num of deletion:: 10, running time provenance::56.402123
+Num of deletion:: 20, running time provenance::108.322317
+Num of deletion:: 30, running time provenance::159.827431
+Num of deletion:: 40, running time provenance::211.545321
+Num of deletion:: 50, running time provenance::263.220890
+Num of deletion:: 60, running time provenance::315.246579
+Num of deletion:: 70, running time provenance::367.542880
+Num of deletion:: 80, running time provenance::419.332082
+Num of deletion:: 90, running time provenance::471.787361
+overhead:: 0
+overhead2:: 0.14804482460021973
+overhead3:: 519.5916755199432
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 519.5925004482269
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0017, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0017, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.914682
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: incremental_provenance_5_5_1_0.00495_4096
+tensor(615970)
+RCV1 Test Avg. Accuracy:: 0.9093163704109395
+repetition 2
+python3 benchmark_exp_lr.py 0.001 4096 10 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression rcv1 2 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.693258
+Train - Epoch 1, Batch: 0, Loss: 0.692321
+Train - Epoch 2, Batch: 0, Loss: 0.691379
+Train - Epoch 3, Batch: 0, Loss: 0.690432
+Train - Epoch 4, Batch: 0, Loss: 0.689501
+Train - Epoch 5, Batch: 0, Loss: 0.688591
+Train - Epoch 6, Batch: 0, Loss: 0.687591
+Train - Epoch 7, Batch: 0, Loss: 0.686816
+Train - Epoch 8, Batch: 0, Loss: 0.685949
+Train - Epoch 9, Batch: 0, Loss: 0.685224
+training_time:: 18.245152235031128
+training time full:: 18.245198011398315
+provenance prepare time:: 4.76837158203125e-07
+Test Avg. Loss: 0.000169, Accuracy: 0.915275
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+Num of deletion:: 0, running time baseline::14.992969
+Num of deletion:: 10, running time baseline::166.340937
+Num of deletion:: 20, running time baseline::317.900864
+Num of deletion:: 30, running time baseline::469.387559
+Num of deletion:: 40, running time baseline::621.365243
+Num of deletion:: 50, running time baseline::773.149744
+Num of deletion:: 60, running time baseline::925.029130
+Num of deletion:: 70, running time baseline::1077.079242
+Num of deletion:: 80, running time baseline::1229.182820
+Num of deletion:: 90, running time baseline::1381.394256
+training time is 1518.597778081894
+overhead:: 0
+overhead2:: 1518.5974509716034
+time_baseline:: 1518.5978078842163
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.914732
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: model_base_line
+tensor(615966)
+RCV1 Test Avg. Accuracy:: 0.9093104654716053
+period:: 5
+init_iters:: 5
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 5 5 2 0.00495 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+delta_size:: 100
+max_epoch:: 10
+Num of deletion:: 0, running time provenance::5.243597
+Num of deletion:: 10, running time provenance::57.034142
+Num of deletion:: 20, running time provenance::108.765247
+Num of deletion:: 30, running time provenance::160.122257
+Num of deletion:: 40, running time provenance::212.061644
+Num of deletion:: 50, running time provenance::263.720415
+Num of deletion:: 60, running time provenance::316.279463
+Num of deletion:: 70, running time provenance::369.867301
+Num of deletion:: 80, running time provenance::423.343611
+Num of deletion:: 90, running time provenance::477.205141
+overhead:: 0
+overhead2:: 0.13167738914489746
+overhead3:: 525.4911918640137
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 525.4919471740723
+curr_diff: 0 tensor(7.5050e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(7.5050e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.914781
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: incremental_provenance_5_5_2_0.00495_4096
+tensor(615963)
+RCV1 Test Avg. Accuracy:: 0.9093060367671048
+repetition 3
+python3 benchmark_exp_lr.py 0.001 4096 10 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression rcv1 3 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.693294
+Train - Epoch 1, Batch: 0, Loss: 0.692371
+Train - Epoch 2, Batch: 0, Loss: 0.691405
+Train - Epoch 3, Batch: 0, Loss: 0.690436
+Train - Epoch 4, Batch: 0, Loss: 0.689450
+Train - Epoch 5, Batch: 0, Loss: 0.688647
+Train - Epoch 6, Batch: 0, Loss: 0.687735
+Train - Epoch 7, Batch: 0, Loss: 0.686857
+Train - Epoch 8, Batch: 0, Loss: 0.685914
+Train - Epoch 9, Batch: 0, Loss: 0.684998
+training_time:: 18.174699306488037
+training time full:: 18.17474341392517
+provenance prepare time:: 7.152557373046875e-07
+Test Avg. Loss: 0.000169, Accuracy: 0.913447
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+Num of deletion:: 0, running time baseline::14.946970
+Num of deletion:: 10, running time baseline::166.151102
+Num of deletion:: 20, running time baseline::317.681228
+Num of deletion:: 30, running time baseline::469.267675
+Num of deletion:: 40, running time baseline::620.714893
+Num of deletion:: 50, running time baseline::772.613747
+Num of deletion:: 60, running time baseline::924.287875
+Num of deletion:: 70, running time baseline::1076.141938
+Num of deletion:: 80, running time baseline::1228.338005
+Num of deletion:: 90, running time baseline::1380.521775
+training time is 1517.7637207508087
+overhead:: 0
+overhead2:: 1517.7634394168854
+time_baseline:: 1517.7637493610382
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.913151
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: model_base_line
+tensor(614806)
+RCV1 Test Avg. Accuracy:: 0.9075980330647078
+period:: 5
+init_iters:: 5
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 5 5 3 0.00495 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+delta_size:: 100
+max_epoch:: 10
+Num of deletion:: 0, running time provenance::5.185802
+Num of deletion:: 10, running time provenance::56.034106
+Num of deletion:: 20, running time provenance::108.053173
+Num of deletion:: 30, running time provenance::159.552916
+Num of deletion:: 40, running time provenance::211.223672
+Num of deletion:: 50, running time provenance::263.099919
+Num of deletion:: 60, running time provenance::314.746894
+Num of deletion:: 70, running time provenance::366.641733
+Num of deletion:: 80, running time provenance::419.159880
+Num of deletion:: 90, running time provenance::472.287886
+overhead:: 0
+overhead2:: 0.13516926765441895
+overhead3:: 519.3139760494232
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 519.3147716522217
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0017, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0017, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.913151
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: incremental_provenance_5_5_3_0.00495_4096
+tensor(614812)
+RCV1 Test Avg. Accuracy:: 0.907606890473709
+repetition 4
+python3 benchmark_exp_lr.py 0.001 4096 10 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression rcv1 4 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.693236
+Train - Epoch 1, Batch: 0, Loss: 0.692260
+Train - Epoch 2, Batch: 0, Loss: 0.691335
+Train - Epoch 3, Batch: 0, Loss: 0.690494
+Train - Epoch 4, Batch: 0, Loss: 0.689582
+Train - Epoch 5, Batch: 0, Loss: 0.688538
+Train - Epoch 6, Batch: 0, Loss: 0.687692
+Train - Epoch 7, Batch: 0, Loss: 0.686775
+Train - Epoch 8, Batch: 0, Loss: 0.685819
+Train - Epoch 9, Batch: 0, Loss: 0.685005
+training_time:: 18.11417007446289
+training time full:: 18.1142156124115
+provenance prepare time:: 9.5367431640625e-07
+Test Avg. Loss: 0.000169, Accuracy: 0.913447
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+Num of deletion:: 0, running time baseline::15.010000
+Num of deletion:: 10, running time baseline::166.520229
+Num of deletion:: 20, running time baseline::318.029680
+Num of deletion:: 30, running time baseline::469.872697
+Num of deletion:: 40, running time baseline::621.776142
+Num of deletion:: 50, running time baseline::773.974706
+Num of deletion:: 60, running time baseline::926.057881
+Num of deletion:: 70, running time baseline::1077.896093
+Num of deletion:: 80, running time baseline::1229.446831
+Num of deletion:: 90, running time baseline::1381.807899
+training time is 1518.5056421756744
+overhead:: 0
+overhead2:: 1518.5053548812866
+time_baseline:: 1518.5056722164154
+curr_diff: 0 tensor(0.0018, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0018, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.913348
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: model_base_line
+tensor(614542)
+RCV1 Test Avg. Accuracy:: 0.9072083070686553
+period:: 5
+init_iters:: 5
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 5 5 4 0.00495 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 10
+delta_size:: 100
+max_epoch:: 10
+Num of deletion:: 0, running time provenance::5.013746
+Num of deletion:: 10, running time provenance::56.502899
+Num of deletion:: 20, running time provenance::107.791343
+Num of deletion:: 30, running time provenance::159.997020
+Num of deletion:: 40, running time provenance::211.896158
+Num of deletion:: 50, running time provenance::265.672909
+Num of deletion:: 60, running time provenance::319.111958
+Num of deletion:: 70, running time provenance::371.842139
+Num of deletion:: 80, running time provenance::424.522757
+Num of deletion:: 90, running time provenance::477.275604
+overhead:: 0
+overhead2:: 0.14266204833984375
+overhead3:: 524.1753129959106
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 524.1761062145233
+curr_diff: 0 tensor(0.0001, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0001, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0017, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0017, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000169, Accuracy: 0.913299
+cal_test_accuracy_rcv1.py:138: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = softmax_layer(torch.from_numpy(out))
+Model_name:: incremental_provenance_5_5_4_0.00495_4096
+tensor(614538)
+RCV1 Test Avg. Accuracy:: 0.9072024021293211

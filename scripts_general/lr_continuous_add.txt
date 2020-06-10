@@ -1,0 +1,2509 @@
+dataset name::MNIST5
+deletion rate::0.00167
+python3 generate_rand_ids 0.00167  MNIST5 1
+tensor([15873, 59906, 45061, 45067, 38415, 10781, 52767, 16941, 32813, 23597,
+        11313,  4147, 49717, 18491, 17994, 21581, 16974, 20560, 31825, 11350,
+        53356,  6254, 46704, 28794, 31364, 28805, 57991, 43658, 46219, 45716,
+        23189, 19096, 16539,  7327, 56993, 22180, 18602,  4779, 16043, 12467,
+        40638, 23230, 25792, 37573, 29382,  7878, 50894, 54994, 54484, 21205,
+        28888, 16608, 55521, 30435, 40685, 28917, 56573, 22782, 25854,  4872,
+        10012, 11040, 47394, 34595, 12078, 48453, 10061, 52050, 28003, 31598,
+        56175, 17774, 13683, 40820, 31120, 57761, 57764, 26536, 28073, 46511,
+         4016,   946,  1460, 37308, 39876, 12230, 34248, 39373, 36306, 43991,
+          985, 43495,  7656, 16874, 26090, 17387, 19436, 17903, 38896, 31226])
+python3 generate_dataset_train_test.py Logistic_regression MNIST5 16384 32 5
+repetition 0
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression MNIST5 0 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.345945
+Train - Epoch 1, Batch: 0, Loss: 1.956271
+Train - Epoch 2, Batch: 0, Loss: 1.684221
+Train - Epoch 3, Batch: 0, Loss: 1.475049
+Train - Epoch 4, Batch: 0, Loss: 1.315668
+Train - Epoch 5, Batch: 0, Loss: 1.203293
+Train - Epoch 6, Batch: 0, Loss: 1.109846
+Train - Epoch 7, Batch: 0, Loss: 1.033833
+Train - Epoch 8, Batch: 0, Loss: 0.977282
+Train - Epoch 9, Batch: 0, Loss: 0.924488
+Train - Epoch 10, Batch: 0, Loss: 0.881112
+Train - Epoch 11, Batch: 0, Loss: 0.844265
+Train - Epoch 12, Batch: 0, Loss: 0.816327
+Train - Epoch 13, Batch: 0, Loss: 0.797305
+Train - Epoch 14, Batch: 0, Loss: 0.764534
+Train - Epoch 15, Batch: 0, Loss: 0.744689
+Train - Epoch 16, Batch: 0, Loss: 0.734030
+Train - Epoch 17, Batch: 0, Loss: 0.716514
+Train - Epoch 18, Batch: 0, Loss: 0.692909
+Train - Epoch 19, Batch: 0, Loss: 0.685701
+Train - Epoch 20, Batch: 0, Loss: 0.678540
+Train - Epoch 21, Batch: 0, Loss: 0.663423
+Train - Epoch 22, Batch: 0, Loss: 0.646056
+Train - Epoch 23, Batch: 0, Loss: 0.642957
+Train - Epoch 24, Batch: 0, Loss: 0.625975
+Train - Epoch 25, Batch: 0, Loss: 0.624113
+Train - Epoch 26, Batch: 0, Loss: 0.612801
+Train - Epoch 27, Batch: 0, Loss: 0.611634
+Train - Epoch 28, Batch: 0, Loss: 0.595702
+Train - Epoch 29, Batch: 0, Loss: 0.594565
+Train - Epoch 30, Batch: 0, Loss: 0.577743
+Train - Epoch 31, Batch: 0, Loss: 0.581141
+training_time:: 3.427025556564331
+training time full:: 3.427072763442993
+provenance prepare time:: 4.76837158203125e-07
+Test Avg. Loss: 0.000055, Accuracy: 0.875400
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.548798
+Num of deletion:: 10, running time baseline::27.896627
+Num of deletion:: 20, running time baseline::53.111506
+Num of deletion:: 30, running time baseline::78.291280
+Num of deletion:: 40, running time baseline::103.526291
+Num of deletion:: 50, running time baseline::128.725441
+Num of deletion:: 60, running time baseline::153.983604
+Num of deletion:: 70, running time baseline::179.260800
+Num of deletion:: 80, running time baseline::204.477329
+Num of deletion:: 90, running time baseline::229.710510
+training time is 252.4942009449005
+overhead:: 0
+overhead2:: 252.4939317703247
+time_baseline:: 252.49423098564148
+curr_diff: 0 tensor(0.0058, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0058, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.875600
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 0 0.00167 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 100
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.917555
+Num of deletion:: 10, running time provenance::10.421226
+Num of deletion:: 20, running time provenance::19.815663
+Num of deletion:: 30, running time provenance::29.171803
+Num of deletion:: 40, running time provenance::38.939171
+Num of deletion:: 50, running time provenance::48.507063
+Num of deletion:: 60, running time provenance::57.795645
+Num of deletion:: 70, running time provenance::67.357178
+Num of deletion:: 80, running time provenance::76.718645
+Num of deletion:: 90, running time provenance::86.436320
+overhead:: 0
+overhead2:: 0.3091132640838623
+overhead3:: 95.12977409362793
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 95.1305513381958
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0058, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0058, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.875500
+repetition 1
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression MNIST5 1 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.319452
+Train - Epoch 1, Batch: 0, Loss: 1.930385
+Train - Epoch 2, Batch: 0, Loss: 1.654750
+Train - Epoch 3, Batch: 0, Loss: 1.445586
+Train - Epoch 4, Batch: 0, Loss: 1.303048
+Train - Epoch 5, Batch: 0, Loss: 1.183593
+Train - Epoch 6, Batch: 0, Loss: 1.089554
+Train - Epoch 7, Batch: 0, Loss: 1.026933
+Train - Epoch 8, Batch: 0, Loss: 0.958510
+Train - Epoch 9, Batch: 0, Loss: 0.920421
+Train - Epoch 10, Batch: 0, Loss: 0.878767
+Train - Epoch 11, Batch: 0, Loss: 0.847214
+Train - Epoch 12, Batch: 0, Loss: 0.810884
+Train - Epoch 13, Batch: 0, Loss: 0.787397
+Train - Epoch 14, Batch: 0, Loss: 0.767497
+Train - Epoch 15, Batch: 0, Loss: 0.734807
+Train - Epoch 16, Batch: 0, Loss: 0.726988
+Train - Epoch 17, Batch: 0, Loss: 0.716414
+Train - Epoch 18, Batch: 0, Loss: 0.690955
+Train - Epoch 19, Batch: 0, Loss: 0.682711
+Train - Epoch 20, Batch: 0, Loss: 0.673566
+Train - Epoch 21, Batch: 0, Loss: 0.672741
+Train - Epoch 22, Batch: 0, Loss: 0.644843
+Train - Epoch 23, Batch: 0, Loss: 0.637052
+Train - Epoch 24, Batch: 0, Loss: 0.625101
+Train - Epoch 25, Batch: 0, Loss: 0.614445
+Train - Epoch 26, Batch: 0, Loss: 0.605527
+Train - Epoch 27, Batch: 0, Loss: 0.597850
+Train - Epoch 28, Batch: 0, Loss: 0.591594
+Train - Epoch 29, Batch: 0, Loss: 0.587357
+Train - Epoch 30, Batch: 0, Loss: 0.581535
+Train - Epoch 31, Batch: 0, Loss: 0.573258
+training_time:: 3.4357423782348633
+training time full:: 3.435788869857788
+provenance prepare time:: 9.5367431640625e-07
+Test Avg. Loss: 0.000055, Accuracy: 0.874600
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.542576
+Num of deletion:: 10, running time baseline::27.804060
+Num of deletion:: 20, running time baseline::53.212835
+Num of deletion:: 30, running time baseline::78.593141
+Num of deletion:: 40, running time baseline::104.052373
+Num of deletion:: 50, running time baseline::129.557992
+Num of deletion:: 60, running time baseline::154.862312
+Num of deletion:: 70, running time baseline::180.138231
+Num of deletion:: 80, running time baseline::205.544224
+Num of deletion:: 90, running time baseline::230.993636
+training time is 253.7790985107422
+overhead:: 0
+overhead2:: 253.77883076667786
+time_baseline:: 253.77912783622742
+curr_diff: 0 tensor(0.0056, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0056, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.874900
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 1 0.00167 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 100
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.947374
+Num of deletion:: 10, running time provenance::10.401151
+Num of deletion:: 20, running time provenance::19.916975
+Num of deletion:: 30, running time provenance::29.354756
+Num of deletion:: 40, running time provenance::38.984715
+Num of deletion:: 50, running time provenance::48.663322
+Num of deletion:: 60, running time provenance::58.196060
+Num of deletion:: 70, running time provenance::67.667774
+Num of deletion:: 80, running time provenance::77.130923
+Num of deletion:: 90, running time provenance::86.554904
+overhead:: 0
+overhead2:: 0.2895674705505371
+overhead3:: 95.25367546081543
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 95.25443196296692
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0056, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0056, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.874900
+repetition 2
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression MNIST5 2 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.346291
+Train - Epoch 1, Batch: 0, Loss: 1.959146
+Train - Epoch 2, Batch: 0, Loss: 1.673946
+Train - Epoch 3, Batch: 0, Loss: 1.475477
+Train - Epoch 4, Batch: 0, Loss: 1.314252
+Train - Epoch 5, Batch: 0, Loss: 1.193121
+Train - Epoch 6, Batch: 0, Loss: 1.107988
+Train - Epoch 7, Batch: 0, Loss: 1.032124
+Train - Epoch 8, Batch: 0, Loss: 0.972520
+Train - Epoch 9, Batch: 0, Loss: 0.931348
+Train - Epoch 10, Batch: 0, Loss: 0.885756
+Train - Epoch 11, Batch: 0, Loss: 0.858220
+Train - Epoch 12, Batch: 0, Loss: 0.819073
+Train - Epoch 13, Batch: 0, Loss: 0.789742
+Train - Epoch 14, Batch: 0, Loss: 0.777760
+Train - Epoch 15, Batch: 0, Loss: 0.752149
+Train - Epoch 16, Batch: 0, Loss: 0.723774
+Train - Epoch 17, Batch: 0, Loss: 0.715087
+Train - Epoch 18, Batch: 0, Loss: 0.704878
+Train - Epoch 19, Batch: 0, Loss: 0.684982
+Train - Epoch 20, Batch: 0, Loss: 0.668763
+Train - Epoch 21, Batch: 0, Loss: 0.654831
+Train - Epoch 22, Batch: 0, Loss: 0.635713
+Train - Epoch 23, Batch: 0, Loss: 0.647786
+Train - Epoch 24, Batch: 0, Loss: 0.624959
+Train - Epoch 25, Batch: 0, Loss: 0.620682
+Train - Epoch 26, Batch: 0, Loss: 0.602014
+Train - Epoch 27, Batch: 0, Loss: 0.600202
+Train - Epoch 28, Batch: 0, Loss: 0.598972
+Train - Epoch 29, Batch: 0, Loss: 0.586418
+Train - Epoch 30, Batch: 0, Loss: 0.584522
+Train - Epoch 31, Batch: 0, Loss: 0.581479
+training_time:: 3.4297821521759033
+training time full:: 3.42982816696167
+provenance prepare time:: 4.76837158203125e-07
+Test Avg. Loss: 0.000055, Accuracy: 0.876500
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.542696
+Num of deletion:: 10, running time baseline::27.754078
+Num of deletion:: 20, running time baseline::52.973740
+Num of deletion:: 30, running time baseline::78.165294
+Num of deletion:: 40, running time baseline::103.473451
+Num of deletion:: 50, running time baseline::128.842256
+Num of deletion:: 60, running time baseline::154.172188
+Num of deletion:: 70, running time baseline::179.555747
+Num of deletion:: 80, running time baseline::204.891420
+Num of deletion:: 90, running time baseline::230.118731
+training time is 252.8508734703064
+overhead:: 0
+overhead2:: 252.8506042957306
+time_baseline:: 252.85090255737305
+curr_diff: 0 tensor(0.0057, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0057, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.876600
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 2 0.00167 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 100
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.970197
+Num of deletion:: 10, running time provenance::10.303197
+Num of deletion:: 20, running time provenance::19.830390
+Num of deletion:: 30, running time provenance::29.314764
+Num of deletion:: 40, running time provenance::38.793818
+Num of deletion:: 50, running time provenance::48.373250
+Num of deletion:: 60, running time provenance::58.208216
+Num of deletion:: 70, running time provenance::67.536094
+Num of deletion:: 80, running time provenance::76.993235
+Num of deletion:: 90, running time provenance::86.343669
+overhead:: 0
+overhead2:: 0.31006741523742676
+overhead3:: 94.70517420768738
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 94.70596480369568
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0057, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0057, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.876500
+repetition 3
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression MNIST5 3 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.331841
+Train - Epoch 1, Batch: 0, Loss: 1.952849
+Train - Epoch 2, Batch: 0, Loss: 1.678852
+Train - Epoch 3, Batch: 0, Loss: 1.470290
+Train - Epoch 4, Batch: 0, Loss: 1.320950
+Train - Epoch 5, Batch: 0, Loss: 1.201081
+Train - Epoch 6, Batch: 0, Loss: 1.110591
+Train - Epoch 7, Batch: 0, Loss: 1.041304
+Train - Epoch 8, Batch: 0, Loss: 0.978090
+Train - Epoch 9, Batch: 0, Loss: 0.922173
+Train - Epoch 10, Batch: 0, Loss: 0.892485
+Train - Epoch 11, Batch: 0, Loss: 0.850524
+Train - Epoch 12, Batch: 0, Loss: 0.817997
+Train - Epoch 13, Batch: 0, Loss: 0.796330
+Train - Epoch 14, Batch: 0, Loss: 0.765861
+Train - Epoch 15, Batch: 0, Loss: 0.751800
+Train - Epoch 16, Batch: 0, Loss: 0.732934
+Train - Epoch 17, Batch: 0, Loss: 0.720695
+Train - Epoch 18, Batch: 0, Loss: 0.693466
+Train - Epoch 19, Batch: 0, Loss: 0.691843
+Train - Epoch 20, Batch: 0, Loss: 0.670912
+Train - Epoch 21, Batch: 0, Loss: 0.659281
+Train - Epoch 22, Batch: 0, Loss: 0.650769
+Train - Epoch 23, Batch: 0, Loss: 0.643860
+Train - Epoch 24, Batch: 0, Loss: 0.624460
+Train - Epoch 25, Batch: 0, Loss: 0.615594
+Train - Epoch 26, Batch: 0, Loss: 0.607070
+Train - Epoch 27, Batch: 0, Loss: 0.608746
+Train - Epoch 28, Batch: 0, Loss: 0.593441
+Train - Epoch 29, Batch: 0, Loss: 0.592990
+Train - Epoch 30, Batch: 0, Loss: 0.583401
+Train - Epoch 31, Batch: 0, Loss: 0.584837
+training_time:: 3.4284558296203613
+training time full:: 3.428499937057495
+provenance prepare time:: 4.76837158203125e-07
+Test Avg. Loss: 0.000055, Accuracy: 0.877000
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.556271
+Num of deletion:: 10, running time baseline::28.193873
+Num of deletion:: 20, running time baseline::53.492263
+Num of deletion:: 30, running time baseline::78.809321
+Num of deletion:: 40, running time baseline::104.081333
+Num of deletion:: 50, running time baseline::129.352180
+Num of deletion:: 60, running time baseline::154.605303
+Num of deletion:: 70, running time baseline::179.862794
+Num of deletion:: 80, running time baseline::205.052298
+Num of deletion:: 90, running time baseline::230.349594
+training time is 253.10263657569885
+overhead:: 0
+overhead2:: 253.1023666858673
+time_baseline:: 253.10266637802124
+curr_diff: 0 tensor(0.0057, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0057, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.877100
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 3 0.00167 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 100
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.971479
+Num of deletion:: 10, running time provenance::10.349360
+Num of deletion:: 20, running time provenance::20.262603
+Num of deletion:: 30, running time provenance::29.620656
+Num of deletion:: 40, running time provenance::39.116298
+Num of deletion:: 50, running time provenance::48.804633
+Num of deletion:: 60, running time provenance::58.333756
+Num of deletion:: 70, running time provenance::68.229129
+Num of deletion:: 80, running time provenance::77.841645
+Num of deletion:: 90, running time provenance::87.373317
+overhead:: 0
+overhead2:: 0.2856926918029785
+overhead3:: 96.14739227294922
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 96.1481864452362
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0057, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0057, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.877100
+repetition 4
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression MNIST5 4 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.332730
+Train - Epoch 1, Batch: 0, Loss: 1.951166
+Train - Epoch 2, Batch: 0, Loss: 1.672320
+Train - Epoch 3, Batch: 0, Loss: 1.472687
+Train - Epoch 4, Batch: 0, Loss: 1.318242
+Train - Epoch 5, Batch: 0, Loss: 1.197473
+Train - Epoch 6, Batch: 0, Loss: 1.108364
+Train - Epoch 7, Batch: 0, Loss: 1.035656
+Train - Epoch 8, Batch: 0, Loss: 0.973450
+Train - Epoch 9, Batch: 0, Loss: 0.935822
+Train - Epoch 10, Batch: 0, Loss: 0.890088
+Train - Epoch 11, Batch: 0, Loss: 0.846891
+Train - Epoch 12, Batch: 0, Loss: 0.829735
+Train - Epoch 13, Batch: 0, Loss: 0.795946
+Train - Epoch 14, Batch: 0, Loss: 0.769730
+Train - Epoch 15, Batch: 0, Loss: 0.753450
+Train - Epoch 16, Batch: 0, Loss: 0.732534
+Train - Epoch 17, Batch: 0, Loss: 0.716957
+Train - Epoch 18, Batch: 0, Loss: 0.698343
+Train - Epoch 19, Batch: 0, Loss: 0.689845
+Train - Epoch 20, Batch: 0, Loss: 0.667113
+Train - Epoch 21, Batch: 0, Loss: 0.660186
+Train - Epoch 22, Batch: 0, Loss: 0.643155
+Train - Epoch 23, Batch: 0, Loss: 0.638940
+Train - Epoch 24, Batch: 0, Loss: 0.632817
+Train - Epoch 25, Batch: 0, Loss: 0.627007
+Train - Epoch 26, Batch: 0, Loss: 0.619996
+Train - Epoch 27, Batch: 0, Loss: 0.600270
+Train - Epoch 28, Batch: 0, Loss: 0.597795
+Train - Epoch 29, Batch: 0, Loss: 0.596673
+Train - Epoch 30, Batch: 0, Loss: 0.584590
+Train - Epoch 31, Batch: 0, Loss: 0.587119
+training_time:: 3.429757833480835
+training time full:: 3.429805040359497
+provenance prepare time:: 9.5367431640625e-07
+Test Avg. Loss: 0.000055, Accuracy: 0.875200
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.543324
+Num of deletion:: 10, running time baseline::27.754039
+Num of deletion:: 20, running time baseline::52.995231
+Num of deletion:: 30, running time baseline::78.232777
+Num of deletion:: 40, running time baseline::103.490342
+Num of deletion:: 50, running time baseline::128.822091
+Num of deletion:: 60, running time baseline::154.118670
+Num of deletion:: 70, running time baseline::179.381881
+Num of deletion:: 80, running time baseline::204.672297
+Num of deletion:: 90, running time baseline::230.004354
+training time is 252.83513641357422
+overhead:: 0
+overhead2:: 252.83485102653503
+time_baseline:: 252.83516454696655
+curr_diff: 0 tensor(0.0057, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0057, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.875100
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 4 0.00167 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 100
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.969862
+Num of deletion:: 10, running time provenance::10.254460
+Num of deletion:: 20, running time provenance::19.711857
+Num of deletion:: 30, running time provenance::28.942438
+Num of deletion:: 40, running time provenance::38.553500
+Num of deletion:: 50, running time provenance::48.030892
+Num of deletion:: 60, running time provenance::57.642032
+Num of deletion:: 70, running time provenance::67.236151
+Num of deletion:: 80, running time provenance::76.892524
+Num of deletion:: 90, running time provenance::86.334139
+overhead:: 0
+overhead2:: 0.30423903465270996
+overhead3:: 94.82601857185364
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 94.82677364349365
+curr_diff: 0 tensor(0.0002, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0002, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0058, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0058, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000055, Accuracy: 0.875100
+dataset name::covtype
+deletion rate::0.00019123
+python3 generate_rand_ids 0.00019123  covtype 1
+start loading data...
+normalization start!!
+tensor([  8706, 137732, 252423, 221192, 201743, 119323, 142884,  95784, 111656,
+        444974, 295473, 518720, 283712, 436293, 220232, 292938, 340051,  92249,
+        307810,  99433, 293481, 310384, 460402,  79987, 355965,   2179, 182931,
+        140439, 387230,   6309,  86694,  52901, 303274,  74416, 185010, 209080,
+        277690, 275642, 308412, 147656,  51401, 340683, 404687, 390359, 517335,
+         95450, 357602, 212728,  70905, 503039, 430850,  84757, 117538, 380197,
+        381232, 136497, 284977, 373557, 132917, 436023, 200512, 115010, 323924,
+        493396,   1878, 326488, 132958, 426339, 462183, 419181, 194925, 369008,
+        222067,  15219, 306037, 257397, 270720, 183684, 150932, 246677, 174485,
+        143255, 139675, 375711, 280486, 391596, 323509, 520644, 195014, 288201,
+        204754, 171476, 395226, 401383, 331753, 133097,  43500, 187373,  81394])
+python3 generate_dataset_train_test.py Logistic_regression covtype 16384 32 5
+start loading data...
+normalization start!!
+repetition 0
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression covtype 0 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 1.979612
+Train - Epoch 0, Batch: 10, Loss: 1.400575
+Train - Epoch 0, Batch: 20, Loss: 1.249331
+Train - Epoch 0, Batch: 30, Loss: 1.201775
+Train - Epoch 1, Batch: 0, Loss: 1.203242
+Train - Epoch 1, Batch: 10, Loss: 1.178685
+Train - Epoch 1, Batch: 20, Loss: 1.163347
+Train - Epoch 1, Batch: 30, Loss: 1.144002
+Train - Epoch 2, Batch: 0, Loss: 1.145327
+Train - Epoch 2, Batch: 10, Loss: 1.133219
+Train - Epoch 2, Batch: 20, Loss: 1.124020
+Train - Epoch 2, Batch: 30, Loss: 1.114222
+Train - Epoch 3, Batch: 0, Loss: 1.115081
+Train - Epoch 3, Batch: 10, Loss: 1.099412
+Train - Epoch 3, Batch: 20, Loss: 1.101558
+Train - Epoch 3, Batch: 30, Loss: 1.073960
+Train - Epoch 4, Batch: 0, Loss: 1.084041
+Train - Epoch 4, Batch: 10, Loss: 1.073500
+Train - Epoch 4, Batch: 20, Loss: 1.064394
+Train - Epoch 4, Batch: 30, Loss: 1.064605
+Train - Epoch 5, Batch: 0, Loss: 1.071065
+Train - Epoch 5, Batch: 10, Loss: 1.062258
+Train - Epoch 5, Batch: 20, Loss: 1.046803
+Train - Epoch 5, Batch: 30, Loss: 1.036822
+Train - Epoch 6, Batch: 0, Loss: 1.046050
+Train - Epoch 6, Batch: 10, Loss: 1.036304
+Train - Epoch 6, Batch: 20, Loss: 1.036048
+Train - Epoch 6, Batch: 30, Loss: 1.020518
+Train - Epoch 7, Batch: 0, Loss: 1.026893
+Train - Epoch 7, Batch: 10, Loss: 1.018157
+Train - Epoch 7, Batch: 20, Loss: 1.021122
+Train - Epoch 7, Batch: 30, Loss: 1.022434
+Train - Epoch 8, Batch: 0, Loss: 1.016904
+Train - Epoch 8, Batch: 10, Loss: 1.013839
+Train - Epoch 8, Batch: 20, Loss: 1.010135
+Train - Epoch 8, Batch: 30, Loss: 0.998699
+Train - Epoch 9, Batch: 0, Loss: 1.006943
+Train - Epoch 9, Batch: 10, Loss: 0.990094
+Train - Epoch 9, Batch: 20, Loss: 1.001704
+Train - Epoch 9, Batch: 30, Loss: 0.999864
+Train - Epoch 10, Batch: 0, Loss: 0.994846
+Train - Epoch 10, Batch: 10, Loss: 0.989876
+Train - Epoch 10, Batch: 20, Loss: 0.992463
+Train - Epoch 10, Batch: 30, Loss: 0.983120
+Train - Epoch 11, Batch: 0, Loss: 0.980216
+Train - Epoch 11, Batch: 10, Loss: 0.978715
+Train - Epoch 11, Batch: 20, Loss: 0.982289
+Train - Epoch 11, Batch: 30, Loss: 0.985359
+Train - Epoch 12, Batch: 0, Loss: 0.972600
+Train - Epoch 12, Batch: 10, Loss: 0.978724
+Train - Epoch 12, Batch: 20, Loss: 0.972477
+Train - Epoch 12, Batch: 30, Loss: 0.974508
+Train - Epoch 13, Batch: 0, Loss: 0.963729
+Train - Epoch 13, Batch: 10, Loss: 0.967283
+Train - Epoch 13, Batch: 20, Loss: 0.964211
+Train - Epoch 13, Batch: 30, Loss: 0.968068
+Train - Epoch 14, Batch: 0, Loss: 0.956260
+Train - Epoch 14, Batch: 10, Loss: 0.956598
+Train - Epoch 14, Batch: 20, Loss: 0.958713
+Train - Epoch 14, Batch: 30, Loss: 0.954045
+Train - Epoch 15, Batch: 0, Loss: 0.952331
+Train - Epoch 15, Batch: 10, Loss: 0.957893
+Train - Epoch 15, Batch: 20, Loss: 0.960676
+Train - Epoch 15, Batch: 30, Loss: 0.941795
+Train - Epoch 16, Batch: 0, Loss: 0.948467
+Train - Epoch 16, Batch: 10, Loss: 0.939501
+Train - Epoch 16, Batch: 20, Loss: 0.945496
+Train - Epoch 16, Batch: 30, Loss: 0.935128
+Train - Epoch 17, Batch: 0, Loss: 0.942960
+Train - Epoch 17, Batch: 10, Loss: 0.948997
+Train - Epoch 17, Batch: 20, Loss: 0.948368
+Train - Epoch 17, Batch: 30, Loss: 0.940184
+Train - Epoch 18, Batch: 0, Loss: 0.939165
+Train - Epoch 18, Batch: 10, Loss: 0.940795
+Train - Epoch 18, Batch: 20, Loss: 0.938710
+Train - Epoch 18, Batch: 30, Loss: 0.931219
+Train - Epoch 19, Batch: 0, Loss: 0.935275
+Train - Epoch 19, Batch: 10, Loss: 0.940593
+Train - Epoch 19, Batch: 20, Loss: 0.933955
+Train - Epoch 19, Batch: 30, Loss: 0.928778
+Train - Epoch 20, Batch: 0, Loss: 0.930744
+Train - Epoch 20, Batch: 10, Loss: 0.932402
+Train - Epoch 20, Batch: 20, Loss: 0.931832
+Train - Epoch 20, Batch: 30, Loss: 0.932799
+Train - Epoch 21, Batch: 0, Loss: 0.927926
+Train - Epoch 21, Batch: 10, Loss: 0.922736
+Train - Epoch 21, Batch: 20, Loss: 0.922125
+Train - Epoch 21, Batch: 30, Loss: 0.928394
+Train - Epoch 22, Batch: 0, Loss: 0.930296
+Train - Epoch 22, Batch: 10, Loss: 0.914090
+Train - Epoch 22, Batch: 20, Loss: 0.924620
+Train - Epoch 22, Batch: 30, Loss: 0.928610
+Train - Epoch 23, Batch: 0, Loss: 0.912770
+Train - Epoch 23, Batch: 10, Loss: 0.911819
+Train - Epoch 23, Batch: 20, Loss: 0.914016
+Train - Epoch 23, Batch: 30, Loss: 0.911191
+Train - Epoch 24, Batch: 0, Loss: 0.917588
+Train - Epoch 24, Batch: 10, Loss: 0.916430
+Train - Epoch 24, Batch: 20, Loss: 0.917997
+Train - Epoch 24, Batch: 30, Loss: 0.910259
+Train - Epoch 25, Batch: 0, Loss: 0.908229
+Train - Epoch 25, Batch: 10, Loss: 0.922766
+Train - Epoch 25, Batch: 20, Loss: 0.916253
+Train - Epoch 25, Batch: 30, Loss: 0.910745
+Train - Epoch 26, Batch: 0, Loss: 0.898373
+Train - Epoch 26, Batch: 10, Loss: 0.911193
+Train - Epoch 26, Batch: 20, Loss: 0.902564
+Train - Epoch 26, Batch: 30, Loss: 0.913187
+Train - Epoch 27, Batch: 0, Loss: 0.913636
+Train - Epoch 27, Batch: 10, Loss: 0.898900
+Train - Epoch 27, Batch: 20, Loss: 0.912376
+Train - Epoch 27, Batch: 30, Loss: 0.904888
+Train - Epoch 28, Batch: 0, Loss: 0.893851
+Train - Epoch 28, Batch: 10, Loss: 0.903077
+Train - Epoch 28, Batch: 20, Loss: 0.901634
+Train - Epoch 28, Batch: 30, Loss: 0.897385
+Train - Epoch 29, Batch: 0, Loss: 0.902005
+Train - Epoch 29, Batch: 10, Loss: 0.906791
+Train - Epoch 29, Batch: 20, Loss: 0.902481
+Train - Epoch 29, Batch: 30, Loss: 0.909252
+Train - Epoch 30, Batch: 0, Loss: 0.895921
+Train - Epoch 30, Batch: 10, Loss: 0.899361
+Train - Epoch 30, Batch: 20, Loss: 0.896708
+Train - Epoch 30, Batch: 30, Loss: 0.902894
+Train - Epoch 31, Batch: 0, Loss: 0.904800
+Train - Epoch 31, Batch: 10, Loss: 0.896041
+Train - Epoch 31, Batch: 20, Loss: 0.895360
+Train - Epoch 31, Batch: 30, Loss: 0.900693
+training_time:: 3.829271078109741
+training time full:: 3.829326629638672
+provenance prepare time:: 9.5367431640625e-07
+Test Avg. Loss: 0.000071, Accuracy: 0.629890
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.343198
+Num of deletion:: 10, running time baseline::25.900234
+Num of deletion:: 20, running time baseline::48.810657
+Num of deletion:: 30, running time baseline::73.537015
+Num of deletion:: 40, running time baseline::97.998908
+Num of deletion:: 50, running time baseline::121.318897
+Num of deletion:: 60, running time baseline::145.546222
+Num of deletion:: 70, running time baseline::168.799689
+Num of deletion:: 80, running time baseline::193.002489
+Num of deletion:: 90, running time baseline::217.103187
+training time is 235.8120515346527
+overhead:: 0
+overhead2:: 235.81177306175232
+time_baseline:: 235.81207823753357
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.629890
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 0 0.00019123 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 99
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::1.009067
+Num of deletion:: 10, running time provenance::11.205012
+Num of deletion:: 20, running time provenance::21.399876
+Num of deletion:: 30, running time provenance::31.712268
+Num of deletion:: 40, running time provenance::41.852360
+Num of deletion:: 50, running time provenance::52.076082
+Num of deletion:: 60, running time provenance::62.452533
+Num of deletion:: 70, running time provenance::72.698196
+Num of deletion:: 80, running time provenance::83.100606
+Num of deletion:: 90, running time provenance::93.411464
+overhead:: 0
+overhead2:: 0.21116900444030762
+overhead3:: 101.82479095458984
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 101.825519323349
+curr_diff: 0 tensor(2.0620e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.0620e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.629890
+repetition 1
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression covtype 1 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 1.862167
+Train - Epoch 0, Batch: 10, Loss: 1.366726
+Train - Epoch 0, Batch: 20, Loss: 1.240910
+Train - Epoch 0, Batch: 30, Loss: 1.184858
+Train - Epoch 1, Batch: 0, Loss: 1.182883
+Train - Epoch 1, Batch: 10, Loss: 1.159275
+Train - Epoch 1, Batch: 20, Loss: 1.154305
+Train - Epoch 1, Batch: 30, Loss: 1.133979
+Train - Epoch 2, Batch: 0, Loss: 1.131964
+Train - Epoch 2, Batch: 10, Loss: 1.127370
+Train - Epoch 2, Batch: 20, Loss: 1.103382
+Train - Epoch 2, Batch: 30, Loss: 1.099525
+Train - Epoch 3, Batch: 0, Loss: 1.097340
+Train - Epoch 3, Batch: 10, Loss: 1.087558
+Train - Epoch 3, Batch: 20, Loss: 1.075263
+Train - Epoch 3, Batch: 30, Loss: 1.083901
+Train - Epoch 4, Batch: 0, Loss: 1.071570
+Train - Epoch 4, Batch: 10, Loss: 1.061802
+Train - Epoch 4, Batch: 20, Loss: 1.063419
+Train - Epoch 4, Batch: 30, Loss: 1.051180
+Train - Epoch 5, Batch: 0, Loss: 1.059695
+Train - Epoch 5, Batch: 10, Loss: 1.051717
+Train - Epoch 5, Batch: 20, Loss: 1.043260
+Train - Epoch 5, Batch: 30, Loss: 1.036807
+Train - Epoch 6, Batch: 0, Loss: 1.042043
+Train - Epoch 6, Batch: 10, Loss: 1.028749
+Train - Epoch 6, Batch: 20, Loss: 1.025944
+Train - Epoch 6, Batch: 30, Loss: 1.018607
+Train - Epoch 7, Batch: 0, Loss: 1.021352
+Train - Epoch 7, Batch: 10, Loss: 1.020790
+Train - Epoch 7, Batch: 20, Loss: 1.012868
+Train - Epoch 7, Batch: 30, Loss: 1.014995
+Train - Epoch 8, Batch: 0, Loss: 1.009773
+Train - Epoch 8, Batch: 10, Loss: 1.003726
+Train - Epoch 8, Batch: 20, Loss: 0.996015
+Train - Epoch 8, Batch: 30, Loss: 0.990284
+Train - Epoch 9, Batch: 0, Loss: 0.992454
+Train - Epoch 9, Batch: 10, Loss: 0.997692
+Train - Epoch 9, Batch: 20, Loss: 0.993655
+Train - Epoch 9, Batch: 30, Loss: 0.997745
+Train - Epoch 10, Batch: 0, Loss: 0.986493
+Train - Epoch 10, Batch: 10, Loss: 0.981770
+Train - Epoch 10, Batch: 20, Loss: 0.983536
+Train - Epoch 10, Batch: 30, Loss: 0.988935
+Train - Epoch 11, Batch: 0, Loss: 0.991551
+Train - Epoch 11, Batch: 10, Loss: 0.981429
+Train - Epoch 11, Batch: 20, Loss: 0.980539
+Train - Epoch 11, Batch: 30, Loss: 0.975667
+Train - Epoch 12, Batch: 0, Loss: 0.971566
+Train - Epoch 12, Batch: 10, Loss: 0.966343
+Train - Epoch 12, Batch: 20, Loss: 0.965873
+Train - Epoch 12, Batch: 30, Loss: 0.972035
+Train - Epoch 13, Batch: 0, Loss: 0.967222
+Train - Epoch 13, Batch: 10, Loss: 0.957618
+Train - Epoch 13, Batch: 20, Loss: 0.950373
+Train - Epoch 13, Batch: 30, Loss: 0.957294
+Train - Epoch 14, Batch: 0, Loss: 0.960389
+Train - Epoch 14, Batch: 10, Loss: 0.955893
+Train - Epoch 14, Batch: 20, Loss: 0.946236
+Train - Epoch 14, Batch: 30, Loss: 0.949661
+Train - Epoch 15, Batch: 0, Loss: 0.950642
+Train - Epoch 15, Batch: 10, Loss: 0.945867
+Train - Epoch 15, Batch: 20, Loss: 0.953595
+Train - Epoch 15, Batch: 30, Loss: 0.953729
+Train - Epoch 16, Batch: 0, Loss: 0.954957
+Train - Epoch 16, Batch: 10, Loss: 0.947855
+Train - Epoch 16, Batch: 20, Loss: 0.937232
+Train - Epoch 16, Batch: 30, Loss: 0.937545
+Train - Epoch 17, Batch: 0, Loss: 0.953625
+Train - Epoch 17, Batch: 10, Loss: 0.934655
+Train - Epoch 17, Batch: 20, Loss: 0.945749
+Train - Epoch 17, Batch: 30, Loss: 0.947903
+Train - Epoch 18, Batch: 0, Loss: 0.939210
+Train - Epoch 18, Batch: 10, Loss: 0.942235
+Train - Epoch 18, Batch: 20, Loss: 0.930424
+Train - Epoch 18, Batch: 30, Loss: 0.943820
+Train - Epoch 19, Batch: 0, Loss: 0.931886
+Train - Epoch 19, Batch: 10, Loss: 0.936525
+Train - Epoch 19, Batch: 20, Loss: 0.927820
+Train - Epoch 19, Batch: 30, Loss: 0.934072
+Train - Epoch 20, Batch: 0, Loss: 0.932719
+Train - Epoch 20, Batch: 10, Loss: 0.924506
+Train - Epoch 20, Batch: 20, Loss: 0.930246
+Train - Epoch 20, Batch: 30, Loss: 0.926357
+Train - Epoch 21, Batch: 0, Loss: 0.930316
+Train - Epoch 21, Batch: 10, Loss: 0.921388
+Train - Epoch 21, Batch: 20, Loss: 0.923209
+Train - Epoch 21, Batch: 30, Loss: 0.924929
+Train - Epoch 22, Batch: 0, Loss: 0.920295
+Train - Epoch 22, Batch: 10, Loss: 0.918016
+Train - Epoch 22, Batch: 20, Loss: 0.924807
+Train - Epoch 22, Batch: 30, Loss: 0.923164
+Train - Epoch 23, Batch: 0, Loss: 0.924418
+Train - Epoch 23, Batch: 10, Loss: 0.911333
+Train - Epoch 23, Batch: 20, Loss: 0.915259
+Train - Epoch 23, Batch: 30, Loss: 0.908091
+Train - Epoch 24, Batch: 0, Loss: 0.918988
+Train - Epoch 24, Batch: 10, Loss: 0.915733
+Train - Epoch 24, Batch: 20, Loss: 0.917352
+Train - Epoch 24, Batch: 30, Loss: 0.913001
+Train - Epoch 25, Batch: 0, Loss: 0.915781
+Train - Epoch 25, Batch: 10, Loss: 0.909092
+Train - Epoch 25, Batch: 20, Loss: 0.913828
+Train - Epoch 25, Batch: 30, Loss: 0.918681
+Train - Epoch 26, Batch: 0, Loss: 0.890034
+Train - Epoch 26, Batch: 10, Loss: 0.901399
+Train - Epoch 26, Batch: 20, Loss: 0.908463
+Train - Epoch 26, Batch: 30, Loss: 0.906833
+Train - Epoch 27, Batch: 0, Loss: 0.904467
+Train - Epoch 27, Batch: 10, Loss: 0.911863
+Train - Epoch 27, Batch: 20, Loss: 0.904183
+Train - Epoch 27, Batch: 30, Loss: 0.911060
+Train - Epoch 28, Batch: 0, Loss: 0.901511
+Train - Epoch 28, Batch: 10, Loss: 0.903757
+Train - Epoch 28, Batch: 20, Loss: 0.898129
+Train - Epoch 28, Batch: 30, Loss: 0.896478
+Train - Epoch 29, Batch: 0, Loss: 0.891981
+Train - Epoch 29, Batch: 10, Loss: 0.898561
+Train - Epoch 29, Batch: 20, Loss: 0.904708
+Train - Epoch 29, Batch: 30, Loss: 0.892691
+Train - Epoch 30, Batch: 0, Loss: 0.901047
+Train - Epoch 30, Batch: 10, Loss: 0.915019
+Train - Epoch 30, Batch: 20, Loss: 0.893923
+Train - Epoch 30, Batch: 30, Loss: 0.892634
+Train - Epoch 31, Batch: 0, Loss: 0.890732
+Train - Epoch 31, Batch: 10, Loss: 0.902433
+Train - Epoch 31, Batch: 20, Loss: 0.887965
+Train - Epoch 31, Batch: 30, Loss: 0.888275
+training_time:: 3.9986023902893066
+training time full:: 3.998650074005127
+provenance prepare time:: 4.76837158203125e-07
+Test Avg. Loss: 0.000070, Accuracy: 0.631198
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.405383
+Num of deletion:: 10, running time baseline::25.711599
+Num of deletion:: 20, running time baseline::48.976943
+Num of deletion:: 30, running time baseline::72.208033
+Num of deletion:: 40, running time baseline::94.608244
+Num of deletion:: 50, running time baseline::118.028821
+Num of deletion:: 60, running time baseline::139.181265
+Num of deletion:: 70, running time baseline::163.940983
+Num of deletion:: 80, running time baseline::189.107341
+Num of deletion:: 90, running time baseline::213.690961
+training time is 231.75514316558838
+overhead:: 0
+overhead2:: 231.7548713684082
+time_baseline:: 231.75517654418945
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000070, Accuracy: 0.631198
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 1 0.00019123 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 99
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::1.082270
+Num of deletion:: 10, running time provenance::11.282413
+Num of deletion:: 20, running time provenance::21.065222
+Num of deletion:: 30, running time provenance::31.262271
+Num of deletion:: 40, running time provenance::41.501065
+Num of deletion:: 50, running time provenance::51.745161
+Num of deletion:: 60, running time provenance::62.008359
+Num of deletion:: 70, running time provenance::72.140160
+Num of deletion:: 80, running time provenance::82.417542
+Num of deletion:: 90, running time provenance::95.350587
+overhead:: 0
+overhead2:: 0.21459388732910156
+overhead3:: 103.68697905540466
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 103.687735080719
+curr_diff: 0 tensor(2.0550e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.0550e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000070, Accuracy: 0.631198
+repetition 2
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression covtype 2 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 1.878103
+Train - Epoch 0, Batch: 10, Loss: 1.350537
+Train - Epoch 0, Batch: 20, Loss: 1.232386
+Train - Epoch 0, Batch: 30, Loss: 1.183012
+Train - Epoch 1, Batch: 0, Loss: 1.182400
+Train - Epoch 1, Batch: 10, Loss: 1.149206
+Train - Epoch 1, Batch: 20, Loss: 1.133507
+Train - Epoch 1, Batch: 30, Loss: 1.124388
+Train - Epoch 2, Batch: 0, Loss: 1.116379
+Train - Epoch 2, Batch: 10, Loss: 1.121164
+Train - Epoch 2, Batch: 20, Loss: 1.096400
+Train - Epoch 2, Batch: 30, Loss: 1.089364
+Train - Epoch 3, Batch: 0, Loss: 1.079739
+Train - Epoch 3, Batch: 10, Loss: 1.083283
+Train - Epoch 3, Batch: 20, Loss: 1.076267
+Train - Epoch 3, Batch: 30, Loss: 1.073506
+Train - Epoch 4, Batch: 0, Loss: 1.076934
+Train - Epoch 4, Batch: 10, Loss: 1.061876
+Train - Epoch 4, Batch: 20, Loss: 1.060183
+Train - Epoch 4, Batch: 30, Loss: 1.039257
+Train - Epoch 5, Batch: 0, Loss: 1.045109
+Train - Epoch 5, Batch: 10, Loss: 1.046728
+Train - Epoch 5, Batch: 20, Loss: 1.042984
+Train - Epoch 5, Batch: 30, Loss: 1.034779
+Train - Epoch 6, Batch: 0, Loss: 1.034215
+Train - Epoch 6, Batch: 10, Loss: 1.027970
+Train - Epoch 6, Batch: 20, Loss: 1.035926
+Train - Epoch 6, Batch: 30, Loss: 1.023614
+Train - Epoch 7, Batch: 0, Loss: 1.014346
+Train - Epoch 7, Batch: 10, Loss: 1.004237
+Train - Epoch 7, Batch: 20, Loss: 1.012740
+Train - Epoch 7, Batch: 30, Loss: 0.999544
+Train - Epoch 8, Batch: 0, Loss: 1.011132
+Train - Epoch 8, Batch: 10, Loss: 1.004070
+Train - Epoch 8, Batch: 20, Loss: 0.998960
+Train - Epoch 8, Batch: 30, Loss: 1.004955
+Train - Epoch 9, Batch: 0, Loss: 0.999954
+Train - Epoch 9, Batch: 10, Loss: 0.985057
+Train - Epoch 9, Batch: 20, Loss: 0.984681
+Train - Epoch 9, Batch: 30, Loss: 0.994090
+Train - Epoch 10, Batch: 0, Loss: 0.988813
+Train - Epoch 10, Batch: 10, Loss: 0.977807
+Train - Epoch 10, Batch: 20, Loss: 0.977160
+Train - Epoch 10, Batch: 30, Loss: 0.985331
+Train - Epoch 11, Batch: 0, Loss: 0.969735
+Train - Epoch 11, Batch: 10, Loss: 0.963666
+Train - Epoch 11, Batch: 20, Loss: 0.979860
+Train - Epoch 11, Batch: 30, Loss: 0.960751
+Train - Epoch 12, Batch: 0, Loss: 0.976183
+Train - Epoch 12, Batch: 10, Loss: 0.981767
+Train - Epoch 12, Batch: 20, Loss: 0.968432
+Train - Epoch 12, Batch: 30, Loss: 0.960730
+Train - Epoch 13, Batch: 0, Loss: 0.958595
+Train - Epoch 13, Batch: 10, Loss: 0.956908
+Train - Epoch 13, Batch: 20, Loss: 0.957695
+Train - Epoch 13, Batch: 30, Loss: 0.948056
+Train - Epoch 14, Batch: 0, Loss: 0.955767
+Train - Epoch 14, Batch: 10, Loss: 0.949630
+Train - Epoch 14, Batch: 20, Loss: 0.958002
+Train - Epoch 14, Batch: 30, Loss: 0.951980
+Train - Epoch 15, Batch: 0, Loss: 0.945234
+Train - Epoch 15, Batch: 10, Loss: 0.953458
+Train - Epoch 15, Batch: 20, Loss: 0.950544
+Train - Epoch 15, Batch: 30, Loss: 0.948504
+Train - Epoch 16, Batch: 0, Loss: 0.950816
+Train - Epoch 16, Batch: 10, Loss: 0.948823
+Train - Epoch 16, Batch: 20, Loss: 0.943825
+Train - Epoch 16, Batch: 30, Loss: 0.940198
+Train - Epoch 17, Batch: 0, Loss: 0.941982
+Train - Epoch 17, Batch: 10, Loss: 0.939259
+Train - Epoch 17, Batch: 20, Loss: 0.936009
+Train - Epoch 17, Batch: 30, Loss: 0.933999
+Train - Epoch 18, Batch: 0, Loss: 0.941390
+Train - Epoch 18, Batch: 10, Loss: 0.942315
+Train - Epoch 18, Batch: 20, Loss: 0.926875
+Train - Epoch 18, Batch: 30, Loss: 0.937896
+Train - Epoch 19, Batch: 0, Loss: 0.924994
+Train - Epoch 19, Batch: 10, Loss: 0.930174
+Train - Epoch 19, Batch: 20, Loss: 0.936550
+Train - Epoch 19, Batch: 30, Loss: 0.925463
+Train - Epoch 20, Batch: 0, Loss: 0.924403
+Train - Epoch 20, Batch: 10, Loss: 0.932833
+Train - Epoch 20, Batch: 20, Loss: 0.922189
+Train - Epoch 20, Batch: 30, Loss: 0.919066
+Train - Epoch 21, Batch: 0, Loss: 0.929323
+Train - Epoch 21, Batch: 10, Loss: 0.926170
+Train - Epoch 21, Batch: 20, Loss: 0.919963
+Train - Epoch 21, Batch: 30, Loss: 0.919941
+Train - Epoch 22, Batch: 0, Loss: 0.916346
+Train - Epoch 22, Batch: 10, Loss: 0.911261
+Train - Epoch 22, Batch: 20, Loss: 0.927941
+Train - Epoch 22, Batch: 30, Loss: 0.923627
+Train - Epoch 23, Batch: 0, Loss: 0.927865
+Train - Epoch 23, Batch: 10, Loss: 0.912266
+Train - Epoch 23, Batch: 20, Loss: 0.913326
+Train - Epoch 23, Batch: 30, Loss: 0.908942
+Train - Epoch 24, Batch: 0, Loss: 0.925578
+Train - Epoch 24, Batch: 10, Loss: 0.911086
+Train - Epoch 24, Batch: 20, Loss: 0.911988
+Train - Epoch 24, Batch: 30, Loss: 0.904496
+Train - Epoch 25, Batch: 0, Loss: 0.914461
+Train - Epoch 25, Batch: 10, Loss: 0.913701
+Train - Epoch 25, Batch: 20, Loss: 0.903572
+Train - Epoch 25, Batch: 30, Loss: 0.902641
+Train - Epoch 26, Batch: 0, Loss: 0.905809
+Train - Epoch 26, Batch: 10, Loss: 0.913230
+Train - Epoch 26, Batch: 20, Loss: 0.901304
+Train - Epoch 26, Batch: 30, Loss: 0.904229
+Train - Epoch 27, Batch: 0, Loss: 0.910103
+Train - Epoch 27, Batch: 10, Loss: 0.897264
+Train - Epoch 27, Batch: 20, Loss: 0.904707
+Train - Epoch 27, Batch: 30, Loss: 0.908971
+Train - Epoch 28, Batch: 0, Loss: 0.892880
+Train - Epoch 28, Batch: 10, Loss: 0.903482
+Train - Epoch 28, Batch: 20, Loss: 0.904986
+Train - Epoch 28, Batch: 30, Loss: 0.885357
+Train - Epoch 29, Batch: 0, Loss: 0.889836
+Train - Epoch 29, Batch: 10, Loss: 0.901473
+Train - Epoch 29, Batch: 20, Loss: 0.900732
+Train - Epoch 29, Batch: 30, Loss: 0.903848
+Train - Epoch 30, Batch: 0, Loss: 0.900451
+Train - Epoch 30, Batch: 10, Loss: 0.888616
+Train - Epoch 30, Batch: 20, Loss: 0.894584
+Train - Epoch 30, Batch: 30, Loss: 0.892628
+Train - Epoch 31, Batch: 0, Loss: 0.896888
+Train - Epoch 31, Batch: 10, Loss: 0.889353
+Train - Epoch 31, Batch: 20, Loss: 0.892515
+Train - Epoch 31, Batch: 30, Loss: 0.895475
+training_time:: 3.7408576011657715
+training time full:: 3.7409024238586426
+provenance prepare time:: 4.76837158203125e-07
+Test Avg. Loss: 0.000070, Accuracy: 0.630699
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.356895
+Num of deletion:: 10, running time baseline::26.213857
+Num of deletion:: 20, running time baseline::50.967238
+Num of deletion:: 30, running time baseline::73.797429
+Num of deletion:: 40, running time baseline::98.373765
+Num of deletion:: 50, running time baseline::123.252164
+Num of deletion:: 60, running time baseline::147.793606
+Num of deletion:: 70, running time baseline::172.760413
+Num of deletion:: 80, running time baseline::196.306359
+Num of deletion:: 90, running time baseline::220.496757
+training time is 239.6252703666687
+overhead:: 0
+overhead2:: 239.62501573562622
+time_baseline:: 239.62530326843262
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000070, Accuracy: 0.630717
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 2 0.00019123 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 99
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::1.022125
+Num of deletion:: 10, running time provenance::11.243333
+Num of deletion:: 20, running time provenance::21.545130
+Num of deletion:: 30, running time provenance::31.840022
+Num of deletion:: 40, running time provenance::42.147936
+Num of deletion:: 50, running time provenance::52.581789
+Num of deletion:: 60, running time provenance::62.910797
+Num of deletion:: 70, running time provenance::73.488519
+Num of deletion:: 80, running time provenance::83.876056
+Num of deletion:: 90, running time provenance::95.149498
+overhead:: 0
+overhead2:: 0.20201730728149414
+overhead3:: 106.23222923278809
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 106.2329957485199
+curr_diff: 0 tensor(2.4744e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.4744e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000070, Accuracy: 0.630717
+repetition 3
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression covtype 3 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.062635
+Train - Epoch 0, Batch: 10, Loss: 1.398924
+Train - Epoch 0, Batch: 20, Loss: 1.238945
+Train - Epoch 0, Batch: 30, Loss: 1.180016
+Train - Epoch 1, Batch: 0, Loss: 1.185755
+Train - Epoch 1, Batch: 10, Loss: 1.158304
+Train - Epoch 1, Batch: 20, Loss: 1.135860
+Train - Epoch 1, Batch: 30, Loss: 1.117313
+Train - Epoch 2, Batch: 0, Loss: 1.123562
+Train - Epoch 2, Batch: 10, Loss: 1.123334
+Train - Epoch 2, Batch: 20, Loss: 1.099723
+Train - Epoch 2, Batch: 30, Loss: 1.099997
+Train - Epoch 3, Batch: 0, Loss: 1.093387
+Train - Epoch 3, Batch: 10, Loss: 1.085403
+Train - Epoch 3, Batch: 20, Loss: 1.078618
+Train - Epoch 3, Batch: 30, Loss: 1.069748
+Train - Epoch 4, Batch: 0, Loss: 1.073418
+Train - Epoch 4, Batch: 10, Loss: 1.064727
+Train - Epoch 4, Batch: 20, Loss: 1.058383
+Train - Epoch 4, Batch: 30, Loss: 1.049355
+Train - Epoch 5, Batch: 0, Loss: 1.058899
+Train - Epoch 5, Batch: 10, Loss: 1.031827
+Train - Epoch 5, Batch: 20, Loss: 1.044133
+Train - Epoch 5, Batch: 30, Loss: 1.040311
+Train - Epoch 6, Batch: 0, Loss: 1.026043
+Train - Epoch 6, Batch: 10, Loss: 1.026481
+Train - Epoch 6, Batch: 20, Loss: 1.024556
+Train - Epoch 6, Batch: 30, Loss: 1.025129
+Train - Epoch 7, Batch: 0, Loss: 1.025320
+Train - Epoch 7, Batch: 10, Loss: 1.019308
+Train - Epoch 7, Batch: 20, Loss: 1.016945
+Train - Epoch 7, Batch: 30, Loss: 1.014527
+Train - Epoch 8, Batch: 0, Loss: 1.008017
+Train - Epoch 8, Batch: 10, Loss: 1.017026
+Train - Epoch 8, Batch: 20, Loss: 0.995448
+Train - Epoch 8, Batch: 30, Loss: 1.007082
+Train - Epoch 9, Batch: 0, Loss: 0.995138
+Train - Epoch 9, Batch: 10, Loss: 0.995209
+Train - Epoch 9, Batch: 20, Loss: 0.989530
+Train - Epoch 9, Batch: 30, Loss: 0.992546
+Train - Epoch 10, Batch: 0, Loss: 0.987547
+Train - Epoch 10, Batch: 10, Loss: 0.981013
+Train - Epoch 10, Batch: 20, Loss: 0.991495
+Train - Epoch 10, Batch: 30, Loss: 0.977662
+Train - Epoch 11, Batch: 0, Loss: 0.973294
+Train - Epoch 11, Batch: 10, Loss: 0.982190
+Train - Epoch 11, Batch: 20, Loss: 0.977459
+Train - Epoch 11, Batch: 30, Loss: 0.969421
+Train - Epoch 12, Batch: 0, Loss: 0.971911
+Train - Epoch 12, Batch: 10, Loss: 0.954799
+Train - Epoch 12, Batch: 20, Loss: 0.970546
+Train - Epoch 12, Batch: 30, Loss: 0.964551
+Train - Epoch 13, Batch: 0, Loss: 0.970232
+Train - Epoch 13, Batch: 10, Loss: 0.965318
+Train - Epoch 13, Batch: 20, Loss: 0.959954
+Train - Epoch 13, Batch: 30, Loss: 0.962039
+Train - Epoch 14, Batch: 0, Loss: 0.968522
+Train - Epoch 14, Batch: 10, Loss: 0.962915
+Train - Epoch 14, Batch: 20, Loss: 0.951717
+Train - Epoch 14, Batch: 30, Loss: 0.948642
+Train - Epoch 15, Batch: 0, Loss: 0.953430
+Train - Epoch 15, Batch: 10, Loss: 0.950560
+Train - Epoch 15, Batch: 20, Loss: 0.943445
+Train - Epoch 15, Batch: 30, Loss: 0.940697
+Train - Epoch 16, Batch: 0, Loss: 0.944912
+Train - Epoch 16, Batch: 10, Loss: 0.936792
+Train - Epoch 16, Batch: 20, Loss: 0.939951
+Train - Epoch 16, Batch: 30, Loss: 0.935640
+Train - Epoch 17, Batch: 0, Loss: 0.940094
+Train - Epoch 17, Batch: 10, Loss: 0.936378
+Train - Epoch 17, Batch: 20, Loss: 0.939385
+Train - Epoch 17, Batch: 30, Loss: 0.937928
+Train - Epoch 18, Batch: 0, Loss: 0.937788
+Train - Epoch 18, Batch: 10, Loss: 0.934208
+Train - Epoch 18, Batch: 20, Loss: 0.938433
+Train - Epoch 18, Batch: 30, Loss: 0.939613
+Train - Epoch 19, Batch: 0, Loss: 0.938723
+Train - Epoch 19, Batch: 10, Loss: 0.932553
+Train - Epoch 19, Batch: 20, Loss: 0.935475
+Train - Epoch 19, Batch: 30, Loss: 0.925640
+Train - Epoch 20, Batch: 0, Loss: 0.923192
+Train - Epoch 20, Batch: 10, Loss: 0.937718
+Train - Epoch 20, Batch: 20, Loss: 0.929526
+Train - Epoch 20, Batch: 30, Loss: 0.925020
+Train - Epoch 21, Batch: 0, Loss: 0.922048
+Train - Epoch 21, Batch: 10, Loss: 0.924033
+Train - Epoch 21, Batch: 20, Loss: 0.925739
+Train - Epoch 21, Batch: 30, Loss: 0.919231
+Train - Epoch 22, Batch: 0, Loss: 0.922054
+Train - Epoch 22, Batch: 10, Loss: 0.926582
+Train - Epoch 22, Batch: 20, Loss: 0.915851
+Train - Epoch 22, Batch: 30, Loss: 0.917994
+Train - Epoch 23, Batch: 0, Loss: 0.918125
+Train - Epoch 23, Batch: 10, Loss: 0.927189
+Train - Epoch 23, Batch: 20, Loss: 0.910130
+Train - Epoch 23, Batch: 30, Loss: 0.913662
+Train - Epoch 24, Batch: 0, Loss: 0.903109
+Train - Epoch 24, Batch: 10, Loss: 0.912441
+Train - Epoch 24, Batch: 20, Loss: 0.913565
+Train - Epoch 24, Batch: 30, Loss: 0.915357
+Train - Epoch 25, Batch: 0, Loss: 0.924775
+Train - Epoch 25, Batch: 10, Loss: 0.912213
+Train - Epoch 25, Batch: 20, Loss: 0.904119
+Train - Epoch 25, Batch: 30, Loss: 0.913105
+Train - Epoch 26, Batch: 0, Loss: 0.915815
+Train - Epoch 26, Batch: 10, Loss: 0.905912
+Train - Epoch 26, Batch: 20, Loss: 0.913370
+Train - Epoch 26, Batch: 30, Loss: 0.907796
+Train - Epoch 27, Batch: 0, Loss: 0.912503
+Train - Epoch 27, Batch: 10, Loss: 0.893588
+Train - Epoch 27, Batch: 20, Loss: 0.903703
+Train - Epoch 27, Batch: 30, Loss: 0.895404
+Train - Epoch 28, Batch: 0, Loss: 0.895927
+Train - Epoch 28, Batch: 10, Loss: 0.908210
+Train - Epoch 28, Batch: 20, Loss: 0.895541
+Train - Epoch 28, Batch: 30, Loss: 0.899924
+Train - Epoch 29, Batch: 0, Loss: 0.900003
+Train - Epoch 29, Batch: 10, Loss: 0.902056
+Train - Epoch 29, Batch: 20, Loss: 0.899723
+Train - Epoch 29, Batch: 30, Loss: 0.893896
+Train - Epoch 30, Batch: 0, Loss: 0.897053
+Train - Epoch 30, Batch: 10, Loss: 0.888912
+Train - Epoch 30, Batch: 20, Loss: 0.901111
+Train - Epoch 30, Batch: 30, Loss: 0.900610
+Train - Epoch 31, Batch: 0, Loss: 0.891656
+Train - Epoch 31, Batch: 10, Loss: 0.896959
+Train - Epoch 31, Batch: 20, Loss: 0.892208
+Train - Epoch 31, Batch: 30, Loss: 0.889397
+training_time:: 3.728712797164917
+training time full:: 3.728757619857788
+provenance prepare time:: 7.152557373046875e-07
+Test Avg. Loss: 0.000070, Accuracy: 0.630544
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.223748
+Num of deletion:: 10, running time baseline::26.792103
+Num of deletion:: 20, running time baseline::51.564585
+Num of deletion:: 30, running time baseline::76.677202
+Num of deletion:: 40, running time baseline::100.566592
+Num of deletion:: 50, running time baseline::125.864735
+Num of deletion:: 60, running time baseline::149.947729
+Num of deletion:: 70, running time baseline::173.314816
+Num of deletion:: 80, running time baseline::197.143103
+Num of deletion:: 90, running time baseline::221.904614
+training time is 239.5381269454956
+overhead:: 0
+overhead2:: 239.53784728050232
+time_baseline:: 239.53815388679504
+curr_diff: 0 tensor(0.0009, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0009, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000070, Accuracy: 0.630510
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 3 0.00019123 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 99
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.977213
+Num of deletion:: 10, running time provenance::14.412272
+Num of deletion:: 20, running time provenance::27.990506
+Num of deletion:: 30, running time provenance::41.580034
+Num of deletion:: 40, running time provenance::55.178286
+Num of deletion:: 50, running time provenance::68.930691
+Num of deletion:: 60, running time provenance::79.472566
+Num of deletion:: 70, running time provenance::89.802583
+Num of deletion:: 80, running time provenance::100.116165
+Num of deletion:: 90, running time provenance::110.532696
+overhead:: 0
+overhead2:: 0.23026323318481445
+overhead3:: 119.51914739608765
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 119.51999020576477
+curr_diff: 0 tensor(1.8119e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.8119e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000070, Accuracy: 0.630510
+repetition 4
+python3 benchmark_exp_lr.py 0.001 16384 32 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression covtype 4 0.005 1 1
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 2.058249
+Train - Epoch 0, Batch: 10, Loss: 1.409359
+Train - Epoch 0, Batch: 20, Loss: 1.248844
+Train - Epoch 0, Batch: 30, Loss: 1.201116
+Train - Epoch 1, Batch: 0, Loss: 1.182497
+Train - Epoch 1, Batch: 10, Loss: 1.163089
+Train - Epoch 1, Batch: 20, Loss: 1.152374
+Train - Epoch 1, Batch: 30, Loss: 1.145327
+Train - Epoch 2, Batch: 0, Loss: 1.136070
+Train - Epoch 2, Batch: 10, Loss: 1.134815
+Train - Epoch 2, Batch: 20, Loss: 1.131211
+Train - Epoch 2, Batch: 30, Loss: 1.110929
+Train - Epoch 3, Batch: 0, Loss: 1.106425
+Train - Epoch 3, Batch: 10, Loss: 1.094585
+Train - Epoch 3, Batch: 20, Loss: 1.087189
+Train - Epoch 3, Batch: 30, Loss: 1.081504
+Train - Epoch 4, Batch: 0, Loss: 1.078301
+Train - Epoch 4, Batch: 10, Loss: 1.079876
+Train - Epoch 4, Batch: 20, Loss: 1.061154
+Train - Epoch 4, Batch: 30, Loss: 1.066902
+Train - Epoch 5, Batch: 0, Loss: 1.070894
+Train - Epoch 5, Batch: 10, Loss: 1.047180
+Train - Epoch 5, Batch: 20, Loss: 1.051577
+Train - Epoch 5, Batch: 30, Loss: 1.051496
+Train - Epoch 6, Batch: 0, Loss: 1.046096
+Train - Epoch 6, Batch: 10, Loss: 1.042456
+Train - Epoch 6, Batch: 20, Loss: 1.029731
+Train - Epoch 6, Batch: 30, Loss: 1.030427
+Train - Epoch 7, Batch: 0, Loss: 1.029020
+Train - Epoch 7, Batch: 10, Loss: 1.029280
+Train - Epoch 7, Batch: 20, Loss: 1.022837
+Train - Epoch 7, Batch: 30, Loss: 1.018105
+Train - Epoch 8, Batch: 0, Loss: 1.008343
+Train - Epoch 8, Batch: 10, Loss: 1.017311
+Train - Epoch 8, Batch: 20, Loss: 1.012281
+Train - Epoch 8, Batch: 30, Loss: 0.998547
+Train - Epoch 9, Batch: 0, Loss: 1.000844
+Train - Epoch 9, Batch: 10, Loss: 1.000915
+Train - Epoch 9, Batch: 20, Loss: 1.004401
+Train - Epoch 9, Batch: 30, Loss: 0.990174
+Train - Epoch 10, Batch: 0, Loss: 1.001606
+Train - Epoch 10, Batch: 10, Loss: 0.990890
+Train - Epoch 10, Batch: 20, Loss: 0.991385
+Train - Epoch 10, Batch: 30, Loss: 0.984726
+Train - Epoch 11, Batch: 0, Loss: 0.986381
+Train - Epoch 11, Batch: 10, Loss: 0.975687
+Train - Epoch 11, Batch: 20, Loss: 0.979767
+Train - Epoch 11, Batch: 30, Loss: 0.970634
+Train - Epoch 12, Batch: 0, Loss: 0.974133
+Train - Epoch 12, Batch: 10, Loss: 0.970334
+Train - Epoch 12, Batch: 20, Loss: 0.968219
+Train - Epoch 12, Batch: 30, Loss: 0.970477
+Train - Epoch 13, Batch: 0, Loss: 0.973399
+Train - Epoch 13, Batch: 10, Loss: 0.966142
+Train - Epoch 13, Batch: 20, Loss: 0.957727
+Train - Epoch 13, Batch: 30, Loss: 0.963258
+Train - Epoch 14, Batch: 0, Loss: 0.965889
+Train - Epoch 14, Batch: 10, Loss: 0.961448
+Train - Epoch 14, Batch: 20, Loss: 0.966088
+Train - Epoch 14, Batch: 30, Loss: 0.958836
+Train - Epoch 15, Batch: 0, Loss: 0.955982
+Train - Epoch 15, Batch: 10, Loss: 0.971634
+Train - Epoch 15, Batch: 20, Loss: 0.958258
+Train - Epoch 15, Batch: 30, Loss: 0.947011
+Train - Epoch 16, Batch: 0, Loss: 0.945809
+Train - Epoch 16, Batch: 10, Loss: 0.953139
+Train - Epoch 16, Batch: 20, Loss: 0.943158
+Train - Epoch 16, Batch: 30, Loss: 0.947159
+Train - Epoch 17, Batch: 0, Loss: 0.946845
+Train - Epoch 17, Batch: 10, Loss: 0.947675
+Train - Epoch 17, Batch: 20, Loss: 0.942701
+Train - Epoch 17, Batch: 30, Loss: 0.933606
+Train - Epoch 18, Batch: 0, Loss: 0.943778
+Train - Epoch 18, Batch: 10, Loss: 0.931522
+Train - Epoch 18, Batch: 20, Loss: 0.945022
+Train - Epoch 18, Batch: 30, Loss: 0.922806
+Train - Epoch 19, Batch: 0, Loss: 0.941335
+Train - Epoch 19, Batch: 10, Loss: 0.944533
+Train - Epoch 19, Batch: 20, Loss: 0.932261
+Train - Epoch 19, Batch: 30, Loss: 0.924270
+Train - Epoch 20, Batch: 0, Loss: 0.926167
+Train - Epoch 20, Batch: 10, Loss: 0.925366
+Train - Epoch 20, Batch: 20, Loss: 0.936599
+Train - Epoch 20, Batch: 30, Loss: 0.928048
+Train - Epoch 21, Batch: 0, Loss: 0.930662
+Train - Epoch 21, Batch: 10, Loss: 0.930841
+Train - Epoch 21, Batch: 20, Loss: 0.920319
+Train - Epoch 21, Batch: 30, Loss: 0.927162
+Train - Epoch 22, Batch: 0, Loss: 0.922387
+Train - Epoch 22, Batch: 10, Loss: 0.919965
+Train - Epoch 22, Batch: 20, Loss: 0.915374
+Train - Epoch 22, Batch: 30, Loss: 0.915899
+Train - Epoch 23, Batch: 0, Loss: 0.928341
+Train - Epoch 23, Batch: 10, Loss: 0.906897
+Train - Epoch 23, Batch: 20, Loss: 0.905922
+Train - Epoch 23, Batch: 30, Loss: 0.925832
+Train - Epoch 24, Batch: 0, Loss: 0.913864
+Train - Epoch 24, Batch: 10, Loss: 0.919873
+Train - Epoch 24, Batch: 20, Loss: 0.914982
+Train - Epoch 24, Batch: 30, Loss: 0.916480
+Train - Epoch 25, Batch: 0, Loss: 0.915407
+Train - Epoch 25, Batch: 10, Loss: 0.909505
+Train - Epoch 25, Batch: 20, Loss: 0.915578
+Train - Epoch 25, Batch: 30, Loss: 0.901634
+Train - Epoch 26, Batch: 0, Loss: 0.911090
+Train - Epoch 26, Batch: 10, Loss: 0.907944
+Train - Epoch 26, Batch: 20, Loss: 0.909662
+Train - Epoch 26, Batch: 30, Loss: 0.910485
+Train - Epoch 27, Batch: 0, Loss: 0.908666
+Train - Epoch 27, Batch: 10, Loss: 0.906305
+Train - Epoch 27, Batch: 20, Loss: 0.904559
+Train - Epoch 27, Batch: 30, Loss: 0.910404
+Train - Epoch 28, Batch: 0, Loss: 0.906433
+Train - Epoch 28, Batch: 10, Loss: 0.909199
+Train - Epoch 28, Batch: 20, Loss: 0.903825
+Train - Epoch 28, Batch: 30, Loss: 0.908077
+Train - Epoch 29, Batch: 0, Loss: 0.906540
+Train - Epoch 29, Batch: 10, Loss: 0.900618
+Train - Epoch 29, Batch: 20, Loss: 0.899001
+Train - Epoch 29, Batch: 30, Loss: 0.907883
+Train - Epoch 30, Batch: 0, Loss: 0.891752
+Train - Epoch 30, Batch: 10, Loss: 0.901607
+Train - Epoch 30, Batch: 20, Loss: 0.907231
+Train - Epoch 30, Batch: 30, Loss: 0.899665
+Train - Epoch 31, Batch: 0, Loss: 0.903268
+Train - Epoch 31, Batch: 10, Loss: 0.906099
+Train - Epoch 31, Batch: 20, Loss: 0.898622
+Train - Epoch 31, Batch: 30, Loss: 0.903483
+training_time:: 4.062312364578247
+training time full:: 4.062354564666748
+provenance prepare time:: 2.384185791015625e-07
+Test Avg. Loss: 0.000071, Accuracy: 0.630062
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+Num of deletion:: 0, running time baseline::2.280217
+Num of deletion:: 10, running time baseline::25.839647
+Num of deletion:: 20, running time baseline::48.937926
+Num of deletion:: 30, running time baseline::70.177434
+Num of deletion:: 40, running time baseline::93.890457
+Num of deletion:: 50, running time baseline::117.937431
+Num of deletion:: 60, running time baseline::141.951656
+Num of deletion:: 70, running time baseline::166.271781
+Num of deletion:: 80, running time baseline::190.429393
+Num of deletion:: 90, running time baseline::215.995509
+training time is 233.30071926116943
+overhead:: 0
+overhead2:: 233.30046010017395
+time_baseline:: 233.30074739456177
+curr_diff: 0 tensor(0.0009, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0009, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.630062
+period:: 5
+init_iters:: 10
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 10 5 4 0.00019123 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 32
+delta_size:: 99
+max_epoch:: 32
+Num of deletion:: 0, running time provenance::0.968125
+Num of deletion:: 10, running time provenance::10.691699
+Num of deletion:: 20, running time provenance::20.723146
+Num of deletion:: 30, running time provenance::30.773144
+Num of deletion:: 40, running time provenance::41.003293
+Num of deletion:: 50, running time provenance::51.268883
+Num of deletion:: 60, running time provenance::61.448559
+Num of deletion:: 70, running time provenance::71.572946
+Num of deletion:: 80, running time provenance::81.623338
+Num of deletion:: 90, running time provenance::91.731202
+overhead:: 0
+overhead2:: 0.20323777198791504
+overhead3:: 100.05394148826599
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 100.05466079711914
+curr_diff: 0 tensor(1.5245e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.5245e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0008, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0008, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000071, Accuracy: 0.630062
+dataset name::higgs
+deletion rate::0.000009524
+python3 generate_rand_ids 0.000009524  higgs 1
+start loading data...
+normalization start!!
+torch.Size([10500000, 29])
+torch.Size([500000, 29])
+tensor([ 5192196,  2517004,  7254541,  3827744,  6359585,   906804,   952374,
+         5281349,  7774280,  1125961,  4068427, 10399312,  2913366,  6748252,
+         9153118,  7365738,  8496751,  8776823,  3235452, 10240642,  8432785,
+          413330,  8456349,  4362401,  5636772,  8423590,  1631400,  5393587,
+         7337140,  5913269,  3012278,  3045046, 10035899,  9274560,  7137479,
+          538313,  1853648,  9221338,  4923619,  8164083,  1185526,  7903481,
+         2046723,  4322053,  5005068,  5572878,  3840790,  7145244,  1703198,
+          683295,   208671,  9769766,  6576936,  3808043,  8177975,  5907256,
+         9148732,  5078855,  6572361,  6107979,    26956,  1886539,   388942,
+         1347407, 10228561,  3189595,  2547042,  8068969,  1080685,  4465013,
+         8649603,  7958404,  4133764,  1190788,  4642694,  8929162,  4498319,
+         4882337,  5750697,  8557485,  4880303,   939953,  7471032,  1239996,
+         2491341,  6766029,  4603859,  1355731,  9500117,   442837,  7546839,
+         7351764,  6471640,  4266984,  1184752,  2934769,  9251319,  7752184,
+         4468218,  2980862])
+python3 generate_dataset_train_test.py Logistic_regression higgs 16384 4 5
+start loading data...
+normalization start!!
+torch.Size([10500000, 29])
+torch.Size([500000, 29])
+repetition 0
+python3 benchmark_exp_lr.py 0.001 16384 4 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 0 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.697785
+Train - Epoch 0, Batch: 10, Loss: 0.694815
+Train - Epoch 0, Batch: 20, Loss: 0.692959
+Train - Epoch 0, Batch: 30, Loss: 0.693871
+Train - Epoch 0, Batch: 40, Loss: 0.693819
+Train - Epoch 0, Batch: 50, Loss: 0.692639
+Train - Epoch 0, Batch: 60, Loss: 0.690499
+Train - Epoch 0, Batch: 70, Loss: 0.691199
+Train - Epoch 0, Batch: 80, Loss: 0.690307
+Train - Epoch 0, Batch: 90, Loss: 0.690915
+Train - Epoch 0, Batch: 100, Loss: 0.690569
+Train - Epoch 0, Batch: 110, Loss: 0.689974
+Train - Epoch 0, Batch: 120, Loss: 0.691443
+Train - Epoch 0, Batch: 130, Loss: 0.688867
+Train - Epoch 0, Batch: 140, Loss: 0.690566
+Train - Epoch 0, Batch: 150, Loss: 0.689818
+Train - Epoch 0, Batch: 160, Loss: 0.690272
+Train - Epoch 0, Batch: 170, Loss: 0.689240
+Train - Epoch 0, Batch: 180, Loss: 0.690446
+Train - Epoch 0, Batch: 190, Loss: 0.689627
+Train - Epoch 0, Batch: 200, Loss: 0.688958
+Train - Epoch 0, Batch: 210, Loss: 0.688391
+Train - Epoch 0, Batch: 220, Loss: 0.688928
+Train - Epoch 0, Batch: 230, Loss: 0.689342
+Train - Epoch 0, Batch: 240, Loss: 0.690183
+Train - Epoch 0, Batch: 250, Loss: 0.688846
+Train - Epoch 0, Batch: 260, Loss: 0.689329
+Train - Epoch 0, Batch: 270, Loss: 0.690136
+Train - Epoch 0, Batch: 280, Loss: 0.687917
+Train - Epoch 0, Batch: 290, Loss: 0.689440
+Train - Epoch 0, Batch: 300, Loss: 0.688298
+Train - Epoch 0, Batch: 310, Loss: 0.687319
+Train - Epoch 0, Batch: 320, Loss: 0.689090
+Train - Epoch 0, Batch: 330, Loss: 0.688077
+Train - Epoch 0, Batch: 340, Loss: 0.687813
+Train - Epoch 0, Batch: 350, Loss: 0.687846
+Train - Epoch 0, Batch: 360, Loss: 0.688004
+Train - Epoch 0, Batch: 370, Loss: 0.687198
+Train - Epoch 0, Batch: 380, Loss: 0.686790
+Train - Epoch 0, Batch: 390, Loss: 0.688059
+Train - Epoch 0, Batch: 400, Loss: 0.687962
+Train - Epoch 0, Batch: 410, Loss: 0.688187
+Train - Epoch 0, Batch: 420, Loss: 0.688289
+Train - Epoch 0, Batch: 430, Loss: 0.686264
+Train - Epoch 0, Batch: 440, Loss: 0.687442
+Train - Epoch 0, Batch: 450, Loss: 0.688110
+Train - Epoch 0, Batch: 460, Loss: 0.686940
+Train - Epoch 0, Batch: 470, Loss: 0.687124
+Train - Epoch 0, Batch: 480, Loss: 0.687053
+Train - Epoch 0, Batch: 490, Loss: 0.687706
+Train - Epoch 0, Batch: 500, Loss: 0.686763
+Train - Epoch 0, Batch: 510, Loss: 0.687376
+Train - Epoch 0, Batch: 520, Loss: 0.687775
+Train - Epoch 0, Batch: 530, Loss: 0.687393
+Train - Epoch 0, Batch: 540, Loss: 0.687527
+Train - Epoch 0, Batch: 550, Loss: 0.687504
+Train - Epoch 0, Batch: 560, Loss: 0.688127
+Train - Epoch 0, Batch: 570, Loss: 0.686740
+Train - Epoch 0, Batch: 580, Loss: 0.687605
+Train - Epoch 0, Batch: 590, Loss: 0.686339
+Train - Epoch 0, Batch: 600, Loss: 0.687121
+Train - Epoch 0, Batch: 610, Loss: 0.686599
+Train - Epoch 0, Batch: 620, Loss: 0.687174
+Train - Epoch 0, Batch: 630, Loss: 0.687235
+Train - Epoch 0, Batch: 640, Loss: 0.686044
+Train - Epoch 1, Batch: 0, Loss: 0.686538
+Train - Epoch 1, Batch: 10, Loss: 0.687824
+Train - Epoch 1, Batch: 20, Loss: 0.685701
+Train - Epoch 1, Batch: 30, Loss: 0.687110
+Train - Epoch 1, Batch: 40, Loss: 0.686228
+Train - Epoch 1, Batch: 50, Loss: 0.686639
+Train - Epoch 1, Batch: 60, Loss: 0.687201
+Train - Epoch 1, Batch: 70, Loss: 0.686361
+Train - Epoch 1, Batch: 80, Loss: 0.686068
+Train - Epoch 1, Batch: 90, Loss: 0.686292
+Train - Epoch 1, Batch: 100, Loss: 0.686664
+Train - Epoch 1, Batch: 110, Loss: 0.686722
+Train - Epoch 1, Batch: 120, Loss: 0.686446
+Train - Epoch 1, Batch: 130, Loss: 0.685819
+Train - Epoch 1, Batch: 140, Loss: 0.686318
+Train - Epoch 1, Batch: 150, Loss: 0.686886
+Train - Epoch 1, Batch: 160, Loss: 0.687284
+Train - Epoch 1, Batch: 170, Loss: 0.687116
+Train - Epoch 1, Batch: 180, Loss: 0.686148
+Train - Epoch 1, Batch: 190, Loss: 0.685666
+Train - Epoch 1, Batch: 200, Loss: 0.685602
+Train - Epoch 1, Batch: 210, Loss: 0.685849
+Train - Epoch 1, Batch: 220, Loss: 0.687893
+Train - Epoch 1, Batch: 230, Loss: 0.685649
+Train - Epoch 1, Batch: 240, Loss: 0.685954
+Train - Epoch 1, Batch: 250, Loss: 0.685414
+Train - Epoch 1, Batch: 260, Loss: 0.686734
+Train - Epoch 1, Batch: 270, Loss: 0.685292
+Train - Epoch 1, Batch: 280, Loss: 0.685783
+Train - Epoch 1, Batch: 290, Loss: 0.685257
+Train - Epoch 1, Batch: 300, Loss: 0.686379
+Train - Epoch 1, Batch: 310, Loss: 0.686471
+Train - Epoch 1, Batch: 320, Loss: 0.686802
+Train - Epoch 1, Batch: 330, Loss: 0.686186
+Train - Epoch 1, Batch: 340, Loss: 0.684463
+Train - Epoch 1, Batch: 350, Loss: 0.685950
+Train - Epoch 1, Batch: 360, Loss: 0.685398
+Train - Epoch 1, Batch: 370, Loss: 0.685320
+Train - Epoch 1, Batch: 380, Loss: 0.686316
+Train - Epoch 1, Batch: 390, Loss: 0.685196
+Train - Epoch 1, Batch: 400, Loss: 0.686277
+Train - Epoch 1, Batch: 410, Loss: 0.685225
+Train - Epoch 1, Batch: 420, Loss: 0.684660
+Train - Epoch 1, Batch: 430, Loss: 0.685497
+Train - Epoch 1, Batch: 440, Loss: 0.686001
+Train - Epoch 1, Batch: 450, Loss: 0.686126
+Train - Epoch 1, Batch: 460, Loss: 0.685534
+Train - Epoch 1, Batch: 470, Loss: 0.684803
+Train - Epoch 1, Batch: 480, Loss: 0.685438
+Train - Epoch 1, Batch: 490, Loss: 0.683874
+Train - Epoch 1, Batch: 500, Loss: 0.686988
+Train - Epoch 1, Batch: 510, Loss: 0.686245
+Train - Epoch 1, Batch: 520, Loss: 0.685126
+Train - Epoch 1, Batch: 530, Loss: 0.684796
+Train - Epoch 1, Batch: 540, Loss: 0.685620
+Train - Epoch 1, Batch: 550, Loss: 0.683778
+Train - Epoch 1, Batch: 560, Loss: 0.685753
+Train - Epoch 1, Batch: 570, Loss: 0.684021
+Train - Epoch 1, Batch: 580, Loss: 0.684394
+Train - Epoch 1, Batch: 590, Loss: 0.686662
+Train - Epoch 1, Batch: 600, Loss: 0.684674
+Train - Epoch 1, Batch: 610, Loss: 0.685510
+Train - Epoch 1, Batch: 620, Loss: 0.686289
+Train - Epoch 1, Batch: 630, Loss: 0.687373
+Train - Epoch 1, Batch: 640, Loss: 0.686364
+Train - Epoch 2, Batch: 0, Loss: 0.685009
+Train - Epoch 2, Batch: 10, Loss: 0.686134
+Train - Epoch 2, Batch: 20, Loss: 0.684942
+Train - Epoch 2, Batch: 30, Loss: 0.686066
+Train - Epoch 2, Batch: 40, Loss: 0.685468
+Train - Epoch 2, Batch: 50, Loss: 0.685089
+Train - Epoch 2, Batch: 60, Loss: 0.684269
+Train - Epoch 2, Batch: 70, Loss: 0.684455
+Train - Epoch 2, Batch: 80, Loss: 0.685610
+Train - Epoch 2, Batch: 90, Loss: 0.685456
+Train - Epoch 2, Batch: 100, Loss: 0.685297
+Train - Epoch 2, Batch: 110, Loss: 0.685404
+Train - Epoch 2, Batch: 120, Loss: 0.686255
+Train - Epoch 2, Batch: 130, Loss: 0.684828
+Train - Epoch 2, Batch: 140, Loss: 0.684262
+Train - Epoch 2, Batch: 150, Loss: 0.685385
+Train - Epoch 2, Batch: 160, Loss: 0.685725
+Train - Epoch 2, Batch: 170, Loss: 0.684851
+Train - Epoch 2, Batch: 180, Loss: 0.684556
+Train - Epoch 2, Batch: 190, Loss: 0.685260
+Train - Epoch 2, Batch: 200, Loss: 0.685539
+Train - Epoch 2, Batch: 210, Loss: 0.685584
+Train - Epoch 2, Batch: 220, Loss: 0.684079
+Train - Epoch 2, Batch: 230, Loss: 0.683352
+Train - Epoch 2, Batch: 240, Loss: 0.684642
+Train - Epoch 2, Batch: 250, Loss: 0.684995
+Train - Epoch 2, Batch: 260, Loss: 0.684158
+Train - Epoch 2, Batch: 270, Loss: 0.684531
+Train - Epoch 2, Batch: 280, Loss: 0.686359
+Train - Epoch 2, Batch: 290, Loss: 0.685862
+Train - Epoch 2, Batch: 300, Loss: 0.684061
+Train - Epoch 2, Batch: 310, Loss: 0.684525
+Train - Epoch 2, Batch: 320, Loss: 0.684922
+Train - Epoch 2, Batch: 330, Loss: 0.685357
+Train - Epoch 2, Batch: 340, Loss: 0.684747
+Train - Epoch 2, Batch: 350, Loss: 0.684933
+Train - Epoch 2, Batch: 360, Loss: 0.684998
+Train - Epoch 2, Batch: 370, Loss: 0.684483
+Train - Epoch 2, Batch: 380, Loss: 0.684910
+Train - Epoch 2, Batch: 390, Loss: 0.684688
+Train - Epoch 2, Batch: 400, Loss: 0.683490
+Train - Epoch 2, Batch: 410, Loss: 0.686272
+Train - Epoch 2, Batch: 420, Loss: 0.685486
+Train - Epoch 2, Batch: 430, Loss: 0.684067
+Train - Epoch 2, Batch: 440, Loss: 0.685473
+Train - Epoch 2, Batch: 450, Loss: 0.683543
+Train - Epoch 2, Batch: 460, Loss: 0.684942
+Train - Epoch 2, Batch: 470, Loss: 0.685203
+Train - Epoch 2, Batch: 480, Loss: 0.684737
+Train - Epoch 2, Batch: 490, Loss: 0.683477
+Train - Epoch 2, Batch: 500, Loss: 0.684681
+Train - Epoch 2, Batch: 510, Loss: 0.684196
+Train - Epoch 2, Batch: 520, Loss: 0.683780
+Train - Epoch 2, Batch: 530, Loss: 0.683773
+Train - Epoch 2, Batch: 540, Loss: 0.684604
+Train - Epoch 2, Batch: 550, Loss: 0.684202/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+
+Train - Epoch 2, Batch: 560, Loss: 0.684690
+Train - Epoch 2, Batch: 570, Loss: 0.683388
+Train - Epoch 2, Batch: 580, Loss: 0.684492
+Train - Epoch 2, Batch: 590, Loss: 0.682953
+Train - Epoch 2, Batch: 600, Loss: 0.684815
+Train - Epoch 2, Batch: 610, Loss: 0.684921
+Train - Epoch 2, Batch: 620, Loss: 0.683204
+Train - Epoch 2, Batch: 630, Loss: 0.684714
+Train - Epoch 2, Batch: 640, Loss: 0.684657
+Train - Epoch 3, Batch: 0, Loss: 0.684988
+Train - Epoch 3, Batch: 10, Loss: 0.684622
+Train - Epoch 3, Batch: 20, Loss: 0.684094
+Train - Epoch 3, Batch: 30, Loss: 0.683172
+Train - Epoch 3, Batch: 40, Loss: 0.685361
+Train - Epoch 3, Batch: 50, Loss: 0.684097
+Train - Epoch 3, Batch: 60, Loss: 0.684176
+Train - Epoch 3, Batch: 70, Loss: 0.684777
+Train - Epoch 3, Batch: 80, Loss: 0.684706
+Train - Epoch 3, Batch: 90, Loss: 0.685758
+Train - Epoch 3, Batch: 100, Loss: 0.684387
+Train - Epoch 3, Batch: 110, Loss: 0.684675
+Train - Epoch 3, Batch: 120, Loss: 0.684294
+Train - Epoch 3, Batch: 130, Loss: 0.684252
+Train - Epoch 3, Batch: 140, Loss: 0.684585
+Train - Epoch 3, Batch: 150, Loss: 0.683681
+Train - Epoch 3, Batch: 160, Loss: 0.683625
+Train - Epoch 3, Batch: 170, Loss: 0.684730
+Train - Epoch 3, Batch: 180, Loss: 0.683827
+Train - Epoch 3, Batch: 190, Loss: 0.684415
+Train - Epoch 3, Batch: 200, Loss: 0.683456
+Train - Epoch 3, Batch: 210, Loss: 0.684247
+Train - Epoch 3, Batch: 220, Loss: 0.683617
+Train - Epoch 3, Batch: 230, Loss: 0.683179
+Train - Epoch 3, Batch: 240, Loss: 0.683535
+Train - Epoch 3, Batch: 250, Loss: 0.683711
+Train - Epoch 3, Batch: 260, Loss: 0.684566
+Train - Epoch 3, Batch: 270, Loss: 0.684111
+Train - Epoch 3, Batch: 280, Loss: 0.683817
+Train - Epoch 3, Batch: 290, Loss: 0.685115
+Train - Epoch 3, Batch: 300, Loss: 0.684641
+Train - Epoch 3, Batch: 310, Loss: 0.684157
+Train - Epoch 3, Batch: 320, Loss: 0.684902
+Train - Epoch 3, Batch: 330, Loss: 0.684202
+Train - Epoch 3, Batch: 340, Loss: 0.685170
+Train - Epoch 3, Batch: 350, Loss: 0.683966
+Train - Epoch 3, Batch: 360, Loss: 0.684144
+Train - Epoch 3, Batch: 370, Loss: 0.683334
+Train - Epoch 3, Batch: 380, Loss: 0.684332
+Train - Epoch 3, Batch: 390, Loss: 0.684744
+Train - Epoch 3, Batch: 400, Loss: 0.684425
+Train - Epoch 3, Batch: 410, Loss: 0.683617
+Train - Epoch 3, Batch: 420, Loss: 0.684786
+Train - Epoch 3, Batch: 430, Loss: 0.683684
+Train - Epoch 3, Batch: 440, Loss: 0.684145
+Train - Epoch 3, Batch: 450, Loss: 0.683400
+Train - Epoch 3, Batch: 460, Loss: 0.684433
+Train - Epoch 3, Batch: 470, Loss: 0.684969
+Train - Epoch 3, Batch: 480, Loss: 0.683331
+Train - Epoch 3, Batch: 490, Loss: 0.683904
+Train - Epoch 3, Batch: 500, Loss: 0.683167
+Train - Epoch 3, Batch: 510, Loss: 0.683486
+Train - Epoch 3, Batch: 520, Loss: 0.683790
+Train - Epoch 3, Batch: 530, Loss: 0.684116
+Train - Epoch 3, Batch: 540, Loss: 0.683945
+Train - Epoch 3, Batch: 550, Loss: 0.684750
+Train - Epoch 3, Batch: 560, Loss: 0.682951
+Train - Epoch 3, Batch: 570, Loss: 0.682656
+Train - Epoch 3, Batch: 580, Loss: 0.684310
+Train - Epoch 3, Batch: 590, Loss: 0.683457
+Train - Epoch 3, Batch: 600, Loss: 0.683497
+Train - Epoch 3, Batch: 610, Loss: 0.683061
+Train - Epoch 3, Batch: 620, Loss: 0.683968
+Train - Epoch 3, Batch: 630, Loss: 0.683700
+Train - Epoch 3, Batch: 640, Loss: 0.683830
+training_time:: 7.525404453277588
+training time full:: 7.525444030761719
+provenance prepare time:: 7.152557373046875e-07
+Test Avg. Loss: 0.000042, Accuracy: 0.553324
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 4
+Num of deletion:: 0, running time baseline::4.814217
+Num of deletion:: 10, running time baseline::53.121494
+Num of deletion:: 20, running time baseline::103.646704
+Num of deletion:: 30, running time baseline::156.704474
+Num of deletion:: 40, running time baseline::209.136091
+Num of deletion:: 50, running time baseline::264.405908
+Num of deletion:: 60, running time baseline::318.736263
+Num of deletion:: 70, running time baseline::372.178972
+Num of deletion:: 80, running time baseline::428.712763
+Num of deletion:: 90, running time baseline::484.862215
+training time is 532.2848541736603
+overhead:: 0
+overhead2:: 532.2845838069916
+time_baseline:: 532.2848818302155
+curr_diff: 0 tensor(2.6941e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.6941e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000042, Accuracy: 0.553328
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 0 0.000009524 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 4
+delta_size:: 100
+max_epoch:: 4
+Num of deletion:: 0, running time provenance::3.832260
+Num of deletion:: 10, running time provenance::36.651851
+Num of deletion:: 20, running time provenance::66.883907
+Num of deletion:: 30, running time provenance::97.758426
+Num of deletion:: 40, running time provenance::129.788205
+Num of deletion:: 50, running time provenance::163.316522
+Num of deletion:: 60, running time provenance::197.277141
+Num of deletion:: 70, running time provenance::228.139362
+Num of deletion:: 80, running time provenance::259.552254
+Num of deletion:: 90, running time provenance::288.372966
+overhead:: 0
+overhead2:: 0.05946946144104004
+overhead3:: 316.1751582622528
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 316.1758964061737
+curr_diff: 0 tensor(1.5005e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.5005e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(2.6204e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.6204e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000042, Accuracy: 0.553330
+repetition 1
+python3 benchmark_exp_lr.py 0.001 16384 4 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 1 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.700219
+Train - Epoch 0, Batch: 10, Loss: 0.697786
+Train - Epoch 0, Batch: 20, Loss: 0.696976
+Train - Epoch 0, Batch: 30, Loss: 0.696781
+Train - Epoch 0, Batch: 40, Loss: 0.693710
+Train - Epoch 0, Batch: 50, Loss: 0.694143
+Train - Epoch 0, Batch: 60, Loss: 0.694022
+Train - Epoch 0, Batch: 70, Loss: 0.692962
+Train - Epoch 0, Batch: 80, Loss: 0.692884
+Train - Epoch 0, Batch: 90, Loss: 0.693415
+Train - Epoch 0, Batch: 100, Loss: 0.692125
+Train - Epoch 0, Batch: 110, Loss: 0.691686
+Train - Epoch 0, Batch: 120, Loss: 0.691055
+Train - Epoch 0, Batch: 130, Loss: 0.692096
+Train - Epoch 0, Batch: 140, Loss: 0.690929
+Train - Epoch 0, Batch: 150, Loss: 0.690568
+Train - Epoch 0, Batch: 160, Loss: 0.690604
+Train - Epoch 0, Batch: 170, Loss: 0.690279
+Train - Epoch 0, Batch: 180, Loss: 0.690618
+Train - Epoch 0, Batch: 190, Loss: 0.690771
+Train - Epoch 0, Batch: 200, Loss: 0.690311
+Train - Epoch 0, Batch: 210, Loss: 0.689344
+Train - Epoch 0, Batch: 220, Loss: 0.689390
+Train - Epoch 0, Batch: 230, Loss: 0.690485
+Train - Epoch 0, Batch: 240, Loss: 0.690251
+Train - Epoch 0, Batch: 250, Loss: 0.688103
+Train - Epoch 0, Batch: 260, Loss: 0.689207
+Train - Epoch 0, Batch: 270, Loss: 0.690013
+Train - Epoch 0, Batch: 280, Loss: 0.689856
+Train - Epoch 0, Batch: 290, Loss: 0.688857
+Train - Epoch 0, Batch: 300, Loss: 0.689736
+Train - Epoch 0, Batch: 310, Loss: 0.690089
+Train - Epoch 0, Batch: 320, Loss: 0.688655
+Train - Epoch 0, Batch: 330, Loss: 0.688286
+Train - Epoch 0, Batch: 340, Loss: 0.687993
+Train - Epoch 0, Batch: 350, Loss: 0.688142
+Train - Epoch 0, Batch: 360, Loss: 0.689288
+Train - Epoch 0, Batch: 370, Loss: 0.688969
+Train - Epoch 0, Batch: 380, Loss: 0.688966
+Train - Epoch 0, Batch: 390, Loss: 0.687785
+Train - Epoch 0, Batch: 400, Loss: 0.688531
+Train - Epoch 0, Batch: 410, Loss: 0.688521
+Train - Epoch 0, Batch: 420, Loss: 0.688212
+Train - Epoch 0, Batch: 430, Loss: 0.689580
+Train - Epoch 0, Batch: 440, Loss: 0.687932
+Train - Epoch 0, Batch: 450, Loss: 0.688717
+Train - Epoch 0, Batch: 460, Loss: 0.687986
+Train - Epoch 0, Batch: 470, Loss: 0.688236
+Train - Epoch 0, Batch: 480, Loss: 0.688619
+Train - Epoch 0, Batch: 490, Loss: 0.687863
+Train - Epoch 0, Batch: 500, Loss: 0.686486
+Train - Epoch 0, Batch: 510, Loss: 0.687856
+Train - Epoch 0, Batch: 520, Loss: 0.688320
+Train - Epoch 0, Batch: 530, Loss: 0.686808
+Train - Epoch 0, Batch: 540, Loss: 0.687148
+Train - Epoch 0, Batch: 550, Loss: 0.687756
+Train - Epoch 0, Batch: 560, Loss: 0.688500
+Train - Epoch 0, Batch: 570, Loss: 0.687785
+Train - Epoch 0, Batch: 580, Loss: 0.687615
+Train - Epoch 0, Batch: 590, Loss: 0.688490
+Train - Epoch 0, Batch: 600, Loss: 0.686394
+Train - Epoch 0, Batch: 610, Loss: 0.686862
+Train - Epoch 0, Batch: 620, Loss: 0.686305
+Train - Epoch 0, Batch: 630, Loss: 0.687337
+Train - Epoch 0, Batch: 640, Loss: 0.686920
+Train - Epoch 1, Batch: 0, Loss: 0.687515
+Train - Epoch 1, Batch: 10, Loss: 0.687861
+Train - Epoch 1, Batch: 20, Loss: 0.687969
+Train - Epoch 1, Batch: 30, Loss: 0.687785
+Train - Epoch 1, Batch: 40, Loss: 0.686730
+Train - Epoch 1, Batch: 50, Loss: 0.687344
+Train - Epoch 1, Batch: 60, Loss: 0.687333
+Train - Epoch 1, Batch: 70, Loss: 0.687351
+Train - Epoch 1, Batch: 80, Loss: 0.687607
+Train - Epoch 1, Batch: 90, Loss: 0.687017
+Train - Epoch 1, Batch: 100, Loss: 0.686645
+Train - Epoch 1, Batch: 110, Loss: 0.687454
+Train - Epoch 1, Batch: 120, Loss: 0.686389
+Train - Epoch 1, Batch: 130, Loss: 0.686202
+Train - Epoch 1, Batch: 140, Loss: 0.686338
+Train - Epoch 1, Batch: 150, Loss: 0.686547
+Train - Epoch 1, Batch: 160, Loss: 0.686477
+Train - Epoch 1, Batch: 170, Loss: 0.687087
+Train - Epoch 1, Batch: 180, Loss: 0.686978
+Train - Epoch 1, Batch: 190, Loss: 0.686361
+Train - Epoch 1, Batch: 200, Loss: 0.686708
+Train - Epoch 1, Batch: 210, Loss: 0.687099
+Train - Epoch 1, Batch: 220, Loss: 0.685890
+Train - Epoch 1, Batch: 230, Loss: 0.687721
+Train - Epoch 1, Batch: 240, Loss: 0.686632
+Train - Epoch 1, Batch: 250, Loss: 0.685215
+Train - Epoch 1, Batch: 260, Loss: 0.687097
+Train - Epoch 1, Batch: 270, Loss: 0.686030
+Train - Epoch 1, Batch: 280, Loss: 0.686838
+Train - Epoch 1, Batch: 290, Loss: 0.686821
+Train - Epoch 1, Batch: 300, Loss: 0.687560
+Train - Epoch 1, Batch: 310, Loss: 0.685381
+Train - Epoch 1, Batch: 320, Loss: 0.687019
+Train - Epoch 1, Batch: 330, Loss: 0.686908
+Train - Epoch 1, Batch: 340, Loss: 0.686213
+Train - Epoch 1, Batch: 350, Loss: 0.687090
+Train - Epoch 1, Batch: 360, Loss: 0.685061
+Train - Epoch 1, Batch: 370, Loss: 0.685550
+Train - Epoch 1, Batch: 380, Loss: 0.686037
+Train - Epoch 1, Batch: 390, Loss: 0.686212
+Train - Epoch 1, Batch: 400, Loss: 0.685262
+Train - Epoch 1, Batch: 410, Loss: 0.687737
+Train - Epoch 1, Batch: 420, Loss: 0.685559
+Train - Epoch 1, Batch: 430, Loss: 0.685749
+Train - Epoch 1, Batch: 440, Loss: 0.685237
+Train - Epoch 1, Batch: 450, Loss: 0.686339
+Train - Epoch 1, Batch: 460, Loss: 0.686332
+Train - Epoch 1, Batch: 470, Loss: 0.686574
+Train - Epoch 1, Batch: 480, Loss: 0.686126
+Train - Epoch 1, Batch: 490, Loss: 0.685763
+Train - Epoch 1, Batch: 500, Loss: 0.685423
+Train - Epoch 1, Batch: 510, Loss: 0.686025
+Train - Epoch 1, Batch: 520, Loss: 0.685226
+Train - Epoch 1, Batch: 530, Loss: 0.687214
+Train - Epoch 1, Batch: 540, Loss: 0.686256
+Train - Epoch 1, Batch: 550, Loss: 0.685480
+Train - Epoch 1, Batch: 560, Loss: 0.685734
+Train - Epoch 1, Batch: 570, Loss: 0.686580
+Train - Epoch 1, Batch: 580, Loss: 0.684843
+Train - Epoch 1, Batch: 590, Loss: 0.686474
+Train - Epoch 1, Batch: 600, Loss: 0.684405
+Train - Epoch 1, Batch: 610, Loss: 0.685207
+Train - Epoch 1, Batch: 620, Loss: 0.685881
+Train - Epoch 1, Batch: 630, Loss: 0.685329
+Train - Epoch 1, Batch: 640, Loss: 0.685527
+Train - Epoch 2, Batch: 0, Loss: 0.685919
+Train - Epoch 2, Batch: 10, Loss: 0.684992
+Train - Epoch 2, Batch: 20, Loss: 0.686071
+Train - Epoch 2, Batch: 30, Loss: 0.684776
+Train - Epoch 2, Batch: 40, Loss: 0.686881
+Train - Epoch 2, Batch: 50, Loss: 0.685521
+Train - Epoch 2, Batch: 60, Loss: 0.685994
+Train - Epoch 2, Batch: 70, Loss: 0.685699
+Train - Epoch 2, Batch: 80, Loss: 0.684617
+Train - Epoch 2, Batch: 90, Loss: 0.686055
+Train - Epoch 2, Batch: 100, Loss: 0.685147
+Train - Epoch 2, Batch: 110, Loss: 0.686226
+Train - Epoch 2, Batch: 120, Loss: 0.686456
+Train - Epoch 2, Batch: 130, Loss: 0.685252
+Train - Epoch 2, Batch: 140, Loss: 0.684892
+Train - Epoch 2, Batch: 150, Loss: 0.684378
+Train - Epoch 2, Batch: 160, Loss: 0.684871
+Train - Epoch 2, Batch: 170, Loss: 0.684175
+Train - Epoch 2, Batch: 180, Loss: 0.686069
+Train - Epoch 2, Batch: 190, Loss: 0.684776
+Train - Epoch 2, Batch: 200, Loss: 0.686159
+Train - Epoch 2, Batch: 210, Loss: 0.684549
+Train - Epoch 2, Batch: 220, Loss: 0.685569
+Train - Epoch 2, Batch: 230, Loss: 0.685680
+Train - Epoch 2, Batch: 240, Loss: 0.683873
+Train - Epoch 2, Batch: 250, Loss: 0.684718
+Train - Epoch 2, Batch: 260, Loss: 0.685716
+Train - Epoch 2, Batch: 270, Loss: 0.686247
+Train - Epoch 2, Batch: 280, Loss: 0.685204
+Train - Epoch 2, Batch: 290, Loss: 0.686886
+Train - Epoch 2, Batch: 300, Loss: 0.685007
+Train - Epoch 2, Batch: 310, Loss: 0.685874
+Train - Epoch 2, Batch: 320, Loss: 0.685812
+Train - Epoch 2, Batch: 330, Loss: 0.684672
+Train - Epoch 2, Batch: 340, Loss: 0.684875
+Train - Epoch 2, Batch: 350, Loss: 0.684614
+Train - Epoch 2, Batch: 360, Loss: 0.684396
+Train - Epoch 2, Batch: 370, Loss: 0.685296
+Train - Epoch 2, Batch: 380, Loss: 0.685384
+Train - Epoch 2, Batch: 390, Loss: 0.684703
+Train - Epoch 2, Batch: 400, Loss: 0.685006
+Train - Epoch 2, Batch: 410, Loss: 0.685002
+Train - Epoch 2, Batch: 420, Loss: 0.685671
+Train - Epoch 2, Batch: 430, Loss: 0.686146
+Train - Epoch 2, Batch: 440, Loss: 0.684620
+Train - Epoch 2, Batch: 450, Loss: 0.685502
+Train - Epoch 2, Batch: 460, Loss: 0.685834
+Train - Epoch 2, Batch: 470, Loss: 0.684658
+Train - Epoch 2, Batch: 480, Loss: 0.684756
+Train - Epoch 2, Batch: 490, Loss: 0.684404
+Train - Epoch 2, Batch: 500, Loss: 0.685219
+Train - Epoch 2, Batch: 510, Loss: 0.684988
+Train - Epoch 2, Batch: 520, Loss: 0.685639
+Train - Epoch 2, Batch: 530, Loss: 0.684884
+Train - Epoch 2, Batch: 540, Loss: 0.685330
+Train - Epoch 2, Batch: 550, Loss: 0.684593/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+
+Train - Epoch 2, Batch: 560, Loss: 0.684235
+Train - Epoch 2, Batch: 570, Loss: 0.684868
+Train - Epoch 2, Batch: 580, Loss: 0.685089
+Train - Epoch 2, Batch: 590, Loss: 0.685226
+Train - Epoch 2, Batch: 600, Loss: 0.683732
+Train - Epoch 2, Batch: 610, Loss: 0.684256
+Train - Epoch 2, Batch: 620, Loss: 0.685038
+Train - Epoch 2, Batch: 630, Loss: 0.684556
+Train - Epoch 2, Batch: 640, Loss: 0.683826
+Train - Epoch 3, Batch: 0, Loss: 0.683778
+Train - Epoch 3, Batch: 10, Loss: 0.684296
+Train - Epoch 3, Batch: 20, Loss: 0.684555
+Train - Epoch 3, Batch: 30, Loss: 0.683512
+Train - Epoch 3, Batch: 40, Loss: 0.684550
+Train - Epoch 3, Batch: 50, Loss: 0.684387
+Train - Epoch 3, Batch: 60, Loss: 0.683945
+Train - Epoch 3, Batch: 70, Loss: 0.683859
+Train - Epoch 3, Batch: 80, Loss: 0.686049
+Train - Epoch 3, Batch: 90, Loss: 0.684134
+Train - Epoch 3, Batch: 100, Loss: 0.683378
+Train - Epoch 3, Batch: 110, Loss: 0.684747
+Train - Epoch 3, Batch: 120, Loss: 0.684353
+Train - Epoch 3, Batch: 130, Loss: 0.682792
+Train - Epoch 3, Batch: 140, Loss: 0.684674
+Train - Epoch 3, Batch: 150, Loss: 0.684784
+Train - Epoch 3, Batch: 160, Loss: 0.684633
+Train - Epoch 3, Batch: 170, Loss: 0.684913
+Train - Epoch 3, Batch: 180, Loss: 0.683559
+Train - Epoch 3, Batch: 190, Loss: 0.683906
+Train - Epoch 3, Batch: 200, Loss: 0.684974
+Train - Epoch 3, Batch: 210, Loss: 0.684076
+Train - Epoch 3, Batch: 220, Loss: 0.684253
+Train - Epoch 3, Batch: 230, Loss: 0.684632
+Train - Epoch 3, Batch: 240, Loss: 0.686461
+Train - Epoch 3, Batch: 250, Loss: 0.684535
+Train - Epoch 3, Batch: 260, Loss: 0.683656
+Train - Epoch 3, Batch: 270, Loss: 0.685322
+Train - Epoch 3, Batch: 280, Loss: 0.684128
+Train - Epoch 3, Batch: 290, Loss: 0.684879
+Train - Epoch 3, Batch: 300, Loss: 0.683920
+Train - Epoch 3, Batch: 310, Loss: 0.684131
+Train - Epoch 3, Batch: 320, Loss: 0.684106
+Train - Epoch 3, Batch: 330, Loss: 0.684441
+Train - Epoch 3, Batch: 340, Loss: 0.684436
+Train - Epoch 3, Batch: 350, Loss: 0.686174
+Train - Epoch 3, Batch: 360, Loss: 0.684840
+Train - Epoch 3, Batch: 370, Loss: 0.684577
+Train - Epoch 3, Batch: 380, Loss: 0.684410
+Train - Epoch 3, Batch: 390, Loss: 0.683618
+Train - Epoch 3, Batch: 400, Loss: 0.684443
+Train - Epoch 3, Batch: 410, Loss: 0.685032
+Train - Epoch 3, Batch: 420, Loss: 0.683238
+Train - Epoch 3, Batch: 430, Loss: 0.683673
+Train - Epoch 3, Batch: 440, Loss: 0.684473
+Train - Epoch 3, Batch: 450, Loss: 0.684231
+Train - Epoch 3, Batch: 460, Loss: 0.683889
+Train - Epoch 3, Batch: 470, Loss: 0.684624
+Train - Epoch 3, Batch: 480, Loss: 0.684335
+Train - Epoch 3, Batch: 490, Loss: 0.682966
+Train - Epoch 3, Batch: 500, Loss: 0.684376
+Train - Epoch 3, Batch: 510, Loss: 0.683931
+Train - Epoch 3, Batch: 520, Loss: 0.683616
+Train - Epoch 3, Batch: 530, Loss: 0.684301
+Train - Epoch 3, Batch: 540, Loss: 0.683814
+Train - Epoch 3, Batch: 550, Loss: 0.683876
+Train - Epoch 3, Batch: 560, Loss: 0.684867
+Train - Epoch 3, Batch: 570, Loss: 0.684680
+Train - Epoch 3, Batch: 580, Loss: 0.684453
+Train - Epoch 3, Batch: 590, Loss: 0.683857
+Train - Epoch 3, Batch: 600, Loss: 0.684026
+Train - Epoch 3, Batch: 610, Loss: 0.683929
+Train - Epoch 3, Batch: 620, Loss: 0.684413
+Train - Epoch 3, Batch: 630, Loss: 0.684183
+Train - Epoch 3, Batch: 640, Loss: 0.684113
+training_time:: 7.575676918029785
+training time full:: 7.5757176876068115
+provenance prepare time:: 1.1920928955078125e-06
+Test Avg. Loss: 0.000042, Accuracy: 0.552720
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 4
+Num of deletion:: 0, running time baseline::4.924880
+Num of deletion:: 10, running time baseline::59.017773
+Num of deletion:: 20, running time baseline::107.298943
+Num of deletion:: 30, running time baseline::162.773018
+Num of deletion:: 40, running time baseline::215.350569
+Num of deletion:: 50, running time baseline::272.574383
+Num of deletion:: 60, running time baseline::327.305482
+Num of deletion:: 70, running time baseline::381.418536
+Num of deletion:: 80, running time baseline::436.584978
+Num of deletion:: 90, running time baseline::491.149077
+training time is 540.6399750709534
+overhead:: 0
+overhead2:: 540.6396946907043
+time_baseline:: 540.6400079727173
+curr_diff: 0 tensor(2.7594e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.7594e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000042, Accuracy: 0.552730
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 1 0.000009524 6000
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 4
+delta_size:: 100
+max_epoch:: 4
+Num of deletion:: 0, running time provenance::3.190677
+Num of deletion:: 10, running time provenance::33.833322
+Num of deletion:: 20, running time provenance::63.647843
+Num of deletion:: 30, running time provenance::101.078350
+Num of deletion:: 40, running time provenance::130.580446
+Num of deletion:: 50, running time provenance::159.954060
+Num of deletion:: 60, running time provenance::191.957873
+Num of deletion:: 70, running time provenance::221.909323
+Num of deletion:: 80, running time provenance::251.386780
+Num of deletion:: 90, running time provenance::284.495000
+overhead:: 0
+overhead2:: 0.056139469146728516
+overhead3:: 310.84508752822876
+overhead4:: 0
+overhead5:: 0
+time_provenance:: 310.84584379196167
+curr_diff: 0 tensor(1.5248e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(1.5248e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(2.6984e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.6984e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000042, Accuracy: 0.552730
+repetition 2
+python3 benchmark_exp_lr.py 0.001 16384 4 [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1] Logistic_regression higgs 2 0.005 1 1
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+../../../.gitignore/
+cuda:1
+Train - Epoch 0, Batch: 0, Loss: 0.703997
+Train - Epoch 0, Batch: 10, Loss: 0.692767
+Train - Epoch 0, Batch: 20, Loss: 0.694470
+Train - Epoch 0, Batch: 30, Loss: 0.693342
+Train - Epoch 0, Batch: 40, Loss: 0.689779
+Train - Epoch 0, Batch: 50, Loss: 0.691871
+Train - Epoch 0, Batch: 60, Loss: 0.692348
+Train - Epoch 0, Batch: 70, Loss: 0.691338
+Train - Epoch 0, Batch: 80, Loss: 0.691281
+Train - Epoch 0, Batch: 90, Loss: 0.690854
+Train - Epoch 0, Batch: 100, Loss: 0.691476
+Train - Epoch 0, Batch: 110, Loss: 0.689760
+Train - Epoch 0, Batch: 120, Loss: 0.689102
+Train - Epoch 0, Batch: 130, Loss: 0.689984
+Train - Epoch 0, Batch: 140, Loss: 0.689961
+Train - Epoch 0, Batch: 150, Loss: 0.689845
+Train - Epoch 0, Batch: 160, Loss: 0.690126
+Train - Epoch 0, Batch: 170, Loss: 0.689529
+Train - Epoch 0, Batch: 180, Loss: 0.689827
+Train - Epoch 0, Batch: 190, Loss: 0.688932
+Train - Epoch 0, Batch: 200, Loss: 0.689954
+Train - Epoch 0, Batch: 210, Loss: 0.689596
+Train - Epoch 0, Batch: 220, Loss: 0.689191
+Train - Epoch 0, Batch: 230, Loss: 0.689368
+Train - Epoch 0, Batch: 240, Loss: 0.688809
+Train - Epoch 0, Batch: 250, Loss: 0.687087
+Train - Epoch 0, Batch: 260, Loss: 0.688373
+Train - Epoch 0, Batch: 270, Loss: 0.690293
+Train - Epoch 0, Batch: 280, Loss: 0.688234
+Train - Epoch 0, Batch: 290, Loss: 0.688893
+Train - Epoch 0, Batch: 300, Loss: 0.687741
+Train - Epoch 0, Batch: 310, Loss: 0.687334
+Train - Epoch 0, Batch: 320, Loss: 0.688504
+Train - Epoch 0, Batch: 330, Loss: 0.687016
+Train - Epoch 0, Batch: 340, Loss: 0.688945
+Train - Epoch 0, Batch: 350, Loss: 0.687214
+Train - Epoch 0, Batch: 360, Loss: 0.688363
+Train - Epoch 0, Batch: 370, Loss: 0.686587
+Train - Epoch 0, Batch: 380, Loss: 0.688001
+Train - Epoch 0, Batch: 390, Loss: 0.688115
+Train - Epoch 0, Batch: 400, Loss: 0.687859
+Train - Epoch 0, Batch: 410, Loss: 0.687107
+Train - Epoch 0, Batch: 420, Loss: 0.687968
+Train - Epoch 0, Batch: 430, Loss: 0.687094
+Train - Epoch 0, Batch: 440, Loss: 0.687820
+Train - Epoch 0, Batch: 450, Loss: 0.688119
+Train - Epoch 0, Batch: 460, Loss: 0.687525
+Train - Epoch 0, Batch: 470, Loss: 0.687322
+Train - Epoch 0, Batch: 480, Loss: 0.686687
+Train - Epoch 0, Batch: 490, Loss: 0.687295
+Train - Epoch 0, Batch: 500, Loss: 0.687556
+Train - Epoch 0, Batch: 510, Loss: 0.688164
+Train - Epoch 0, Batch: 520, Loss: 0.686505
+Train - Epoch 0, Batch: 530, Loss: 0.687830
+Train - Epoch 0, Batch: 540, Loss: 0.687826
+Train - Epoch 0, Batch: 550, Loss: 0.687335
+Train - Epoch 0, Batch: 560, Loss: 0.687443
+Train - Epoch 0, Batch: 570, Loss: 0.686888
+Train - Epoch 0, Batch: 580, Loss: 0.686607
+Train - Epoch 0, Batch: 590, Loss: 0.687298
+Train - Epoch 0, Batch: 600, Loss: 0.687508
+Train - Epoch 0, Batch: 610, Loss: 0.687456
+Train - Epoch 0, Batch: 620, Loss: 0.687142
+Train - Epoch 0, Batch: 630, Loss: 0.687587
+Train - Epoch 0, Batch: 640, Loss: 0.687999
+Train - Epoch 1, Batch: 0, Loss: 0.686061
+Train - Epoch 1, Batch: 10, Loss: 0.686828
+Train - Epoch 1, Batch: 20, Loss: 0.686742
+Train - Epoch 1, Batch: 30, Loss: 0.685732
+Train - Epoch 1, Batch: 40, Loss: 0.686066
+Train - Epoch 1, Batch: 50, Loss: 0.686134
+Train - Epoch 1, Batch: 60, Loss: 0.685288
+Train - Epoch 1, Batch: 70, Loss: 0.687714
+Train - Epoch 1, Batch: 80, Loss: 0.687659
+Train - Epoch 1, Batch: 90, Loss: 0.686869
+Train - Epoch 1, Batch: 100, Loss: 0.686577
+Train - Epoch 1, Batch: 110, Loss: 0.686063
+Train - Epoch 1, Batch: 120, Loss: 0.686253
+Train - Epoch 1, Batch: 130, Loss: 0.686680
+Train - Epoch 1, Batch: 140, Loss: 0.687278
+Train - Epoch 1, Batch: 150, Loss: 0.686688
+Train - Epoch 1, Batch: 160, Loss: 0.686228
+Train - Epoch 1, Batch: 170, Loss: 0.686967
+Train - Epoch 1, Batch: 180, Loss: 0.686890
+Train - Epoch 1, Batch: 190, Loss: 0.685568
+Train - Epoch 1, Batch: 200, Loss: 0.685875
+Train - Epoch 1, Batch: 210, Loss: 0.687545
+Train - Epoch 1, Batch: 220, Loss: 0.686671
+Train - Epoch 1, Batch: 230, Loss: 0.686040
+Train - Epoch 1, Batch: 240, Loss: 0.687342
+Train - Epoch 1, Batch: 250, Loss: 0.685654
+Train - Epoch 1, Batch: 260, Loss: 0.686904
+Train - Epoch 1, Batch: 270, Loss: 0.684944
+Train - Epoch 1, Batch: 280, Loss: 0.685457
+Train - Epoch 1, Batch: 290, Loss: 0.685854
+Train - Epoch 1, Batch: 300, Loss: 0.686766
+Train - Epoch 1, Batch: 310, Loss: 0.687496
+Train - Epoch 1, Batch: 320, Loss: 0.686271
+Train - Epoch 1, Batch: 330, Loss: 0.686000
+Train - Epoch 1, Batch: 340, Loss: 0.686017
+Train - Epoch 1, Batch: 350, Loss: 0.686130
+Train - Epoch 1, Batch: 360, Loss: 0.685869
+Train - Epoch 1, Batch: 370, Loss: 0.684328
+Train - Epoch 1, Batch: 380, Loss: 0.686310
+Train - Epoch 1, Batch: 390, Loss: 0.685844
+Train - Epoch 1, Batch: 400, Loss: 0.685889
+Train - Epoch 1, Batch: 410, Loss: 0.684121
+Train - Epoch 1, Batch: 420, Loss: 0.686756
+Train - Epoch 1, Batch: 430, Loss: 0.685447
+Train - Epoch 1, Batch: 440, Loss: 0.685736
+Train - Epoch 1, Batch: 450, Loss: 0.686276
+Train - Epoch 1, Batch: 460, Loss: 0.685785
+Train - Epoch 1, Batch: 470, Loss: 0.684749
+Train - Epoch 1, Batch: 480, Loss: 0.684544
+Train - Epoch 1, Batch: 490, Loss: 0.684872
+Train - Epoch 1, Batch: 500, Loss: 0.684837
+Train - Epoch 1, Batch: 510, Loss: 0.685165
+Train - Epoch 1, Batch: 520, Loss: 0.685442
+Train - Epoch 1, Batch: 530, Loss: 0.686505
+Train - Epoch 1, Batch: 540, Loss: 0.686468
+Train - Epoch 1, Batch: 550, Loss: 0.685769
+Train - Epoch 1, Batch: 560, Loss: 0.686475
+Train - Epoch 1, Batch: 570, Loss: 0.685301
+Train - Epoch 1, Batch: 580, Loss: 0.685712
+Train - Epoch 1, Batch: 590, Loss: 0.685023
+Train - Epoch 1, Batch: 600, Loss: 0.686072
+Train - Epoch 1, Batch: 610, Loss: 0.685175
+Train - Epoch 1, Batch: 620, Loss: 0.686602
+Train - Epoch 1, Batch: 630, Loss: 0.685509
+Train - Epoch 1, Batch: 640, Loss: 0.685959
+Train - Epoch 2, Batch: 0, Loss: 0.685304
+Train - Epoch 2, Batch: 10, Loss: 0.686389
+Train - Epoch 2, Batch: 20, Loss: 0.685651
+Train - Epoch 2, Batch: 30, Loss: 0.685438
+Train - Epoch 2, Batch: 40, Loss: 0.685727
+Train - Epoch 2, Batch: 50, Loss: 0.685714
+Train - Epoch 2, Batch: 60, Loss: 0.684856
+Train - Epoch 2, Batch: 70, Loss: 0.685666
+Train - Epoch 2, Batch: 80, Loss: 0.684149
+Train - Epoch 2, Batch: 90, Loss: 0.686468
+Train - Epoch 2, Batch: 100, Loss: 0.684980
+Train - Epoch 2, Batch: 110, Loss: 0.685983
+Train - Epoch 2, Batch: 120, Loss: 0.685908
+Train - Epoch 2, Batch: 130, Loss: 0.685437
+Train - Epoch 2, Batch: 140, Loss: 0.685391
+Train - Epoch 2, Batch: 150, Loss: 0.685560
+Train - Epoch 2, Batch: 160, Loss: 0.684363
+Train - Epoch 2, Batch: 170, Loss: 0.685344
+Train - Epoch 2, Batch: 180, Loss: 0.683934
+Train - Epoch 2, Batch: 190, Loss: 0.684367
+Train - Epoch 2, Batch: 200, Loss: 0.685265
+Train - Epoch 2, Batch: 210, Loss: 0.685297
+Train - Epoch 2, Batch: 220, Loss: 0.686214
+Train - Epoch 2, Batch: 230, Loss: 0.686594
+Train - Epoch 2, Batch: 240, Loss: 0.685771
+Train - Epoch 2, Batch: 250, Loss: 0.684300
+Train - Epoch 2, Batch: 260, Loss: 0.684769
+Train - Epoch 2, Batch: 270, Loss: 0.685186
+Train - Epoch 2, Batch: 280, Loss: 0.685313
+Train - Epoch 2, Batch: 290, Loss: 0.684867
+Train - Epoch 2, Batch: 300, Loss: 0.685680
+Train - Epoch 2, Batch: 310, Loss: 0.685605
+Train - Epoch 2, Batch: 320, Loss: 0.685036
+Train - Epoch 2, Batch: 330, Loss: 0.684453
+Train - Epoch 2, Batch: 340, Loss: 0.683567
+Train - Epoch 2, Batch: 350, Loss: 0.683265
+Train - Epoch 2, Batch: 360, Loss: 0.684314
+Train - Epoch 2, Batch: 370, Loss: 0.685616
+Train - Epoch 2, Batch: 380, Loss: 0.685689
+Train - Epoch 2, Batch: 390, Loss: 0.685319
+Train - Epoch 2, Batch: 400, Loss: 0.684115
+Train - Epoch 2, Batch: 410, Loss: 0.686488
+Train - Epoch 2, Batch: 420, Loss: 0.684228
+Train - Epoch 2, Batch: 430, Loss: 0.684130
+Train - Epoch 2, Batch: 440, Loss: 0.684723
+Train - Epoch 2, Batch: 450, Loss: 0.686236
+Train - Epoch 2, Batch: 460, Loss: 0.684535
+Train - Epoch 2, Batch: 470, Loss: 0.684532
+Train - Epoch 2, Batch: 480, Loss: 0.684432
+Train - Epoch 2, Batch: 490, Loss: 0.683586
+Train - Epoch 2, Batch: 500, Loss: 0.684651
+Train - Epoch 2, Batch: 510, Loss: 0.684593
+Train - Epoch 2, Batch: 520, Loss: 0.684034
+Train - Epoch 2, Batch: 530, Loss: 0.684710
+Train - Epoch 2, Batch: 540, Loss: 0.685302
+Train - Epoch 2, Batch: 550, Loss: 0.685343/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:75: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+
+Train - Epoch 2, Batch: 560, Loss: 0.684019
+Train - Epoch 2, Batch: 570, Loss: 0.684789
+Train - Epoch 2, Batch: 580, Loss: 0.685794
+Train - Epoch 2, Batch: 590, Loss: 0.684371
+Train - Epoch 2, Batch: 600, Loss: 0.684181
+Train - Epoch 2, Batch: 610, Loss: 0.684292
+Train - Epoch 2, Batch: 620, Loss: 0.684134
+Train - Epoch 2, Batch: 630, Loss: 0.684477
+Train - Epoch 2, Batch: 640, Loss: 0.683071
+Train - Epoch 3, Batch: 0, Loss: 0.685946
+Train - Epoch 3, Batch: 10, Loss: 0.685404
+Train - Epoch 3, Batch: 20, Loss: 0.684471
+Train - Epoch 3, Batch: 30, Loss: 0.685632
+Train - Epoch 3, Batch: 40, Loss: 0.684353
+Train - Epoch 3, Batch: 50, Loss: 0.684674
+Train - Epoch 3, Batch: 60, Loss: 0.683521
+Train - Epoch 3, Batch: 70, Loss: 0.684659
+Train - Epoch 3, Batch: 80, Loss: 0.684470
+Train - Epoch 3, Batch: 90, Loss: 0.684866
+Train - Epoch 3, Batch: 100, Loss: 0.684146
+Train - Epoch 3, Batch: 110, Loss: 0.685232
+Train - Epoch 3, Batch: 120, Loss: 0.684501
+Train - Epoch 3, Batch: 130, Loss: 0.684106
+Train - Epoch 3, Batch: 140, Loss: 0.683888
+Train - Epoch 3, Batch: 150, Loss: 0.683988
+Train - Epoch 3, Batch: 160, Loss: 0.684726
+Train - Epoch 3, Batch: 170, Loss: 0.684583
+Train - Epoch 3, Batch: 180, Loss: 0.684457
+Train - Epoch 3, Batch: 190, Loss: 0.684414
+Train - Epoch 3, Batch: 200, Loss: 0.684143
+Train - Epoch 3, Batch: 210, Loss: 0.684402
+Train - Epoch 3, Batch: 220, Loss: 0.685062
+Train - Epoch 3, Batch: 230, Loss: 0.684076
+Train - Epoch 3, Batch: 240, Loss: 0.683475
+Train - Epoch 3, Batch: 250, Loss: 0.683960
+Train - Epoch 3, Batch: 260, Loss: 0.684211
+Train - Epoch 3, Batch: 270, Loss: 0.685018
+Train - Epoch 3, Batch: 280, Loss: 0.683537
+Train - Epoch 3, Batch: 290, Loss: 0.683963
+Train - Epoch 3, Batch: 300, Loss: 0.684129
+Train - Epoch 3, Batch: 310, Loss: 0.684126
+Train - Epoch 3, Batch: 320, Loss: 0.684936
+Train - Epoch 3, Batch: 330, Loss: 0.684907
+Train - Epoch 3, Batch: 340, Loss: 0.683706
+Train - Epoch 3, Batch: 350, Loss: 0.683977
+Train - Epoch 3, Batch: 360, Loss: 0.683436
+Train - Epoch 3, Batch: 370, Loss: 0.684111
+Train - Epoch 3, Batch: 380, Loss: 0.684941
+Train - Epoch 3, Batch: 390, Loss: 0.683595
+Train - Epoch 3, Batch: 400, Loss: 0.683414
+Train - Epoch 3, Batch: 410, Loss: 0.683673
+Train - Epoch 3, Batch: 420, Loss: 0.684418
+Train - Epoch 3, Batch: 430, Loss: 0.683561
+Train - Epoch 3, Batch: 440, Loss: 0.684574
+Train - Epoch 3, Batch: 450, Loss: 0.683289
+Train - Epoch 3, Batch: 460, Loss: 0.683994
+Train - Epoch 3, Batch: 470, Loss: 0.682279
+Train - Epoch 3, Batch: 480, Loss: 0.684036
+Train - Epoch 3, Batch: 490, Loss: 0.684262
+Train - Epoch 3, Batch: 500, Loss: 0.683484
+Train - Epoch 3, Batch: 510, Loss: 0.684277
+Train - Epoch 3, Batch: 520, Loss: 0.684039
+Train - Epoch 3, Batch: 530, Loss: 0.683465
+Train - Epoch 3, Batch: 540, Loss: 0.683525
+Train - Epoch 3, Batch: 550, Loss: 0.684674
+Train - Epoch 3, Batch: 560, Loss: 0.683600
+Train - Epoch 3, Batch: 570, Loss: 0.683659
+Train - Epoch 3, Batch: 580, Loss: 0.684500
+Train - Epoch 3, Batch: 590, Loss: 0.685405
+Train - Epoch 3, Batch: 600, Loss: 0.684016
+Train - Epoch 3, Batch: 610, Loss: 0.684766
+Train - Epoch 3, Batch: 620, Loss: 0.683323
+Train - Epoch 3, Batch: 630, Loss: 0.683663
+Train - Epoch 3, Batch: 640, Loss: 0.683417
+training_time:: 7.579310178756714
+training time full:: 7.5793492794036865
+provenance prepare time:: 1.1920928955078125e-06
+Test Avg. Loss: 0.000042, Accuracy: 0.552144
+baseline::
+python3 incremental_updates_base_line_lr_multi.py 0
+/home/wuyinjun/ML_provenance/src/sensitivity_analysis_SGD/Models/DNN_single.py:57: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  out = self.fc2(out1)
+max_epoch:: 4
+Num of deletion:: 0, running time baseline::4.930649
+Num of deletion:: 10, running time baseline::60.021431
+Num of deletion:: 20, running time baseline::112.845331
+Num of deletion:: 30, running time baseline::165.308509
+Num of deletion:: 40, running time baseline::216.313323
+Num of deletion:: 50, running time baseline::267.598985
+Num of deletion:: 60, running time baseline::320.027982
+Num of deletion:: 70, running time baseline::374.726943
+Num of deletion:: 80, running time baseline::425.468112
+Num of deletion:: 90, running time baseline::475.256531
+training time is 520.121141910553
+overhead:: 0
+overhead2:: 520.1208543777466
+time_baseline:: 520.1211733818054
+curr_diff: 0 tensor(2.8300e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(2.8300e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000042, Accuracy: 0.552146
+period:: 3
+init_iters:: 300
+incremental updates::
+python3 incremental_updates_provenance5_lr_multi.py 300 3 2 0.000009524 6000

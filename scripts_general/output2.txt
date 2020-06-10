@@ -1,0 +1,1012 @@
+varied batch size::
+batch_size:: 128
+2
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.298361
+Train - Epoch 0, Batch: 10, Loss: 2.176571
+Train - Epoch 0, Batch: 20, Loss: 2.105923
+Train - Epoch 0, Batch: 30, Loss: 2.051531
+Train - Epoch 0, Batch: 40, Loss: 2.023804
+Train - Epoch 0, Batch: 50, Loss: 1.993653
+Train - Epoch 0, Batch: 60, Loss: 1.980250
+Train - Epoch 0, Batch: 70, Loss: 1.959293
+Train - Epoch 0, Batch: 80, Loss: 1.958985
+Train - Epoch 0, Batch: 90, Loss: 1.939861
+Train - Epoch 0, Batch: 100, Loss: 1.921894
+Train - Epoch 0, Batch: 110, Loss: 1.909323
+Train - Epoch 0, Batch: 120, Loss: 1.881745
+Train - Epoch 0, Batch: 130, Loss: 1.917117
+Train - Epoch 0, Batch: 140, Loss: 1.932955
+Train - Epoch 0, Batch: 150, Loss: 1.909110
+Train - Epoch 0, Batch: 160, Loss: 1.897809
+Train - Epoch 0, Batch: 170, Loss: 1.898566
+Train - Epoch 0, Batch: 180, Loss: 1.907119
+Train - Epoch 0, Batch: 190, Loss: 1.886844
+Train - Epoch 0, Batch: 200, Loss: 1.877320
+Train - Epoch 0, Batch: 210, Loss: 1.898950
+Train - Epoch 0, Batch: 220, Loss: 1.922553
+Train - Epoch 0, Batch: 230, Loss: 1.904373
+Train - Epoch 0, Batch: 240, Loss: 1.879310
+Train - Epoch 0, Batch: 250, Loss: 1.897951
+Train - Epoch 0, Batch: 260, Loss: 1.890609
+Train - Epoch 0, Batch: 270, Loss: 1.913337
+Train - Epoch 0, Batch: 280, Loss: 1.917948
+Train - Epoch 0, Batch: 290, Loss: 1.879240
+Train - Epoch 0, Batch: 300, Loss: 1.875857
+Train - Epoch 0, Batch: 310, Loss: 1.886307
+Train - Epoch 0, Batch: 320, Loss: 1.900098
+Train - Epoch 0, Batch: 330, Loss: 1.889897
+Train - Epoch 0, Batch: 340, Loss: 1.874373
+Train - Epoch 0, Batch: 350, Loss: 1.898550
+Train - Epoch 0, Batch: 360, Loss: 1.899327
+Train - Epoch 0, Batch: 370, Loss: 1.878361
+Train - Epoch 0, Batch: 380, Loss: 1.905762
+Train - Epoch 0, Batch: 390, Loss: 1.854637
+Train - Epoch 0, Batch: 400, Loss: 1.935692
+Train - Epoch 0, Batch: 410, Loss: 1.897296
+Train - Epoch 0, Batch: 420, Loss: 1.874811
+Train - Epoch 0, Batch: 430, Loss: 1.874960
+Train - Epoch 0, Batch: 440, Loss: 1.877406
+Train - Epoch 0, Batch: 450, Loss: 1.879807
+Train - Epoch 0, Batch: 460, Loss: 1.894156
+Test Avg. Loss: 0.014838, Accuracy: 0.835000
+Train - Epoch 1, Batch: 0, Loss: 1.877551
+Train - Epoch 1, Batch: 10, Loss: 1.876553
+Train - Epoch 1, Batch: 20, Loss: 1.878283
+Train - Epoch 1, Batch: 30, Loss: 1.880544
+Train - Epoch 1, Batch: 40, Loss: 1.895076
+Train - Epoch 1, Batch: 50, Loss: 1.900602
+Train - Epoch 1, Batch: 60, Loss: 1.915180
+Train - Epoch 1, Batch: 70, Loss: 1.889880
+Train - Epoch 1, Batch: 80, Loss: 1.906002
+Train - Epoch 1, Batch: 90, Loss: 1.883304
+Train - Epoch 1, Batch: 100, Loss: 1.887547
+Train - Epoch 1, Batch: 110, Loss: 1.915233
+Train - Epoch 1, Batch: 120, Loss: 1.875432
+Train - Epoch 1, Batch: 130, Loss: 1.864578
+Train - Epoch 1, Batch: 140, Loss: 1.869943
+Train - Epoch 1, Batch: 150, Loss: 1.863226
+Train - Epoch 1, Batch: 160, Loss: 1.912944
+Train - Epoch 1, Batch: 170, Loss: 1.877834
+Train - Epoch 1, Batch: 180, Loss: 1.892376
+Train - Epoch 1, Batch: 190, Loss: 1.902311
+Train - Epoch 1, Batch: 200, Loss: 1.903515
+Train - Epoch 1, Batch: 210, Loss: 1.862052
+Train - Epoch 1, Batch: 220, Loss: 1.893381
+Train - Epoch 1, Batch: 230, Loss: 1.886252
+Train - Epoch 1, Batch: 240, Loss: 1.892732
+Train - Epoch 1, Batch: 250, Loss: 1.860310
+Train - Epoch 1, Batch: 260, Loss: 1.888804
+Train - Epoch 1, Batch: 270, Loss: 1.865907
+Train - Epoch 1, Batch: 280, Loss: 1.869292
+Train - Epoch 1, Batch: 290, Loss: 1.861120
+Train - Epoch 1, Batch: 300, Loss: 1.874108
+Train - Epoch 1, Batch: 310, Loss: 1.908509
+Train - Epoch 1, Batch: 320, Loss: 1.875548
+Train - Epoch 1, Batch: 330, Loss: 1.878720
+Train - Epoch 1, Batch: 340, Loss: 1.881099
+Train - Epoch 1, Batch: 350, Loss: 1.884507
+Train - Epoch 1, Batch: 360, Loss: 1.888935
+Train - Epoch 1, Batch: 370, Loss: 1.892438
+Train - Epoch 1, Batch: 380, Loss: 1.869389
+Train - Epoch 1, Batch: 390, Loss: 1.910347
+Train - Epoch 1, Batch: 400, Loss: 1.884189
+Train - Epoch 1, Batch: 410, Loss: 1.878136
+Train - Epoch 1, Batch: 420, Loss: 1.876733
+Train - Epoch 1, Batch: 430, Loss: 1.900699
+Train - Epoch 1, Batch: 440, Loss: 1.878739
+Train - Epoch 1, Batch: 450, Loss: 1.897654
+Train - Epoch 1, Batch: 460, Loss: 1.890282
+Test Avg. Loss: 0.014824, Accuracy: 0.836500
+training_time:: 13.906700372695923
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+batch_size:: 128
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+training time is 10.925092458724976
+time_baseline:: 10.930010318756104
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.3864e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.014824, Accuracy: 0.836200
+max_epoch:: 2
+delta_size:: 3
+max_epoch:: 2
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 2.1199233531951904
+curr_diff: 0 tensor(4.9319e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.3012e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(4.9337e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.2718e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.014824, Accuracy: 0.836200
+batch_size:: 256
+4
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.302050
+Train - Epoch 0, Batch: 10, Loss: 2.184911
+Train - Epoch 0, Batch: 20, Loss: 2.107599
+Train - Epoch 0, Batch: 30, Loss: 2.057946
+Train - Epoch 0, Batch: 40, Loss: 2.018091
+Train - Epoch 0, Batch: 50, Loss: 1.987565
+Train - Epoch 0, Batch: 60, Loss: 1.952260
+Train - Epoch 0, Batch: 70, Loss: 1.968591
+Train - Epoch 0, Batch: 80, Loss: 1.945939
+Train - Epoch 0, Batch: 90, Loss: 1.940190
+Train - Epoch 0, Batch: 100, Loss: 1.920428
+Train - Epoch 0, Batch: 110, Loss: 1.936066
+Train - Epoch 0, Batch: 120, Loss: 1.915466
+Train - Epoch 0, Batch: 130, Loss: 1.924688
+Train - Epoch 0, Batch: 140, Loss: 1.926850
+Train - Epoch 0, Batch: 150, Loss: 1.897985
+Train - Epoch 0, Batch: 160, Loss: 1.904155
+Train - Epoch 0, Batch: 170, Loss: 1.902004
+Train - Epoch 0, Batch: 180, Loss: 1.898343
+Train - Epoch 0, Batch: 190, Loss: 1.899085
+Train - Epoch 0, Batch: 200, Loss: 1.913053
+Train - Epoch 0, Batch: 210, Loss: 1.880613
+Train - Epoch 0, Batch: 220, Loss: 1.892162
+Train - Epoch 0, Batch: 230, Loss: 1.898686
+Test Avg. Loss: 0.007543, Accuracy: 0.832200
+Train - Epoch 1, Batch: 0, Loss: 1.898632
+Train - Epoch 1, Batch: 10, Loss: 1.893625
+Train - Epoch 1, Batch: 20, Loss: 1.895487
+Train - Epoch 1, Batch: 30, Loss: 1.915796
+Train - Epoch 1, Batch: 40, Loss: 1.896526
+Train - Epoch 1, Batch: 50, Loss: 1.888967
+Train - Epoch 1, Batch: 60, Loss: 1.883356
+Train - Epoch 1, Batch: 70, Loss: 1.892274
+Train - Epoch 1, Batch: 80, Loss: 1.885088
+Train - Epoch 1, Batch: 90, Loss: 1.894661
+Train - Epoch 1, Batch: 100, Loss: 1.908115
+Train - Epoch 1, Batch: 110, Loss: 1.886254
+Train - Epoch 1, Batch: 120, Loss: 1.880964
+Train - Epoch 1, Batch: 130, Loss: 1.897102
+Train - Epoch 1, Batch: 140, Loss: 1.871388
+Train - Epoch 1, Batch: 150, Loss: 1.878160
+Train - Epoch 1, Batch: 160, Loss: 1.890859
+Train - Epoch 1, Batch: 170, Loss: 1.898415
+Train - Epoch 1, Batch: 180, Loss: 1.883918
+Train - Epoch 1, Batch: 190, Loss: 1.878912
+Train - Epoch 1, Batch: 200, Loss: 1.883987
+Train - Epoch 1, Batch: 210, Loss: 1.897819
+Train - Epoch 1, Batch: 220, Loss: 1.887474
+Train - Epoch 1, Batch: 230, Loss: 1.885795
+Test Avg. Loss: 0.007511, Accuracy: 0.836300
+Train - Epoch 2, Batch: 0, Loss: 1.897589
+Train - Epoch 2, Batch: 10, Loss: 1.886349
+Train - Epoch 2, Batch: 20, Loss: 1.884687
+Train - Epoch 2, Batch: 30, Loss: 1.882637
+Train - Epoch 2, Batch: 40, Loss: 1.886245
+Train - Epoch 2, Batch: 50, Loss: 1.886872
+Train - Epoch 2, Batch: 60, Loss: 1.877327
+Train - Epoch 2, Batch: 70, Loss: 1.889072
+Train - Epoch 2, Batch: 80, Loss: 1.879926
+Train - Epoch 2, Batch: 90, Loss: 1.879491
+Train - Epoch 2, Batch: 100, Loss: 1.891023
+Train - Epoch 2, Batch: 110, Loss: 1.889736
+Train - Epoch 2, Batch: 120, Loss: 1.874458
+Train - Epoch 2, Batch: 130, Loss: 1.879987
+Train - Epoch 2, Batch: 140, Loss: 1.889498
+Train - Epoch 2, Batch: 150, Loss: 1.891543
+Train - Epoch 2, Batch: 160, Loss: 1.866616
+Train - Epoch 2, Batch: 170, Loss: 1.883171
+Train - Epoch 2, Batch: 180, Loss: 1.885980
+Train - Epoch 2, Batch: 190, Loss: 1.897639
+Train - Epoch 2, Batch: 200, Loss: 1.884287
+Train - Epoch 2, Batch: 210, Loss: 1.891461
+Train - Epoch 2, Batch: 220, Loss: 1.870612
+Train - Epoch 2, Batch: 230, Loss: 1.873215
+Test Avg. Loss: 0.007505, Accuracy: 0.836800
+Train - Epoch 3, Batch: 0, Loss: 1.866670
+Train - Epoch 3, Batch: 10, Loss: 1.882864
+Train - Epoch 3, Batch: 20, Loss: 1.874344
+Train - Epoch 3, Batch: 30, Loss: 1.879786
+Train - Epoch 3, Batch: 40, Loss: 1.877966
+Train - Epoch 3, Batch: 50, Loss: 1.876884
+Train - Epoch 3, Batch: 60, Loss: 1.887191
+Train - Epoch 3, Batch: 70, Loss: 1.870875
+Train - Epoch 3, Batch: 80, Loss: 1.884839
+Train - Epoch 3, Batch: 90, Loss: 1.887758
+Train - Epoch 3, Batch: 100, Loss: 1.880065
+Train - Epoch 3, Batch: 110, Loss: 1.891120
+Train - Epoch 3, Batch: 120, Loss: 1.892792
+Train - Epoch 3, Batch: 130, Loss: 1.886841
+Train - Epoch 3, Batch: 140, Loss: 1.874470
+Train - Epoch 3, Batch: 150, Loss: 1.905371
+Train - Epoch 3, Batch: 160, Loss: 1.874975
+Train - Epoch 3, Batch: 170, Loss: 1.891986
+Train - Epoch 3, Batch: 180, Loss: 1.895593
+Train - Epoch 3, Batch: 190, Loss: 1.888360
+Train - Epoch 3, Batch: 200, Loss: 1.886302
+Train - Epoch 3, Batch: 210, Loss: 1.900133
+Train - Epoch 3, Batch: 220, Loss: 1.879560
+Train - Epoch 3, Batch: 230, Loss: 1.891335
+Test Avg. Loss: 0.007504, Accuracy: 0.836900
+training_time:: 25.415088415145874
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 4
+delta_size:: 3
+max_epoch:: 4
+batch_size:: 256
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+epoch:: 2
+	calling Sampler:__iter__
+epoch:: 3
+	calling Sampler:__iter__
+training time is 21.292264699935913
+time_baseline:: 21.301542282104492
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.6161e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007504, Accuracy: 0.836900
+max_epoch:: 4
+delta_size:: 3
+max_epoch:: 4
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+epoch  2
+	calling Sampler:__iter__
+epoch  3
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 3.3235440254211426
+curr_diff: 0 tensor(4.2603e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(2.5432e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(4.2679e-05, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0004, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.3665e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0004, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.007504, Accuracy: 0.836900
+batch_size:: 1024
+16
+/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.305578
+Train - Epoch 0, Batch: 10, Loss: 2.179132
+Train - Epoch 0, Batch: 20, Loss: 2.102291
+Train - Epoch 0, Batch: 30, Loss: 2.056854
+Train - Epoch 0, Batch: 40, Loss: 2.012847
+Train - Epoch 0, Batch: 50, Loss: 1.996355
+Test Avg. Loss: 0.001965, Accuracy: 0.812000
+Train - Epoch 1, Batch: 0, Loss: 1.970779
+Train - Epoch 1, Batch: 10, Loss: 1.959040
+Train - Epoch 1, Batch: 20, Loss: 1.941753
+Train - Epoch 1, Batch: 30, Loss: 1.938115
+Train - Epoch 1, Batch: 40, Loss: 1.925131
+Train - Epoch 1, Batch: 50, Loss: 1.913254
+Test Avg. Loss: 0.001912, Accuracy: 0.824900
+Train - Epoch 2, Batch: 0, Loss: 1.928191
+Train - Epoch 2, Batch: 10, Loss: 1.914537
+Train - Epoch 2, Batch: 20, Loss: 1.912731
+Train - Epoch 2, Batch: 30, Loss: 1.907122
+Train - Epoch 2, Batch: 40, Loss: 1.899072
+Train - Epoch 2, Batch: 50, Loss: 1.904672
+Test Avg. Loss: 0.001895, Accuracy: 0.830100
+Train - Epoch 3, Batch: 0, Loss: 1.899915
+Train - Epoch 3, Batch: 10, Loss: 1.899887
+Train - Epoch 3, Batch: 20, Loss: 1.895958
+Train - Epoch 3, Batch: 30, Loss: 1.898857
+Train - Epoch 3, Batch: 40, Loss: 1.902473
+Train - Epoch 3, Batch: 50, Loss: 1.896124
+Test Avg. Loss: 0.001887, Accuracy: 0.834000
+Train - Epoch 4, Batch: 0, Loss: 1.905464
+Train - Epoch 4, Batch: 10, Loss: 1.897858
+Train - Epoch 4, Batch: 20, Loss: 1.892502
+Train - Epoch 4, Batch: 30, Loss: 1.890017
+Train - Epoch 4, Batch: 40, Loss: 1.891816
+Train - Epoch 4, Batch: 50, Loss: 1.891902
+Test Avg. Loss: 0.001884, Accuracy: 0.834100
+Train - Epoch 5, Batch: 0, Loss: 1.888567
+Train - Epoch 5, Batch: 10, Loss: 1.893127
+Train - Epoch 5, Batch: 20, Loss: 1.888395
+Train - Epoch 5, Batch: 30, Loss: 1.889755
+Train - Epoch 5, Batch: 40, Loss: 1.885061
+Train - Epoch 5, Batch: 50, Loss: 1.888010
+Test Avg. Loss: 0.001881, Accuracy: 0.835500
+Train - Epoch 6, Batch: 0, Loss: 1.886218
+Train - Epoch 6, Batch: 10, Loss: 1.890221
+Train - Epoch 6, Batch: 20, Loss: 1.891249
+Train - Epoch 6, Batch: 30, Loss: 1.884392
+Train - Epoch 6, Batch: 40, Loss: 1.891037
+Train - Epoch 6, Batch: 50, Loss: 1.889572
+Test Avg. Loss: 0.001880, Accuracy: 0.835900
+Train - Epoch 7, Batch: 0, Loss: 1.887314
+Train - Epoch 7, Batch: 10, Loss: 1.886803
+Train - Epoch 7, Batch: 20, Loss: 1.890068
+Train - Epoch 7, Batch: 30, Loss: 1.890100
+Train - Epoch 7, Batch: 40, Loss: 1.885088
+Train - Epoch 7, Batch: 50, Loss: 1.889444
+Test Avg. Loss: 0.001879, Accuracy: 0.836000
+Train - Epoch 8, Batch: 0, Loss: 1.883205
+Train - Epoch 8, Batch: 10, Loss: 1.882625
+Train - Epoch 8, Batch: 20, Loss: 1.891331
+Train - Epoch 8, Batch: 30, Loss: 1.887906
+Train - Epoch 8, Batch: 40, Loss: 1.877722
+Train - Epoch 8, Batch: 50, Loss: 1.893148
+Test Avg. Loss: 0.001879, Accuracy: 0.836300
+Train - Epoch 9, Batch: 0, Loss: 1.893683
+Train - Epoch 9, Batch: 10, Loss: 1.885949
+Train - Epoch 9, Batch: 20, Loss: 1.881188
+Train - Epoch 9, Batch: 30, Loss: 1.895749
+Train - Epoch 9, Batch: 40, Loss: 1.881045
+Train - Epoch 9, Batch: 50, Loss: 1.884493
+Test Avg. Loss: 0.001878, Accuracy: 0.836500
+Train - Epoch 10, Batch: 0, Loss: 1.886238
+Train - Epoch 10, Batch: 10, Loss: 1.889791
+Train - Epoch 10, Batch: 20, Loss: 1.887674
+Train - Epoch 10, Batch: 30, Loss: 1.888571
+Train - Epoch 10, Batch: 40, Loss: 1.884506
+Train - Epoch 10, Batch: 50, Loss: 1.884046
+Test Avg. Loss: 0.001878, Accuracy: 0.837100
+Train - Epoch 11, Batch: 0, Loss: 1.882136
+Train - Epoch 11, Batch: 10, Loss: 1.878943
+Train - Epoch 11, Batch: 20, Loss: 1.888344
+Train - Epoch 11, Batch: 30, Loss: 1.886318
+Train - Epoch 11, Batch: 40, Loss: 1.883252
+Train - E3.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.304089
+Train - Epoch 0, Batch: 10, Loss: 2.180448
+Test Avg. Loss: 0.000639, Accuracy: 0.729100
+Train - Epoch 1, Batch: 0, Loss: 2.135836
+Train - Epoch 1, Batch: 10, Loss: 2.079278
+Test Avg. Loss: 0.000613, Accuracy: 0.791200
+Train - Epoch 2, Batch: 0, Loss: 2.056348
+Train - Epoch 2, Batch: 10, Loss: 2.019883
+Test Avg. Loss: 0.000598, Accuracy: 0.807900
+Train - Epoch 3, Batch: 0, Loss: 2.004971
+Train - Epoch 3, Batch: 10, Loss: 1.986527
+Test Avg. Loss: 0.000589, Accuracy: 0.815700
+Train - Epoch 4, Batch: 0, Loss: 1.977256
+Train - Epoch 4, Batch: 10, Loss: 1.960684
+Test Avg. Loss: 0.000583, Accuracy: 0.819200
+Train - Epoch 5, Batch: 0, Loss: 1.952779
+Train - Epoch 5, Batch: 10, Loss: 1.945038
+Test Avg. Loss: 0.000579, Accuracy: 0.822800
+Train - Epoch 6, Batch: 0, Loss: 1.940270
+Train - Epoch 6, Batch: 10, Loss: 1.938936
+Test Avg. Loss: 0.000576, Accuracy: 0.823700
+Train - Epoch 7, Batch: 0, Loss: 1.933767
+Train - Epoch 7, Batch: 10, Loss: 1.927223
+Test Avg. Loss: 0.000574, Accuracy: 0.824800
+Train - Epoch 8, Batch: 0, Loss: 1.926082
+Train - Epoch 8, Batch: 10, Loss: 1.916681
+Test Avg. Loss: 0.000572, Accuracy: 0.825400
+Train - Epoch 9, Batch: 0, Loss: 1.919126
+Train - Epoch 9, Batch: 10, Loss: 1.912268
+Test Avg. Loss: 0.000571, Accuracy: 0.826400
+Train - Epoch 10, Batch: 0, Loss: 1.912943
+Train - Epoch 10, Batch: 10, Loss: 1.909801
+Test Avg. Loss: 0.000570, Accuracy: 0.827600
+Train - Epoch 11, Batch: 0, Loss: 1.911984
+Train - Epoch 11, Batch: 10, Loss: 1.910473
+Test Avg. Loss: 0.000569, Accuracy: 0.828100
+Train - Epoch 12, Batch: 0, Loss: 1.907417
+Train - Epoch 12, Batch: 10, Loss: 1.906682
+Test Avg. Loss: 0.000568, Accuracy: 0.828800
+Train - Epoch 13, Batch: 0, Loss: 1.908309
+Train - Epoch 13, Batch: 10, Loss: 1.908141
+Test Avg. Loss: 0.000568, Accuracy: 0.830000
+Train - Epoch 14, Batch: 0, Loss: 1.903493
+Train - Epoch 14, Batch: 10, Loss: 1.904028
+Test Avg. Loss: 0.000567, Accuracy: 0.830800
+Train - Epoch 15, Batch: 0, Loss: 1.904865
+Train - Epoch 15, Batch: 10, Loss: 1.900096
+Test Avg. Loss: 0.000567, Accuracy: 0.832100
+Train - Epoch 16, Batch: 0, Loss: 1.901313
+Train - Epoch 16, Batch: 10, Loss: 1.899876
+Test Avg. Loss: 0.000566, Accuracy: 0.832400
+Train - Epoch 17, Batch: 0, Loss: 1.899783
+Train - Epoch 17, Batch: 10, Loss: 1.900742
+Test Avg. Loss: 0.000566, Accuracy: 0.832400
+Train - Epoch 18, Batch: 0, Loss: 1.901044
+Train - Epoch 18, Batch: 10, Loss: 1.894665
+Test Avg. Loss: 0.000566, Accuracy: 0.832500
+Train - Epoch 19, Batch: 0, Loss: 1.898920
+Train - Epoch 19, Batch: 10, Loss: 1.898774
+Test Avg. Loss: 0.000566, Accuracy: 0.832600
+Train - Epoch 20, Batch: 0, Loss: 1.901518
+Train - Epoch 20, Batch: 10, Loss: 1.897057
+Test Avg. Loss: 0.000565, Accuracy: 0.833200
+Train - Epoch 21, Batch: 0, Loss: 1.897243
+Train - Epoch 21, Batch: 10, Loss: 1.896933
+Test Avg. Loss: 0.000565, Accuracy: 0.833200
+Train - Epoch 22, Batch: 0, Loss: 1.896299
+Train - Epoch 22, Batch: 10, Loss: 1.894593
+Test Avg. Loss: 0.000565, Accuracy: 0.833300
+Train - Epoch 23, Batch: 0, Loss: 1.892815
+Train - Epoch 23, Batch: 10, Loss: 1.895000
+Test Avg. Loss: 0.000565, Accuracy: 0.833200
+Train - Epoch 24, Batch: 0, Loss: 1.893817
+Train - Epoch 24, Batch: 10, Loss: 1.894150
+Test Avg. Loss: 0.000565, Accuracy: 0.833100
+Train - Epoch 25, Batch: 0, Loss: 1.894119
+Train - Epoch 25, Batch: 10, Loss: 1.894046
+Test Avg. Loss: 0.000565, Accuracy: 0.833300
+Train - Epoch 26, Batch: 0, Loss: 1.892504
+Train - Epoch 26, Batch: 10, Loss: 1.895262
+Test Avg. Loss: 0.000565, Accuracy: 0.833300
+Train - Epoch 27, Batch: 0, Loss: 1.890730
+Train - Epoch 27, Batch: 10, Loss: 1.896527
+Test Avg. Loss: 0.000565, Accuracy: 0.833400
+Train - Epoch 28, Batch: 0, Loss: 1.893685
+Train - Epoch 28, Batch: 10, Loss: 1.893895
+Test Avg. Loss: 0.000564, Accuracy: 0.833500
+Train - Epoch 29, Batch: 0, Loss: 1.894685
+Train - Epoch 29, Batch: 10, Loss: 1.892815
+Test Avg. Loss: 0.000564, Accuracy: 0.833600
+Train - Epoch 30, Batch: 0, Loss: 1.895789
+Train - Epoch 30, Batch: 10, Loss: 1.893749
+Test Avg. Loss: 0.000564, Accuracy: 0.833600
+Train - Epoch 31, Batch: 0, Loss: 1.898821
+Train - Epoch 31, Batch: 10, Loss: 1.894854
+Test Avg. Loss: 0.000564, Accuracy: 0.833700
+Train - Epoch 32, Batch: 0, Loss: 1.895256
+Train - Epoch 32, Batch: 10, Loss: 1.893839
+Test Avg. Loss: 0.000564, Accuracy: 0.8337003.6.9 (default, Nov  7 2019, 10:44:02) 
+[GCC 8.3.0]
+cuda:2
+Train - Epoch 0, Batch: 0, Loss: 2.304089
+Train - Epoch 0, Batch: 10, Loss: 2.180448
+Test Avg. Loss: 0.000639, Accuracy: 0.729100
+Train - Epoch 1, Batch: 0, Loss: 2.135836
+Train - Epoch 1, Batch: 10, Loss: 2.079278
+Test Avg. Loss: 0.000613, Accuracy: 0.791200
+Train - Epoch 2, Batch: 0, Loss: 2.056348
+Train - Epoch 2, Batch: 10, Loss: 2.019883
+Test Avg. Loss: 0.000598, Accuracy: 0.807900
+Train - Epoch 3, Batch: 0, Loss: 2.004971
+Train - Epoch 3, Batch: 10, Loss: 1.986527
+Test Avg. Loss: 0.000589, Accuracy: 0.815700
+Train - Epoch 4, Batch: 0, Loss: 1.977256
+Train - Epoch 4, Batch: 10, Loss: 1.960684
+Test Avg. Loss: 0.000583, Accuracy: 0.819200
+Train - Epoch 5, Batch: 0, Loss: 1.952779
+Train - Epoch 5, Batch: 10, Loss: 1.945038
+Test Avg. Loss: 0.000579, Accuracy: 0.822800
+Train - Epoch 6, Batch: 0, Loss: 1.940270
+Train - Epoch 6, Batch: 10, Loss: 1.938936
+Test Avg. Loss: 0.000576, Accuracy: 0.823700
+Train - Epoch 7, Batch: 0, Loss: 1.933767
+Train - Epoch 7, Batch: 10, Loss: 1.927223
+Test Avg. Loss: 0.000574, Accuracy: 0.824800
+Train - Epoch 8, Batch: 0, Loss: 1.926082
+Train - Epoch 8, Batch: 10, Loss: 1.916681
+Test Avg. Loss: 0.000572, Accuracy: 0.825400
+Train - Epoch 9, Batch: 0, Loss: 1.919126
+Train - Epoch 9, Batch: 10, Loss: 1.912268
+Test Avg. Loss: 0.000571, Accuracy: 0.826400
+Train - Epoch 10, Batch: 0, Loss: 1.912943
+Train - Epoch 10, Batch: 10, Loss: 1.909801
+Test Avg. Loss: 0.000570, Accuracy: 0.827600
+Train - Epoch 11, Batch: 0, Loss: 1.911984
+Train - Epoch 11, Batch: 10, Loss: 1.910473
+Test Avg. Loss: 0.000569, Accuracy: 0.828100
+Train - Epoch 12, Batch: 0, Loss: 1.907417
+Train - Epoch 12, Batch: 10, Loss: 1.906682
+Test Avg. Loss: 0.000568, Accuracy: 0.828800
+Train - Epoch 13, Batch: 0, Loss: 1.908309
+Train - Epoch 13, Batch: 10, Loss: 1.908141
+Test Avg. Loss: 0.000568, Accuracy: 0.830000
+Train - Epoch 14, Batch: 0, Loss: 1.903493
+Train - Epoch 14, Batch: 10, Loss: 1.904028
+Test Avg. Loss: 0.000567, Accuracy: 0.830800
+Train - Epoch 15, Batch: 0, Loss: 1.904865
+Train - Epoch 15, Batch: 10, Loss: 1.900096
+Test Avg. Loss: 0.000567, Accuracy: 0.832100
+Train - Epoch 16, Batch: 0, Loss: 1.901313
+Train - Epoch 16, Batch: 10, Loss: 1.899876
+Test Avg. Loss: 0.000566, Accuracy: 0.832400
+Train - Epoch 17, Batch: 0, Loss: 1.899783
+Train - Epoch 17, Batch: 10, Loss: 1.900742
+Test Avg. Loss: 0.000566, Accuracy: 0.832400
+Train - Epoch 18, Batch: 0, Loss: 1.901044
+Train - Epoch 18, Batch: 10, Loss: 1.894665
+Test Avg. Loss: 0.000566, Accuracy: 0.832500
+Train - Epoch 19, Batch: 0, Loss: 1.898920
+Train - Epoch 19, Batch: 10, Loss: 1.898774
+Test Avg. Loss: 0.000566, Accuracy: 0.832600
+Train - Epoch 20, Batch: 0, Loss: 1.901518
+Train - Epoch 20, Batch: 10, Loss: 1.897057
+Test Avg. Loss: 0.000565, Accuracy: 0.833200
+Train - Epoch 21, Batch: 0, Loss: 1.897243
+Train - Epoch 21, Batch: 10, Loss: 1.896933
+Test Avg. Loss: 0.000565, Accuracy: 0.833200
+Train - Epoch 22, Batch: 0, Loss: 1.896299
+Train - Epoch 22, Batch: 10, Loss: 1.894593
+Test Avg. Loss: 0.000565, Accuracy: 0.833300
+Train - Epoch 23, Batch: 0, Loss: 1.892815
+Train - Epoch 23, Batch: 10, Loss: 1.895000
+Test Avg. Loss: 0.000565, Accuracy: 0.833200
+Train - Epoch 24, Batch: 0, Loss: 1.893817
+Train - Epoch 24, Batch: 10, Loss: 1.894150
+Test Avg. Loss: 0.000565, Accuracy: 0.833100
+Train - Epoch 25, Batch: 0, Loss: 1.894119
+Train - Epoch 25, Batch: 10, Loss: 1.894046
+Test Avg. Loss: 0.000565, Accuracy: 0.833300
+Train - Epoch 26, Batch: 0, Loss: 1.892504
+Train - Epoch 26, Batch: 10, Loss: 1.895262
+Test Avg. Loss: 0.000565, Accuracy: 0.833300
+Train - Epoch 27, Batch: 0, Loss: 1.890730
+Train - Epoch 27, Batch: 10, Loss: 1.896527
+Test Avg. Loss: 0.000565, Accuracy: 0.833400
+Train - Epoch 28, Batch: 0, Loss: 1.893685
+Train - Epoch 28, Batch: 10, Loss: 1.893895
+Test Avg. Loss: 0.000564, Accuracy: 0.833500
+Train - Epoch 29, Batch: 0, Loss: 1.894685
+Train - Epoch 29, Batch: 10, Loss: 1.892815
+Test Avg. Loss: 0.000564, Accuracy: 0.833600
+Train - Epoch 30, Batch: 0, Loss: 1.895789
+Train - Epoch 30, Batch: 10, Loss: 1.893749
+Test Avg. Loss: 0.000564, Accuracy: 0.833600
+Train - Epoch 31, Batch: 0, Loss: 1.898821
+Train - Epoch 31, Batch: 10, Loss: 1.894854
+Test Avg. Loss: 0.000564, Accuracy: 0.833700
+Train - Epoch 32, Batch: 0, Loss: 1.895256
+Train - Epoch 32, Batch: 10, Loss: 1.893839
+Test Avg. Loss: 0.000564, Accuracy: 0.833700
+Train - Epoch 33, Batch: 0, Loss: 1.892861
+Train - Epoch 33, Batch: 10, Loss: 1.894173
+Test Avg. Loss: 0.000564, Accuracy: 0.833700
+Train - Epoch 34, Batch: 0, Loss: 1.892514
+Train - Epoch 34, Batch: 10, Loss: 1.893543
+Test Avg. Loss: 0.000564, Accuracy: 0.833800
+Train - Epoch 35, Batch: 0, Loss: 1.894595
+Train - Epoch 35, Batch: 10, Loss: 1.896875
+Test Avg. Loss: 0.000564, Accuracy: 0.833800
+Train - Epoch 36, Batch: 0, Loss: 1.890530
+Train - Epoch 36, Batch: 10, Loss: 1.894145
+Test Avg. Loss: 0.000564, Accuracy: 0.833800
+Train - Epoch 37, Batch: 0, Loss: 1.890234
+Train - Epoch 37, Batch: 10, Loss: 1.890587
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 38, Batch: 0, Loss: 1.889697
+Train - Epoch 38, Batch: 10, Loss: 1.892047
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 39, Batch: 0, Loss: 1.889509
+Train - Epoch 39, Batch: 10, Loss: 1.891773
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 40, Batch: 0, Loss: 1.892081
+Train - Epoch 40, Batch: 10, Loss: 1.887331
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 41, Batch: 0, Loss: 1.897200
+Train - Epoch 41, Batch: 10, Loss: 1.894522
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 42, Batch: 0, Loss: 1.893486
+Train - Epoch 42, Batch: 10, Loss: 1.892466
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 43, Batch: 0, Loss: 1.895364
+Train - Epoch 43, Batch: 10, Loss: 1.891383
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 44, Batch: 0, Loss: 1.895494
+Train - Epoch 44, Batch: 10, Loss: 1.887727
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 45, Batch: 0, Loss: 1.893201
+Train - Epoch 45, Batch: 10, Loss: 1.893081
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 46, Batch: 0, Loss: 1.891853
+Train - Epoch 46, Batch: 10, Loss: 1.889945
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 47, Batch: 0, Loss: 1.892822
+Train - Epoch 47, Batch: 10, Loss: 1.895097
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 48, Batch: 0, Loss: 1.894346
+Train - Epoch 48, Batch: 10, Loss: 1.895253
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 49, Batch: 0, Loss: 1.890984
+Train - Epoch 49, Batch: 10, Loss: 1.893651
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 50, Batch: 0, Loss: 1.892660
+Train - Epoch 50, Batch: 10, Loss: 1.891331
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 51, Batch: 0, Loss: 1.892323
+Train - Epoch 51, Batch: 10, Loss: 1.895249
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 52, Batch: 0, Loss: 1.893913
+Train - Epoch 52, Batch: 10, Loss: 1.890235
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 53, Batch: 0, Loss: 1.892173
+Train - Epoch 53, Batch: 10, Loss: 1.891899
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 54, Batch: 0, Loss: 1.895308
+Train - Epoch 54, Batch: 10, Loss: 1.891098
+Test Avg. Loss: 0.000564, Accuracy: 0.833900
+Train - Epoch 55, Batch: 0, Loss: 1.892965
+Train - Epoch 55, Batch: 10, Loss: 1.891350
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 56, Batch: 0, Loss: 1.889183
+Train - Epoch 56, Batch: 10, Loss: 1.885994
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 57, Batch: 0, Loss: 1.891589
+Train - Epoch 57, Batch: 10, Loss: 1.893237
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 58, Batch: 0, Loss: 1.893002
+Train - Epoch 58, Batch: 10, Loss: 1.892272
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 59, Batch: 0, Loss: 1.891122
+Train - Epoch 59, Batch: 10, Loss: 1.896196
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 60, Batch: 0, Loss: 1.893619
+Train - Epoch 60, Batch: 10, Loss: 1.891245
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 61, Batch: 0, Loss: 1.893628
+Train - Epoch 61, Batch: 10, Loss: 1.890863
+Test Avg. Loss: 0.000564, Accuracy: 0.834000/usr/lib/python3/dist-packages/torch/optim/lr_scheduler.py:100: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule.See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type CrossEntropyLoss. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+
+Train - Epoch 62, Batch: 0, Loss: 1.896693
+Train - Epoch 62, Batch: 10, Loss: 1.894746
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+Train - Epoch 63, Batch: 0, Loss: 1.892773
+Train - Epoch 63, Batch: 10, Loss: 1.890593
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+training_time:: 380.77545738220215
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type DNNModel_single. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Linear. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+/usr/lib/python3/dist-packages/torch/serialization.py:292: UserWarning: Couldn't retrieve source code for container of type Sigmoid. It won't be checked for correctness upon loading.
+  "type " + obj.__name__ + ". It won't be checked "
+max_epoch:: 64
+delta_size:: 3
+max_epoch:: 64
+batch_size:: 4096
+epoch:: 0
+	calling Sampler:__iter__
+epoch:: 1
+	calling Sampler:__iter__
+epoch:: 2
+	calling Sampler:__iter__
+epoch:: 3
+	calling Sampler:__iter__
+epoch:: 4
+	calling Sampler:__iter__
+epoch:: 5
+	calling Sampler:__iter__
+epoch:: 6
+	calling Sampler:__iter__
+epoch:: 7
+	calling Sampler:__iter__
+epoch:: 8
+	calling Sampler:__iter__
+epoch:: 9
+	calling Sampler:__iter__
+epoch:: 10
+	calling Sampler:__iter__
+epoch:: 11
+	calling Sampler:__iter__
+epoch:: 12
+	calling Sampler:__iter__
+epoch:: 13
+	calling Sampler:__iter__
+epoch:: 14
+	calling Sampler:__iter__
+epoch:: 15
+	calling Sampler:__iter__
+epoch:: 16
+	calling Sampler:__iter__
+epoch:: 17
+	calling Sampler:__iter__
+epoch:: 18
+	calling Sampler:__iter__
+epoch:: 19
+	calling Sampler:__iter__
+epoch:: 20
+	calling Sampler:__iter__
+epoch:: 21
+	calling Sampler:__iter__
+epoch:: 22
+	calling Sampler:__iter__
+epoch:: 23
+	calling Sampler:__iter__
+epoch:: 24
+	calling Sampler:__iter__
+epoch:: 25
+	calling Sampler:__iter__
+epoch:: 26
+	calling Sampler:__iter__
+epoch:: 27
+	calling Sampler:__iter__
+epoch:: 28
+	calling Sampler:__iter__
+epoch:: 29
+	calling Sampler:__iter__
+epoch:: 30
+	calling Sampler:__iter__
+epoch:: 31
+	calling Sampler:__iter__
+epoch:: 32
+	calling Sampler:__iter__
+epoch:: 33
+	calling Sampler:__iter__
+epoch:: 34
+	calling Sampler:__iter__
+epoch:: 35
+	calling Sampler:__iter__
+epoch:: 36
+	calling Sampler:__iter__
+epoch:: 37
+	calling Sampler:__iter__
+epoch:: 38
+	calling Sampler:__iter__
+epoch:: 39
+	calling Sampler:__iter__
+epoch:: 40
+	calling Sampler:__iter__
+epoch:: 41
+	calling Sampler:__iter__
+epoch:: 42
+	calling Sampler:__iter__
+epoch:: 43
+	calling Sampler:__iter__
+epoch:: 44
+	calling Sampler:__iter__
+epoch:: 45
+	calling Sampler:__iter__
+epoch:: 46
+	calling Sampler:__iter__
+epoch:: 47
+	calling Sampler:__iter__
+epoch:: 48
+	calling Sampler:__iter__
+epoch:: 49
+	calling Sampler:__iter__
+epoch:: 50
+	calling Sampler:__iter__
+epoch:: 51
+	calling Sampler:__iter__
+epoch:: 52
+	calling Sampler:__iter__
+epoch:: 53
+	calling Sampler:__iter__
+epoch:: 54
+	calling Sampler:__iter__
+epoch:: 55
+	calling Sampler:__iter__
+epoch:: 56
+	calling Sampler:__iter__
+epoch:: 57
+	calling Sampler:__iter__
+epoch:: 58
+	calling Sampler:__iter__
+epoch:: 59
+	calling Sampler:__iter__
+epoch:: 60
+	calling Sampler:__iter__
+epoch:: 61
+	calling Sampler:__iter__
+epoch:: 62
+	calling Sampler:__iter__
+epoch:: 63
+	calling Sampler:__iter__
+training time is 325.9591808319092
+time_baseline:: 326.12977623939514
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(3.3751e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000564, Accuracy: 0.834000
+max_epoch:: 64
+delta_size:: 3
+max_epoch:: 64
+epoch  0
+	calling Sampler:__iter__
+epoch  1
+	calling Sampler:__iter__
+epoch  2
+	calling Sampler:__iter__
+epoch  3
+	calling Sampler:__iter__
+epoch  4
+	calling Sampler:__iter__
+epoch  5
+	calling Sampler:__iter__
+epoch  6
+	calling Sampler:__iter__
+epoch  7
+	calling Sampler:__iter__
+epoch  8
+	calling Sampler:__iter__
+epoch  9
+	calling Sampler:__iter__
+epoch  10
+	calling Sampler:__iter__
+epoch  11
+	calling Sampler:__iter__
+epoch  12
+	calling Sampler:__iter__
+epoch  13
+	calling Sampler:__iter__
+epoch  14
+	calling Sampler:__iter__
+epoch  15
+	calling Sampler:__iter__
+epoch  16
+	calling Sampler:__iter__
+epoch  17
+	calling Sampler:__iter__
+epoch  18
+	calling Sampler:__iter__
+epoch  19
+	calling Sampler:__iter__
+epoch  20
+	calling Sampler:__iter__
+epoch  21
+	calling Sampler:__iter__
+epoch  22
+	calling Sampler:__iter__
+epoch  23
+	calling Sampler:__iter__
+epoch  24
+	calling Sampler:__iter__
+epoch  25
+	calling Sampler:__iter__
+epoch  26
+	calling Sampler:__iter__
+epoch  27
+	calling Sampler:__iter__
+epoch  28
+	calling Sampler:__iter__
+epoch  29
+	calling Sampler:__iter__
+epoch  30
+	calling Sampler:__iter__
+epoch  31
+	calling Sampler:__iter__
+epoch  32
+	calling Sampler:__iter__
+epoch  33
+	calling Sampler:__iter__
+epoch  34
+	calling Sampler:__iter__
+epoch  35
+	calling Sampler:__iter__
+epoch  36
+	calling Sampler:__iter__
+epoch  37
+	calling Sampler:__iter__
+epoch  38
+	calling Sampler:__iter__
+epoch  39
+	calling Sampler:__iter__
+epoch  40
+	calling Sampler:__iter__
+epoch  41
+	calling Sampler:__iter__
+epoch  42
+	calling Sampler:__iter__
+epoch  43
+	calling Sampler:__iter__
+epoch  44
+	calling Sampler:__iter__
+epoch  45
+	calling Sampler:__iter__
+epoch  46
+	calling Sampler:__iter__
+epoch  47
+	calling Sampler:__iter__
+epoch  48
+	calling Sampler:__iter__
+epoch  49
+	calling Sampler:__iter__
+epoch  50
+	calling Sampler:__iter__
+epoch  51
+	calling Sampler:__iter__
+epoch  52
+	calling Sampler:__iter__
+epoch  53
+	calling Sampler:__iter__
+epoch  54
+	calling Sampler:__iter__
+epoch  55
+	calling Sampler:__iter__
+epoch  56
+	calling Sampler:__iter__
+epoch  57
+	calling Sampler:__iter__
+epoch  58
+	calling Sampler:__iter__
+epoch  59
+	calling Sampler:__iter__
+epoch  60
+	calling Sampler:__iter__
+epoch  61
+	calling Sampler:__iter__
+epoch  62
+	calling Sampler:__iter__
+epoch  63
+	calling Sampler:__iter__
+overhead:: 0
+overhead2:: 0
+overhead3:: 0
+time_provenance:: 39.406818866729736
+curr_diff: 0 tensor(3.6816e-06, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(1.0750e-07, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(3.6832e-06, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+curr_diff: 0 tensor(0.0005, dtype=torch.float64, grad_fn=<NormBackward0>)
+curr_diff: 1 tensor(3.3808e-05, dtype=torch.float64, grad_fn=<NormBackward0>)
+tensor(0.0005, dtype=torch.float64, grad_fn=<SqrtBackward>)
+tensor(1.0000, dtype=torch.float64, grad_fn=<DivBackward0>)
+Test Avg. Loss: 0.000564, Accuracy: 0.834000

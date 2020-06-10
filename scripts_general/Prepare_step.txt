@@ -1,0 +1,124 @@
+DNN prepare:
+Train - Epoch 0, Batch: 0, Loss: 2.305789
+Train - Epoch 0, Batch: 10, Loss: 1.263166
+Train - Epoch 0, Batch: 20, Loss: 0.603769
+Train - Epoch 0, Batch: 30, Loss: 0.527826
+Train - Epoch 0, Batch: 40, Loss: 0.533279
+Train - Epoch 0, Batch: 50, Loss: 0.445080
+Train - Epoch 0, Batch: 60, Loss: 0.364383
+Train - Epoch 0, Batch: 70, Loss: 0.417881
+Train - Epoch 0, Batch: 80, Loss: 0.377342
+Train - Epoch 0, Batch: 90, Loss: 0.329352
+Train - Epoch 0, Batch: 100, Loss: 0.269556
+Train - Epoch 0, Batch: 110, Loss: 0.263282
+Test Avg. Loss: 0.000722, Accuracy: 0.879700
+Train - Epoch 1, Batch: 0, Loss: 0.374492
+Train - Epoch 1, Batch: 10, Loss: 0.261008
+Train - Epoch 1, Batch: 20, Loss: 0.280325
+Train - Epoch 1, Batch: 30, Loss: 0.263783
+Train - Epoch 1, Batch: 40, Loss: 0.316670
+Train - Epoch 1, Batch: 50, Loss: 0.256295
+Train - Epoch 1, Batch: 60, Loss: 0.281366
+Train - Epoch 1, Batch: 70, Loss: 0.224350
+Train - Epoch 1, Batch: 80, Loss: 0.274513
+Train - Epoch 1, Batch: 90, Loss: 0.262673
+Train - Epoch 1, Batch: 100, Loss: 0.205923
+Train - Epoch 1, Batch: 110, Loss: 0.190737
+Test Avg. Loss: 0.000492, Accuracy: 0.923900
+Train - Epoch 2, Batch: 0, Loss: 0.243959
+Train - Epoch 2, Batch: 10, Loss: 0.221280
+Train - Epoch 2, Batch: 20, Loss: 0.190042
+Train - Epoch 2, Batch: 30, Loss: 0.169914
+Train - Epoch 2, Batch: 40, Loss: 0.208987
+Train - Epoch 2, Batch: 50, Loss: 0.206642
+Train - Epoch 2, Batch: 60, Loss: 0.187838
+Train - Epoch 2, Batch: 70, Loss: 0.174992
+Train - Epoch 2, Batch: 80, Loss: 0.209350
+Train - Epoch 2, Batch: 90, Loss: 0.171185
+Train - Epoch 2, Batch: 100, Loss: 0.200987
+Train - Epoch 2, Batch: 110, Loss: 0.214937
+Test Avg. Loss: 0.000397, Accuracy: 0.942500
+
+[0.05,0.05,0.05]
+
+
+
+LeNet5:
+
+Train - Epoch 0, Batch: 0, Loss: 2.321346
+Train - Epoch 0, Batch: 10, Loss: 2.297600
+Train - Epoch 0, Batch: 20, Loss: 2.297861
+Train - Epoch 0, Batch: 30, Loss: 2.284897
+Train - Epoch 0, Batch: 40, Loss: 2.277865
+Train - Epoch 0, Batch: 50, Loss: 2.256097
+Train - Epoch 0, Batch: 60, Loss: 2.145740
+Train - Epoch 0, Batch: 70, Loss: 2.234544
+Train - Epoch 0, Batch: 80, Loss: 2.033576
+Train - Epoch 0, Batch: 90, Loss: 1.810924
+Train - Epoch 0, Batch: 100, Loss: 1.710024
+Train - Epoch 0, Batch: 110, Loss: 1.437261
+Train - Epoch 0, Batch: 120, Loss: 1.553963
+Train - Epoch 0, Batch: 130, Loss: 0.941369
+Train - Epoch 0, Batch: 140, Loss: 1.142603
+Train - Epoch 0, Batch: 150, Loss: 0.518333
+Train - Epoch 0, Batch: 160, Loss: 0.744644
+Train - Epoch 0, Batch: 170, Loss: 0.465130
+Train - Epoch 0, Batch: 180, Loss: 0.496443
+Train - Epoch 0, Batch: 190, Loss: 0.373515
+Train - Epoch 0, Batch: 200, Loss: 0.314731
+Train - Epoch 0, Batch: 210, Loss: 0.336351
+Train - Epoch 0, Batch: 220, Loss: 0.348740
+Train - Epoch 0, Batch: 230, Loss: 0.308266
+Test Avg. Loss: 0.003024, Accuracy: 0.747700
+Train - Epoch 1, Batch: 0, Loss: 0.806540
+Train - Epoch 1, Batch: 10, Loss: 0.210781
+Train - Epoch 1, Batch: 20, Loss: 0.289769
+Train - Epoch 1, Batch: 30, Loss: 0.360455
+Train - Epoch 1, Batch: 40, Loss: 0.322511
+Train - Epoch 1, Batch: 50, Loss: 0.379188
+Train - Epoch 1, Batch: 60, Loss: 0.261730
+Train - Epoch 1, Batch: 70, Loss: 0.258916
+Train - Epoch 1, Batch: 80, Loss: 0.284510
+Train - Epoch 1, Batch: 90, Loss: 0.184814
+Train - Epoch 1, Batch: 100, Loss: 0.302052
+Train - Epoch 1, Batch: 110, Loss: 1.216070
+Train - Epoch 1, Batch: 120, Loss: 0.252135
+Train - Epoch 1, Batch: 130, Loss: 0.389104
+Train - Epoch 1, Batch: 140, Loss: 0.238056
+Train - Epoch 1, Batch: 150, Loss: 0.201614
+Train - Epoch 1, Batch: 160, Loss: 0.517002
+Train - Epoch 1, Batch: 170, Loss: 0.193269
+Train - Epoch 1, Batch: 180, Loss: 0.233279
+Train - Epoch 1, Batch: 190, Loss: 0.169309
+Train - Epoch 1, Batch: 200, Loss: 0.198035
+Train - Epoch 1, Batch: 210, Loss: 0.195320
+Train - Epoch 1, Batch: 220, Loss: 0.191307
+Train - Epoch 1, Batch: 230, Loss: 0.201073
+Test Avg. Loss: 0.000728, Accuracy: 0.942600
+Train - Epoch 2, Batch: 0, Loss: 0.188021
+Train - Epoch 2, Batch: 10, Loss: 0.185254
+Train - Epoch 2, Batch: 20, Loss: 0.255116
+Train - Epoch 2, Batch: 30, Loss: 0.209186
+Train - Epoch 2, Batch: 40, Loss: 0.385574
+Train - Epoch 2, Batch: 50, Loss: 0.222855
+Train - Epoch 2, Batch: 60, Loss: 0.164600
+Train - Epoch 2, Batch: 70, Loss: 0.157878
+Train - Epoch 2, Batch: 80, Loss: 0.361350
+Train - Epoch 2, Batch: 90, Loss: 0.227810
+Train - Epoch 2, Batch: 100, Loss: 0.192470
+Train - Epoch 2, Batch: 110, Loss: 0.164713
+Train - Epoch 2, Batch: 120, Loss: 0.209338
+Train - Epoch 2, Batch: 130, Loss: 0.137151
+Train - Epoch 2, Batch: 140, Loss: 1.172736
+Train - Epoch 2, Batch: 150, Loss: 0.166162
+Train - Epoch 2, Batch: 160, Loss: 0.212672
+Train - Epoch 2, Batch: 170, Loss: 0.193129
+Train - Epoch 2, Batch: 180, Loss: 0.643261
+Train - Epoch 2, Batch: 190, Loss: 0.182753
+Train - Epoch 2, Batch: 200, Loss: 0.296059
+Train - Epoch 2, Batch: 210, Loss: 0.220371
+Train - Epoch 2, Batch: 220, Loss: 0.179920
+Train - Epoch 2, Batch: 230, Loss: 0.227132
+Test Avg. Loss: 0.000747, Accuracy: 0.946300
+training_time:: 8.74880576133728
+
