@@ -1,5 +1,5 @@
 Code for the paper:
-> Yinjun Wu, Edgar Dobriban, Susan Davidson. "DeltaGrad: Rapid retraining of machine learning models" (2020)
+> Yinjun Wu, Edgar Dobriban, Susan Davidson. "DeltaGrad: Rapid retraining of machine learning models" (ICML 2020)
 
 
 
