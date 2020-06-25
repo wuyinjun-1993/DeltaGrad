@@ -3,7 +3,7 @@ Code for the paper:
 
 
 
-Usage:
+Usage (go to the folder '/src'):
 
 run MNIST with our methods (assume that we use regularized logistic regression for training):
 
