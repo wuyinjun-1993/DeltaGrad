@@ -6,12 +6,12 @@ import torch
 
 import sys, os, time
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'/data_IO')
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'/Interpolation')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/data_IO')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/Interpolation')
 
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.abspath(__file__))
 try:
     from data_IO.Load_data import *
 # from sensitivity_analysis.logistic_regression.Logistic_regression import test_X
@@ -36,18 +36,18 @@ except ImportError:
 if __name__ == '__main__':
     
     
-    configs = load_config_data(config_file)
+#     configs = load_config_data(config_file)
     
-    git_ignore_folder = configs['git_ignore_folder']
+    git_ignore_folder = '../../.gitignore/'#configs['git_ignore_folder']
     
     sys_args = sys.argv
 
     dataset_train = torch.load(git_ignore_folder + "dataset_train")
     
-    dataset_test = torch.load(git_ignore_folder + "test_data")
+    dataset_test = torch.load(git_ignore_folder + "dataset_test")
     
 
-    learning_rate = torch.load(git_ignore_folder + 'alpha')
+#     learning_rate = torch.load(git_ignore_folder + 'alpha')
 
     regularization_coeff = torch.load(git_ignore_folder + 'beta')
 
@@ -94,14 +94,14 @@ if __name__ == '__main__':
 #     Y = torch.load(git_ignore_folder+'noise_Y')
     init_para_list = list(torch.load(git_ignore_folder + 'init_para'))
     
-    random_ids_multi_super_iterations = torch.load(git_ignore_folder + 'random_ids_multi_super_iterations')
+    random_ids_multi_epochs = torch.load(git_ignore_folder + 'random_ids_multi_epochs')
     
     model_class = torch.load(git_ignore_folder + 'model_class')
     
 #     data_train_loader = torch.load(git_ignore_folder + 'data_train_loader')
     
     
-    data_test_loader = torch.load(git_ignore_folder + 'data_test_loader')
+#     data_test_loader = torch.load(git_ignore_folder + 'data_test_loader')
     batch_size = torch.load(git_ignore_folder + 'batch_size')
     
     learning_rate_all_epochs = torch.load(git_ignore_folder + 'learning_rate_all_epochs')
@@ -115,7 +115,7 @@ if __name__ == '__main__':
     mini_batch_num = int((len(dataset_train) - 1)/batch_size) + 1
     
 
-    added_random_ids_multi_super_iteration = get_sampling_each_iteration0(random_ids_multi_super_iterations, X_to_add.shape[0], mini_batch_num, len(dataset_train))
+    added_random_ids_multi_super_iteration = get_sampling_each_iteration0(random_ids_multi_epochs, X_to_add.shape[0], mini_batch_num, len(dataset_train))
     
     print("delta data size::", X_to_add.shape[0])
     
@@ -148,7 +148,7 @@ if __name__ == '__main__':
     hyper_para_function=getattr(Data_preparer, "get_hyperparameters_" + dataset_name)
 
     
-    criterion, optimizer, lr_scheduler = hyper_para_function(data_preparer, model.parameters(), learning_rate, regularization_coeff)
+    criterion, optimizer = hyper_para_function(data_preparer, model.parameters(), learning_rate_all_epochs[0], regularization_coeff)
     
     init_model(model,init_para_list)
 
@@ -230,8 +230,8 @@ if __name__ == '__main__':
     
     t1 = time.time()
     
-#     num_epochs, dataset_train, model, random_ids_multi_super_iterations, selected_rows, batch_size, learning_rate_all_epochs, criterion, optimizer, para_list_all_epochs, gradient_list_all_epochs, is_GPU, device, record_params, all_ids_list_all_epochs
-    model, count, para_list_all_epochs, gradient_list_all_epochs = model_update_standard_lib(max_epoch, dataset_train, dim, model, random_ids_multi_super_iterations, batch_size, learning_rate_all_epochs, added_random_ids_multi_super_iteration, X_to_add, Y_to_add, criterion, optimizer, para_list_all_epochs, gradient_list_all_epochs, is_GPU, device, record_params, regularization_coeff)
+#     num_epochs, dataset_train, model, random_ids_multi_epochs, selected_rows, batch_size, learning_rate_all_epochs, criterion, optimizer, para_list_all_epochs, gradient_list_all_epochs, is_GPU, device, record_params, all_ids_list_all_epochs
+    model, count, para_list_all_epochs, gradient_list_all_epochs = model_update_standard_lib(max_epoch, dataset_train, dim, model, random_ids_multi_epochs, batch_size, learning_rate_all_epochs, added_random_ids_multi_super_iteration, X_to_add, Y_to_add, criterion, optimizer, para_list_all_epochs, gradient_list_all_epochs, is_GPU, device, record_params, regularization_coeff)
 
     t2 = time.time()
     

@@ -40,7 +40,6 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 try:
     from data_IO.Load_data import *
     from utils import *
-    from Interpolation.piecewise_linear_interpolation_2D import *
     from Models.DNN import DNNModel
     from Models.Lenet5 import LeNet5
     from Models.Lenet5_cifar import LeNet5_cifar
@@ -53,12 +52,11 @@ try:
     from Models.CNN import *
     from Models.Pretrained_models import *
     from Batch_samplers import Batch_sampler
-    from multi_nomial_logistic_regression.Multi_logistic_regression import *
-    from multi_nomial_logistic_regression.incremental_updates_logistic_regression_multi_dim import *
+#     from multi_nomial_logistic_regression.Multi_logistic_regression import *
+#     from multi_nomial_logistic_regression.incremental_updates_logistic_regression_multi_dim import *
 except ImportError:
     from Load_data import *
     from utils import *
-    from piecewise_linear_interpolation_2D import *
     from Models.DNN import DNNModel
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
@@ -71,8 +69,8 @@ except ImportError:
     from Models.CNN import *
     from Models.Pretrained_models import *
     from Batch_samplers import Batch_sampler
-    from multi_nomial_logistic_regression.Multi_logistic_regression import *
-    from multi_nomial_logistic_regression.incremental_updates_logistic_regression_multi_dim import *
+#     from multi_nomial_logistic_regression.Multi_logistic_regression import *
+#     from multi_nomial_logistic_regression.incremental_updates_logistic_regression_multi_dim import *
 loss_threshold = 0.1
 random_ids_multi_super_iterations = []
     

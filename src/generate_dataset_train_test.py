@@ -43,15 +43,11 @@ try:
     from data_IO.Load_data import *
     from utils import *
     from Models.DNN import DNNModel
-    from Models.Lenet5 import LeNet5
-    from Models.Lenet5_cifar import LeNet5_cifar
     from Models.Data_preparer import *
     from Models.DNN_single import *
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
     from Models.ResNet import *
-    from Models.Skipnet import *
-    from Models.CNN import *
     from Models.Pretrained_models import *
 
 except ImportError:
@@ -60,13 +56,9 @@ except ImportError:
     from Models.DNN import DNNModel
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
-    from Models.Lenet5 import LeNet5
-    from Models.Lenet5_cifar import LeNet5_cifar
     from Models.Data_preparer import *
     from Models.DNN_single import *
     from Models.ResNet import *
-    from Models.Skipnet import *
-    from Models.CNN import *
     from Models.Pretrained_models import *
 
 config_file = 'train_data_meta_info.ini'
@@ -84,10 +76,8 @@ if __name__ == '__main__':
     
 #     parser.add_argument('--bz', type = int, help="minibatch size used in SGD")
     
-    parser.add_argument('--epoch', type = int, help="number of epochs used in SGD")
 
-
-    parser.add_argument('--repo', default = '.gitignore/', help = 'repository to store the data and the intermediate results')
+    parser.add_argument('--repo', default = gitignore_repo, help = 'repository to store the data and the intermediate results')
 
     args = parser.parse_args()
     
@@ -108,9 +98,7 @@ if __name__ == '__main__':
     model_class = getattr(sys.modules[__name__], model_name)
 
     data_preparer = Data_preparer()
-    
-    epochs = args.epoch
-    
+        
     dataset_train, dataset_test = get_train_test_data_loader_by_name_lr(data_preparer, model_class, dataset_name, git_ignore_folder)
 
     

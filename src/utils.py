@@ -45,15 +45,10 @@ try:
 #     from utils import *
 #     from Interpolation.piecewise_linear_interpolation_2D import *
     from Models.DNN import DNNModel
-    from Models.Lenet5 import LeNet5
-    from Models.Lenet5_cifar import LeNet5_cifar
     from Models.Data_preparer import *
     from Models.DNN_single import DNNModel_single
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
-    from Models.ResNet import *
-    from Models.Skipnet import *
-    from Models.CNN import *
     from Models.Pretrained_models import *
 #     from Batch_samplers import Batch_sampler
 #     from multi_nomial_logistic_regression.Multi_logistic_regression import *
@@ -65,13 +60,8 @@ except ImportError:
     from Models.DNN import DNNModel
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
-    from Models.Lenet5 import LeNet5
-    from Models.Lenet5_cifar import LeNet5_cifar
     from Models.Data_preparer import *
     from Models.DNN_single import DNNModel_single
-    from Models.ResNet import *
-    from Models.Skipnet import *
-    from Models.CNN import *
     from Models.Pretrained_models import *
 #     from Batch_samplers import Batch_sampler
 #     from multi_nomial_logistic_regression.Multi_logistic_regression import *
@@ -82,6 +72,8 @@ baseline_method = 'baseline'
 
 deltagrad_method = 'deltagrad'
 
+
+gitignore_repo = '../.gitignore/'
 
 def get_sampling_each_iteration0(random_ids_multi_super_iterations, add_num, num_mini_batches, id):
 
@@ -365,6 +357,28 @@ def clear_gradients(para_list):
         param.grad.zero_()
 
 
+def get_model_para_shape_list(para_list):
+    
+    shape_list = []
+    
+    full_shape_list = []
+    
+    total_shape_size = 0
+    
+    for para in list(para_list):
+        
+        all_shape_size = 1
+        
+        
+        for i in range(len(para.shape)):
+            all_shape_size *= para.shape[i]
+        
+        total_shape_size += all_shape_size
+        shape_list.append(all_shape_size)
+        full_shape_list.append(para.shape)
+        
+    return full_shape_list, shape_list, total_shape_size
+
 def post_processing_gradien_para_list_all_epochs(para_list_all_epochs, grad_list_all_epochs):
     
 #     num = 0
@@ -388,7 +402,7 @@ def post_processing_gradien_para_list_all_epochs(para_list_all_epochs, grad_list
     
     return para_list_all_epoch_tensor, grad_list_all_epoch_tensor
 
-
+'''pre-fetch parts of the history parameters and gradients into GPU to save the IO overhead'''
 def cache_grad_para_history(git_ignore_folder, cached_size, is_GPU, device):
     para_list_all_epochs = torch.load(git_ignore_folder + 'para_list_all_epochs')
     
@@ -439,13 +453,13 @@ def compute_model_para_diff(model1_para_list, model2_para_list):
         
         all_dot += torch.sum(param1*param2)
         
-        print("curr_diff:", i, curr_diff)
+#         print("curr_diff:", i, curr_diff)
         
         diff += curr_diff*curr_diff
         
-    print(torch.sqrt(diff))
+    print('model difference (l2 norm):', torch.sqrt(diff))
     
-    print(all_dot/torch.sqrt(norm1*norm2))
+#     print(all_dot/torch.sqrt(norm1*norm2))
 
 
 def compute_derivative_one_more_step(model, batch_X, batch_Y, criterion, optimizer):
@@ -475,3 +489,31 @@ def init_model(model, para_list):
             m.grad.zero_()
         m.requires_grad= True
         i += 1
+        
+        
+def get_devectorized_parameters(params, full_shape_list, shape_list):
+    
+    params = params.view(-1)
+    
+    para_list = []
+    
+    pos = 0
+    
+    for i in range(len(full_shape_list)):
+        
+        param = 0
+        if len(full_shape_list[i]) >= 2:
+            
+            curr_shape_list = list(full_shape_list[i])
+            
+            param = params[pos: pos+shape_list[i]].view(curr_shape_list)
+            
+        else:
+            param = params[pos: pos+shape_list[i]].view(full_shape_list[i])
+        
+        para_list.append(param)
+    
+        
+        pos += shape_list[i]
+    
+    return para_list

@@ -52,7 +52,7 @@ if __name__ == '__main__':
     
     parser.add_argument('--train', action='store_true', help = 'Train phase over the full training datasets')
     
-    parser.add_argument('--repo', default = '.gitignore/', help = 'repository to store the data and the intermediate results')
+    parser.add_argument('--repo', default = gitignore_repo, help = 'repository to store the data and the intermediate results')
         
     parser.add_argument('--method', default = baseline_method, help = 'methods to update the models')
     
@@ -105,6 +105,9 @@ if __name__ == '__main__':
     else:
         if args.add:
             model_update_add(args, args.method, lr_lists)
+            
+        else:
+            model_update_del(args, args.method, lr_lists)
     
 
 

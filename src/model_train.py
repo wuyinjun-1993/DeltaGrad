@@ -15,7 +15,7 @@ from utils import *
 
 
 
-def model_training_lr_test(random_ids_multi_super_iterations, epoch, net, dataset_train, data_train_size, optimizer, criterion, batch_size, is_GPU, device, lrs):
+def model_training_lr_test(random_ids_multi_epochs, epoch, net, dataset_train, data_train_size, optimizer, criterion, batch_size, is_GPU, device, lrs):
 #     global cur_batch_win
     net.train()
     
@@ -42,7 +42,7 @@ def model_training_lr_test(random_ids_multi_super_iterations, epoch, net, datase
         
 #         random_ids = torch.zeros([data_train_size], dtype = torch.long)
 #         random_ids = torch.randperm(data_train_size)
-        random_ids = random_ids_multi_super_iterations[j]
+        random_ids = random_ids_multi_epochs[j]
     
 #         k = 0
         
@@ -131,7 +131,7 @@ def model_training_lr_test(random_ids_multi_super_iterations, epoch, net, datase
 #         item1 = data_train_loader.dataset.data[100]
 #         print(torch.norm(item0[0] - item1[0]))
         
-#         random_ids_multi_super_iterations.append(random_ids)
+#         random_ids_multi_epochs.append(random_ids)
     
 #     test(net, dataset_test, criterion, data_test_size, is_GPU, device)
         

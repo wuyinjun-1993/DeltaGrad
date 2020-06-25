@@ -9,11 +9,11 @@ Created on Mar 15, 2019
 import sys, os
 
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))+'/data_IO')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/data_IO')
 
 # print(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.abspath(__file__))
 
 import torch
 import time
@@ -30,9 +30,9 @@ except ImportError:
 
 
 if __name__ == '__main__':
-    configs = load_config_data(config_file)
+#     configs = load_config_data(config_file)
     
-    git_ignore_folder = configs['git_ignore_folder']
+    git_ignore_folder = '../../.gitignore/'#configs['git_ignore_folder']
     
 #     origin_model = torch.load(git_ignore_folder + 'origin_model')
     
@@ -66,9 +66,9 @@ if __name__ == '__main__':
 #     
 #     batch_size = torch.load(git_ignore_folder + 'batch_size')
 #     
-#     random_ids_multi_super_iterations = torch.load(git_ignore_folder + 'random_ids_multi_super_iterations')
+#     random_ids_multi_epochs = torch.load(git_ignore_folder + 'random_ids_multi_epochs')
 # 
-#     sorted_ids_multi_super_iterations = torch.load(git_ignore_folder + 'sorted_ids_multi_super_iterations')
+#     sorted_ids_multi_epochs = torch.load(git_ignore_folder + 'sorted_ids_multi_epochs')
 #     curr_S_k_list, curr_Y_k_list = compute_curr_S_K_Y_K_list(S_k_list, Y_k_list, exp_para_list_all_epochs, exp_gradient_list_all_epochs, para_list_all_epochs, gradient_list_all_epochs)
     
     
@@ -93,18 +93,18 @@ if __name__ == '__main__':
     
 #     hessian_matrix = torch.load(git_ignore_folder + 'hessian_matrix')
     
-    sorted_ids_multi_super_iterations = torch.load(git_ignore_folder + 'sorted_ids_multi_super_iterations')
+    sorted_ids_multi_epochs = torch.load(git_ignore_folder + 'sorted_ids_multi_epochs')
 #     model_base_line = torch.load(git_ignore_folder + 'model_base_line')
     
     model_base_line = torch.load(git_ignore_folder + 'model_base_line')
     dataset_train = torch.load(git_ignore_folder + "dataset_train")
     
-    dataset_test = torch.load(git_ignore_folder + "test_data")
+    dataset_test = torch.load(git_ignore_folder + "dataset_test")
     
     delta_data_ids = torch.load(git_ignore_folder + "delta_data_ids")
 
 
-    learning_rate = torch.load(git_ignore_folder + 'alpha')
+#     learning_rate = torch.load(git_ignore_folder + 'alpha')
 
     regularization_coeff = torch.load(git_ignore_folder + 'beta')
 
@@ -134,14 +134,14 @@ if __name__ == '__main__':
     
     init_para_list = list(torch.load(git_ignore_folder + 'init_para'))
     
-    random_ids_multi_super_iterations = torch.load(git_ignore_folder + 'random_ids_multi_super_iterations')
+    random_ids_multi_epochs = torch.load(git_ignore_folder + 'random_ids_multi_epochs')
     
     model_class = torch.load(git_ignore_folder + 'model_class')
     
 #     data_train_loader = torch.load(git_ignore_folder + 'data_train_loader')
     
     
-    data_test_loader = torch.load(git_ignore_folder + 'data_test_loader')
+#     data_test_loader = torch.load(git_ignore_folder + 'data_test_loader')
     
     
     learning_rate_all_epochs = torch.load(git_ignore_folder + 'learning_rate_all_epochs')
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     hyper_para_function=getattr(Data_preparer, "get_hyperparameters_" + dataset_name)
 
     
-    criterion, optimizer, lr_scheduler = hyper_para_function(data_preparer, model.parameters(), learning_rate, regularization_coeff)
+    criterion, optimizer = hyper_para_function(data_preparer, model.parameters(), learning_rate_all_epochs[0], regularization_coeff)
     
     init_model(model,init_para_list)
     
@@ -292,10 +292,10 @@ if __name__ == '__main__':
     
     
     
-    model_para_list, res_para, res_grad = model_update_provenance_test3(period, 1, init_epochs, None, None, None, None, dataset_train, model, grad_list_all_epoch_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, max_epoch, 2, learning_rate_all_epochs, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim, added_random_ids_multi_super_iteration, X_to_add, Y_to_add, criterion, optimizer, lr_scheduler, regularization_coeff, is_GPU, device)
-#     model_para_list = model_update_provenance_test2(30, 1, init_epochs, None, None, exp_gradient_list_all_epochs, exp_para_list_all_epochs, origin_X, origin_Y, model, gradient_list_all_epochs, para_list_all_epochs, max_epoch, delta_data_ids, input_dim, hidden_dims, output_dim, 2, alpha, beta, selected_rows, error, delta_X, delta_Y, update_X, update_Y, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim)
+    model_para_list, res_para, res_grad = model_update_provenance_test3(period, 1, init_epochs, None, None, None, None, dataset_train, model, grad_list_all_epoch_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, max_epoch, 2, learning_rate_all_epochs, random_ids_multi_epochs, sorted_ids_multi_epochs, batch_size, dim, added_random_ids_multi_super_iteration, X_to_add, Y_to_add, criterion, optimizer, None, regularization_coeff, is_GPU, device)
+#     model_para_list = model_update_provenance_test2(30, 1, init_epochs, None, None, exp_gradient_list_all_epochs, exp_para_list_all_epochs, origin_X, origin_Y, model, gradient_list_all_epochs, para_list_all_epochs, max_epoch, delta_data_ids, input_dim, hidden_dims, output_dim, 2, alpha, beta, selected_rows, error, delta_X, delta_Y, update_X, update_Y, random_ids_multi_epochs, sorted_ids_multi_epochs, batch_size, dim)
 
-#     model_para_list = model_update_provenance_test1_advanced(1, 20, 1, init_epochs, None, None, exp_gradient_list_all_epochs, exp_para_list_all_epochs, origin_X, origin_Y, model, gradient_list_all_epochs, para_list_all_epochs, max_epoch, delta_data_ids, input_dim, hidden_dims, output_dim, 3, alpha, beta, selected_rows, error, delta_X, delta_Y, update_X, update_Y, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim)
+#     model_para_list = model_update_provenance_test1_advanced(1, 20, 1, init_epochs, None, None, exp_gradient_list_all_epochs, exp_para_list_all_epochs, origin_X, origin_Y, model, gradient_list_all_epochs, para_list_all_epochs, max_epoch, delta_data_ids, input_dim, hidden_dims, output_dim, 3, alpha, beta, selected_rows, error, delta_X, delta_Y, update_X, update_Y, random_ids_multi_epochs, sorted_ids_multi_epochs, batch_size, dim)
 
     t2 = time.time()
     print('time_provenance::', t2 - t1)

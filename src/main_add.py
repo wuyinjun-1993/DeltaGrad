@@ -34,15 +34,11 @@ try:
     from data_IO.Load_data import *
     from utils import *
     from Models.DNN import DNNModel
-    from Models.Lenet5 import LeNet5
-    from Models.Lenet5_cifar import LeNet5_cifar
     from Models.Data_preparer import *
     from Models.DNN_single import *
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
     from Models.ResNet import *
-    from Models.Skipnet import *
-    from Models.CNN import *
     from Models.Pretrained_models import *
 
 except ImportError:
@@ -51,13 +47,9 @@ except ImportError:
     from Models.DNN import DNNModel
     from Models.DNN2 import DNNModel2
     from Models.DNN3 import DNNModel3
-    from Models.Lenet5 import LeNet5
-    from Models.Lenet5_cifar import LeNet5_cifar
     from Models.Data_preparer import *
     from Models.DNN_single import *
     from Models.ResNet import *
-    from Models.Skipnet import *
-    from Models.CNN import *
     from Models.Pretrained_models import *
 
 
@@ -92,32 +84,7 @@ except ImportError:
 
 
 
-def get_devectorized_parameters(params, full_shape_list, shape_list):
-    
-    params = params.view(-1)
-    
-    para_list = []
-    
-    pos = 0
-    
-    for i in range(len(full_shape_list)):
-        
-        param = 0
-        if len(full_shape_list[i]) >= 2:
-            
-            curr_shape_list = list(full_shape_list[i])
-            
-            param = params[pos: pos+shape_list[i]].view(curr_shape_list)
-            
-        else:
-            param = params[pos: pos+shape_list[i]].view(full_shape_list[i])
-        
-        para_list.append(param)
-    
-        
-        pos += shape_list[i]
-    
-    return para_list
+
 
 
 def model_update_add(args, method, lr_lists):
@@ -216,11 +183,13 @@ def model_update_add(args, method, lr_lists):
     if method == baseline_method:
         
         
-        added_random_ids_multi_super_iteration = get_sampling_each_iteration0(random_ids_all_epochs, X_to_add.shape[0], mini_batch_num, len(dataset_train))
-    
+        added_random_ids_multi_epochs = get_sampling_each_iteration0(random_ids_all_epochs, X_to_add.shape[0], mini_batch_num, len(dataset_train))
+     
         print("delta data size::", X_to_add.shape[0])
-        
-        torch.save(added_random_ids_multi_super_iteration, git_ignore_folder + 'added_random_ids_multi_super_iteration')
+         
+        torch.save(added_random_ids_multi_epochs, git_ignore_folder + 'added_random_ids_multi_epochs')
+
+#         added_random_ids_multi_epochs = torch.load(git_ignore_folder + 'added_random_ids_multi_epochs')
 
         dataset_train.data = torch.cat([dataset_train.data, X_to_add], 0)
     
@@ -229,7 +198,7 @@ def model_update_add(args, method, lr_lists):
         
         t1 = time.time()
         
-        updated_model, exp_para_list, exp_grad_list = model_update_standard_lib_add(num_epochs, dataset_train, dim, model, random_ids_all_epochs, batch_size, learning_rate_all_epochs, added_random_ids_multi_super_iteration, criterion, optimizer, is_GPU, device, regularization_coeff)
+        updated_model, exp_para_list, exp_grad_list = model_update_standard_lib_add(num_epochs, dataset_train, dim, model, random_ids_all_epochs, batch_size, learning_rate_all_epochs, added_random_ids_multi_epochs, criterion, optimizer, is_GPU, device, regularization_coeff)
     
         t2 = time.time()
             
@@ -255,7 +224,7 @@ def model_update_add(args, method, lr_lists):
     else:
         if method == deltagrad_method:
             
-            added_random_ids_multi_super_iteration = torch.load(git_ignore_folder + 'added_random_ids_multi_super_iteration')
+            added_random_ids_multi_epochs = torch.load(git_ignore_folder + 'added_random_ids_multi_epochs')
             
             dataset_train.data = torch.cat([dataset_train.data, X_to_add], 0)
     
@@ -275,11 +244,11 @@ def model_update_add(args, method, lr_lists):
             
             grad_list_all_epochs_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor = cache_grad_para_history(git_ignore_folder, cached_size, is_GPU, device)
             
-#             model_update_provenance_test3(period, 1, init_epochs, dataset_train, model, grad_list_all_epoch_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, max_epoch, 2, learning_rate_all_epochs, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim, added_random_ids_multi_super_iteration, X_to_add, Y_to_add, criterion, optimizer, lr_scheduler, regularization_coeff, is_GPU, device)
+#             model_update_provenance_test3(period, 1, init_epochs, dataset_train, model, grad_list_all_epoch_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, max_epoch, 2, learning_rate_all_epochs, random_ids_multi_epochss, sorted_ids_multi_epochss, batch_size, dim, added_random_ids_multi_epochs, X_to_add, Y_to_add, criterion, optimizer, lr_scheduler, regularization_coeff, is_GPU, device)
             
             t1 = time.time()
             
-            updated_model = model_update_delta_grad_add(exp_para_list, exp_grad_list, period, 1, init_epochs, dataset_train, model, grad_list_all_epochs_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, m, learning_rate_all_epochs, random_ids_all_epochs, batch_size, dim, added_random_ids_multi_super_iteration, criterion, optimizer, regularization_coeff, is_GPU, device)
+            updated_model = model_update_delta_grad_add(exp_para_list, exp_grad_list, period, 1, init_epochs, dataset_train, model, grad_list_all_epochs_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, m, learning_rate_all_epochs, random_ids_all_epochs, batch_size, dim, added_random_ids_multi_epochs, criterion, optimizer, regularization_coeff, is_GPU, device)
             
             t2 = time.time()
             
@@ -467,7 +436,27 @@ def update_para_final2(vec_para, gradient_list, alpha):
 
     return vec_para
 
-def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, init_epochs, dataset_train, model, gradient_list_all_epochs_tensor, para_list_all_epochs_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, m, learning_rate_all_epochs, random_ids_multi_super_iterations, batch_size, dim, added_random_ids_multi_super_iteration, criterion, optimizer, regularization_coeff, is_GPU, device):
+
+def get_expect_full_gradient(dataset_train, curr_rand_ids, is_GPU, device, model, para, criterion, optimizer):
+    batch_remaining_X = dataset_train.data[curr_rand_ids]
+    
+    batch_remaining_Y = dataset_train.labels[curr_rand_ids]
+    
+    if is_GPU:
+        batch_remaining_X = batch_remaining_X.to(device)
+        
+        batch_remaining_Y = batch_remaining_Y.to(device)
+    
+    init_model(model, para)
+    
+    compute_derivative_one_more_step(model, batch_remaining_X, batch_remaining_Y, criterion, optimizer)
+    
+    
+    expect_gradients = get_all_vectorized_parameters1(model.get_all_gradient())
+    
+    return expect_gradients
+
+def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, init_epochs, dataset_train, model, gradient_list_all_epochs_tensor, para_list_all_epochs_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, m, learning_rate_all_epochs, random_ids_multi_epochss, batch_size, dim, added_random_ids_multi_epochs, criterion, optimizer, regularization_coeff, is_GPU, device):
     
     
     para = list(model.parameters())
@@ -509,11 +498,11 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
     
     res_grad = []
     
-    for k in range(len(random_ids_multi_super_iterations)):
+    for k in range(len(random_ids_multi_epochss)):
     
-        random_ids = random_ids_multi_super_iterations[k]
+        random_ids = random_ids_multi_epochss[k]
         
-        added_to_random_ids = added_random_ids_multi_super_iteration[k]
+        added_to_random_ids = added_random_ids_multi_epochs[k]
         
         j = 0
         
@@ -527,8 +516,8 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
             
             curr_added_random_ids = added_to_random_ids[jj]
             
-            if end_id > dim[0]:
-                end_id = dim[0]
+            if end_id > len(dataset_train):
+                end_id = len(dataset_train)
             
             if curr_added_random_ids.shape[0] <= 0:
                 to_add = False
@@ -661,7 +650,7 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
                     
                     compute_model_para_diff(exp_para_list[i], para)
                 
-                    print(torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - gradient_full))
+                    print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - gradient_full))
                     
                     para = get_devectorized_parameters((1-learning_rate*regularization_coeff)*curr_para - learning_rate*gradient_full, full_shape_list, shape_list)
                     
@@ -704,6 +693,11 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
                     
                     gradient_dual = model.get_all_gradient()
                 
+                curr_rand_ids = random_ids[j:end_id]
+                    
+                expect_full_gradients = get_all_vectorized_parameters1(get_expect_full_gradient(dataset_train, curr_rand_ids, is_GPU, device, model, para, criterion, optimizer))
+
+                
                 with torch.no_grad():
                 
                     curr_vec_para = get_all_vectorized_parameters1(para)
@@ -736,7 +730,6 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
                     
                     alpha = learning_rate_all_epochs[i]
                     
-                    
                     if gradient_dual is not None:
                         is_positive, final_gradient_list = compute_grad_final3(curr_vec_para, torch.t(hessian_para_prod), get_all_vectorized_parameters1(gradient_dual), grad_list_GPU_tensor[cached_id], para_list_GPU_tensor[cached_id], end_id - j, curr_added_size, learning_rate, regularization_coeff, is_GPU, device)
                         
@@ -745,7 +738,7 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
                     
                     compute_model_para_diff(exp_para_list[i], para)
                 
-                    print(torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - final_gradient_list))
+                    print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - final_gradient_list))
 
                     
                     vec_para = update_para_final2(curr_vec_para, final_gradient_list, learning_rate)
@@ -798,7 +791,7 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
 
 
 
-def model_update_standard_lib_add(max_epoch, dataset_train, dim, model, random_ids_multi_epochs, batch_size, learning_rate_all_epochs, added_random_ids_multi_super_iteration, criterion, optimizer, is_GPU, device, regularization_coeff):
+def model_update_standard_lib_add(max_epoch, dataset_train, dim, model, random_ids_multi_epochs, batch_size, learning_rate_all_epochs, added_random_ids_multi_epochs, criterion, optimizer, is_GPU, device, regularization_coeff):
     count = 0
 
     elapse_time = 0
@@ -823,7 +816,7 @@ def model_update_standard_lib_add(max_epoch, dataset_train, dim, model, random_i
         
         random_ids = random_ids_multi_epochs[k]
         
-        added_random_ids = added_random_ids_multi_super_iteration[k]
+        added_random_ids = added_random_ids_multi_epochs[k]
         
         id_start = 0
         
@@ -853,7 +846,9 @@ def model_update_standard_lib_add(max_epoch, dataset_train, dim, model, random_i
             
             if end_id > dim[0]:
                 end_id = dim[0]
-            
+            if count == 11:
+                print(curr_to_add_rand_ids, i, end_id)
+                print('here')
 
             learning_rate = learning_rate_all_epochs[count]
         
@@ -1118,7 +1113,12 @@ def main_add(args, lr_lists):
     
     hyper_para_function=getattr(Data_preparer, "get_hyperparameters_" + dataset_name)
     
-    model = model_class(dim[1], num_class)
+    if model_name == 'Logistic_regression':
+        model = model_class(dim[1], num_class)
+    else:
+        model = model_class()
+    
+#     model = model_class(dim[1], num_class)
     
     print('data dimension::',dim)
     
@@ -1144,7 +1144,6 @@ def main_add(args, lr_lists):
     
 #     model, gradient_list_all_epochs, para_list_all_epochs, learning_rate_all_epochs, X_theta_prod_seq, X_theta_prod_softmax_seq, random_ids_multi_epochs = model_training_lr(num_epochs, model, dataset_train, data_test_loader, len(dataset_train), len(dataset_test), optimizer, criterion, lr_scheduler, batch_size, is_GPU, device, lrs)
 
-    
     model, gradient_list_all_epochs, para_list_all_epochs, learning_rate_all_epochs = model_training_lr_test(random_ids_all_epochs, num_epochs, model, dataset_train, len(dataset_train), optimizer, criterion, batch_size, is_GPU, device, lr_lists)
     
     t2 = time.time()
@@ -1168,6 +1167,8 @@ def main_add(args, lr_lists):
     print("training time full::", t2 - t1)
     
     print("provenance prepare time::", t4 - t3)    
+    
+    torch.save(dataset_train, git_ignore_folder + "dataset_train")
     
     torch.save(gradient_list_all_epochs, git_ignore_folder + 'gradient_list_all_epochs')
     
