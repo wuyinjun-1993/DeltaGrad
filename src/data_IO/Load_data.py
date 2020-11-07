@@ -15,13 +15,13 @@ import json
 from scipy.sparse import coo_matrix
 from sklearn.datasets import fetch_rcv1
 
-# import sys, os
-# sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import sys, os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # 
-# try:
-#     from sensitivity_analysis.clean_sensorless import *
-# except ImportError:
-#     from clean_sensorless import *
+try:
+    from generate_config_files import *
+except ImportError:
+    from data_IO.generate_config_files import *
 
 git_ignore_folder = '../../../.gitignore/'
 
@@ -69,7 +69,7 @@ file_name = '../../../data/creditcard.csv'
 
 
 
-config_file = '../../train_data_meta_info.ini'
+# config_file = '../train_data_meta_info.ini'
 
 def get_relative_change(tensor1, tensor2):
     
@@ -565,7 +565,7 @@ def load_data_multi_classes(is_classification, file_name, split_id = None):
     print('start loading data...')
     
     
-    configs = load_config_data(config_file)
+    configs = load_config_data(config_file_name)
     
     from_csv = configs[file_name]['from_csv']
     
@@ -1093,7 +1093,106 @@ def check_correctness(data):
     res = LA.norm(data[:,3])*LA.norm(data[:,3])
     print('res', res)
     
+def clean_sensor_data0(file_name, is_classification, num_features, split_id = None):
+
+    Y_data = []
+        
+    X_data = []
+
+#     configs = load_config_data(config_file)
+# 
+#     num_features = int(configs[file_name]['feature_num'])
+
+    with open(file_name) as fp:  
+        line = fp.readline()
+        cnt = 1
+        
+        while line:
+#             print("Line {}".format(cnt))
+            
+            contents = line.split(' ')
+            
+            if ':' not in contents[-1]:
+                contents.pop()
+            
+            if '\n' in contents[-1]:
+                contents[-1] = contents[-1][:-1]
+            
+            
+            Y_data.append(float(contents[0]))
+            
+            data_map = {}
+            
+            for i in range(len(contents)-1):
+                id = contents[i+1].split(':')[0]
+                
+                curr_content = float(contents[i+1].split(':')[1])
+                
+                data_map[id] = curr_content
+            
+            curr_X_data = []
+                
+                
+            for i in range(num_features):
+                if str(i+1) in data_map:
+                    curr_X_data.append(data_map[str(i+1)])
+                else:
+                    curr_X_data.append(0.0)
+                
+            
+#             print(cnt, curr_X_data)
+            
+            cnt = cnt+1
+            
+            X_data.append(curr_X_data)
+            
+            line = fp.readline()
+#             
+#             curr_X_data = []
+#             
+#             if len(contents) < num_features + 1:
+#                 continue
+#             
+#             for i in range(num_features):
+#                 
+#                 id = contents[i+1].split(':')[0]
+#                 
+#                 if int(id) != i+1:
+#                     break
+#                 
+#                 curr_X_data.append(float(contents[i+1].split(':')[1]))
+#             
+#             
+#             if len(curr_X_data) < num_features:
+#                 continue
+#             
+#             X_data.append(curr_X_data)
+#             
+#             
+#             cnt += 1
     
+    X_data = normalize(np.array(X_data))
+    
+    
+    train_X_data = torch.tensor(X_data, dtype = torch.double)
+    
+    train_Y_data = torch.tensor(Y_data, dtype = torch.double)
+    
+
+    if torch.min(train_Y_data) != 0:
+        train_Y_data = train_Y_data - 1
+    
+#     print('unique_Y::', torch.unique(train_Y_data))
+    
+    train_Y_data = train_Y_data.view(-1,1)
+    
+#     print('Y_dim::', train_Y_data.shape)
+    
+    
+    if split_id is None:
+        return split_train_test_data(train_X_data, train_Y_data, 0.1, is_classification)
+    else:
+        return train_X_data[0:split_id], train_Y_data[0:split_id], train_X_data[split_id:], train_Y_data[split_id:]    
     
 def clean_sensor_data(file_name, is_classification, split_id = None):
 

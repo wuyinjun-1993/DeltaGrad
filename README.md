@@ -19,8 +19,17 @@ python3 generate_rand_delta_ids.py --dataset MNIST --ratio 0.001 --restart
 
 
 
-3. start training phase on the full tranining dataset 
-(--add: flags to specify for model updates after small additions,otherwise we do small deletions;  --train: flag to specify to train on the full training dataset, otherwise, we update the pretrained model; --bz: mini-batch size; --epochs: number of epochs for running SGD; --wd: l2 regularization coefficient or weight decay rate; --lr, --lrlen: use certain learning rate for how many epochs, the following command means that the learning rates at the first 10 epochs and the last 10 epochs are 0.1 and 0.05 respectively):
+3. start training phase on the full tranining dataset
+
+--add: flags to specify for model updates after small additions,otherwise we do small deletions;  
+--train: flag to specify to train on the full training dataset, otherwise, we update the pretrained model; 
+--bz: mini-batch size; 
+--epochs: number of epochs for running SGD; 
+--wd: l2 regularization coefficient or weight decay rate; 
+--lr, --lrlen: use certain learning rate for how many epochs, the following command means that the learning rates at the first 10 epochs and the last 10 epochs are 0.1 and 0.05 respectively:
+--GPU: whether to use GPU
+--GID: Device ID of the GPU
+
 python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset MNIST --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --train
 
 

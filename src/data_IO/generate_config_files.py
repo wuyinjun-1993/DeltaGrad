@@ -24,7 +24,7 @@ def write_to_file(map, config_file_name):
 
 directory_name = '../../../data/'
 
-config_file_name = '../train_data_meta_info.ini'
+config_file_name = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/train_data_meta_info.ini'
 
 
 sys_args = sys.argv
@@ -36,7 +36,8 @@ if len(sys_args) > 1:
 
 
 
-file_name = directory_name + 'szeged-weather/weatherHistory.csv'
+# file_name = directory_name + 'szeged-weather/weatherHistory.csv'
+file_name = 'szeged-weather'
 
 x_cols = [5,6,7,8]
  
@@ -51,7 +52,8 @@ map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'candy/candy-data.csv'
+# file_name = directory_name + 'candy/candy-data.csv'
+file_name = 'candy'
 
 x_cols = [2,3,4,5,6,7,8,9,10,11,12]
   
@@ -63,7 +65,7 @@ map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'BlogFeedback/blogData_train.csv'
+file_name = 'BlogFeedback'
 
 x_cols = list(range(280))
    
@@ -80,7 +82,8 @@ map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'adult.csv'
+file_name = 'adult'
+# file_name = directory_name + 'adult.csv'
 
 x_cols = [0, 4, 10, 11, 12]
       
@@ -91,7 +94,7 @@ from_csv = True
 map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
 
-file_name = directory_name + 'toxic/train.csv'
+file_name = 'toxic'
 
 x_cols = [3, 4, 5, 6, 7]
        
@@ -151,7 +154,8 @@ map[file_name] = {'feature_num': 3072, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'HIGGS'
+# file_name = directory_name + 'HIGGS'
+file_name = 'HIGGS'
 
 from_csv = False
 
@@ -159,7 +163,9 @@ map[file_name] = {'feature_num': 28, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'aloi.scale'
+# file_name = directory_name + 'aloi.scale'
+
+file_name = 'aloi'
 
 from_csv = False
 
@@ -168,7 +174,9 @@ map[file_name] = {'feature_num': 128, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'minist.csv'
+# file_name = directory_name + 'minist.csv'
+
+file_name = 'minist'
  
 y_cols = [0]
  
@@ -180,7 +188,9 @@ from_csv = True
 
 map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
-file_name = directory_name + 'heartbeat/mitbih_train.csv'
+# file_name = directory_name + 'heartbeat/mitbih_train.csv'
+
+file_name = 'heartbeat'
  
 y_cols = [187]
  
@@ -194,7 +204,9 @@ map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'sgemm_product.csv'
+# file_name = directory_name + 'sgemm_product.csv'
+
+file_name = 'sgemm_product'
  
 y_cols = [14, 15, 16, 17]
  
@@ -214,7 +226,9 @@ map[file_name] = {'x_cols': x_cols, 'y_cols': y_cols, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'Sensorless.scale'
+# file_name = directory_name + 'Sensorless.scale'
+
+file_name = 'Sensorless'
  
 # x_cols = [x+1 for x in x_cols]
 
@@ -233,7 +247,9 @@ map[file_name] = {'feature_num': 9, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'covtype'
+# file_name = directory_name + 'covtype'
+
+file_name = 'covtype'
  
 # x_cols = [x+1 for x in x_cols]
 
@@ -242,7 +258,9 @@ from_csv = False
 map[file_name] = {'feature_num': 54, 'from_csv': from_csv}
 
 
-file_name = directory_name + 'skin_nonskin'
+# file_name = directory_name + 'skin_nonskin'
+
+file_name = 'skin_nonskin'
  
 # x_cols = [x+1 for x in x_cols]
 
@@ -255,7 +273,9 @@ map[file_name] = {'feature_num': 3, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'covtype_binary'
+# file_name = directory_name + 'covtype_binary'
+file_name = 'covtype_binary'
+
  
 # x_cols = [x+1 for x in x_cols]
 
@@ -265,7 +285,9 @@ map[file_name] = {'feature_num': 54, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'rcv1_train.multiclass'
+# file_name = directory_name + 'rcv1_train.multiclass'
+
+file_name = 'rcv1_train_multi'
  
 # x_cols = [x+1 for x in x_cols]
 
@@ -275,7 +297,9 @@ map[file_name] = {'feature_num': 47236, 'from_csv': from_csv}
 
 
 
-file_name = directory_name + 'rcv1_test.multiclass'
+# file_name = directory_name + 'rcv1_test.multiclass'
+
+file_name = 'rcv1_test_multi'
  
 # x_cols = [x+1 for x in x_cols]
 

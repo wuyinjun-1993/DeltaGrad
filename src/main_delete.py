@@ -878,7 +878,7 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                 
                 if GPU_tensor_end_id > para_list_all_epochs_tensor.shape[0]:
                     GPU_tensor_end_id = para_list_all_epochs_tensor.shape[0] 
-                print("end_tensor_id::", GPU_tensor_end_id)
+#                 print("end_tensor_id::", GPU_tensor_end_id)
                 
                 para_list_GPU_tensor[0:GPU_tensor_end_id - batch_id*cached_size].copy_(para_list_all_epochs_tensor[batch_id*cached_size:GPU_tensor_end_id])
                 

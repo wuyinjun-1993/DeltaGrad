@@ -9,6 +9,10 @@ import os, sys
 
 from torch import nn, optim
 import torch
+import requests
+
+import bz2
+from bz2 import decompress
 
 import torchvision
 from torchvision import transforms, datasets, models
@@ -383,16 +387,67 @@ class Data_preparer:
     
     
     
-    def prepare_higgs(self):
+    def prepare_higgs(self, git_ignore_folder):
         
-        configs = load_config_data(config_file)
-    
-#     print(configs)
-        git_ignore_folder = configs['git_ignore_folder']
         
-        directory_name = configs['directory']
         
-        train_X, train_Y, test_X, test_Y = load_data_multi_classes(True, directory_name + "HIGGS", -500000)
+        if not os.path.exists(git_ignore_folder):
+            os.makedirs(git_ignore_folder)
+            
+        if not os.path.exists(git_ignore_folder + '/higgs'):
+            os.makedirs(git_ignore_folder + '/higgs')
+        
+        curr_file_name = git_ignore_folder + '/higgs/HIGGS'
+        
+        if not os.path.exists(git_ignore_folder + '/higgs/HIGGS.bz2'):
+            print('start downloading higgs dataset')
+            url = 'https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/HIGGS.bz2'
+            r = requests.get(url, allow_redirects=True)
+            
+            open(curr_file_name + '.bz2', 'wb').write(r.content)
+            print('end downloading higgs dataset')
+            
+            print('start uncompressing higgs dataset')
+            zipfile = bz2.BZ2File(curr_file_name + '.bz2') # open the file
+            data = zipfile.read() # get the decompressed data
+#             newfilepath = filepath[:-4] # assuming the filepath ends with .bz2
+            open(curr_file_name, 'wb').write(data) # write a uncompressed file
+                        
+            print('end uncompressing higgs dataset')
+            
+            
+        
+#         if not os.path.exists(git_ignore_folder + '/rcv1/rcv1_test.binary'):
+#             print('start downloading rcv1 test dataset')
+#             url = 'https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/rcv1_test.binary.bz2'
+#             r = requests.get(url, allow_redirects=True)
+#             curr_file_name = git_ignore_folder + 'rcv1/rcv1_test.binary'
+#             open(curr_file_name + '.bz2', 'wb').write(r.content)
+#             print('end downloading rcv1 test dataset')
+#             
+#             print('start uncompressing rcv1 test dataset')
+#             zipfile = bz2.BZ2File(curr_file_name + '.bz2') # open the file
+#             data = zipfile.read() # get the decompressed data
+# #             newfilepath = filepath[:-4] # assuming the filepath ends with .bz2
+#             open(curr_file_name, 'wb').write(data) # write a uncompressed file
+#             print('end uncompressing rcv1 test dataset')
+        
+        
+        
+        
+        
+#         configs = load_config_data(config_file)
+#     
+# #     print(configs)
+#         git_ignore_folder = configs['git_ignore_folder']
+#         
+#         directory_name = configs['directory']
+        
+        num_feature = 28
+        
+        train_X, train_Y, test_X, test_Y =  clean_sensor_data0(git_ignore_folder + 'higgs/HIGGS', True, num_feature, -500000)
+        
+#         train_X, train_Y, test_X, test_Y = load_data_multi_classes(, , )
         
         train_Y = train_Y.view(-1)
         
@@ -402,9 +457,9 @@ class Data_preparer:
         
         test_X = extended_by_constant_terms(test_X, False)
         
-        torch.save(train_X, git_ignore_folder + 'noise_X')
-        
-        torch.save(train_Y, git_ignore_folder + 'noise_Y')
+#         torch.save(train_X, git_ignore_folder + 'noise_X')
+#         
+#         torch.save(train_Y, git_ignore_folder + 'noise_Y')
         
         
         print(train_X.shape)
@@ -431,11 +486,11 @@ class Data_preparer:
     
         criterion = nn.NLLLoss()
         optimizer = optim.SGD(parameters, lr=init_lr, weight_decay = regularization_rate)
-        lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma = 0.9)
+#         lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma = 0.9)
         
 #         regularization_rate = 0.1
         
-        return criterion, optimizer, lr_scheduler
+        return criterion, optimizer
     
     def get_num_class_higgs(self):
         return 2
@@ -445,16 +500,62 @@ class Data_preparer:
     
     
     
-    def prepare_rcv1(self):
+    
+    
+    
+    def prepare_rcv1(self, git_ignore_folder):
         
-        configs = load_config_data(config_file)
+        
+        
+        if not os.path.exists(git_ignore_folder):
+            os.makedirs(git_ignore_folder)
+            
+        if not os.path.exists(git_ignore_folder + '/rcv1'):
+            os.makedirs(git_ignore_folder + '/rcv1')
+        
+        
+        if not os.path.exists(git_ignore_folder + '/rcv1/rcv1_train.binary'):
+            print('start downloading rcv1 training dataset')
+            url = 'https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/rcv1_train.binary.bz2'
+            r = requests.get(url, allow_redirects=True)
+            curr_file_name = git_ignore_folder + 'rcv1/rcv1_train.binary'
+            open(curr_file_name + '.bz2', 'wb').write(r.content)
+            print('end downloading rcv1 training dataset')
+            
+            print('start uncompressing rcv1 training dataset')
+            zipfile = bz2.BZ2File(curr_file_name + '.bz2') # open the file
+            data = zipfile.read() # get the decompressed data
+#             newfilepath = filepath[:-4] # assuming the filepath ends with .bz2
+            open(curr_file_name, 'wb').write(data) # write a uncompressed file
+                        
+            print('end uncompressing rcv1 training dataset')
+            
+            
+        
+        if not os.path.exists(git_ignore_folder + '/rcv1/rcv1_test.binary'):
+            print('start downloading rcv1 test dataset')
+            url = 'https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/rcv1_test.binary.bz2'
+            r = requests.get(url, allow_redirects=True)
+            curr_file_name = git_ignore_folder + 'rcv1/rcv1_test.binary'
+            open(curr_file_name + '.bz2', 'wb').write(r.content)
+            print('end downloading rcv1 test dataset')
+            
+            print('start uncompressing rcv1 test dataset')
+            zipfile = bz2.BZ2File(curr_file_name + '.bz2') # open the file
+            data = zipfile.read() # get the decompressed data
+#             newfilepath = filepath[:-4] # assuming the filepath ends with .bz2
+            open(curr_file_name, 'wb').write(data) # write a uncompressed file
+            print('end uncompressing rcv1 test dataset')
+#         configs = load_config_data(config_file)
     
 #     print(configs)
-        git_ignore_folder = configs['git_ignore_folder']
+#         git_ignore_folder = configs['git_ignore_folder']
         
-        directory_name = configs['directory']
+#         directory_name = configs['directory']
         
-        X_train, y_train = load_svmlight_file(directory_name + "rcv1_train.binary")
+        X_train, y_train = load_svmlight_file(git_ignore_folder + "/rcv1/rcv1_train.binary")
+        
+#         X_test, y_test = load_svmlight_file(git_ignore_folder + "/rcv1/rcv1_test.binary")
         
         
         train_X = torch.from_numpy(X_train.todense()).type(torch.DoubleTensor)
@@ -462,6 +563,13 @@ class Data_preparer:
         train_Y = torch.from_numpy(y_train).type(torch.DoubleTensor).view(y_train.shape[0], -1)
         
         train_Y = (train_Y + 1)/2
+        
+#         test_X = torch.from_numpy(X_test.todense()).type(torch.DoubleTensor)
+#         
+#         test_Y = torch.from_numpy(y_test).type(torch.DoubleTensor).view(y_test.shape[0], -1)
+#         
+#         test_Y = (test_Y + 1)/2        
+        
         
 #         train_X, train_Y, test_X, test_Y = load_data_multi_classes_rcv1()
         
@@ -500,11 +608,11 @@ class Data_preparer:
     
         criterion = nn.NLLLoss()
         optimizer = optim.SGD(parameters, lr=init_lr, weight_decay = regularization_rate)
-        lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma = 0.9)
+#         lr_scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma = 0.9)
         
 #         regularization_rate = 0.1
         
-        return criterion, optimizer, lr_scheduler
+        return criterion, optimizer
     
     def get_num_class_rcv1(self):
         return 2
