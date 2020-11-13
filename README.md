@@ -8,14 +8,29 @@ Usage (go to the folder '/src'):
 run MNIST with our methods (assume that we use regularized logistic regression for training):
 
 
-1. preprocessing the dataset (--model: model name used for training):
+1. preprocessing the dataset (--model: model name used for training), note that the first execution of the following commands may take long since they will download and extract datasets:
 
+For MNIST dataset:
 python3 generate_dataset_train_test.py --model Logistic_regression --dataset MNIST
+
+For RCV1 dataset:
+python3 generate_dataset_train_test.py --model Logistic_regression --dataset rcv1
+
+For HIGGS dataset:
+python3 generate_dataset_train_test.py --model Logistic_regression --dataset higgs
+
 
 
 2. randomly generate deleted/added samples from the training dataset:
 
+For MNIST dataset:
 python3 generate_rand_delta_ids.py --dataset MNIST --ratio 0.001 --restart
+
+For RCV1 dataset:
+python3 generate_rand_delta_ids.py --dataset rcv1 --ratio 0.001 --restart
+
+For HIGGS dataset:
+python3 generate_rand_delta_ids.py --dataset higgs --ratio 0.001 --restart
 
 
 
@@ -30,11 +45,27 @@ python3 generate_rand_delta_ids.py --dataset MNIST --ratio 0.001 --restart
 --GPU: whether to use GPU
 --GID: Device ID of the GPU
 
+For MNIST dataset:
 python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset MNIST --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --train
 
 
+For RCV1 dataset:
+python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset rcv1 --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --train
+
+For HIGGS dataset:
+python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset higgs --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --train
+
+
 4. update the mode after the training phase with the baseline method (retrain from the scratch, --add: flags to specify for model updates after small additions,otherwise we do small deletions):
+
+For MNIST dataset:
 python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset MNIST --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --method baseline
+
+For RCV1 dataset:
+python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset rcv1 --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --method baseline
+
+For HIGGS dataset:
+python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset higgs --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --method baseline
 
 
 output (similar to this, the first line is the time in seconds to update the model with the baseline method  while the second line is the difference between the model before deletions or additions and the updated model by baseline method):
@@ -44,7 +75,15 @@ model difference (l2 norm): tensor(0.0027, dtype=torch.float64, grad_fn=<SqrtBac
 
 
 5. update the model after the training phase with deltagrad (--add: flags to specify for model updates after small additions,otherwise we do small deletions; --init: the hyperparameter j_0 used in Deltagrad, -m: the hyperparameter m used in Deltagrad; --period: the hyperparameter T_0 used in Deltagrad; --cached_size: control how many history parameters or gradients from the training phase before deletions or additions pre-cached in the GPU for saving the IO overhead):
+
+For MNIST dataset:
 python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset MNIST --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --method deltagrad --period 5 --init 20 -m 2 --cached_size 20
+
+For RCV1 dataset:
+python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset rcv1 --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --method deltagrad --period 10 --init 20 -m 2 --cached_size 20
+
+For HIGGS dataset:
+python3 main.py --bz 16384 --epochs 20 --model Logistic_regression --dataset higgs --wd 0.0001  --lr 0.1 0.05  --lrlen 10 10  --method deltagrad --period 5 --init 20 -m 2 --cached_size 20
 
 
 output (similar to this, the first line is the time in seconds to update the model while the second line is the difference between the updated model by deltagrad and the updated model by baseline method):
