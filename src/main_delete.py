@@ -40,7 +40,7 @@ try:
     from Models.Data_preparer import *
     from Models.DNN_single import *
     from Models.DNN2 import DNNModel2
-    from Models.DNN3 import DNNModel3
+    from Models.DNN3 import *
     from Models.ResNet import *
     from Models.Pretrained_models import *
 
@@ -49,11 +49,13 @@ except ImportError:
     from utils import *
     from Models.DNN import DNNModel
     from Models.DNN2 import DNNModel2
-    from Models.DNN3 import DNNModel3
+    from Models.DNN3 import *
     from Models.Data_preparer import *
     from Models.DNN_single import *
     from Models.ResNet import *
     from Models.Pretrained_models import *
+
+mini_sigma = 0.001
 
 def get_batch_train_data(dataset_train, ids):
     
@@ -77,7 +79,7 @@ def compute_grad_final3(para, hessian_para_prod, gradient_dual, grad_list_tensor
         
 #         gradients = (hessian_para_prod[i]*size1 - (gradient_dual[i].to('cpu') + beta*para[i])*size2)/(size1 - size2)
         
-        gradients -= (gradient_dual + beta*para_list_tensor)*size2
+        gradients -= (gradient_dual + beta*para)*size2
         
         gradients /= (size1 - size2)
             
@@ -103,36 +105,36 @@ def compute_grad_final3(para, hessian_para_prod, gradient_dual, grad_list_tensor
     
 
 
-def cal_approx_hessian_vec_prod0_3(S_k_list, Y_k_list, i, m, k, v_vec, period, is_GPU, device):
+def cal_approx_hessian_vec_prod0_3(S_k_list, Y_k_list, v_vec, k, is_GPU, device):
  
  
 #     t3  = time.time()
     
-    period_num = int(i/period)
-    
-    
-    ids = torch.tensor(range(m)).view(-1)
-    
-    if period_num > 0:
-        ids = torch.cat([ids, period*torch.tensor(range(period_num + 1))], dim = 0)
-#     else:
+#     period_num = int(i/period)
+#     
+#     
+#     ids = torch.tensor(range(m)).view(-1)
+#     
+#     if period_num > 0:
 #         ids = torch.cat([ids, period*torch.tensor(range(period_num + 1))], dim = 0)
-    ids = ids - 1
-    
-    ids = ids[ids >= 0]
-    
-    if ids.shape[0] > k:
-        ids = ids[-k:]
-    
-#     if i-k >= 1:
-#         lb = i-k
-#         
-#         zero_mat_dim = ids.shape[0] + k
-#         
-#     else:
-#         lb = 1
-#         
-#         zero_mat_dim = ids.shape[0] + i-1
+# #     else:
+# #         ids = torch.cat([ids, period*torch.tensor(range(period_num + 1))], dim = 0)
+#     ids = ids - 1
+#     
+#     ids = ids[ids >= 0]
+#     
+#     if ids.shape[0] > k:
+#         ids = ids[-k:]
+#     
+# #     if i-k >= 1:
+# #         lb = i-k
+# #         
+# #         zero_mat_dim = ids.shape[0] + k
+# #         
+# #     else:
+# #         lb = 1
+# #         
+# #         zero_mat_dim = ids.shape[0] + i-1
     zero_mat_dim = k#ids.shape[0]
     
     
@@ -181,6 +183,8 @@ def cal_approx_hessian_vec_prod0_3(S_k_list, Y_k_list, i, m, k, v_vec, period, i
     
     sigma_k = torch.mm(Y_k_list[-1],torch.t(S_k_list[-1]))/(torch.mm(S_k_list[-1], torch.t(S_k_list[-1])))
     
+    if sigma_k < mini_sigma:
+        sigma_k = mini_sigma
     
 #     interm = sigma_k*S_k_time_S_k + torch.mm(L_k, torch.mm(torch.diag(torch.pow(D_k_diag, -1)), torch.t(L_k)))
 #     
@@ -340,7 +344,11 @@ def prepare_hessian_vec_prod0_3(S_k_list, Y_k_list, i, m, k, is_GPU, device):
     D_k_diag = torch.diag(S_k_time_Y_k)
     
     
+#     sigma_k = torch.mm(Y_k_list[-1],torch.t(S_k_list[-1]))/(torch.mm(S_k_list[-1], torch.t(S_k_list[-1])))
     sigma_k = torch.mm(Y_k_list[-1],torch.t(S_k_list[-1]))/(torch.mm(S_k_list[-1], torch.t(S_k_list[-1])))
+    
+    if sigma_k < mini_sigma:
+        sigma_k = mini_sigma
     
     
     upper_mat = torch.cat([-torch.diag(D_k_diag), torch.t(L_k)], dim = 1)
@@ -382,7 +390,7 @@ def get_remaining_subset_data_per_epoch(curr_rand_ids, removed_rand_ids):
     return res
 
 
-def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi_epochs, sorted_ids_multi_epochs, delta_data_ids, batch_size, learning_rate_all_epochs, criterion, optimizer, is_GPU, device):
+def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi_epochs, sorted_ids_multi_epochs, delta_data_ids, batch_size, learning_rate_all_epochs, criterion, optimizer, is_GPU, device, record_params = False):
     count = 0
 
     elapse_time = 0
@@ -403,53 +411,58 @@ def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi
 
     random_ids_list_all_epochs = []
     
-    t5 = time.time()
+    remaining_tensor_bool = torch.ones(dataset_train.data.shape[0]).bool()
     
-    for k in range(num_epochs):
-        
-
+    remaining_tensor_bool[delta_data_ids.view(-1)] = False
     
-        random_ids = random_ids_multi_epochs[k]
-        
-        sort_idx = sorted_ids_multi_epochs[k]#random_ids.numpy().argsort()
-        
-        if delta_data_ids.shape[0] > 1:
-            all_indexes = np.sort(sort_idx[delta_data_ids])
-        else:
-            all_indexes = torch.tensor([sort_idx[delta_data_ids]])
-                
-        id_start = 0
     
-        id_end = 0
-        
-        random_ids_list = []
-        
-        for j in range(0, len(dataset_train), batch_size):
-        
-            end_id = j + batch_size
-            
-            if end_id > len(dataset_train):
-                end_id = len(dataset_train)
-            
-            if all_indexes[-1] < end_id:
-                id_end = all_indexes.shape[0]
-            else:
-                id_end = np.argmax(all_indexes >= end_id)
-            
-            removed_ids = random_ids[all_indexes[id_start:id_end]]
-            
-            if removed_ids.shape[0] > 0:
-                curr_matched_ids = get_remaining_subset_data_per_epoch(random_ids[j:end_id], removed_ids)
-            else:
-                curr_matched_ids = random_ids[j:end_id]
-            random_ids_list.append(curr_matched_ids)
-            id_start = id_end
-                
-        random_ids_list_all_epochs.append(random_ids_list)
-
-    t6 = time.time()
-    
-    overhead2 = (t6 - t5)
+#     t5 = time.time()
+#     
+#     for k in range(num_epochs):
+#         
+# 
+#     
+#         random_ids = random_ids_multi_epochs[k]
+#         
+#         sort_idx = sorted_ids_multi_epochs[k]#random_ids.numpy().argsort()
+#         
+#         if delta_data_ids.shape[0] > 1:
+#             all_indexes = np.sort(sort_idx[delta_data_ids])
+#         else:
+#             all_indexes = torch.tensor([sort_idx[delta_data_ids]])
+#                 
+#         id_start = 0
+#     
+#         id_end = 0
+#         
+#         random_ids_list = []
+#         
+#         for j in range(0, len(dataset_train), batch_size):
+#         
+#             end_id = j + batch_size
+#             
+#             if end_id > len(dataset_train):
+#                 end_id = len(dataset_train)
+#             
+#             if all_indexes[-1] < end_id:
+#                 id_end = all_indexes.shape[0]
+#             else:
+#                 id_end = np.argmax(all_indexes >= end_id)
+#             
+#             removed_ids = random_ids[all_indexes[id_start:id_end]]
+#             
+#             if removed_ids.shape[0] > 0:
+#                 curr_matched_ids = get_remaining_subset_data_per_epoch(random_ids[j:end_id], removed_ids)
+#             else:
+#                 curr_matched_ids = random_ids[j:end_id]
+#             random_ids_list.append(curr_matched_ids)
+#             id_start = id_end
+#                 
+#         random_ids_list_all_epochs.append(random_ids_list)
+# 
+#     t6 = time.time()
+#     
+#     overhead2 = (t6 - t5)
 
     
     
@@ -459,17 +472,27 @@ def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi
         
         print("epoch::", k)
         
-        random_ids_list = random_ids_list_all_epochs[k]
+#         random_ids_list = random_ids_list_all_epochs[k]
+
+        random_ids = random_ids_multi_epochs[k]
         
-        for j in range(len(random_ids_list)):
+        for j in range(0, dataset_train.data.shape[0], batch_size):
         
+#         for j in range(len(random_ids_list)):
         
-            curr_random_ids = random_ids_list[j]
+            end_id = j + batch_size
+            
+            if end_id >= dataset_train.data.shape[0]:
+                end_id = dataset_train.data.shape[0]
+            
+            curr_random_ids = random_ids[j:end_id]
+            
+            curr_remaining_tensor = remaining_tensor_bool[curr_random_ids]
             
             if k == 0 and j == 0:
                 print(curr_random_ids[0:50])
             
-            curr_matched_ids_size = len(curr_random_ids)
+            curr_matched_ids_size = torch.sum(curr_remaining_tensor).item()
             
             if curr_matched_ids_size <= 0:
                 
@@ -479,14 +502,14 @@ def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi
             
             if not is_GPU:
 
-                batch_X = dataset_train.data[curr_random_ids]
+                batch_X = dataset_train.data[curr_random_ids[curr_remaining_tensor]]
                 
-                batch_Y = dataset_train.labels[curr_random_ids]
+                batch_Y = dataset_train.labels[curr_random_ids[curr_remaining_tensor]]
                 
             else:
-                batch_X = dataset_train.data[curr_random_ids].to(device)
+                batch_X = dataset_train.data[curr_random_ids[curr_remaining_tensor]].to(device)
                 
-                batch_Y = dataset_train.labels[curr_random_ids].to(device)
+                batch_Y = dataset_train.labels[curr_random_ids[curr_remaining_tensor]].to(device)
                 
             learning_rate = learning_rate_all_epochs[count]
             
@@ -503,8 +526,8 @@ def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi
             
             loss.backward()
             
-#             if record_params:
-#                 append_gradient_list(exp_gradient_list_all_epochs, None, exp_para_list_all_epochs, model, batch_X, is_GPU, device)
+            if record_params:
+                append_gradient_list(exp_gradient_list_all_epochs, None, exp_para_list_all_epochs, model, batch_X, is_GPU, device)
 
             optimizer.step()
             
@@ -518,14 +541,274 @@ def model_update_standard_lib(num_epochs, dataset_train, model, random_ids_multi
     
     print("overhead::", overhead)
      
-    print("overhead2::", overhead2)
+#     print("overhead2::", overhead2)
 #     
     print("overhead3::", overhead3)
 
-#     return model, count, exp_para_list_all_epochs, exp_gradient_list_all_epochs, random_ids_list_all_epochs
-    return model
+    return model, count, exp_para_list_all_epochs, exp_gradient_list_all_epochs, random_ids_list_all_epochs
+#     return model
 
-def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train, model, gradient_list_all_epochs_tensor, para_list_all_epochs_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, delta_ids, m, learning_rate_all_epochs, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim, criterion, optimizer, regularization_coeff, is_GPU, device):
+def calculate_y_k_bar(curr_s_k,hessian_prod, curr_y_k):
+    
+    s_k_times_hessian_prod = torch.mm(curr_s_k.view(1,-1), hessian_prod.view(-1,1))
+    
+    s_k_y_k_prod = torch.mm(curr_s_k.view(1,-1), curr_y_k.view(-1,1))
+    
+    if s_k_y_k_prod < 0.25*s_k_times_hessian_prod:
+        theta_k = 0.75*s_k_times_hessian_prod/(s_k_times_hessian_prod - s_k_y_k_prod)
+    else:
+        theta_k = 1
+    
+    print('theta k::', theta_k, s_k_times_hessian_prod, s_k_y_k_prod)
+    curr_y_k_bar = theta_k*curr_y_k.view(1,-1) + (1-theta_k)*hessian_prod.view(1,-1)
+    
+    return curr_y_k_bar, theta_k
+    
+# def get_all_vectorized_parameters(para_list):
+#     
+#     res_list = []
+#     
+#     i = 0
+#     
+#     for param in para_list:
+#         
+# #         print(param.data.view(-1).view(shape_list[i]) - param)
+# #         
+# #         print(torch.norm(param.data.view(-1).view(shape_list[i]) - param))
+#         
+#         res_list.append(param.data.to('cpu').view(-1))
+#         
+#         i += 1
+# #         para_list.append(param.grad.clone())
+#         
+#         
+#     return torch.cat(res_list, 0).view(1,-1)    
+
+def explicit_iters(batch_delta_X, batch_delta_Y, batch_remaining_X, batch_remaining_Y, curr_matched_ids_size, model, para, k, p, m, S_k_list, Y_k_list, learning_rate, regularization_coeff, para_list_GPU_tensor, grad_list_GPU_tensor, cached_id, full_shape_list, shape_list, is_GPU, device, criterion, optimizer, exp_para_list, exp_gradient_list):
+    
+    if exp_para_list is not None:
+        print('para diff::', torch.norm(get_all_vectorized_parameters1(exp_para_list) - get_all_vectorized_parameters1(para)))
+    
+    
+    init_model(model, para)
+    
+    compute_derivative_one_more_step(model, batch_remaining_X, batch_remaining_Y, criterion, optimizer)
+    
+    expect_gradients = get_all_vectorized_parameters1(model.get_all_gradient())
+    
+    if exp_gradient_list is not None:
+        print('gradient diff::', torch.norm(expect_gradients - get_all_vectorized_parameters1(exp_gradient_list)))
+    
+    
+    gradient_remaining = 0
+    #                 if curr_matched_ids_size > 0:
+#     if not removed_batch_empty_list[i]:
+#     if not curr_removed_batch_empty_list:
+    if curr_matched_ids_size >0:
+        
+    #                     t3 = time.time()
+        
+        clear_gradients(model.parameters())
+            
+        compute_derivative_one_more_step(model, batch_delta_X, batch_delta_Y, criterion, optimizer)
+    
+    
+        gradient_remaining = get_all_vectorized_parameters1(model.get_all_gradient())     
+        
+        
+    #                     t4 = time.time()
+    #                 
+    #                 
+    #                     overhead2 += (t4  -t3)
+    
+    with torch.no_grad():
+                   
+        curr_para = get_all_vectorized_parameters1(para)
+    
+        if k>0 or (p > 0 and k == 0):
+            
+            prev_para = para_list_GPU_tensor[cached_id]
+            
+            curr_s_list = (curr_para - prev_para)# + 1e-16
+            
+            
+            
+        gradient_full = (expect_gradients*batch_remaining_X.shape[0] + gradient_remaining*curr_matched_ids_size)/(batch_remaining_X.shape[0] + curr_matched_ids_size)
+
+        hessian_para_prod = None
+        theta_k = 1
+
+        if k>0 or (p > 0 and k == 0):
+            
+            curr_y_k = gradient_full - grad_list_GPU_tensor[cached_id] + regularization_coeff*curr_s_list#+ 1e-16
+
+            
+            if len(Y_k_list) >= m:
+                
+                curr_len = m
+                
+                if len(S_k_list) < m:
+                    curr_len = len(S_k_list) 
+                
+                hessian_para_prod,_, _, _, _, _ = cal_approx_hessian_vec_prod0_3(list(S_k_list)[1:], list(Y_k_list)[1:], curr_s_list.view(-1,1), curr_len-1, is_GPU, device)
+                
+                
+                curr_y_k_bar, theta_k = calculate_y_k_bar(curr_s_list,hessian_para_prod.view(-1,1), curr_y_k)
+    
+#                 print(torch.dot(curr_y_k_bar.view(-1), curr_s_list.view(-1)))
+            else:
+                sigma_k = torch.mm(curr_y_k,torch.t(curr_s_list))/(torch.mm(curr_s_list, torch.t(curr_s_list)))
+    
+                if sigma_k < mini_sigma:
+                    sigma_k = mini_sigma
+                
+                hessian_para_prod = sigma_k*curr_s_list
+                
+                curr_y_k_bar, theta_k = calculate_y_k_bar(curr_s_list,hessian_para_prod, curr_y_k)
+            
+            Y_k_list.append(curr_y_k_bar)
+            
+            if len(Y_k_list) > m:
+                removed_y_k = Y_k_list.popleft()
+                
+                del removed_y_k
+            
+            S_k_list.append(curr_s_list)
+            if len(S_k_list) > m:
+                removed_s_k = S_k_list.popleft()
+                
+                del removed_s_k
+        
+    
+        para = get_devectorized_parameters((1-learning_rate*regularization_coeff)*curr_para - learning_rate*expect_gradients, full_shape_list, shape_list)
+        
+#         recorded += 1
+        
+        
+        del gradient_full
+        
+        del gradient_remaining
+        
+        del expect_gradients
+        
+        del batch_remaining_X
+        
+        del batch_remaining_Y
+        
+#         if not removed_batch_empty_list[i]:
+        if curr_matched_ids_size > 0:
+            
+            del batch_delta_X
+            
+            del batch_delta_Y
+        
+        if k>0 or (p > 0 and k == 0):
+            del prev_para
+        
+            del curr_para
+        
+#         if recorded >= length:
+#             use_standard_way = False
+#     
+#     hessian_para_prod, zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat_prime = cal_approx_hessian_vec_prod0_3(S_k_list, Y_k_list, i, init_epochs, m, vec_para_diff, period, is_GPU, device)
+
+    return para, cached_id, hessian_para_prod, theta_k
+
+def compute_grad_diff_iter(hessian_prod, init_hessian_prod, vec_para_diff, init_hessian_prod_times_para_diff, hessian_prod_times_vec_para_diff, grad_diff):
+    
+    const = 1
+    
+    b = (hessian_prod - init_hessian_prod).view(-1)*init_hessian_prod_times_para_diff/const
+    
+#     A_diag = 1/const*0.75*init_hessian_prod_times_para_diff - init_hessian_prod.view(-1)*vec_para_diff.view(-1) + vec_para_diff.view(-1)*hessian_prod_times_vec_para_diff.view(-1)
+#     
+#     A_mat = 1/const*0.75*init_hessian_prod_times_para_diff*torch.eye(init_hessian_prod.view(-1).shape[0]) - torch.mm(init_hessian_prod.view(-1,1), vec_para_diff.view(1,-1)) + torch.mm(hessian_prod_times_vec_para_diff.view(-1,1), vec_para_diff.view(1,-1))
+#   
+#     print('A diag diff::', torch.norm(torch.diag(A_mat).view(-1) - A_diag.view(-1)))
+    
+    A_times_x = 1/const*0.75*init_hessian_prod_times_para_diff*grad_diff - init_hessian_prod*torch.dot(vec_para_diff, grad_diff) + hessian_prod*torch.dot(grad_diff, vec_para_diff)
+    
+    residual = b - A_times_x
+    
+    if torch.norm(residual) < 0.00001:
+            return grad_diff
+    
+    p = residual.clone()
+    
+    while(True):
+    
+        A_times_p = 1/const*0.75*init_hessian_prod_times_para_diff*p - init_hessian_prod*torch.dot(vec_para_diff, p) + hessian_prod*torch.dot(p, vec_para_diff)
+        
+        alpha = torch.dot(residual.view(-1), residual.view(-1))/torch.dot(p.view(-1), A_times_p.view(-1))
+        
+        grad_diff = grad_diff + alpha*p
+        
+        new_residual = residual - alpha*A_times_p
+        
+        print('residual::', torch.norm(new_residual))
+        
+        if torch.norm(new_residual) < 0.00001:
+            return grad_diff
+        
+        beta = torch.dot(new_residual.view(-1), new_residual.view(-1))/torch.dot(residual.view(-1), residual.view(-1))
+        
+        p = new_residual + beta*p
+        
+        residual = new_residual
+        
+#         print('A times x diff::', torch.norm(torch.mm(A_mat, grad_diff.view(-1,1)).view(-1) - A_times_x.view(-1)))
+#         
+#         prev_grad_diff = grad_diff.clone()
+#         
+#         
+#         residual = b - A_times_x
+#         
+#         
+#         
+# #         
+# #         grad_diff2 = (b - A_times_x + A_diag.view(-1)*grad_diff.view(-1))/A_diag
+# #     
+# #         grad_diff = torch.mm(torch.diag(1/A_diag), b.view(-1,1) - torch.mm(A_mat - torch.diag(A_diag), grad_diff.view(-1,1))).view(-1)
+#     
+#         
+#         print('grad diff::', torch.norm(grad_diff - prev_grad_diff))
+    
+#         if torch.norm(grad_diff - prev_grad_diff) < 0.00001:
+#             return grad_diff
+
+
+def derive_grad_diff(hessian_prod, init_hessian_prod, vec_para_diff):
+    grad_diff = hessian_prod.view(-1)
+    
+    grad_diff_times_vec_para_diff = torch.dot(grad_diff.view(-1), vec_para_diff.view(-1))
+    
+    hessian_prod_times_vec_para_diff = torch.dot(grad_diff.view(-1), vec_para_diff.view(-1))
+    
+    init_hessian_prod_times_para_diff = torch.dot(init_hessian_prod.view(-1), vec_para_diff.view(-1))
+    
+#     if grad_diff_times_vec_para_diff.item() >= 0.25*init_hessian_prod_times_para_diff.item():
+#         return grad_diff
+#      
+#     else:
+    grad_diff = compute_grad_diff_iter(hessian_prod.view(-1), init_hessian_prod.view(-1), vec_para_diff.view(-1), init_hessian_prod_times_para_diff, hessian_prod_times_vec_para_diff, grad_diff.view(-1))
+    
+    return grad_diff
+#         while(True):
+#             theta_k = 0.75*init_hessian_prod_times_para_diff/(init_hessian_prod_times_para_diff - grad_diff_times_vec_para_diff)
+#             
+#             prev_grad_diff = grad_diff.clone()
+#             
+#             grad_diff = (hessian_prod.view(-1) - (1-theta_k)*init_hessian_prod.view(-1))/theta_k
+#             
+#             print('theta diff::', torch.norm(prev_grad_diff.view(-1) - grad_diff.view(-1)))
+#             
+#             if torch.norm(prev_grad_diff.view(-1) - grad_diff.view(-1)).item() < 0.0001:
+#                 return grad_diff
+#             
+#             grad_diff_times_vec_para_diff = torch.dot(grad_diff.view(-1), vec_para_diff.view(-1))
+            
+
+def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train, model, gradient_list_all_epochs_tensor, para_list_all_epochs_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, delta_ids, m, learning_rate_all_epochs, random_ids_multi_super_iterations, sorted_ids_multi_super_iterations, batch_size, dim, criterion, optimizer, regularization_coeff, is_GPU, device, exp_para_list_all_epochs, exp_gradient_list_all_epochs):
     '''function to use deltagrad for incremental updates'''
     
     
@@ -550,6 +833,11 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
     
     Y_k_list = deque()
     
+    remaining_id_bool_tensor = torch.ones(dataset_train.data.shape[0]).bool()
+    
+    remaining_id_bool_tensor[delta_ids.view(-1)] = False
+    
+    
 #     overhead2 = 0
 #     
 #     overhead3 = 0
@@ -564,74 +852,6 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
     
     batch_id = 1
     
-    
-    random_ids_list_all_epochs = []
-
-    removed_batch_empty_list = []
-    
-#     res_para_list = []
-#     
-#     res_grad_list = []
-    
-#     t5 = time.time()
-    
-    '''detect which samples are removed from each mini-batch'''
-    
-    for k in range(max_epoch):
-        
-
-    
-        random_ids = random_ids_multi_super_iterations[k]
-        
-        sort_idx = sorted_ids_multi_super_iterations[k]#random_ids.numpy().argsort()
-        
-        if delta_ids.shape[0] > 1:
-            all_indexes = np.sort(sort_idx[delta_ids])
-        else:
-            all_indexes = torch.tensor([sort_idx[delta_ids]])
-                
-        id_start = 0
-    
-        id_end = 0
-        
-        random_ids_list = []
-        
-        for j in range(0, dim[0], batch_size):
-        
-            end_id = j + batch_size
-            
-            if end_id > dim[0]:
-                end_id = dim[0]
-            
-            if all_indexes[-1] < end_id:
-                id_end = all_indexes.shape[0]
-            else:
-                id_end = np.argmax(all_indexes >= end_id)
-            
-            curr_matched_ids = random_ids[all_indexes[id_start:id_end]]
-
-            curr_matched_id_num = curr_matched_ids.shape[0]
-
-            if curr_matched_id_num > 0:
-                random_ids_list.append(curr_matched_ids)
-                removed_batch_empty_list.append(False)
-            else:
-                random_ids_list.append(random_ids[0:1])
-                removed_batch_empty_list.append(True)
-            
-            i += 1
-            
-            id_start = id_end
-                
-        random_ids_list_all_epochs.append(random_ids_list)        
-    
-    
-#     t6 = time.time()
-#     
-#     overhead3 += (t6  -t5)
-    
-    '''main for loop of deltagrad'''
-    
     i = 0
     
     for k in range(max_epoch):
@@ -639,43 +859,46 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
         random_ids = random_ids_multi_super_iterations[k]
         
         
-        random_ids_list = random_ids_list_all_epochs[k]
-        
         id_start = 0
     
         id_end = 0
         
-        j = 0
+        print('k::', k)
+#         j = 0
         
         curr_init_epochs = init_epochs
         
-        for p in range(len(random_ids_list)):
-            
-#             curr_matched_ids = items[2]        
-            curr_matched_ids = random_ids_list[p]
+#         for p in range(len(random_ids_list)):
+        for j in range(0, dataset_train.data.shape[0], batch_size):
             
             end_id = j + batch_size
             
             if end_id > dim[0]:
                 end_id = dim[0]        
 #             print(i,p)
-            curr_matched_ids_size = 0
-            if not removed_batch_empty_list[i]:
-                
-                if not is_GPU:
-                
-                    batch_delta_X = dataset_train.data[curr_matched_ids]
-                    
-                    batch_delta_Y = dataset_train.labels[curr_matched_ids]
-                
-                else:
 
-                    batch_delta_X = dataset_train.data[curr_matched_ids].to(device)
+            curr_random_ids = random_ids[j:end_id]
+
+            curr_remaining_bool = remaining_id_bool_tensor[curr_random_ids]
+            
+            curr_removed_bool = ~curr_remaining_bool
+
+            batch_delta_X = dataset_train.data[curr_random_ids[curr_removed_bool]]
                     
-                    batch_delta_Y = dataset_train.labels[curr_matched_ids].to(device)
+            batch_delta_Y = dataset_train.labels[curr_random_ids[curr_removed_bool]]
+
+
+            curr_matched_ids_size = torch.sum(curr_removed_bool).item()
+            if curr_matched_ids_size > 0:
+                
+                if is_GPU:
+
+                    batch_delta_X = batch_delta_X.to(device)
+                    
+                    batch_delta_Y = batch_delta_Y.to(device)
                 
 #                 curr_matched_ids_size = items[2].shape[0]
-                curr_matched_ids_size = len(curr_matched_ids)
+#                 curr_matched_ids_size = len(curr_matched_ids)
             
             learning_rate = learning_rate_all_epochs[i]
             
@@ -697,123 +920,24 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                 
                 use_standard_way = True
                 
-                
             if i< curr_init_epochs or use_standard_way == True:
 #                 t7 = time.time()
                 '''explicitly evaluate the gradient'''
-                curr_rand_ids = random_ids[j:end_id]
+                batch_remaining_X = dataset_train.data[curr_random_ids[curr_remaining_bool]]
                 
-                if not removed_batch_empty_list[i]:
-                
-                    curr_matched_ids2 = get_remaining_subset_data_per_epoch(curr_rand_ids, curr_matched_ids)
-                else:
-                    curr_matched_ids2 = curr_rand_ids
-                
-                batch_remaining_X, batch_remaining_Y, batch_remaining_ids = get_batch_train_data(dataset_train, curr_matched_ids2)
+                batch_remaining_Y = dataset_train.labels[curr_random_ids[curr_remaining_bool]]
                 
                 if is_GPU:
                     batch_remaining_X = batch_remaining_X.to(device)
                     
                     batch_remaining_Y = batch_remaining_Y.to(device)
+                if exp_gradient_list_all_epochs is None or exp_para_list_all_epochs is None or len(exp_gradient_list_all_epochs) == 0 or len(exp_para_list_all_epochs) == 0: 
+                    para, cached_id, init_hessian_para_prod, theta_k = explicit_iters(batch_delta_X, batch_delta_Y, batch_remaining_X, batch_remaining_Y, curr_matched_ids_size, model, para, k, j, m+1, S_k_list, Y_k_list, learning_rate, regularization_coeff, para_list_GPU_tensor, grad_list_GPU_tensor, cached_id, full_shape_list, shape_list, is_GPU, device,criterion, optimizer, None, None)
+                else:
+                    '''batch_delta_X, batch_delta_Y, batch_remaining_X, batch_remaining_Y, curr_matched_ids_size, model, para, k, p, m, S_k_list, Y_k_list, learning_rate, regularization_coeff, para_list_GPU_tensor, grad_list_GPU_tensor, cached_id, full_shape_list, shape_list, is_GPU, device, exp_para_list, exp_gradient_list'''
+                    para, cached_id, init_hessian_para_prod, theta_k = explicit_iters(batch_delta_X, batch_delta_Y, batch_remaining_X, batch_remaining_Y, curr_matched_ids_size, model, para, k, j, m+1, S_k_list, Y_k_list, learning_rate, regularization_coeff, para_list_GPU_tensor, grad_list_GPU_tensor, cached_id, full_shape_list, shape_list, is_GPU, device,criterion, optimizer, exp_para_list_all_epochs[i], exp_gradient_list_all_epochs[i])
                 
-#                 t8 = time.time()
-#             
-#                 overhead4 += (t8 - t7)
-#                 
-#                 
-#                 t5 = time.time()
-                
-                init_model(model, para)
-                
-                compute_derivative_one_more_step(model, batch_remaining_X, batch_remaining_Y, criterion, optimizer)
-                
-                
-
-                
-                
-                expect_gradients = get_all_vectorized_parameters1(model.get_all_gradient())
-                
-#                 t6 = time.time()
-# 
-#                 overhead3 += (t6 - t5)
-                
-                gradient_remaining = 0
-#                 if curr_matched_ids_size > 0:
-                if not removed_batch_empty_list[i]:
-                    
-#                     t3 = time.time()
-                    
-                    clear_gradients(model.parameters())
-                        
-                    compute_derivative_one_more_step(model, batch_delta_X, batch_delta_Y, criterion, optimizer)
-                
-                
-                    gradient_remaining = get_all_vectorized_parameters1(model.get_all_gradient())     
-                    
-                    
-#                     t4 = time.time()
-#                 
-#                 
-#                     overhead2 += (t4  -t3)
-                
-                with torch.no_grad():
-                               
-                
-                    curr_para = get_all_vectorized_parameters1(para)
-                
-                    if k>0 or (p > 0 and k == 0):
-                        
-                        prev_para = para_list_GPU_tensor[cached_id]
-                        
-                        curr_s_list = (curr_para - prev_para) + 1e-16
-                        
-                        S_k_list.append(curr_s_list)
-                        if len(S_k_list) > m:
-                            removed_s_k = S_k_list.popleft()
-                            
-                            del removed_s_k
-                        
-                    gradient_full = (expect_gradients*curr_matched_ids2.shape[0] + gradient_remaining*curr_matched_ids_size)/(curr_matched_ids2.shape[0] + curr_matched_ids_size)
-
-                    if k>0 or (p > 0 and k == 0):
-                        
-                        Y_k_list.append(gradient_full - grad_list_GPU_tensor[cached_id] + regularization_coeff*curr_s_list+ 1e-16)
-                        
-                        if len(Y_k_list) > m:
-                            removed_y_k = Y_k_list.popleft()
-                            
-                            del removed_y_k
-                    
-
-                    para = get_devectorized_parameters((1-learning_rate*regularization_coeff)*curr_para - learning_rate*expect_gradients, full_shape_list, shape_list)
-                    
-                    recorded += 1
-                    
-                    
-                    del gradient_full
-                    
-                    del gradient_remaining
-                    
-                    del expect_gradients
-                    
-                    del batch_remaining_X
-                    
-                    del batch_remaining_Y
-                    
-                    if not removed_batch_empty_list[i]:
-                        
-                        del batch_delta_X
-                        
-                        del batch_delta_Y
-                    
-                    if k>0 or (p > 0 and k == 0):
-                        del prev_para
-                    
-                        del curr_para
-                    
-                    if recorded >= length:
-                        use_standard_way = False
-                
+                use_standard_way = False
                 
             else:
                 
@@ -821,7 +945,7 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                 
                 gradient_dual = None
     
-                if not removed_batch_empty_list[i]:
+                if curr_matched_ids_size > 0:
                 
                     init_model(model, para)
                     
@@ -836,12 +960,11 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                     
                     if (i-curr_init_epochs)/period >= 1:
                         if (i-curr_init_epochs) % period == 1:
-                            zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat_prime = prepare_hessian_vec_prod0_3(S_k_list, Y_k_list, i, init_epochs, m, is_GPU, device)
+                            zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat_prime = prepare_hessian_vec_prod0_3(list(S_k_list)[1:], list(Y_k_list)[1:], i, init_epochs, m, is_GPU, device)
                             
                             mat = np.linalg.inv(mat_prime.cpu().numpy())
                             mat = torch.from_numpy(mat)
                             if is_GPU:
-                                
                                 
                                 mat = mat.to(device)
                             
@@ -849,9 +972,15 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                         hessian_para_prod = compute_approx_hessian_vector_prod_with_prepared_terms1(zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat, vec_para_diff, is_GPU, device)
                         
                     else:
-                        
-                        hessian_para_prod, zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat_prime = cal_approx_hessian_vec_prod0_3(S_k_list, Y_k_list, i, init_epochs, m, vec_para_diff, period, is_GPU, device)
+                        '''S_k_list, Y_k_list, v_vec, k, is_GPU, device'''
+                        hessian_para_prod, zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat_prime = cal_approx_hessian_vec_prod0_3(list(S_k_list)[1:], list(Y_k_list)[1:], vec_para_diff, m, is_GPU, device)
                     exp_gradient, exp_param = None, None
+                    
+                    init_hessian_para_prod,_, _, _, _, _ = cal_approx_hessian_vec_prod0_3(list(S_k_list)[0:-1], list(Y_k_list)[0:-1], vec_para_diff, m, is_GPU, device)
+                    
+                    hessian_para_prod = derive_grad_diff(hessian_para_prod, init_hessian_para_prod, vec_para_diff).view(-1,1)
+                     
+#                     hessian_para_prod = (hessian_para_prod - (1-theta_k)*init_hessian_para_prod)/theta_k
                     
                     if gradient_dual is not None:
                         is_positive, final_gradient_list = compute_grad_final3(get_all_vectorized_parameters1(para), torch.t(hessian_para_prod), get_all_vectorized_parameters1(gradient_dual), grad_list_GPU_tensor[cached_id], para_list_GPU_tensor[cached_id], end_id - j, curr_matched_ids_size, learning_rate, regularization_coeff, is_GPU, device)
@@ -860,6 +989,10 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                         is_positive, final_gradient_list = compute_grad_final3(get_all_vectorized_parameters1(para), torch.t(hessian_para_prod), None, grad_list_GPU_tensor[cached_id], para_list_GPU_tensor[cached_id], end_id - j, curr_matched_ids_size, learning_rate, regularization_coeff, is_GPU, device)
                     
                     
+                    if exp_gradient_list_all_epochs is not None and len(exp_gradient_list_all_epochs) > 0:
+                        print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_gradient_list_all_epochs[i]) + regularization_coeff*get_all_vectorized_parameters1(para) - final_gradient_list))
+                        print('para diff::', torch.norm(get_all_vectorized_parameters1(exp_para_list_all_epochs[i]) - get_all_vectorized_parameters1(para)))
+                        print('para change::', torch.norm(get_all_vectorized_parameters1(exp_para_list_all_epochs[i]) - para_list_GPU_tensor[cached_id]))
                     vec_para = update_para_final2(para, final_gradient_list, learning_rate, regularization_coeff, exp_gradient, exp_param)
                     
                     
@@ -867,7 +1000,7 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                     
             i = i + 1
             
-            j += batch_size
+#             j += batch_size
             
             
             cached_id += 1
@@ -983,7 +1116,11 @@ def model_update_del(args, method, lr_lists):
     
     hyper_para_function=getattr(Data_preparer, "get_hyperparameters_" + dataset_name)
     
-    model = model_class(dim[1], num_class)
+#     model = model_class(dim[1], num_class)
+    if model_name == 'Logistic_regression':
+        model = model_class(dim[1], num_class)
+    else:
+        model = model_class()
     
     
     init_para_list = list(torch.load(git_ignore_folder + 'init_para'))
@@ -1008,7 +1145,7 @@ def model_update_del(args, method, lr_lists):
         
         t1 = time.time()
                 
-        updated_model = model_update_standard_lib(num_epochs, dataset_train, model, random_ids_all_epochs, sorted_ids_multi_epochs, delta_data_ids, batch_size, learning_rate_all_epochs, criterion, optimizer, is_GPU, device)
+        updated_model, _, exp_para_list, exp_grad_list, _ = model_update_standard_lib(num_epochs, dataset_train, model, random_ids_all_epochs, sorted_ids_multi_epochs, delta_data_ids, batch_size, learning_rate_all_epochs, criterion, optimizer, is_GPU, device, record_params = True)
     
         t2 = time.time()
             
@@ -1026,9 +1163,9 @@ def model_update_del(args, method, lr_lists):
     
         torch.save(updated_model, git_ignore_folder + 'model_base_line')
         
-#         torch.save(exp_para_list, git_ignore_folder + 'exp_para_list')
-#         
-#         torch.save(exp_grad_list, git_ignore_folder + 'exp_grad_list')    
+        torch.save(exp_para_list, git_ignore_folder + 'exp_para_list')
+         
+        torch.save(exp_grad_list, git_ignore_folder + 'exp_grad_list')    
         
     
     else:
@@ -1040,9 +1177,9 @@ def model_update_del(args, method, lr_lists):
 #     
 #             dataset_train.labels = torch.cat([dataset_train.labels, Y_to_add], 0)
 #             
-#             exp_para_list = torch.load(git_ignore_folder + 'exp_para_list')
-#         
-#             exp_grad_list = torch.load(git_ignore_folder + 'exp_grad_list')
+            exp_para_list = torch.load(git_ignore_folder + 'exp_para_list')
+         
+            exp_grad_list = torch.load(git_ignore_folder + 'exp_grad_list')
             
             period = args.period
             
@@ -1058,7 +1195,7 @@ def model_update_del(args, method, lr_lists):
             
             t1 = time.time()
             
-            updated_model = model_update_deltagrad(num_epochs, period, 1, init_epochs, dataset_train, model, grad_list_all_epochs_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, delta_data_ids, m, learning_rate_all_epochs, random_ids_all_epochs, sorted_ids_multi_epochs, batch_size, dim, criterion, optimizer, regularization_coeff, is_GPU, device)
+            updated_model = model_update_deltagrad(num_epochs, period, 1, init_epochs, dataset_train, model, grad_list_all_epochs_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, delta_data_ids, m, learning_rate_all_epochs, random_ids_all_epochs, sorted_ids_multi_epochs, batch_size, dim, criterion, optimizer, regularization_coeff, is_GPU, device, exp_para_list_all_epochs = exp_para_list, exp_gradient_list_all_epochs = exp_grad_list)
             
 #             updated_model = model_update_deltagrad(exp_para_list, exp_grad_list, period, 1, init_epochs, dataset_train, model, grad_list_all_epochs_tensor, para_list_all_epoch_tensor, grad_list_GPU_tensor, para_list_GPU_tensor, cached_size, m, learning_rate_all_epochs, random_ids_all_epochs, batch_size, dim, added_random_ids_multi_super_iteration, criterion, optimizer, regularization_coeff, is_GPU, device)
             

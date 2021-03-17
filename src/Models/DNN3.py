@@ -34,7 +34,49 @@ except ImportError:
 #     from MyDataset import MyDataset
 
 
+class CNN_simple(nn.Module):
+    def __init__(self):
+        super(CNN_simple, self).__init__()
+        self.conv1 = nn.Conv2d(1, 10, kernel_size=5).double()
+        self.conv2 = nn.Conv2d(10, 20, kernel_size=5).double()
+#         self.conv2_drop = nn.Dropout2d()
+        self.fc1 = nn.Linear(320, 50).double()
+        self.fc2 = nn.Linear(50, 10).double()
 
+    def forward(self, x):
+        
+        x = torch.unsqueeze(x, 1)
+        
+        x = F.softmax(F.max_pool2d(self.conv1(x), 2))
+#         x = F.softmax(F.max_pool2d(self.conv2_drop(self.conv2(x)), 2))
+        x = F.softmax(F.max_pool2d(self.conv2(x), 2))
+        x = x.view(-1, 320)
+        x = F.softmax(self.fc1(x))
+#         x = F.dropout(x, training=self.training)
+        x = self.fc2(x)
+        return F.log_softmax(x)
+
+    def get_all_parameters(self):
+    
+        para_list = []
+        
+        for param in self.parameters():
+            para_list.append(param.data.clone())
+            
+            
+        return para_list
+
+
+
+    def get_all_gradient(self):
+        
+        para_list = []
+        
+        for param in self.parameters():
+            para_list.append(param.grad.clone())
+            
+            
+        return para_list    
 
 
 class DNNModel3(nn.Module):
@@ -51,13 +93,15 @@ class DNNModel3(nn.Module):
         
 
     def forward(self, x):
-         
+        
+        x = x.view(x.shape[0], -1)
+        
         x = self.fc1(x)
-        x = F.relu(x)
+        x = F.sigmoid(x)
         x = self.fc2(x)
-        x = F.relu(x)
+        x = F.sigmoid(x)
         x = self.fc3(x)
-        x = F.softmax(x, dim=1)
+        x = nn.LogSoftmax()(x)
  
         return x
 #     

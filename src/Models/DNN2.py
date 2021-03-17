@@ -40,10 +40,10 @@ class DNNModel2(nn.Module):
     
     
     
-    def __init__(self):
+    def __init__(self, input_dim, output_dim):
         super(DNNModel2, self).__init__()
         
-        self.fc1 = nn.Linear(28*28, 256).double()
+        self.fc1 = nn.Linear(input_dim, 256).double()
         
         nn.init.kaiming_uniform_(self.fc1.weight, mode='fan_in', nonlinearity='relu')
         
@@ -55,7 +55,7 @@ class DNNModel2(nn.Module):
         
         self.relu2 = nn.ReLU()
         
-        self.fc3 = nn.Linear(256, 10).double()
+        self.fc3 = nn.Linear(256, output_dim).double()
         
         nn.init.kaiming_uniform_(self.fc3.weight, mode='fan_in', nonlinearity='relu')
 
@@ -152,6 +152,19 @@ class DNNModel2(nn.Module):
         
         
         return output_list, non_linear_input_list
+    
+    
+    def get_loss_function(self, reduction = 'mean', f1 = False):
+        
+#         optimizer = optim.SGD(self.parameters(), lr=init_lr, weight_decay = regularization_rate)
+        
+#         optimizer = Adam(self.parameters(), lr=init_lr)
+        self.use_f1_loss = f1
+#         if not f1:
+        return nn.CrossEntropyLoss(reduction = reduction)
+#         else:
+#             return f1_loss
+    
     
     class MyDataset(Dataset):
         def __init__(self, train_X, train_Y):

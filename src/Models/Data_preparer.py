@@ -295,14 +295,14 @@ class Data_preparer:
         test_Y = test_data.targets
         
         
-        train_X = train_X.reshape([train_X.shape[0], -1])
+#         train_X = train_X.reshape([train_X.shape[0], -1])
         
         
         train_X = train_X.type(torch.DoubleTensor)
         
         test_X = test_X.type(torch.DoubleTensor)
         
-        test_X = test_X.reshape([test_X.shape[0], -1])
+#         test_X = test_X.reshape([test_X.shape[0], -1])
         
 #         print(train_X.shape)
 
