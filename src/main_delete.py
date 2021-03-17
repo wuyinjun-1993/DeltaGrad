@@ -650,10 +650,12 @@ def explicit_iters(batch_delta_X, batch_delta_Y, batch_remaining_X, batch_remain
                 if len(S_k_list) < m:
                     curr_len = len(S_k_list) 
                 
-                hessian_para_prod,_, _, _, _, _ = cal_approx_hessian_vec_prod0_3(list(S_k_list)[1:], list(Y_k_list)[1:], curr_s_list.view(-1,1), curr_len-1, is_GPU, device)
+#                 hessian_para_prod,_, _, _, _, _ = cal_approx_hessian_vec_prod0_3(list(S_k_list)[1:], list(Y_k_list)[1:], curr_s_list.view(-1,1), curr_len-1, is_GPU, device)
                 
                 
-                curr_y_k_bar, theta_k = calculate_y_k_bar(curr_s_list,hessian_para_prod.view(-1,1), curr_y_k)
+#                 curr_y_k_bar, theta_k = calculate_y_k_bar(curr_s_list,hessian_para_prod.view(-1,1), curr_y_k)
+                
+                curr_y_k_bar = curr_y_k
     
 #                 print(torch.dot(curr_y_k_bar.view(-1), curr_s_list.view(-1)))
             else:
@@ -662,9 +664,11 @@ def explicit_iters(batch_delta_X, batch_delta_Y, batch_remaining_X, batch_remain
                 if sigma_k < mini_sigma:
                     sigma_k = mini_sigma
                 
-                hessian_para_prod = sigma_k*curr_s_list
+#                 hessian_para_prod = sigma_k*curr_s_list
                 
-                curr_y_k_bar, theta_k = calculate_y_k_bar(curr_s_list,hessian_para_prod, curr_y_k)
+#                 curr_y_k_bar, theta_k = calculate_y_k_bar(curr_s_list,hessian_para_prod, curr_y_k)
+            
+                curr_y_k_bar = curr_y_k
             
             Y_k_list.append(curr_y_k_bar)
             
@@ -976,9 +980,9 @@ def model_update_deltagrad(max_epoch, period, length, init_epochs, dataset_train
                         hessian_para_prod, zero_mat_dim, curr_Y_k, curr_S_k, sigma_k, mat_prime = cal_approx_hessian_vec_prod0_3(list(S_k_list)[1:], list(Y_k_list)[1:], vec_para_diff, m, is_GPU, device)
                     exp_gradient, exp_param = None, None
                     
-                    init_hessian_para_prod,_, _, _, _, _ = cal_approx_hessian_vec_prod0_3(list(S_k_list)[0:-1], list(Y_k_list)[0:-1], vec_para_diff, m, is_GPU, device)
-                    
-                    hessian_para_prod = derive_grad_diff(hessian_para_prod, init_hessian_para_prod, vec_para_diff).view(-1,1)
+#                     init_hessian_para_prod,_, _, _, _, _ = cal_approx_hessian_vec_prod0_3(list(S_k_list)[0:-1], list(Y_k_list)[0:-1], vec_para_diff, m, is_GPU, device)
+#                     
+#                     hessian_para_prod = derive_grad_diff(hessian_para_prod, init_hessian_para_prod, vec_para_diff).view(-1,1)
                      
 #                     hessian_para_prod = (hessian_para_prod - (1-theta_k)*init_hessian_para_prod)/theta_k
                     
