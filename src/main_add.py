@@ -216,9 +216,9 @@ def model_update_add(args, method, lr_lists):
     
         torch.save(updated_model, git_ignore_folder + 'model_base_line')
         
-        torch.save(exp_para_list, git_ignore_folder + 'exp_para_list')
-        
-        torch.save(exp_grad_list, git_ignore_folder + 'exp_grad_list')    
+        # torch.save(exp_para_list, git_ignore_folder + 'exp_para_list')
+        #
+        # torch.save(exp_grad_list, git_ignore_folder + 'exp_grad_list')    
         
     
     else:
@@ -230,9 +230,9 @@ def model_update_add(args, method, lr_lists):
     
             dataset_train.labels = torch.cat([dataset_train.labels, Y_to_add], 0)
             
-            exp_para_list = torch.load(git_ignore_folder + 'exp_para_list')
+            exp_para_list = None#torch.load(git_ignore_folder + 'exp_para_list')
         
-            exp_grad_list = torch.load(git_ignore_folder + 'exp_grad_list')
+            exp_grad_list = None#torch.load(git_ignore_folder + 'exp_grad_list')
             
             period = args.period
             
@@ -648,9 +648,9 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
 #                     res_grad.append(gradient_full)
                     
                     
-                    compute_model_para_diff(exp_para_list[i], para)
+                    # compute_model_para_diff(exp_para_list[i], para)
                 
-                    print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - gradient_full))
+                    # print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - gradient_full))
                     
                     para = get_devectorized_parameters((1-learning_rate*regularization_coeff)*curr_para - learning_rate*gradient_full, full_shape_list, shape_list)
                     
@@ -736,9 +736,9 @@ def model_update_delta_grad_add(exp_para_list, exp_grad_list, period, length, in
                     else:
                         is_positive, final_gradient_list = compute_grad_final3(curr_vec_para, torch.t(hessian_para_prod), None, grad_list_GPU_tensor[cached_id], para_list_GPU_tensor[cached_id], end_id - j, curr_added_size, learning_rate, regularization_coeff, is_GPU, device)
                     
-                    compute_model_para_diff(exp_para_list[i], para)
+                    # compute_model_para_diff(exp_para_list[i], para)
                 
-                    print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - final_gradient_list))
+                    # print('gradient diff::', torch.norm(get_all_vectorized_parameters1(exp_grad_list[i]) - final_gradient_list))
 
                     
                     vec_para = update_para_final2(curr_vec_para, final_gradient_list, learning_rate)
